@@ -1,7 +1,7 @@
 /*
  * Product Service
  *
- * API for managing products
+ * Introducing our revolutionary Product Management Service! Designed to streamline your product inventory and elevate customer experiences, our cutting-edge protobuf service is a game-changer in the world of efficient product management.  With our service, you can effortlessly create new products, allowing you to quickly bring your ideas to life and expand your catalog. Retrieve product information in a snap, providing accurate and personalized details to your customers based on their specific needs and preferences.  Stay ahead of the competition by easily updating product information, ensuring your catalog is always up-to-date and optimized. Seamlessly remove products from your inventory when needed, maintaining a clean and relevant product selection.  Enhance the visual appeal of your products with our advanced media gallery functionalities. Effortlessly add and update captivating images and videos to showcase your products in the best possible light, engaging your customers and driving conversions.  Personalization is key in today's market, and our service enables you to offer unique options to your customers. Easily create and manage lists of customizable options for your products, providing flexibility and tailoring to individual preferences.  Attributes play a vital role in defining products, and our service empowers you to effectively manage them. From bulk attribute creation to listing and retrieving attribute options, our service ensures your product information is rich and comprehensive.  Our service extends its capabilities to entity management, allowing you to effortlessly handle different entities and create customized options lists associated with them. This provides further flexibility and customization options for your product offerings.  When it comes to bulk updates, our service has you covered. Effortlessly update multiple products simultaneously, saving you time and streamlining your operations.  Finding specific products and variants is a breeze with our service. Quickly locate products based on their unique stock keeping unit (SKU) values, ensuring efficient inventory management and smooth order fulfillment.  Experience a new level of efficiency and productivity with our Product Management Service. Unlock the full potential of streamlined product management and empower your business to thrive in today's competitive market. Try our service today and elevate your product management to new heights!
  *
  * The version of the OpenAPI document: v1
  * Contact: info@gemini-commerce.com
@@ -29,36 +29,453 @@ namespace product.Api
     {
         #region Synchronous Operations
         /// <summary>
-        /// 
+        /// Add Media Gallery Entry
         /// </summary>
+        /// <remarks>
+        /// The AddMediaGalleryEntry endpoint allows users to add a new media entry to the gallery of a specific product. To make a request to this endpoint, users need to provide the necessary information in the specified format. The request includes the tenant_id to specify the relevant tenant, the product_id to identify the target product, and the asset_grn which represents the globally unique identifier for the media asset being added. Additionally, the position field indicates the desired position of the media entry within the gallery, allowing users to control the order in which the media items are displayed. The metadata field, which is a repeated field, provides the option to include additional metadata associated with the media entry. This operation is asynchronous and may complete after the response.
+        /// </remarks>
         /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ProductAddMediaGalleryEntryResponse</returns>
-        ProductAddMediaGalleryEntryResponse ProductAddMediaGalleryEntry(ProductAddMediaGalleryEntryRequest body, int operationIndex = 0);
+        ProductAddMediaGalleryEntryResponse AddMediaGalleryEntry(ProductAddMediaGalleryEntryRequest body, int operationIndex = 0);
 
         /// <summary>
-        /// 
+        /// Add Media Gallery Entry
         /// </summary>
         /// <remarks>
-        /// 
+        /// The AddMediaGalleryEntry endpoint allows users to add a new media entry to the gallery of a specific product. To make a request to this endpoint, users need to provide the necessary information in the specified format. The request includes the tenant_id to specify the relevant tenant, the product_id to identify the target product, and the asset_grn which represents the globally unique identifier for the media asset being added. Additionally, the position field indicates the desired position of the media entry within the gallery, allowing users to control the order in which the media items are displayed. The metadata field, which is a repeated field, provides the option to include additional metadata associated with the media entry. This operation is asynchronous and may complete after the response.
         /// </remarks>
         /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of ProductAddMediaGalleryEntryResponse</returns>
-        ApiResponse<ProductAddMediaGalleryEntryResponse> ProductAddMediaGalleryEntryWithHttpInfo(ProductAddMediaGalleryEntryRequest body, int operationIndex = 0);
+        ApiResponse<ProductAddMediaGalleryEntryResponse> AddMediaGalleryEntryWithHttpInfo(ProductAddMediaGalleryEntryRequest body, int operationIndex = 0);
         /// <summary>
-        /// Assets endpoints
+        /// Bulk Add Assets Entries
         /// </summary>
+        /// <remarks>
+        /// The BulkAddAssetsEntries endpoint allows users to add assets. This operation is asynchronous and may complete after the response.
+        /// </remarks>
         /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ProductBulkAddAssetsEntriesResponse</returns>
-        ProductBulkAddAssetsEntriesResponse ProductBulkAddAssetsEntries(ProductBulkAddAssetsEntriesRequest body, int operationIndex = 0);
+        ProductBulkAddAssetsEntriesResponse BulkAddAssetsEntries(ProductBulkAddAssetsEntriesRequest body, int operationIndex = 0);
 
         /// <summary>
-        /// Assets endpoints
+        /// Bulk Add Assets Entries
+        /// </summary>
+        /// <remarks>
+        /// The BulkAddAssetsEntries endpoint allows users to add assets. This operation is asynchronous and may complete after the response.
+        /// </remarks>
+        /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of ProductBulkAddAssetsEntriesResponse</returns>
+        ApiResponse<ProductBulkAddAssetsEntriesResponse> BulkAddAssetsEntriesWithHttpInfo(ProductBulkAddAssetsEntriesRequest body, int operationIndex = 0);
+        /// <summary>
+        /// Bulk Delete Products
+        /// </summary>
+        /// <remarks>
+        /// This operation is asynchronous and may complete after the response.
+        /// </remarks>
+        /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>Object</returns>
+        Object BulkDeleteProducts(ProductBulkDeleteProductsRequest body, int operationIndex = 0);
+
+        /// <summary>
+        /// Bulk Delete Products
+        /// </summary>
+        /// <remarks>
+        /// This operation is asynchronous and may complete after the response.
+        /// </remarks>
+        /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of Object</returns>
+        ApiResponse<Object> BulkDeleteProductsWithHttpInfo(ProductBulkDeleteProductsRequest body, int operationIndex = 0);
+        /// <summary>
+        /// Bulk Enhance Product Data With AI
+        /// </summary>
+        /// <remarks>
+        /// The BulkEnhanceProductDataWithAI endpoint allows users to enhance product data using artificial intelligence (AI) capabilities. By making a request to this endpoint and providing the necessary input data, users can leverage AI algorithms to enrich and optimize product information. This operation is asynchronous and may complete after the response.
+        /// </remarks>
+        /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>Object</returns>
+        Object BulkEnhanceProductDataWithAI(ProductBulkEnhanceProductDataWithAIRequest body, int operationIndex = 0);
+
+        /// <summary>
+        /// Bulk Enhance Product Data With AI
+        /// </summary>
+        /// <remarks>
+        /// The BulkEnhanceProductDataWithAI endpoint allows users to enhance product data using artificial intelligence (AI) capabilities. By making a request to this endpoint and providing the necessary input data, users can leverage AI algorithms to enrich and optimize product information. This operation is asynchronous and may complete after the response.
+        /// </remarks>
+        /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of Object</returns>
+        ApiResponse<Object> BulkEnhanceProductDataWithAIWithHttpInfo(ProductBulkEnhanceProductDataWithAIRequest body, int operationIndex = 0);
+        /// <summary>
+        /// Bulk Remove Assets Entries
+        /// </summary>
+        /// <remarks>
+        /// The BulkRemoveAssetsEntries endpoint allows users to remove assets. This operation is asynchronous and may complete after the response.
+        /// </remarks>
+        /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>Object</returns>
+        Object BulkRemoveAssetsEntries(ProductBulkRemoveAssetsEntriesRequest body, int operationIndex = 0);
+
+        /// <summary>
+        /// Bulk Remove Assets Entries
+        /// </summary>
+        /// <remarks>
+        /// The BulkRemoveAssetsEntries endpoint allows users to remove assets. This operation is asynchronous and may complete after the response.
+        /// </remarks>
+        /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of Object</returns>
+        ApiResponse<Object> BulkRemoveAssetsEntriesWithHttpInfo(ProductBulkRemoveAssetsEntriesRequest body, int operationIndex = 0);
+        /// <summary>
+        /// Bulk Update Assets Entries
+        /// </summary>
+        /// <remarks>
+        /// The BulkUpdateAssetsEntries endpoint allows users to update assets. This operation is asynchronous and may complete after the response.
+        /// </remarks>
+        /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ProductBulkUpdateAssetsEntriesResponse</returns>
+        ProductBulkUpdateAssetsEntriesResponse BulkUpdateAssetsEntries(ProductBulkUpdateAssetsEntriesRequest body, int operationIndex = 0);
+
+        /// <summary>
+        /// Bulk Update Assets Entries
+        /// </summary>
+        /// <remarks>
+        /// The BulkUpdateAssetsEntries endpoint allows users to update assets. This operation is asynchronous and may complete after the response.
+        /// </remarks>
+        /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of ProductBulkUpdateAssetsEntriesResponse</returns>
+        ApiResponse<ProductBulkUpdateAssetsEntriesResponse> BulkUpdateAssetsEntriesWithHttpInfo(ProductBulkUpdateAssetsEntriesRequest body, int operationIndex = 0);
+        /// <summary>
+        /// Bulk Update Products
+        /// </summary>
+        /// <remarks>
+        /// Version 2 of bulk updates for product attributes with enhanced payload structure and response format. This operation is asynchronous and may complete after the response.
+        /// </remarks>
+        /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ProductBulkUpdateResponse</returns>
+        ProductBulkUpdateResponse BulkUpdateV2(ProductBulkUpdateRequestV2 body, int operationIndex = 0);
+
+        /// <summary>
+        /// Bulk Update Products
+        /// </summary>
+        /// <remarks>
+        /// Version 2 of bulk updates for product attributes with enhanced payload structure and response format. This operation is asynchronous and may complete after the response.
+        /// </remarks>
+        /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of ProductBulkUpdateResponse</returns>
+        ApiResponse<ProductBulkUpdateResponse> BulkUpdateV2WithHttpInfo(ProductBulkUpdateRequestV2 body, int operationIndex = 0);
+        /// <summary>
+        /// Create Attribute Options
+        /// </summary>
+        /// <remarks>
+        /// Create attribute options with specified codes, values, and swatches. Returns created options and any associated errors.
+        /// </remarks>
+        /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>EntitymanagerCreateAttributeOptionsResponse</returns>
+        EntitymanagerCreateAttributeOptionsResponse CreateAttributeOptions(EntitymanagerCreateAttributeOptionsRequest body, int operationIndex = 0);
+
+        /// <summary>
+        /// Create Attribute Options
+        /// </summary>
+        /// <remarks>
+        /// Create attribute options with specified codes, values, and swatches. Returns created options and any associated errors.
+        /// </remarks>
+        /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of EntitymanagerCreateAttributeOptionsResponse</returns>
+        ApiResponse<EntitymanagerCreateAttributeOptionsResponse> CreateAttributeOptionsWithHttpInfo(EntitymanagerCreateAttributeOptionsRequest body, int operationIndex = 0);
+        /// <summary>
+        /// Create Entity
+        /// </summary>
+        /// <remarks>
+        /// The CreateEntity endpoint allows users to define and create a new entity with custom attributes, providing a flexible way to represent and manage different data structures within the system. By making a request to this endpoint, users can create a new entity that serves as an abstraction of a product or any other domain-specific object. This endpoint empowers users to define the specific attributes that compose the entity, such as color, composition, technical details, or any other relevant properties. Utilize the CreateEntity endpoint to dynamically extend and adapt your system&#39;s data model to accommodate diverse business requirements and efficiently manage various types of entities.
+        /// </remarks>
+        /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>EntitymanagerCreateEntityResponse</returns>
+        EntitymanagerCreateEntityResponse CreateEntity(EntitymanagerEntity body, int operationIndex = 0);
+
+        /// <summary>
+        /// Create Entity
+        /// </summary>
+        /// <remarks>
+        /// The CreateEntity endpoint allows users to define and create a new entity with custom attributes, providing a flexible way to represent and manage different data structures within the system. By making a request to this endpoint, users can create a new entity that serves as an abstraction of a product or any other domain-specific object. This endpoint empowers users to define the specific attributes that compose the entity, such as color, composition, technical details, or any other relevant properties. Utilize the CreateEntity endpoint to dynamically extend and adapt your system&#39;s data model to accommodate diverse business requirements and efficiently manage various types of entities.
+        /// </remarks>
+        /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of EntitymanagerCreateEntityResponse</returns>
+        ApiResponse<EntitymanagerCreateEntityResponse> CreateEntityWithHttpInfo(EntitymanagerEntity body, int operationIndex = 0);
+        /// <summary>
+        /// Create Options List
+        /// </summary>
+        /// <remarks>
+        /// The CreateOptionsList endpoint allows users to create an OptionList, which represents a list of predefined options for assigning to an attribute. By making a request to this endpoint with the provided request format, users can create a new OptionList by specifying the relevant tenant ID and providing the OptionList object containing the predefined options. This functionality facilitates efficient management and assignment of predefined attribute values, ensuring consistency and flexibility within the system.
+        /// </remarks>
+        /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>EntitymanagerCreateOptionsListResponse</returns>
+        EntitymanagerCreateOptionsListResponse CreateOptionsList(EntitymanagerCreateOptionsListRequest body, int operationIndex = 0);
+
+        /// <summary>
+        /// Create Options List
+        /// </summary>
+        /// <remarks>
+        /// The CreateOptionsList endpoint allows users to create an OptionList, which represents a list of predefined options for assigning to an attribute. By making a request to this endpoint with the provided request format, users can create a new OptionList by specifying the relevant tenant ID and providing the OptionList object containing the predefined options. This functionality facilitates efficient management and assignment of predefined attribute values, ensuring consistency and flexibility within the system.
+        /// </remarks>
+        /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of EntitymanagerCreateOptionsListResponse</returns>
+        ApiResponse<EntitymanagerCreateOptionsListResponse> CreateOptionsListWithHttpInfo(EntitymanagerCreateOptionsListRequest body, int operationIndex = 0);
+        /// <summary>
+        /// Create Product With AI
+        /// </summary>
+        /// <remarks>
+        /// The CreateProductWithAI endpoint allows users to create a new product within the system using artificial intelligence (AI) capabilities. By sending a request to this endpoint and providing the necessary input data, users can leverage AI algorithms to enhance and optimize the product creation process.
+        /// </remarks>
+        /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ProductCreateProductWithAIResponse</returns>
+        ProductCreateProductWithAIResponse CreateProductWithAI(ProductCreateProductWithAIRequest body, int operationIndex = 0);
+
+        /// <summary>
+        /// Create Product With AI
+        /// </summary>
+        /// <remarks>
+        /// The CreateProductWithAI endpoint allows users to create a new product within the system using artificial intelligence (AI) capabilities. By sending a request to this endpoint and providing the necessary input data, users can leverage AI algorithms to enhance and optimize the product creation process.
+        /// </remarks>
+        /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of ProductCreateProductWithAIResponse</returns>
+        ApiResponse<ProductCreateProductWithAIResponse> CreateProductWithAIWithHttpInfo(ProductCreateProductWithAIRequest body, int operationIndex = 0);
+        /// <summary>
+        /// Get Attribute Option
+        /// </summary>
+        /// <remarks>
+        /// Retrieve attribute option details by providing the tenant ID, list code, and option ID. Returns the specified attribute option.
+        /// </remarks>
+        /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>EntitymanagerGetAttributeOptionResponse</returns>
+        EntitymanagerGetAttributeOptionResponse GetAttributeOption(EntitymanagerGetAttributeOptionRequest body, int operationIndex = 0);
+
+        /// <summary>
+        /// Get Attribute Option
+        /// </summary>
+        /// <remarks>
+        /// Retrieve attribute option details by providing the tenant ID, list code, and option ID. Returns the specified attribute option.
+        /// </remarks>
+        /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of EntitymanagerGetAttributeOptionResponse</returns>
+        ApiResponse<EntitymanagerGetAttributeOptionResponse> GetAttributeOptionWithHttpInfo(EntitymanagerGetAttributeOptionRequest body, int operationIndex = 0);
+        /// <summary>
+        /// Get Attribute Options
+        /// </summary>
+        /// <remarks>
+        /// Retrieve a list of attribute options based on the provided tenant ID and list code.
+        /// </remarks>
+        /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>EntitymanagerGetAttributeOptionsResponse</returns>
+        EntitymanagerGetAttributeOptionsResponse GetAttributeOptions(EntitymanagerGetAttributeOptionsRequest body, int operationIndex = 0);
+
+        /// <summary>
+        /// Get Attribute Options
+        /// </summary>
+        /// <remarks>
+        /// Retrieve a list of attribute options based on the provided tenant ID and list code.
+        /// </remarks>
+        /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of EntitymanagerGetAttributeOptionsResponse</returns>
+        ApiResponse<EntitymanagerGetAttributeOptionsResponse> GetAttributeOptionsWithHttpInfo(EntitymanagerGetAttributeOptionsRequest body, int operationIndex = 0);
+        /// <summary>
+        /// Get Entity Details
+        /// </summary>
+        /// <remarks>
+        /// Retrieve details of an entity by providing the tenant ID and either entity data or entity ID. Returns information including ID, type, code, label, relationships, and attributes.
+        /// </remarks>
+        /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>EntitymanagerEntity</returns>
+        EntitymanagerEntity GetEntity(EntitymanagerEntityRequest body, int operationIndex = 0);
+
+        /// <summary>
+        /// Get Entity Details
+        /// </summary>
+        /// <remarks>
+        /// Retrieve details of an entity by providing the tenant ID and either entity data or entity ID. Returns information including ID, type, code, label, relationships, and attributes.
+        /// </remarks>
+        /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of EntitymanagerEntity</returns>
+        ApiResponse<EntitymanagerEntity> GetEntityWithHttpInfo(EntitymanagerEntityRequest body, int operationIndex = 0);
+        /// <summary>
+        /// Get Options List
+        /// </summary>
+        /// <remarks>
+        /// Retrieve option lists.
+        /// </remarks>
+        /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>EntitymanagerGetOptionsListResponse</returns>
+        EntitymanagerGetOptionsListResponse GetOptionsList(EntitymanagerGetOptionsListRequest body, int operationIndex = 0);
+
+        /// <summary>
+        /// Get Options List
+        /// </summary>
+        /// <remarks>
+        /// Retrieve option lists.
+        /// </remarks>
+        /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of EntitymanagerGetOptionsListResponse</returns>
+        ApiResponse<EntitymanagerGetOptionsListResponse> GetOptionsListWithHttpInfo(EntitymanagerGetOptionsListRequest body, int operationIndex = 0);
+        /// <summary>
+        /// Get Product
+        /// </summary>
+        /// <remarks>
+        /// The GetProduct endpoint enables users to retrieve a product from the system. By sending a request to this endpoint, users can retrieve a product by providing its unique identifier.
+        /// </remarks>
+        /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ProductGetProductResponse</returns>
+        ProductGetProductResponse GetProduct(ProductGetProductRequest body, int operationIndex = 0);
+
+        /// <summary>
+        /// Get Product
+        /// </summary>
+        /// <remarks>
+        /// The GetProduct endpoint enables users to retrieve a product from the system. By sending a request to this endpoint, users can retrieve a product by providing its unique identifier.
+        /// </remarks>
+        /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of ProductGetProductResponse</returns>
+        ApiResponse<ProductGetProductResponse> GetProductWithHttpInfo(ProductGetProductRequest body, int operationIndex = 0);
+        /// <summary>
+        /// Get Product By Code
+        /// </summary>
+        /// <remarks>
+        /// The GetProductByCode endpoint enables users to retrieve a product from the system. By sending a request to this endpoint, users can retrieve a product by providing its unique code.
+        /// </remarks>
+        /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ProductGetProductByCodeResponse</returns>
+        ProductGetProductByCodeResponse GetProductByCode(ProductGetProductByCodeRequest body, int operationIndex = 0);
+
+        /// <summary>
+        /// Get Product By Code
+        /// </summary>
+        /// <remarks>
+        /// The GetProductByCode endpoint enables users to retrieve a product from the system. By sending a request to this endpoint, users can retrieve a product by providing its unique code.
+        /// </remarks>
+        /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of ProductGetProductByCodeResponse</returns>
+        ApiResponse<ProductGetProductByCodeResponse> GetProductByCodeWithHttpInfo(ProductGetProductByCodeRequest body, int operationIndex = 0);
+        /// <summary>
+        /// Get Product By Url Key
+        /// </summary>
+        /// <remarks>
+        /// The GetProductByUrlKey endpoint enables users to retrieve a product from the system. By sending a request to this endpoint, users can retrieve a product by providing its unique url key.
+        /// </remarks>
+        /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ProductGetProductByUrlKeyResponse</returns>
+        ProductGetProductByUrlKeyResponse GetProductByUrlKey(ProductGetProductByUrlKeyRequest body, int operationIndex = 0);
+
+        /// <summary>
+        /// Get Product By Url Key
+        /// </summary>
+        /// <remarks>
+        /// The GetProductByUrlKey endpoint enables users to retrieve a product from the system. By sending a request to this endpoint, users can retrieve a product by providing its unique url key.
+        /// </remarks>
+        /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of ProductGetProductByUrlKeyResponse</returns>
+        ApiResponse<ProductGetProductByUrlKeyResponse> GetProductByUrlKeyWithHttpInfo(ProductGetProductByUrlKeyRequest body, int operationIndex = 0);
+        /// <summary>
+        /// Get Product Data In Review
+        /// </summary>
+        /// <remarks>
+        /// The GetProductDataInReview endpoint allows users to retrieve product data that is currently under review. By making a request to this endpoint, users can access detailed information about the product data that is pending approval or review by authorized personnel. This functionality provides transparency and visibility into the product data review process, enabling users to track the status and progress of product data submissions.
+        /// </remarks>
+        /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ProductGetProductDataInReviewResponse</returns>
+        ProductGetProductDataInReviewResponse GetProductDataInReview(ProductGetProductDataInReviewRequest body, int operationIndex = 0);
+
+        /// <summary>
+        /// Get Product Data In Review
+        /// </summary>
+        /// <remarks>
+        /// The GetProductDataInReview endpoint allows users to retrieve product data that is currently under review. By making a request to this endpoint, users can access detailed information about the product data that is pending approval or review by authorized personnel. This functionality provides transparency and visibility into the product data review process, enabling users to track the status and progress of product data submissions.
+        /// </remarks>
+        /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of ProductGetProductDataInReviewResponse</returns>
+        ApiResponse<ProductGetProductDataInReviewResponse> GetProductDataInReviewWithHttpInfo(ProductGetProductDataInReviewRequest body, int operationIndex = 0);
+        /// <summary>
+        /// List Attribute Options
+        /// </summary>
+        /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>EntitymanagerListAttributeOptionsResponse</returns>
+        EntitymanagerListAttributeOptionsResponse ListAttributeOptions(EntitymanagerListAttributeOptionsRequest body, int operationIndex = 0);
+
+        /// <summary>
+        /// List Attribute Options
         /// </summary>
         /// <remarks>
         /// 
@@ -66,11 +483,143 @@ namespace product.Api
         /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of ProductBulkAddAssetsEntriesResponse</returns>
-        ApiResponse<ProductBulkAddAssetsEntriesResponse> ProductBulkAddAssetsEntriesWithHttpInfo(ProductBulkAddAssetsEntriesRequest body, int operationIndex = 0);
+        /// <returns>ApiResponse of EntitymanagerListAttributeOptionsResponse</returns>
+        ApiResponse<EntitymanagerListAttributeOptionsResponse> ListAttributeOptionsWithHttpInfo(EntitymanagerListAttributeOptionsRequest body, int operationIndex = 0);
+        /// <summary>
+        /// List Entities
+        /// </summary>
+        /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>EntitymanagerListEntitiesResponse</returns>
+        EntitymanagerListEntitiesResponse ListEntities(EntitymanagerListEntitiesRequest body, int operationIndex = 0);
+
+        /// <summary>
+        /// List Entities
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of EntitymanagerListEntitiesResponse</returns>
+        ApiResponse<EntitymanagerListEntitiesResponse> ListEntitiesWithHttpInfo(EntitymanagerListEntitiesRequest body, int operationIndex = 0);
+        /// <summary>
+        /// List Options Lists
+        /// </summary>
+        /// <remarks>
+        /// The ListOptionsLists endpoint allows users to retrieve a list of OptionLists available in the system. By making a request to this endpoint with the provided request format, users can obtain all the OptionLists associated with the specified tenant. This functionality enables users to access and manage the predefined options available for various attributes within the system. Utilizing the ListOptionsLists endpoint provides a convenient way to retrieve and work with OptionLists, facilitating efficient management of attribute options and ensuring consistency in attribute values throughout the system.
+        /// </remarks>
+        /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>EntitymanagerListOptionsListsResponse</returns>
+        EntitymanagerListOptionsListsResponse ListOptionsLists(EntitymanagerListOptionsListsRequest body, int operationIndex = 0);
+
+        /// <summary>
+        /// List Options Lists
+        /// </summary>
+        /// <remarks>
+        /// The ListOptionsLists endpoint allows users to retrieve a list of OptionLists available in the system. By making a request to this endpoint with the provided request format, users can obtain all the OptionLists associated with the specified tenant. This functionality enables users to access and manage the predefined options available for various attributes within the system. Utilizing the ListOptionsLists endpoint provides a convenient way to retrieve and work with OptionLists, facilitating efficient management of attribute options and ensuring consistency in attribute values throughout the system.
+        /// </remarks>
+        /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of EntitymanagerListOptionsListsResponse</returns>
+        ApiResponse<EntitymanagerListOptionsListsResponse> ListOptionsListsWithHttpInfo(EntitymanagerListOptionsListsRequest body, int operationIndex = 0);
+        /// <summary>
+        /// List Products
+        /// </summary>
+        /// <remarks>
+        /// The ListProducts endpoint provides users with the ability to retrieve a filtered list of products based on specific criteria. By including filter parameters in the request, users can customize the response to only include products that meet certain conditions, such as price range, category, availability, or any other relevant attributes. This endpoint empowers users to efficiently narrow down the product selection and retrieve tailored results.
+        /// </remarks>
+        /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ProductListProductsResponse</returns>
+        ProductListProductsResponse ListProducts(ProductListProductsRequest body, int operationIndex = 0);
+
+        /// <summary>
+        /// List Products
+        /// </summary>
+        /// <remarks>
+        /// The ListProducts endpoint provides users with the ability to retrieve a filtered list of products based on specific criteria. By including filter parameters in the request, users can customize the response to only include products that meet certain conditions, such as price range, category, availability, or any other relevant attributes. This endpoint empowers users to efficiently narrow down the product selection and retrieve tailored results.
+        /// </remarks>
+        /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of ProductListProductsResponse</returns>
+        ApiResponse<ProductListProductsResponse> ListProductsWithHttpInfo(ProductListProductsRequest body, int operationIndex = 0);
+        /// <summary>
+        /// List Products By Ids
+        /// </summary>
+        /// <remarks>
+        /// The ListProductsByIds endpoint allows users to retrieve a list of products based on provided IDs. By making a request to this endpoint and specifying a set of product IDs, users can retrieve detailed information about the corresponding products. This endpoint facilitates efficient retrieval of specific products, enabling applications to display accurate and targeted product information to users.
+        /// </remarks>
+        /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ProductListProductsByIdsResponse</returns>
+        ProductListProductsByIdsResponse ListProductsByIds(ProductListProductsByIdsRequest body, int operationIndex = 0);
+
+        /// <summary>
+        /// List Products By Ids
+        /// </summary>
+        /// <remarks>
+        /// The ListProductsByIds endpoint allows users to retrieve a list of products based on provided IDs. By making a request to this endpoint and specifying a set of product IDs, users can retrieve detailed information about the corresponding products. This endpoint facilitates efficient retrieval of specific products, enabling applications to display accurate and targeted product information to users.
+        /// </remarks>
+        /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of ProductListProductsByIdsResponse</returns>
+        ApiResponse<ProductListProductsByIdsResponse> ListProductsByIdsWithHttpInfo(ProductListProductsByIdsRequest body, int operationIndex = 0);
+        /// <summary>
+        /// List Products By Sku
+        /// </summary>
+        /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ProductListProductsBySkuResponse</returns>
+        ProductListProductsBySkuResponse ListProductsBySku(ProductListProductsBySkuRequest body, int operationIndex = 0);
+
+        /// <summary>
+        /// List Products By Sku
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of ProductListProductsBySkuResponse</returns>
+        ApiResponse<ProductListProductsBySkuResponse> ListProductsBySkuWithHttpInfo(ProductListProductsBySkuRequest body, int operationIndex = 0);
+        /// <summary>
+        /// List Product Variants By Sku
+        /// </summary>
+        /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ProductListVariantsBySkuResponse</returns>
+        ProductListVariantsBySkuResponse ListVariantsBySku(ProductListVariantsBySkuRequest body, int operationIndex = 0);
+
+        /// <summary>
+        /// List Product Variants By Sku
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of ProductListVariantsBySkuResponse</returns>
+        ApiResponse<ProductListVariantsBySkuResponse> ListVariantsBySkuWithHttpInfo(ProductListVariantsBySkuRequest body, int operationIndex = 0);
         /// <summary>
         /// 
         /// </summary>
+        /// <remarks>
+        /// Allow creation of multiple attributes. If any attribute is invalid, an error will be returned with more details, and in the response body, the attributes created will be returned.
+        /// </remarks>
         /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
@@ -81,7 +630,7 @@ namespace product.Api
         /// 
         /// </summary>
         /// <remarks>
-        /// 
+        /// Allow creation of multiple attributes. If any attribute is invalid, an error will be returned with more details, and in the response body, the attributes created will be returned.
         /// </remarks>
         /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"></param>
@@ -91,46 +640,9 @@ namespace product.Api
         /// <summary>
         /// 
         /// </summary>
-        /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>Object</returns>
-        Object ProductBulkDeleteProducts(ProductBulkDeleteProductsRequest body, int operationIndex = 0);
-
-        /// <summary>
-        /// 
-        /// </summary>
         /// <remarks>
-        /// 
+        /// This operation is asynchronous and may complete after the response.
         /// </remarks>
-        /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of Object</returns>
-        ApiResponse<Object> ProductBulkDeleteProductsWithHttpInfo(ProductBulkDeleteProductsRequest body, int operationIndex = 0);
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>Object</returns>
-        Object ProductBulkRemoveAssetsEntries(ProductBulkRemoveAssetsEntriesRequest body, int operationIndex = 0);
-
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of Object</returns>
-        ApiResponse<Object> ProductBulkRemoveAssetsEntriesWithHttpInfo(ProductBulkRemoveAssetsEntriesRequest body, int operationIndex = 0);
-        /// <summary>
-        /// 
-        /// </summary>
         /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
@@ -142,7 +654,7 @@ namespace product.Api
         /// 
         /// </summary>
         /// <remarks>
-        /// 
+        /// This operation is asynchronous and may complete after the response.
         /// </remarks>
         /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"></param>
@@ -150,46 +662,6 @@ namespace product.Api
         /// <returns>ApiResponse of ProductBulkUpdateResponse</returns>
         [Obsolete]
         ApiResponse<ProductBulkUpdateResponse> ProductBulkUpdateWithHttpInfo(ProductBulkUpdateRequest body, int operationIndex = 0);
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ProductBulkUpdateAssetsEntriesResponse</returns>
-        ProductBulkUpdateAssetsEntriesResponse ProductBulkUpdateAssetsEntries(ProductBulkUpdateAssetsEntriesRequest body, int operationIndex = 0);
-
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of ProductBulkUpdateAssetsEntriesResponse</returns>
-        ApiResponse<ProductBulkUpdateAssetsEntriesResponse> ProductBulkUpdateAssetsEntriesWithHttpInfo(ProductBulkUpdateAssetsEntriesRequest body, int operationIndex = 0);
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ProductBulkUpdateResponseV2</returns>
-        ProductBulkUpdateResponseV2 ProductBulkUpdateV2(ProductBulkUpdateRequestV2 body, int operationIndex = 0);
-
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of ProductBulkUpdateResponseV2</returns>
-        ApiResponse<ProductBulkUpdateResponseV2> ProductBulkUpdateV2WithHttpInfo(ProductBulkUpdateRequestV2 body, int operationIndex = 0);
         /// <summary>
         /// 
         /// </summary>
@@ -214,67 +686,7 @@ namespace product.Api
         /// 
         /// </summary>
         /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>EntitymanagerCreateAttributeOptionsResponse</returns>
-        EntitymanagerCreateAttributeOptionsResponse ProductCreateAttributeOptions(EntitymanagerCreateAttributeOptionsRequest body, int operationIndex = 0);
-
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of EntitymanagerCreateAttributeOptionsResponse</returns>
-        ApiResponse<EntitymanagerCreateAttributeOptionsResponse> ProductCreateAttributeOptionsWithHttpInfo(EntitymanagerCreateAttributeOptionsRequest body, int operationIndex = 0);
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>EntitymanagerCreateEntityResponse</returns>
-        EntitymanagerCreateEntityResponse ProductCreateEntity(EntitymanagerEntity body, int operationIndex = 0);
-
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of EntitymanagerCreateEntityResponse</returns>
-        ApiResponse<EntitymanagerCreateEntityResponse> ProductCreateEntityWithHttpInfo(EntitymanagerEntity body, int operationIndex = 0);
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>EntitymanagerCreateOptionsListResponse</returns>
-        EntitymanagerCreateOptionsListResponse ProductCreateOptionsList(EntitymanagerCreateOptionsListRequest body, int operationIndex = 0);
-
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of EntitymanagerCreateOptionsListResponse</returns>
-        ApiResponse<EntitymanagerCreateOptionsListResponse> ProductCreateOptionsListWithHttpInfo(EntitymanagerCreateOptionsListRequest body, int operationIndex = 0);
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"></param>
+        /// <param name="body">The CreateProductRequest message is used to create a new product within the system. It contains various fields that allow specifying the details and attributes of the product.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ProductCreateProductResponse</returns>
         [Obsolete]
@@ -287,7 +699,7 @@ namespace product.Api
         /// 
         /// </remarks>
         /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"></param>
+        /// <param name="body">The CreateProductRequest message is used to create a new product within the system. It contains various fields that allow specifying the details and attributes of the product.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of ProductCreateProductResponse</returns>
         [Obsolete]
@@ -400,151 +812,11 @@ namespace product.Api
         /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>EntitymanagerGetAttributeOptionResponse</returns>
-        EntitymanagerGetAttributeOptionResponse ProductGetAttributeOption(EntitymanagerGetAttributeOptionRequest body, int operationIndex = 0);
-
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of EntitymanagerGetAttributeOptionResponse</returns>
-        ApiResponse<EntitymanagerGetAttributeOptionResponse> ProductGetAttributeOptionWithHttpInfo(EntitymanagerGetAttributeOptionRequest body, int operationIndex = 0);
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>EntitymanagerGetAttributeOptionsResponse</returns>
-        EntitymanagerGetAttributeOptionsResponse ProductGetAttributeOptions(EntitymanagerGetAttributeOptionsRequest body, int operationIndex = 0);
-
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of EntitymanagerGetAttributeOptionsResponse</returns>
-        ApiResponse<EntitymanagerGetAttributeOptionsResponse> ProductGetAttributeOptionsWithHttpInfo(EntitymanagerGetAttributeOptionsRequest body, int operationIndex = 0);
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>EntitymanagerEntity</returns>
-        EntitymanagerEntity ProductGetEntity(EntitymanagerEntityRequest body, int operationIndex = 0);
-
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of EntitymanagerEntity</returns>
-        ApiResponse<EntitymanagerEntity> ProductGetEntityWithHttpInfo(EntitymanagerEntityRequest body, int operationIndex = 0);
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>EntitymanagerGetOptionsListResponse</returns>
-        EntitymanagerGetOptionsListResponse ProductGetOptionsList(EntitymanagerGetOptionsListRequest body, int operationIndex = 0);
-
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of EntitymanagerGetOptionsListResponse</returns>
-        ApiResponse<EntitymanagerGetOptionsListResponse> ProductGetOptionsListWithHttpInfo(EntitymanagerGetOptionsListRequest body, int operationIndex = 0);
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ProductGetProductResponse</returns>
-        ProductGetProductResponse ProductGetProduct(ProductGetProductRequest body, int operationIndex = 0);
-
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of ProductGetProductResponse</returns>
-        ApiResponse<ProductGetProductResponse> ProductGetProductWithHttpInfo(ProductGetProductRequest body, int operationIndex = 0);
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ProductGetProductByCodeResponse</returns>
-        ProductGetProductByCodeResponse ProductGetProductByCode(ProductGetProductByCodeRequest body, int operationIndex = 0);
-
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of ProductGetProductByCodeResponse</returns>
-        ApiResponse<ProductGetProductByCodeResponse> ProductGetProductByCodeWithHttpInfo(ProductGetProductByCodeRequest body, int operationIndex = 0);
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ProductGetProductByUrlKeyResponse</returns>
-        ProductGetProductByUrlKeyResponse ProductGetProductByUrlKey(ProductGetProductByUrlKeyRequest body, int operationIndex = 0);
-
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of ProductGetProductByUrlKeyResponse</returns>
-        ApiResponse<ProductGetProductByUrlKeyResponse> ProductGetProductByUrlKeyWithHttpInfo(ProductGetProductByUrlKeyRequest body, int operationIndex = 0);
-        /// <summary>
-        /// Attribute Groups endpoints
-        /// </summary>
-        /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>EntitymanagerListAttributeGroupsResponse</returns>
         EntitymanagerListAttributeGroupsResponse ProductListAttributeGroups(EntitymanagerListAttributeGroupsRequest body, int operationIndex = 0);
 
         /// <summary>
-        /// Attribute Groups endpoints
+        /// 
         /// </summary>
         /// <remarks>
         /// 
@@ -554,166 +826,6 @@ namespace product.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of EntitymanagerListAttributeGroupsResponse</returns>
         ApiResponse<EntitymanagerListAttributeGroupsResponse> ProductListAttributeGroupsWithHttpInfo(EntitymanagerListAttributeGroupsRequest body, int operationIndex = 0);
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>EntitymanagerListAttributeOptionsResponse</returns>
-        EntitymanagerListAttributeOptionsResponse ProductListAttributeOptions(EntitymanagerListAttributeOptionsRequest body, int operationIndex = 0);
-
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of EntitymanagerListAttributeOptionsResponse</returns>
-        ApiResponse<EntitymanagerListAttributeOptionsResponse> ProductListAttributeOptionsWithHttpInfo(EntitymanagerListAttributeOptionsRequest body, int operationIndex = 0);
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>EntitymanagerListEntitiesResponse</returns>
-        EntitymanagerListEntitiesResponse ProductListEntities(EntitymanagerListEntitiesRequest body, int operationIndex = 0);
-
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of EntitymanagerListEntitiesResponse</returns>
-        ApiResponse<EntitymanagerListEntitiesResponse> ProductListEntitiesWithHttpInfo(EntitymanagerListEntitiesRequest body, int operationIndex = 0);
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>EntitymanagerListOptionsListsResponse</returns>
-        EntitymanagerListOptionsListsResponse ProductListOptionsLists(EntitymanagerListOptionsListsRequest body, int operationIndex = 0);
-
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of EntitymanagerListOptionsListsResponse</returns>
-        ApiResponse<EntitymanagerListOptionsListsResponse> ProductListOptionsListsWithHttpInfo(EntitymanagerListOptionsListsRequest body, int operationIndex = 0);
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ProductListProductsResponse</returns>
-        ProductListProductsResponse ProductListProducts(ProductListProductsRequest body, int operationIndex = 0);
-
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of ProductListProductsResponse</returns>
-        ApiResponse<ProductListProductsResponse> ProductListProductsWithHttpInfo(ProductListProductsRequest body, int operationIndex = 0);
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ProductListProductsByIdsResponse</returns>
-        ProductListProductsByIdsResponse ProductListProductsByIds(ProductListProductsByIdsRequest body, int operationIndex = 0);
-
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of ProductListProductsByIdsResponse</returns>
-        ApiResponse<ProductListProductsByIdsResponse> ProductListProductsByIdsWithHttpInfo(ProductListProductsByIdsRequest body, int operationIndex = 0);
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ProductListProductsBySkuResponse</returns>
-        ProductListProductsBySkuResponse ProductListProductsBySku(ProductListProductsBySkuRequest body, int operationIndex = 0);
-
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of ProductListProductsBySkuResponse</returns>
-        ApiResponse<ProductListProductsBySkuResponse> ProductListProductsBySkuWithHttpInfo(ProductListProductsBySkuRequest body, int operationIndex = 0);
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ProductListVariantsBySkuResponse</returns>
-        ProductListVariantsBySkuResponse ProductListVariantsBySku(ProductListVariantsBySkuRequest body, int operationIndex = 0);
-
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of ProductListVariantsBySkuResponse</returns>
-        ApiResponse<ProductListVariantsBySkuResponse> ProductListVariantsBySkuWithHttpInfo(ProductListVariantsBySkuRequest body, int operationIndex = 0);
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>Object</returns>
-        Object ProductRemoveMediaGalleryEntry(ProductRemoveMediaGalleryEntryRequest body, int operationIndex = 0);
-
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of Object</returns>
-        ApiResponse<Object> ProductRemoveMediaGalleryEntryWithHttpInfo(ProductRemoveMediaGalleryEntryRequest body, int operationIndex = 0);
         /// <summary>
         /// 
         /// </summary>
@@ -754,66 +866,6 @@ namespace product.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of EntitymanagerAttributeGroup</returns>
         ApiResponse<EntitymanagerAttributeGroup> ProductUpdateAttributeGroupWithHttpInfo(EntitymanagerUpdateAttributeGroupRequest body, int operationIndex = 0);
-        /// <summary>
-        /// rpc GetAttributeOptionByCode (product.entitymanager.GetAttributeOptionByCodeRequest) returns (product.entitymanager.GetAttributeOptionByCodeResponse) {}
-        /// </summary>
-        /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>EntitymanagerUpdateAttributeOptionsResponse</returns>
-        EntitymanagerUpdateAttributeOptionsResponse ProductUpdateAttributeOptions(EntitymanagerUpdateAttributeOptionsRequest body, int operationIndex = 0);
-
-        /// <summary>
-        /// rpc GetAttributeOptionByCode (product.entitymanager.GetAttributeOptionByCodeRequest) returns (product.entitymanager.GetAttributeOptionByCodeResponse) {}
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of EntitymanagerUpdateAttributeOptionsResponse</returns>
-        ApiResponse<EntitymanagerUpdateAttributeOptionsResponse> ProductUpdateAttributeOptionsWithHttpInfo(EntitymanagerUpdateAttributeOptionsRequest body, int operationIndex = 0);
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>Object</returns>
-        Object ProductUpdateMediaGalleryEntry(ProductUpdateMediaGalleryEntryRequest body, int operationIndex = 0);
-
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of Object</returns>
-        ApiResponse<Object> ProductUpdateMediaGalleryEntryWithHttpInfo(ProductUpdateMediaGalleryEntryRequest body, int operationIndex = 0);
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>EntitymanagerUpdateOptionsListResponse</returns>
-        EntitymanagerUpdateOptionsListResponse ProductUpdateOptionsList(EntitymanagerUpdateOptionsListRequest body, int operationIndex = 0);
-
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of EntitymanagerUpdateOptionsListResponse</returns>
-        ApiResponse<EntitymanagerUpdateOptionsListResponse> ProductUpdateOptionsListWithHttpInfo(EntitymanagerUpdateOptionsListRequest body, int operationIndex = 0);
         /// <summary>
         /// 
         /// </summary>
@@ -856,6 +908,161 @@ namespace product.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of Object</returns>
         ApiResponse<Object> ProductUpdateProductV2WithHttpInfo(ProductUpdateProductRequestV2 body, int operationIndex = 0);
+        /// <summary>
+        /// Remove Media Gallery Entry
+        /// </summary>
+        /// <remarks>
+        /// The RemoveMediaGalleryEntry endpoint allows users to remove a specific media entry from a product&#39;s gallery. By making a request to this endpoint and providing the tenant ID, product ID, and the unique identifier of the media entry, users can easily manage and update the visual content of a product&#39;s gallery. This operation is asynchronous and may complete after the response.
+        /// </remarks>
+        /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>Object</returns>
+        Object RemoveMediaGalleryEntry(ProductRemoveMediaGalleryEntryRequest body, int operationIndex = 0);
+
+        /// <summary>
+        /// Remove Media Gallery Entry
+        /// </summary>
+        /// <remarks>
+        /// The RemoveMediaGalleryEntry endpoint allows users to remove a specific media entry from a product&#39;s gallery. By making a request to this endpoint and providing the tenant ID, product ID, and the unique identifier of the media entry, users can easily manage and update the visual content of a product&#39;s gallery. This operation is asynchronous and may complete after the response.
+        /// </remarks>
+        /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of Object</returns>
+        ApiResponse<Object> RemoveMediaGalleryEntryWithHttpInfo(ProductRemoveMediaGalleryEntryRequest body, int operationIndex = 0);
+        /// <summary>
+        /// Update Attribute Options
+        /// </summary>
+        /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>EntitymanagerUpdateAttributeOptionsResponse</returns>
+        EntitymanagerUpdateAttributeOptionsResponse UpdateAttributeOptions(EntitymanagerUpdateAttributeOptionsRequest body, int operationIndex = 0);
+
+        /// <summary>
+        /// Update Attribute Options
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of EntitymanagerUpdateAttributeOptionsResponse</returns>
+        ApiResponse<EntitymanagerUpdateAttributeOptionsResponse> UpdateAttributeOptionsWithHttpInfo(EntitymanagerUpdateAttributeOptionsRequest body, int operationIndex = 0);
+        /// <summary>
+        /// Get Enhance Product Data With AI Status
+        /// </summary>
+        /// <remarks>
+        /// The GetEnhanceProductDataWithAIStatus endpoint allows users to retrieve the status of a product data enhancement process using artificial intelligence (AI) capabilities. By making a request to this endpoint and providing the necessary input data, users can check the progress and completion status of the AI-driven product data enhancement operation. This functionality provides visibility and transparency into the AI processing of product data, enabling users to monitor and track the status of the enhancement process.
+        /// </remarks>
+        /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ProductGetEnhanceProductDataWithAIStatusResponse</returns>
+        ProductGetEnhanceProductDataWithAIStatusResponse UpdateDataToBeReviewed(ProductGetEnhanceProductDataWithAIStatusRequest body, int operationIndex = 0);
+
+        /// <summary>
+        /// Get Enhance Product Data With AI Status
+        /// </summary>
+        /// <remarks>
+        /// The GetEnhanceProductDataWithAIStatus endpoint allows users to retrieve the status of a product data enhancement process using artificial intelligence (AI) capabilities. By making a request to this endpoint and providing the necessary input data, users can check the progress and completion status of the AI-driven product data enhancement operation. This functionality provides visibility and transparency into the AI processing of product data, enabling users to monitor and track the status of the enhancement process.
+        /// </remarks>
+        /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of ProductGetEnhanceProductDataWithAIStatusResponse</returns>
+        ApiResponse<ProductGetEnhanceProductDataWithAIStatusResponse> UpdateDataToBeReviewedWithHttpInfo(ProductGetEnhanceProductDataWithAIStatusRequest body, int operationIndex = 0);
+        /// <summary>
+        /// Update Data To Be Reviewed
+        /// </summary>
+        /// <remarks>
+        /// The UpdateDataToBeReviewed endpoint allows users to update product data that is pending review. By sending a request to this endpoint and providing the necessary input data, users can modify and enhance the product information that is currently under review. This functionality enables users to make changes to product data submissions and ensure that the information is accurate and up-to-date before final approval.
+        /// </remarks>
+        /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>Object</returns>
+        Object UpdateDataToBeReviewed_0(ProductUpdateDataToBeReviewedRequest body, int operationIndex = 0);
+
+        /// <summary>
+        /// Update Data To Be Reviewed
+        /// </summary>
+        /// <remarks>
+        /// The UpdateDataToBeReviewed endpoint allows users to update product data that is pending review. By sending a request to this endpoint and providing the necessary input data, users can modify and enhance the product information that is currently under review. This functionality enables users to make changes to product data submissions and ensure that the information is accurate and up-to-date before final approval.
+        /// </remarks>
+        /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of Object</returns>
+        ApiResponse<Object> UpdateDataToBeReviewed_0WithHttpInfo(ProductUpdateDataToBeReviewedRequest body, int operationIndex = 0);
+        /// <summary>
+        /// Update Media Gallery Entry
+        /// </summary>
+        /// <remarks>
+        /// The UpdateMediaGalleryEntry endpoint allows users to modify and update a specific media entry within a product&#39;s gallery. By sending a request to this endpoint and providing the necessary information, users can efficiently update the media asset, position, and metadata associated with the entry. This operation is asynchronous and may complete after the response.
+        /// </remarks>
+        /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>Object</returns>
+        Object UpdateMediaGalleryEntry(ProductUpdateMediaGalleryEntryRequest body, int operationIndex = 0);
+
+        /// <summary>
+        /// Update Media Gallery Entry
+        /// </summary>
+        /// <remarks>
+        /// The UpdateMediaGalleryEntry endpoint allows users to modify and update a specific media entry within a product&#39;s gallery. By sending a request to this endpoint and providing the necessary information, users can efficiently update the media asset, position, and metadata associated with the entry. This operation is asynchronous and may complete after the response.
+        /// </remarks>
+        /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of Object</returns>
+        ApiResponse<Object> UpdateMediaGalleryEntryWithHttpInfo(ProductUpdateMediaGalleryEntryRequest body, int operationIndex = 0);
+        /// <summary>
+        /// Update Options List
+        /// </summary>
+        /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>EntitymanagerUpdateOptionsListResponse</returns>
+        EntitymanagerUpdateOptionsListResponse UpdateOptionsList(EntitymanagerUpdateOptionsListRequest body, int operationIndex = 0);
+
+        /// <summary>
+        /// Update Options List
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of EntitymanagerUpdateOptionsListResponse</returns>
+        ApiResponse<EntitymanagerUpdateOptionsListResponse> UpdateOptionsListWithHttpInfo(EntitymanagerUpdateOptionsListRequest body, int operationIndex = 0);
+        /// <summary>
+        /// Update Product With AI
+        /// </summary>
+        /// <remarks>
+        /// The UpdateProductWithAI endpoint allows users to update an existing product within the system using artificial intelligence (AI) capabilities. By sending a request to this endpoint and providing the necessary input data, users can leverage AI algorithms to enhance and optimize the product update process.
+        /// </remarks>
+        /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ProductUpdateProductWithAIResponse</returns>
+        ProductUpdateProductWithAIResponse UpdateProductWithAI(ProductUpdateProductWithAIRequest body, int operationIndex = 0);
+
+        /// <summary>
+        /// Update Product With AI
+        /// </summary>
+        /// <remarks>
+        /// The UpdateProductWithAI endpoint allows users to update an existing product within the system using artificial intelligence (AI) capabilities. By sending a request to this endpoint and providing the necessary input data, users can leverage AI algorithms to enhance and optimize the product update process.
+        /// </remarks>
+        /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of ProductUpdateProductWithAIResponse</returns>
+        ApiResponse<ProductUpdateProductWithAIResponse> UpdateProductWithAIWithHttpInfo(ProductUpdateProductWithAIRequest body, int operationIndex = 0);
         #endregion Synchronous Operations
     }
 
@@ -866,45 +1073,482 @@ namespace product.Api
     {
         #region Asynchronous Operations
         /// <summary>
-        /// 
+        /// Add Media Gallery Entry
         /// </summary>
         /// <remarks>
-        /// 
+        /// The AddMediaGalleryEntry endpoint allows users to add a new media entry to the gallery of a specific product. To make a request to this endpoint, users need to provide the necessary information in the specified format. The request includes the tenant_id to specify the relevant tenant, the product_id to identify the target product, and the asset_grn which represents the globally unique identifier for the media asset being added. Additionally, the position field indicates the desired position of the media entry within the gallery, allowing users to control the order in which the media items are displayed. The metadata field, which is a repeated field, provides the option to include additional metadata associated with the media entry. This operation is asynchronous and may complete after the response.
         /// </remarks>
         /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ProductAddMediaGalleryEntryResponse</returns>
-        System.Threading.Tasks.Task<ProductAddMediaGalleryEntryResponse> ProductAddMediaGalleryEntryAsync(ProductAddMediaGalleryEntryRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ProductAddMediaGalleryEntryResponse> AddMediaGalleryEntryAsync(ProductAddMediaGalleryEntryRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
-        /// 
+        /// Add Media Gallery Entry
         /// </summary>
         /// <remarks>
-        /// 
+        /// The AddMediaGalleryEntry endpoint allows users to add a new media entry to the gallery of a specific product. To make a request to this endpoint, users need to provide the necessary information in the specified format. The request includes the tenant_id to specify the relevant tenant, the product_id to identify the target product, and the asset_grn which represents the globally unique identifier for the media asset being added. Additionally, the position field indicates the desired position of the media entry within the gallery, allowing users to control the order in which the media items are displayed. The metadata field, which is a repeated field, provides the option to include additional metadata associated with the media entry. This operation is asynchronous and may complete after the response.
         /// </remarks>
         /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (ProductAddMediaGalleryEntryResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ProductAddMediaGalleryEntryResponse>> ProductAddMediaGalleryEntryWithHttpInfoAsync(ProductAddMediaGalleryEntryRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<ProductAddMediaGalleryEntryResponse>> AddMediaGalleryEntryWithHttpInfoAsync(ProductAddMediaGalleryEntryRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
-        /// Assets endpoints
+        /// Bulk Add Assets Entries
         /// </summary>
         /// <remarks>
-        /// 
+        /// The BulkAddAssetsEntries endpoint allows users to add assets. This operation is asynchronous and may complete after the response.
         /// </remarks>
         /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ProductBulkAddAssetsEntriesResponse</returns>
-        System.Threading.Tasks.Task<ProductBulkAddAssetsEntriesResponse> ProductBulkAddAssetsEntriesAsync(ProductBulkAddAssetsEntriesRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ProductBulkAddAssetsEntriesResponse> BulkAddAssetsEntriesAsync(ProductBulkAddAssetsEntriesRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
-        /// Assets endpoints
+        /// Bulk Add Assets Entries
+        /// </summary>
+        /// <remarks>
+        /// The BulkAddAssetsEntries endpoint allows users to add assets. This operation is asynchronous and may complete after the response.
+        /// </remarks>
+        /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (ProductBulkAddAssetsEntriesResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<ProductBulkAddAssetsEntriesResponse>> BulkAddAssetsEntriesWithHttpInfoAsync(ProductBulkAddAssetsEntriesRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <summary>
+        /// Bulk Delete Products
+        /// </summary>
+        /// <remarks>
+        /// This operation is asynchronous and may complete after the response.
+        /// </remarks>
+        /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of Object</returns>
+        System.Threading.Tasks.Task<Object> BulkDeleteProductsAsync(ProductBulkDeleteProductsRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+
+        /// <summary>
+        /// Bulk Delete Products
+        /// </summary>
+        /// <remarks>
+        /// This operation is asynchronous and may complete after the response.
+        /// </remarks>
+        /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (Object)</returns>
+        System.Threading.Tasks.Task<ApiResponse<Object>> BulkDeleteProductsWithHttpInfoAsync(ProductBulkDeleteProductsRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <summary>
+        /// Bulk Enhance Product Data With AI
+        /// </summary>
+        /// <remarks>
+        /// The BulkEnhanceProductDataWithAI endpoint allows users to enhance product data using artificial intelligence (AI) capabilities. By making a request to this endpoint and providing the necessary input data, users can leverage AI algorithms to enrich and optimize product information. This operation is asynchronous and may complete after the response.
+        /// </remarks>
+        /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of Object</returns>
+        System.Threading.Tasks.Task<Object> BulkEnhanceProductDataWithAIAsync(ProductBulkEnhanceProductDataWithAIRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+
+        /// <summary>
+        /// Bulk Enhance Product Data With AI
+        /// </summary>
+        /// <remarks>
+        /// The BulkEnhanceProductDataWithAI endpoint allows users to enhance product data using artificial intelligence (AI) capabilities. By making a request to this endpoint and providing the necessary input data, users can leverage AI algorithms to enrich and optimize product information. This operation is asynchronous and may complete after the response.
+        /// </remarks>
+        /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (Object)</returns>
+        System.Threading.Tasks.Task<ApiResponse<Object>> BulkEnhanceProductDataWithAIWithHttpInfoAsync(ProductBulkEnhanceProductDataWithAIRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <summary>
+        /// Bulk Remove Assets Entries
+        /// </summary>
+        /// <remarks>
+        /// The BulkRemoveAssetsEntries endpoint allows users to remove assets. This operation is asynchronous and may complete after the response.
+        /// </remarks>
+        /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of Object</returns>
+        System.Threading.Tasks.Task<Object> BulkRemoveAssetsEntriesAsync(ProductBulkRemoveAssetsEntriesRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+
+        /// <summary>
+        /// Bulk Remove Assets Entries
+        /// </summary>
+        /// <remarks>
+        /// The BulkRemoveAssetsEntries endpoint allows users to remove assets. This operation is asynchronous and may complete after the response.
+        /// </remarks>
+        /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (Object)</returns>
+        System.Threading.Tasks.Task<ApiResponse<Object>> BulkRemoveAssetsEntriesWithHttpInfoAsync(ProductBulkRemoveAssetsEntriesRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <summary>
+        /// Bulk Update Assets Entries
+        /// </summary>
+        /// <remarks>
+        /// The BulkUpdateAssetsEntries endpoint allows users to update assets. This operation is asynchronous and may complete after the response.
+        /// </remarks>
+        /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ProductBulkUpdateAssetsEntriesResponse</returns>
+        System.Threading.Tasks.Task<ProductBulkUpdateAssetsEntriesResponse> BulkUpdateAssetsEntriesAsync(ProductBulkUpdateAssetsEntriesRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+
+        /// <summary>
+        /// Bulk Update Assets Entries
+        /// </summary>
+        /// <remarks>
+        /// The BulkUpdateAssetsEntries endpoint allows users to update assets. This operation is asynchronous and may complete after the response.
+        /// </remarks>
+        /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (ProductBulkUpdateAssetsEntriesResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<ProductBulkUpdateAssetsEntriesResponse>> BulkUpdateAssetsEntriesWithHttpInfoAsync(ProductBulkUpdateAssetsEntriesRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <summary>
+        /// Bulk Update Products
+        /// </summary>
+        /// <remarks>
+        /// Version 2 of bulk updates for product attributes with enhanced payload structure and response format. This operation is asynchronous and may complete after the response.
+        /// </remarks>
+        /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ProductBulkUpdateResponse</returns>
+        System.Threading.Tasks.Task<ProductBulkUpdateResponse> BulkUpdateV2Async(ProductBulkUpdateRequestV2 body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+
+        /// <summary>
+        /// Bulk Update Products
+        /// </summary>
+        /// <remarks>
+        /// Version 2 of bulk updates for product attributes with enhanced payload structure and response format. This operation is asynchronous and may complete after the response.
+        /// </remarks>
+        /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (ProductBulkUpdateResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<ProductBulkUpdateResponse>> BulkUpdateV2WithHttpInfoAsync(ProductBulkUpdateRequestV2 body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <summary>
+        /// Create Attribute Options
+        /// </summary>
+        /// <remarks>
+        /// Create attribute options with specified codes, values, and swatches. Returns created options and any associated errors.
+        /// </remarks>
+        /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of EntitymanagerCreateAttributeOptionsResponse</returns>
+        System.Threading.Tasks.Task<EntitymanagerCreateAttributeOptionsResponse> CreateAttributeOptionsAsync(EntitymanagerCreateAttributeOptionsRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+
+        /// <summary>
+        /// Create Attribute Options
+        /// </summary>
+        /// <remarks>
+        /// Create attribute options with specified codes, values, and swatches. Returns created options and any associated errors.
+        /// </remarks>
+        /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (EntitymanagerCreateAttributeOptionsResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<EntitymanagerCreateAttributeOptionsResponse>> CreateAttributeOptionsWithHttpInfoAsync(EntitymanagerCreateAttributeOptionsRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <summary>
+        /// Create Entity
+        /// </summary>
+        /// <remarks>
+        /// The CreateEntity endpoint allows users to define and create a new entity with custom attributes, providing a flexible way to represent and manage different data structures within the system. By making a request to this endpoint, users can create a new entity that serves as an abstraction of a product or any other domain-specific object. This endpoint empowers users to define the specific attributes that compose the entity, such as color, composition, technical details, or any other relevant properties. Utilize the CreateEntity endpoint to dynamically extend and adapt your system&#39;s data model to accommodate diverse business requirements and efficiently manage various types of entities.
+        /// </remarks>
+        /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of EntitymanagerCreateEntityResponse</returns>
+        System.Threading.Tasks.Task<EntitymanagerCreateEntityResponse> CreateEntityAsync(EntitymanagerEntity body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+
+        /// <summary>
+        /// Create Entity
+        /// </summary>
+        /// <remarks>
+        /// The CreateEntity endpoint allows users to define and create a new entity with custom attributes, providing a flexible way to represent and manage different data structures within the system. By making a request to this endpoint, users can create a new entity that serves as an abstraction of a product or any other domain-specific object. This endpoint empowers users to define the specific attributes that compose the entity, such as color, composition, technical details, or any other relevant properties. Utilize the CreateEntity endpoint to dynamically extend and adapt your system&#39;s data model to accommodate diverse business requirements and efficiently manage various types of entities.
+        /// </remarks>
+        /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (EntitymanagerCreateEntityResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<EntitymanagerCreateEntityResponse>> CreateEntityWithHttpInfoAsync(EntitymanagerEntity body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <summary>
+        /// Create Options List
+        /// </summary>
+        /// <remarks>
+        /// The CreateOptionsList endpoint allows users to create an OptionList, which represents a list of predefined options for assigning to an attribute. By making a request to this endpoint with the provided request format, users can create a new OptionList by specifying the relevant tenant ID and providing the OptionList object containing the predefined options. This functionality facilitates efficient management and assignment of predefined attribute values, ensuring consistency and flexibility within the system.
+        /// </remarks>
+        /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of EntitymanagerCreateOptionsListResponse</returns>
+        System.Threading.Tasks.Task<EntitymanagerCreateOptionsListResponse> CreateOptionsListAsync(EntitymanagerCreateOptionsListRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+
+        /// <summary>
+        /// Create Options List
+        /// </summary>
+        /// <remarks>
+        /// The CreateOptionsList endpoint allows users to create an OptionList, which represents a list of predefined options for assigning to an attribute. By making a request to this endpoint with the provided request format, users can create a new OptionList by specifying the relevant tenant ID and providing the OptionList object containing the predefined options. This functionality facilitates efficient management and assignment of predefined attribute values, ensuring consistency and flexibility within the system.
+        /// </remarks>
+        /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (EntitymanagerCreateOptionsListResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<EntitymanagerCreateOptionsListResponse>> CreateOptionsListWithHttpInfoAsync(EntitymanagerCreateOptionsListRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <summary>
+        /// Create Product With AI
+        /// </summary>
+        /// <remarks>
+        /// The CreateProductWithAI endpoint allows users to create a new product within the system using artificial intelligence (AI) capabilities. By sending a request to this endpoint and providing the necessary input data, users can leverage AI algorithms to enhance and optimize the product creation process.
+        /// </remarks>
+        /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ProductCreateProductWithAIResponse</returns>
+        System.Threading.Tasks.Task<ProductCreateProductWithAIResponse> CreateProductWithAIAsync(ProductCreateProductWithAIRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+
+        /// <summary>
+        /// Create Product With AI
+        /// </summary>
+        /// <remarks>
+        /// The CreateProductWithAI endpoint allows users to create a new product within the system using artificial intelligence (AI) capabilities. By sending a request to this endpoint and providing the necessary input data, users can leverage AI algorithms to enhance and optimize the product creation process.
+        /// </remarks>
+        /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (ProductCreateProductWithAIResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<ProductCreateProductWithAIResponse>> CreateProductWithAIWithHttpInfoAsync(ProductCreateProductWithAIRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <summary>
+        /// Get Attribute Option
+        /// </summary>
+        /// <remarks>
+        /// Retrieve attribute option details by providing the tenant ID, list code, and option ID. Returns the specified attribute option.
+        /// </remarks>
+        /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of EntitymanagerGetAttributeOptionResponse</returns>
+        System.Threading.Tasks.Task<EntitymanagerGetAttributeOptionResponse> GetAttributeOptionAsync(EntitymanagerGetAttributeOptionRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+
+        /// <summary>
+        /// Get Attribute Option
+        /// </summary>
+        /// <remarks>
+        /// Retrieve attribute option details by providing the tenant ID, list code, and option ID. Returns the specified attribute option.
+        /// </remarks>
+        /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (EntitymanagerGetAttributeOptionResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<EntitymanagerGetAttributeOptionResponse>> GetAttributeOptionWithHttpInfoAsync(EntitymanagerGetAttributeOptionRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <summary>
+        /// Get Attribute Options
+        /// </summary>
+        /// <remarks>
+        /// Retrieve a list of attribute options based on the provided tenant ID and list code.
+        /// </remarks>
+        /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of EntitymanagerGetAttributeOptionsResponse</returns>
+        System.Threading.Tasks.Task<EntitymanagerGetAttributeOptionsResponse> GetAttributeOptionsAsync(EntitymanagerGetAttributeOptionsRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+
+        /// <summary>
+        /// Get Attribute Options
+        /// </summary>
+        /// <remarks>
+        /// Retrieve a list of attribute options based on the provided tenant ID and list code.
+        /// </remarks>
+        /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (EntitymanagerGetAttributeOptionsResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<EntitymanagerGetAttributeOptionsResponse>> GetAttributeOptionsWithHttpInfoAsync(EntitymanagerGetAttributeOptionsRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <summary>
+        /// Get Entity Details
+        /// </summary>
+        /// <remarks>
+        /// Retrieve details of an entity by providing the tenant ID and either entity data or entity ID. Returns information including ID, type, code, label, relationships, and attributes.
+        /// </remarks>
+        /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of EntitymanagerEntity</returns>
+        System.Threading.Tasks.Task<EntitymanagerEntity> GetEntityAsync(EntitymanagerEntityRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+
+        /// <summary>
+        /// Get Entity Details
+        /// </summary>
+        /// <remarks>
+        /// Retrieve details of an entity by providing the tenant ID and either entity data or entity ID. Returns information including ID, type, code, label, relationships, and attributes.
+        /// </remarks>
+        /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (EntitymanagerEntity)</returns>
+        System.Threading.Tasks.Task<ApiResponse<EntitymanagerEntity>> GetEntityWithHttpInfoAsync(EntitymanagerEntityRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <summary>
+        /// Get Options List
+        /// </summary>
+        /// <remarks>
+        /// Retrieve option lists.
+        /// </remarks>
+        /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of EntitymanagerGetOptionsListResponse</returns>
+        System.Threading.Tasks.Task<EntitymanagerGetOptionsListResponse> GetOptionsListAsync(EntitymanagerGetOptionsListRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+
+        /// <summary>
+        /// Get Options List
+        /// </summary>
+        /// <remarks>
+        /// Retrieve option lists.
+        /// </remarks>
+        /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (EntitymanagerGetOptionsListResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<EntitymanagerGetOptionsListResponse>> GetOptionsListWithHttpInfoAsync(EntitymanagerGetOptionsListRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <summary>
+        /// Get Product
+        /// </summary>
+        /// <remarks>
+        /// The GetProduct endpoint enables users to retrieve a product from the system. By sending a request to this endpoint, users can retrieve a product by providing its unique identifier.
+        /// </remarks>
+        /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ProductGetProductResponse</returns>
+        System.Threading.Tasks.Task<ProductGetProductResponse> GetProductAsync(ProductGetProductRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+
+        /// <summary>
+        /// Get Product
+        /// </summary>
+        /// <remarks>
+        /// The GetProduct endpoint enables users to retrieve a product from the system. By sending a request to this endpoint, users can retrieve a product by providing its unique identifier.
+        /// </remarks>
+        /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (ProductGetProductResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<ProductGetProductResponse>> GetProductWithHttpInfoAsync(ProductGetProductRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <summary>
+        /// Get Product By Code
+        /// </summary>
+        /// <remarks>
+        /// The GetProductByCode endpoint enables users to retrieve a product from the system. By sending a request to this endpoint, users can retrieve a product by providing its unique code.
+        /// </remarks>
+        /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ProductGetProductByCodeResponse</returns>
+        System.Threading.Tasks.Task<ProductGetProductByCodeResponse> GetProductByCodeAsync(ProductGetProductByCodeRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+
+        /// <summary>
+        /// Get Product By Code
+        /// </summary>
+        /// <remarks>
+        /// The GetProductByCode endpoint enables users to retrieve a product from the system. By sending a request to this endpoint, users can retrieve a product by providing its unique code.
+        /// </remarks>
+        /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (ProductGetProductByCodeResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<ProductGetProductByCodeResponse>> GetProductByCodeWithHttpInfoAsync(ProductGetProductByCodeRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <summary>
+        /// Get Product By Url Key
+        /// </summary>
+        /// <remarks>
+        /// The GetProductByUrlKey endpoint enables users to retrieve a product from the system. By sending a request to this endpoint, users can retrieve a product by providing its unique url key.
+        /// </remarks>
+        /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ProductGetProductByUrlKeyResponse</returns>
+        System.Threading.Tasks.Task<ProductGetProductByUrlKeyResponse> GetProductByUrlKeyAsync(ProductGetProductByUrlKeyRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+
+        /// <summary>
+        /// Get Product By Url Key
+        /// </summary>
+        /// <remarks>
+        /// The GetProductByUrlKey endpoint enables users to retrieve a product from the system. By sending a request to this endpoint, users can retrieve a product by providing its unique url key.
+        /// </remarks>
+        /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (ProductGetProductByUrlKeyResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<ProductGetProductByUrlKeyResponse>> GetProductByUrlKeyWithHttpInfoAsync(ProductGetProductByUrlKeyRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <summary>
+        /// Get Product Data In Review
+        /// </summary>
+        /// <remarks>
+        /// The GetProductDataInReview endpoint allows users to retrieve product data that is currently under review. By making a request to this endpoint, users can access detailed information about the product data that is pending approval or review by authorized personnel. This functionality provides transparency and visibility into the product data review process, enabling users to track the status and progress of product data submissions.
+        /// </remarks>
+        /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ProductGetProductDataInReviewResponse</returns>
+        System.Threading.Tasks.Task<ProductGetProductDataInReviewResponse> GetProductDataInReviewAsync(ProductGetProductDataInReviewRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+
+        /// <summary>
+        /// Get Product Data In Review
+        /// </summary>
+        /// <remarks>
+        /// The GetProductDataInReview endpoint allows users to retrieve product data that is currently under review. By making a request to this endpoint, users can access detailed information about the product data that is pending approval or review by authorized personnel. This functionality provides transparency and visibility into the product data review process, enabling users to track the status and progress of product data submissions.
+        /// </remarks>
+        /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (ProductGetProductDataInReviewResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<ProductGetProductDataInReviewResponse>> GetProductDataInReviewWithHttpInfoAsync(ProductGetProductDataInReviewRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <summary>
+        /// List Attribute Options
         /// </summary>
         /// <remarks>
         /// 
@@ -913,13 +1557,176 @@ namespace product.Api
         /// <param name="body"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (ProductBulkAddAssetsEntriesResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ProductBulkAddAssetsEntriesResponse>> ProductBulkAddAssetsEntriesWithHttpInfoAsync(ProductBulkAddAssetsEntriesRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of EntitymanagerListAttributeOptionsResponse</returns>
+        System.Threading.Tasks.Task<EntitymanagerListAttributeOptionsResponse> ListAttributeOptionsAsync(EntitymanagerListAttributeOptionsRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+
+        /// <summary>
+        /// List Attribute Options
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (EntitymanagerListAttributeOptionsResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<EntitymanagerListAttributeOptionsResponse>> ListAttributeOptionsWithHttpInfoAsync(EntitymanagerListAttributeOptionsRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <summary>
+        /// List Entities
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of EntitymanagerListEntitiesResponse</returns>
+        System.Threading.Tasks.Task<EntitymanagerListEntitiesResponse> ListEntitiesAsync(EntitymanagerListEntitiesRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+
+        /// <summary>
+        /// List Entities
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (EntitymanagerListEntitiesResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<EntitymanagerListEntitiesResponse>> ListEntitiesWithHttpInfoAsync(EntitymanagerListEntitiesRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <summary>
+        /// List Options Lists
+        /// </summary>
+        /// <remarks>
+        /// The ListOptionsLists endpoint allows users to retrieve a list of OptionLists available in the system. By making a request to this endpoint with the provided request format, users can obtain all the OptionLists associated with the specified tenant. This functionality enables users to access and manage the predefined options available for various attributes within the system. Utilizing the ListOptionsLists endpoint provides a convenient way to retrieve and work with OptionLists, facilitating efficient management of attribute options and ensuring consistency in attribute values throughout the system.
+        /// </remarks>
+        /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of EntitymanagerListOptionsListsResponse</returns>
+        System.Threading.Tasks.Task<EntitymanagerListOptionsListsResponse> ListOptionsListsAsync(EntitymanagerListOptionsListsRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+
+        /// <summary>
+        /// List Options Lists
+        /// </summary>
+        /// <remarks>
+        /// The ListOptionsLists endpoint allows users to retrieve a list of OptionLists available in the system. By making a request to this endpoint with the provided request format, users can obtain all the OptionLists associated with the specified tenant. This functionality enables users to access and manage the predefined options available for various attributes within the system. Utilizing the ListOptionsLists endpoint provides a convenient way to retrieve and work with OptionLists, facilitating efficient management of attribute options and ensuring consistency in attribute values throughout the system.
+        /// </remarks>
+        /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (EntitymanagerListOptionsListsResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<EntitymanagerListOptionsListsResponse>> ListOptionsListsWithHttpInfoAsync(EntitymanagerListOptionsListsRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <summary>
+        /// List Products
+        /// </summary>
+        /// <remarks>
+        /// The ListProducts endpoint provides users with the ability to retrieve a filtered list of products based on specific criteria. By including filter parameters in the request, users can customize the response to only include products that meet certain conditions, such as price range, category, availability, or any other relevant attributes. This endpoint empowers users to efficiently narrow down the product selection and retrieve tailored results.
+        /// </remarks>
+        /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ProductListProductsResponse</returns>
+        System.Threading.Tasks.Task<ProductListProductsResponse> ListProductsAsync(ProductListProductsRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+
+        /// <summary>
+        /// List Products
+        /// </summary>
+        /// <remarks>
+        /// The ListProducts endpoint provides users with the ability to retrieve a filtered list of products based on specific criteria. By including filter parameters in the request, users can customize the response to only include products that meet certain conditions, such as price range, category, availability, or any other relevant attributes. This endpoint empowers users to efficiently narrow down the product selection and retrieve tailored results.
+        /// </remarks>
+        /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (ProductListProductsResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<ProductListProductsResponse>> ListProductsWithHttpInfoAsync(ProductListProductsRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <summary>
+        /// List Products By Ids
+        /// </summary>
+        /// <remarks>
+        /// The ListProductsByIds endpoint allows users to retrieve a list of products based on provided IDs. By making a request to this endpoint and specifying a set of product IDs, users can retrieve detailed information about the corresponding products. This endpoint facilitates efficient retrieval of specific products, enabling applications to display accurate and targeted product information to users.
+        /// </remarks>
+        /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ProductListProductsByIdsResponse</returns>
+        System.Threading.Tasks.Task<ProductListProductsByIdsResponse> ListProductsByIdsAsync(ProductListProductsByIdsRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+
+        /// <summary>
+        /// List Products By Ids
+        /// </summary>
+        /// <remarks>
+        /// The ListProductsByIds endpoint allows users to retrieve a list of products based on provided IDs. By making a request to this endpoint and specifying a set of product IDs, users can retrieve detailed information about the corresponding products. This endpoint facilitates efficient retrieval of specific products, enabling applications to display accurate and targeted product information to users.
+        /// </remarks>
+        /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (ProductListProductsByIdsResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<ProductListProductsByIdsResponse>> ListProductsByIdsWithHttpInfoAsync(ProductListProductsByIdsRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <summary>
+        /// List Products By Sku
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ProductListProductsBySkuResponse</returns>
+        System.Threading.Tasks.Task<ProductListProductsBySkuResponse> ListProductsBySkuAsync(ProductListProductsBySkuRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+
+        /// <summary>
+        /// List Products By Sku
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (ProductListProductsBySkuResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<ProductListProductsBySkuResponse>> ListProductsBySkuWithHttpInfoAsync(ProductListProductsBySkuRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <summary>
+        /// List Product Variants By Sku
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ProductListVariantsBySkuResponse</returns>
+        System.Threading.Tasks.Task<ProductListVariantsBySkuResponse> ListVariantsBySkuAsync(ProductListVariantsBySkuRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+
+        /// <summary>
+        /// List Product Variants By Sku
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (ProductListVariantsBySkuResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<ProductListVariantsBySkuResponse>> ListVariantsBySkuWithHttpInfoAsync(ProductListVariantsBySkuRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// 
         /// </summary>
         /// <remarks>
-        /// 
+        /// Allow creation of multiple attributes. If any attribute is invalid, an error will be returned with more details, and in the response body, the attributes created will be returned.
         /// </remarks>
         /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"></param>
@@ -932,7 +1739,7 @@ namespace product.Api
         /// 
         /// </summary>
         /// <remarks>
-        /// 
+        /// Allow creation of multiple attributes. If any attribute is invalid, an error will be returned with more details, and in the response body, the attributes created will be returned.
         /// </remarks>
         /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"></param>
@@ -944,57 +1751,7 @@ namespace product.Api
         /// 
         /// </summary>
         /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of Object</returns>
-        System.Threading.Tasks.Task<Object> ProductBulkDeleteProductsAsync(ProductBulkDeleteProductsRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
-
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (Object)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> ProductBulkDeleteProductsWithHttpInfoAsync(ProductBulkDeleteProductsRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of Object</returns>
-        System.Threading.Tasks.Task<Object> ProductBulkRemoveAssetsEntriesAsync(ProductBulkRemoveAssetsEntriesRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
-
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (Object)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> ProductBulkRemoveAssetsEntriesWithHttpInfoAsync(ProductBulkRemoveAssetsEntriesRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <remarks>
-        /// 
+        /// This operation is asynchronous and may complete after the response.
         /// </remarks>
         /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"></param>
@@ -1008,7 +1765,7 @@ namespace product.Api
         /// 
         /// </summary>
         /// <remarks>
-        /// 
+        /// This operation is asynchronous and may complete after the response.
         /// </remarks>
         /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"></param>
@@ -1017,56 +1774,6 @@ namespace product.Api
         /// <returns>Task of ApiResponse (ProductBulkUpdateResponse)</returns>
         [Obsolete]
         System.Threading.Tasks.Task<ApiResponse<ProductBulkUpdateResponse>> ProductBulkUpdateWithHttpInfoAsync(ProductBulkUpdateRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ProductBulkUpdateAssetsEntriesResponse</returns>
-        System.Threading.Tasks.Task<ProductBulkUpdateAssetsEntriesResponse> ProductBulkUpdateAssetsEntriesAsync(ProductBulkUpdateAssetsEntriesRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
-
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (ProductBulkUpdateAssetsEntriesResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ProductBulkUpdateAssetsEntriesResponse>> ProductBulkUpdateAssetsEntriesWithHttpInfoAsync(ProductBulkUpdateAssetsEntriesRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ProductBulkUpdateResponseV2</returns>
-        System.Threading.Tasks.Task<ProductBulkUpdateResponseV2> ProductBulkUpdateV2Async(ProductBulkUpdateRequestV2 body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
-
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (ProductBulkUpdateResponseV2)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ProductBulkUpdateResponseV2>> ProductBulkUpdateV2WithHttpInfoAsync(ProductBulkUpdateRequestV2 body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// 
         /// </summary>
@@ -1099,82 +1806,7 @@ namespace product.Api
         /// 
         /// </remarks>
         /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of EntitymanagerCreateAttributeOptionsResponse</returns>
-        System.Threading.Tasks.Task<EntitymanagerCreateAttributeOptionsResponse> ProductCreateAttributeOptionsAsync(EntitymanagerCreateAttributeOptionsRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
-
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (EntitymanagerCreateAttributeOptionsResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<EntitymanagerCreateAttributeOptionsResponse>> ProductCreateAttributeOptionsWithHttpInfoAsync(EntitymanagerCreateAttributeOptionsRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of EntitymanagerCreateEntityResponse</returns>
-        System.Threading.Tasks.Task<EntitymanagerCreateEntityResponse> ProductCreateEntityAsync(EntitymanagerEntity body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
-
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (EntitymanagerCreateEntityResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<EntitymanagerCreateEntityResponse>> ProductCreateEntityWithHttpInfoAsync(EntitymanagerEntity body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of EntitymanagerCreateOptionsListResponse</returns>
-        System.Threading.Tasks.Task<EntitymanagerCreateOptionsListResponse> ProductCreateOptionsListAsync(EntitymanagerCreateOptionsListRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
-
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (EntitymanagerCreateOptionsListResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<EntitymanagerCreateOptionsListResponse>> ProductCreateOptionsListWithHttpInfoAsync(EntitymanagerCreateOptionsListRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"></param>
+        /// <param name="body">The CreateProductRequest message is used to create a new product within the system. It contains various fields that allow specifying the details and attributes of the product.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ProductCreateProductResponse</returns>
@@ -1188,7 +1820,7 @@ namespace product.Api
         /// 
         /// </remarks>
         /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"></param>
+        /// <param name="body">The CreateProductRequest message is used to create a new product within the system. It contains various fields that allow specifying the details and attributes of the product.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (ProductCreateProductResponse)</returns>
@@ -1331,186 +1963,11 @@ namespace product.Api
         /// <param name="body"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of EntitymanagerGetAttributeOptionResponse</returns>
-        System.Threading.Tasks.Task<EntitymanagerGetAttributeOptionResponse> ProductGetAttributeOptionAsync(EntitymanagerGetAttributeOptionRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
-
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (EntitymanagerGetAttributeOptionResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<EntitymanagerGetAttributeOptionResponse>> ProductGetAttributeOptionWithHttpInfoAsync(EntitymanagerGetAttributeOptionRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of EntitymanagerGetAttributeOptionsResponse</returns>
-        System.Threading.Tasks.Task<EntitymanagerGetAttributeOptionsResponse> ProductGetAttributeOptionsAsync(EntitymanagerGetAttributeOptionsRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
-
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (EntitymanagerGetAttributeOptionsResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<EntitymanagerGetAttributeOptionsResponse>> ProductGetAttributeOptionsWithHttpInfoAsync(EntitymanagerGetAttributeOptionsRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of EntitymanagerEntity</returns>
-        System.Threading.Tasks.Task<EntitymanagerEntity> ProductGetEntityAsync(EntitymanagerEntityRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
-
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (EntitymanagerEntity)</returns>
-        System.Threading.Tasks.Task<ApiResponse<EntitymanagerEntity>> ProductGetEntityWithHttpInfoAsync(EntitymanagerEntityRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of EntitymanagerGetOptionsListResponse</returns>
-        System.Threading.Tasks.Task<EntitymanagerGetOptionsListResponse> ProductGetOptionsListAsync(EntitymanagerGetOptionsListRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
-
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (EntitymanagerGetOptionsListResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<EntitymanagerGetOptionsListResponse>> ProductGetOptionsListWithHttpInfoAsync(EntitymanagerGetOptionsListRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ProductGetProductResponse</returns>
-        System.Threading.Tasks.Task<ProductGetProductResponse> ProductGetProductAsync(ProductGetProductRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
-
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (ProductGetProductResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ProductGetProductResponse>> ProductGetProductWithHttpInfoAsync(ProductGetProductRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ProductGetProductByCodeResponse</returns>
-        System.Threading.Tasks.Task<ProductGetProductByCodeResponse> ProductGetProductByCodeAsync(ProductGetProductByCodeRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
-
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (ProductGetProductByCodeResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ProductGetProductByCodeResponse>> ProductGetProductByCodeWithHttpInfoAsync(ProductGetProductByCodeRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ProductGetProductByUrlKeyResponse</returns>
-        System.Threading.Tasks.Task<ProductGetProductByUrlKeyResponse> ProductGetProductByUrlKeyAsync(ProductGetProductByUrlKeyRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
-
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (ProductGetProductByUrlKeyResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ProductGetProductByUrlKeyResponse>> ProductGetProductByUrlKeyWithHttpInfoAsync(ProductGetProductByUrlKeyRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
-        /// <summary>
-        /// Attribute Groups endpoints
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of EntitymanagerListAttributeGroupsResponse</returns>
         System.Threading.Tasks.Task<EntitymanagerListAttributeGroupsResponse> ProductListAttributeGroupsAsync(EntitymanagerListAttributeGroupsRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
-        /// Attribute Groups endpoints
+        /// 
         /// </summary>
         /// <remarks>
         /// 
@@ -1521,206 +1978,6 @@ namespace product.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (EntitymanagerListAttributeGroupsResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<EntitymanagerListAttributeGroupsResponse>> ProductListAttributeGroupsWithHttpInfoAsync(EntitymanagerListAttributeGroupsRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of EntitymanagerListAttributeOptionsResponse</returns>
-        System.Threading.Tasks.Task<EntitymanagerListAttributeOptionsResponse> ProductListAttributeOptionsAsync(EntitymanagerListAttributeOptionsRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
-
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (EntitymanagerListAttributeOptionsResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<EntitymanagerListAttributeOptionsResponse>> ProductListAttributeOptionsWithHttpInfoAsync(EntitymanagerListAttributeOptionsRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of EntitymanagerListEntitiesResponse</returns>
-        System.Threading.Tasks.Task<EntitymanagerListEntitiesResponse> ProductListEntitiesAsync(EntitymanagerListEntitiesRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
-
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (EntitymanagerListEntitiesResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<EntitymanagerListEntitiesResponse>> ProductListEntitiesWithHttpInfoAsync(EntitymanagerListEntitiesRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of EntitymanagerListOptionsListsResponse</returns>
-        System.Threading.Tasks.Task<EntitymanagerListOptionsListsResponse> ProductListOptionsListsAsync(EntitymanagerListOptionsListsRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
-
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (EntitymanagerListOptionsListsResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<EntitymanagerListOptionsListsResponse>> ProductListOptionsListsWithHttpInfoAsync(EntitymanagerListOptionsListsRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ProductListProductsResponse</returns>
-        System.Threading.Tasks.Task<ProductListProductsResponse> ProductListProductsAsync(ProductListProductsRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
-
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (ProductListProductsResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ProductListProductsResponse>> ProductListProductsWithHttpInfoAsync(ProductListProductsRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ProductListProductsByIdsResponse</returns>
-        System.Threading.Tasks.Task<ProductListProductsByIdsResponse> ProductListProductsByIdsAsync(ProductListProductsByIdsRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
-
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (ProductListProductsByIdsResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ProductListProductsByIdsResponse>> ProductListProductsByIdsWithHttpInfoAsync(ProductListProductsByIdsRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ProductListProductsBySkuResponse</returns>
-        System.Threading.Tasks.Task<ProductListProductsBySkuResponse> ProductListProductsBySkuAsync(ProductListProductsBySkuRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
-
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (ProductListProductsBySkuResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ProductListProductsBySkuResponse>> ProductListProductsBySkuWithHttpInfoAsync(ProductListProductsBySkuRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ProductListVariantsBySkuResponse</returns>
-        System.Threading.Tasks.Task<ProductListVariantsBySkuResponse> ProductListVariantsBySkuAsync(ProductListVariantsBySkuRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
-
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (ProductListVariantsBySkuResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ProductListVariantsBySkuResponse>> ProductListVariantsBySkuWithHttpInfoAsync(ProductListVariantsBySkuRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of Object</returns>
-        System.Threading.Tasks.Task<Object> ProductRemoveMediaGalleryEntryAsync(ProductRemoveMediaGalleryEntryRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
-
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (Object)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> ProductRemoveMediaGalleryEntryWithHttpInfoAsync(ProductRemoveMediaGalleryEntryRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// 
         /// </summary>
@@ -1771,81 +2028,6 @@ namespace product.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (EntitymanagerAttributeGroup)</returns>
         System.Threading.Tasks.Task<ApiResponse<EntitymanagerAttributeGroup>> ProductUpdateAttributeGroupWithHttpInfoAsync(EntitymanagerUpdateAttributeGroupRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
-        /// <summary>
-        /// rpc GetAttributeOptionByCode (product.entitymanager.GetAttributeOptionByCodeRequest) returns (product.entitymanager.GetAttributeOptionByCodeResponse) {}
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of EntitymanagerUpdateAttributeOptionsResponse</returns>
-        System.Threading.Tasks.Task<EntitymanagerUpdateAttributeOptionsResponse> ProductUpdateAttributeOptionsAsync(EntitymanagerUpdateAttributeOptionsRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
-
-        /// <summary>
-        /// rpc GetAttributeOptionByCode (product.entitymanager.GetAttributeOptionByCodeRequest) returns (product.entitymanager.GetAttributeOptionByCodeResponse) {}
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (EntitymanagerUpdateAttributeOptionsResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<EntitymanagerUpdateAttributeOptionsResponse>> ProductUpdateAttributeOptionsWithHttpInfoAsync(EntitymanagerUpdateAttributeOptionsRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of Object</returns>
-        System.Threading.Tasks.Task<Object> ProductUpdateMediaGalleryEntryAsync(ProductUpdateMediaGalleryEntryRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
-
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (Object)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> ProductUpdateMediaGalleryEntryWithHttpInfoAsync(ProductUpdateMediaGalleryEntryRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of EntitymanagerUpdateOptionsListResponse</returns>
-        System.Threading.Tasks.Task<EntitymanagerUpdateOptionsListResponse> ProductUpdateOptionsListAsync(EntitymanagerUpdateOptionsListRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
-
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (EntitymanagerUpdateOptionsListResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<EntitymanagerUpdateOptionsListResponse>> ProductUpdateOptionsListWithHttpInfoAsync(EntitymanagerUpdateOptionsListRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// 
         /// </summary>
@@ -1898,6 +2080,181 @@ namespace product.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (Object)</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> ProductUpdateProductV2WithHttpInfoAsync(ProductUpdateProductRequestV2 body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <summary>
+        /// Remove Media Gallery Entry
+        /// </summary>
+        /// <remarks>
+        /// The RemoveMediaGalleryEntry endpoint allows users to remove a specific media entry from a product&#39;s gallery. By making a request to this endpoint and providing the tenant ID, product ID, and the unique identifier of the media entry, users can easily manage and update the visual content of a product&#39;s gallery. This operation is asynchronous and may complete after the response.
+        /// </remarks>
+        /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of Object</returns>
+        System.Threading.Tasks.Task<Object> RemoveMediaGalleryEntryAsync(ProductRemoveMediaGalleryEntryRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+
+        /// <summary>
+        /// Remove Media Gallery Entry
+        /// </summary>
+        /// <remarks>
+        /// The RemoveMediaGalleryEntry endpoint allows users to remove a specific media entry from a product&#39;s gallery. By making a request to this endpoint and providing the tenant ID, product ID, and the unique identifier of the media entry, users can easily manage and update the visual content of a product&#39;s gallery. This operation is asynchronous and may complete after the response.
+        /// </remarks>
+        /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (Object)</returns>
+        System.Threading.Tasks.Task<ApiResponse<Object>> RemoveMediaGalleryEntryWithHttpInfoAsync(ProductRemoveMediaGalleryEntryRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <summary>
+        /// Update Attribute Options
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of EntitymanagerUpdateAttributeOptionsResponse</returns>
+        System.Threading.Tasks.Task<EntitymanagerUpdateAttributeOptionsResponse> UpdateAttributeOptionsAsync(EntitymanagerUpdateAttributeOptionsRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+
+        /// <summary>
+        /// Update Attribute Options
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (EntitymanagerUpdateAttributeOptionsResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<EntitymanagerUpdateAttributeOptionsResponse>> UpdateAttributeOptionsWithHttpInfoAsync(EntitymanagerUpdateAttributeOptionsRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <summary>
+        /// Get Enhance Product Data With AI Status
+        /// </summary>
+        /// <remarks>
+        /// The GetEnhanceProductDataWithAIStatus endpoint allows users to retrieve the status of a product data enhancement process using artificial intelligence (AI) capabilities. By making a request to this endpoint and providing the necessary input data, users can check the progress and completion status of the AI-driven product data enhancement operation. This functionality provides visibility and transparency into the AI processing of product data, enabling users to monitor and track the status of the enhancement process.
+        /// </remarks>
+        /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ProductGetEnhanceProductDataWithAIStatusResponse</returns>
+        System.Threading.Tasks.Task<ProductGetEnhanceProductDataWithAIStatusResponse> UpdateDataToBeReviewedAsync(ProductGetEnhanceProductDataWithAIStatusRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+
+        /// <summary>
+        /// Get Enhance Product Data With AI Status
+        /// </summary>
+        /// <remarks>
+        /// The GetEnhanceProductDataWithAIStatus endpoint allows users to retrieve the status of a product data enhancement process using artificial intelligence (AI) capabilities. By making a request to this endpoint and providing the necessary input data, users can check the progress and completion status of the AI-driven product data enhancement operation. This functionality provides visibility and transparency into the AI processing of product data, enabling users to monitor and track the status of the enhancement process.
+        /// </remarks>
+        /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (ProductGetEnhanceProductDataWithAIStatusResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<ProductGetEnhanceProductDataWithAIStatusResponse>> UpdateDataToBeReviewedWithHttpInfoAsync(ProductGetEnhanceProductDataWithAIStatusRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <summary>
+        /// Update Data To Be Reviewed
+        /// </summary>
+        /// <remarks>
+        /// The UpdateDataToBeReviewed endpoint allows users to update product data that is pending review. By sending a request to this endpoint and providing the necessary input data, users can modify and enhance the product information that is currently under review. This functionality enables users to make changes to product data submissions and ensure that the information is accurate and up-to-date before final approval.
+        /// </remarks>
+        /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of Object</returns>
+        System.Threading.Tasks.Task<Object> UpdateDataToBeReviewed_0Async(ProductUpdateDataToBeReviewedRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+
+        /// <summary>
+        /// Update Data To Be Reviewed
+        /// </summary>
+        /// <remarks>
+        /// The UpdateDataToBeReviewed endpoint allows users to update product data that is pending review. By sending a request to this endpoint and providing the necessary input data, users can modify and enhance the product information that is currently under review. This functionality enables users to make changes to product data submissions and ensure that the information is accurate and up-to-date before final approval.
+        /// </remarks>
+        /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (Object)</returns>
+        System.Threading.Tasks.Task<ApiResponse<Object>> UpdateDataToBeReviewed_0WithHttpInfoAsync(ProductUpdateDataToBeReviewedRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <summary>
+        /// Update Media Gallery Entry
+        /// </summary>
+        /// <remarks>
+        /// The UpdateMediaGalleryEntry endpoint allows users to modify and update a specific media entry within a product&#39;s gallery. By sending a request to this endpoint and providing the necessary information, users can efficiently update the media asset, position, and metadata associated with the entry. This operation is asynchronous and may complete after the response.
+        /// </remarks>
+        /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of Object</returns>
+        System.Threading.Tasks.Task<Object> UpdateMediaGalleryEntryAsync(ProductUpdateMediaGalleryEntryRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+
+        /// <summary>
+        /// Update Media Gallery Entry
+        /// </summary>
+        /// <remarks>
+        /// The UpdateMediaGalleryEntry endpoint allows users to modify and update a specific media entry within a product&#39;s gallery. By sending a request to this endpoint and providing the necessary information, users can efficiently update the media asset, position, and metadata associated with the entry. This operation is asynchronous and may complete after the response.
+        /// </remarks>
+        /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (Object)</returns>
+        System.Threading.Tasks.Task<ApiResponse<Object>> UpdateMediaGalleryEntryWithHttpInfoAsync(ProductUpdateMediaGalleryEntryRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <summary>
+        /// Update Options List
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of EntitymanagerUpdateOptionsListResponse</returns>
+        System.Threading.Tasks.Task<EntitymanagerUpdateOptionsListResponse> UpdateOptionsListAsync(EntitymanagerUpdateOptionsListRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+
+        /// <summary>
+        /// Update Options List
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (EntitymanagerUpdateOptionsListResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<EntitymanagerUpdateOptionsListResponse>> UpdateOptionsListWithHttpInfoAsync(EntitymanagerUpdateOptionsListRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <summary>
+        /// Update Product With AI
+        /// </summary>
+        /// <remarks>
+        /// The UpdateProductWithAI endpoint allows users to update an existing product within the system using artificial intelligence (AI) capabilities. By sending a request to this endpoint and providing the necessary input data, users can leverage AI algorithms to enhance and optimize the product update process.
+        /// </remarks>
+        /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ProductUpdateProductWithAIResponse</returns>
+        System.Threading.Tasks.Task<ProductUpdateProductWithAIResponse> UpdateProductWithAIAsync(ProductUpdateProductWithAIRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+
+        /// <summary>
+        /// Update Product With AI
+        /// </summary>
+        /// <remarks>
+        /// The UpdateProductWithAI endpoint allows users to update an existing product within the system using artificial intelligence (AI) capabilities. By sending a request to this endpoint and providing the necessary input data, users can leverage AI algorithms to enhance and optimize the product update process.
+        /// </remarks>
+        /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (ProductUpdateProductWithAIResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<ProductUpdateProductWithAIResponse>> UpdateProductWithAIWithHttpInfoAsync(ProductUpdateProductWithAIRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         #endregion Asynchronous Operations
     }
 
@@ -2019,31 +2376,31 @@ namespace product.Api
         }
 
         /// <summary>
-        ///  
+        /// Add Media Gallery Entry The AddMediaGalleryEntry endpoint allows users to add a new media entry to the gallery of a specific product. To make a request to this endpoint, users need to provide the necessary information in the specified format. The request includes the tenant_id to specify the relevant tenant, the product_id to identify the target product, and the asset_grn which represents the globally unique identifier for the media asset being added. Additionally, the position field indicates the desired position of the media entry within the gallery, allowing users to control the order in which the media items are displayed. The metadata field, which is a repeated field, provides the option to include additional metadata associated with the media entry. This operation is asynchronous and may complete after the response.
         /// </summary>
         /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ProductAddMediaGalleryEntryResponse</returns>
-        public ProductAddMediaGalleryEntryResponse ProductAddMediaGalleryEntry(ProductAddMediaGalleryEntryRequest body, int operationIndex = 0)
+        public ProductAddMediaGalleryEntryResponse AddMediaGalleryEntry(ProductAddMediaGalleryEntryRequest body, int operationIndex = 0)
         {
-            product.Client.ApiResponse<ProductAddMediaGalleryEntryResponse> localVarResponse = ProductAddMediaGalleryEntryWithHttpInfo(body);
+            product.Client.ApiResponse<ProductAddMediaGalleryEntryResponse> localVarResponse = AddMediaGalleryEntryWithHttpInfo(body);
             return localVarResponse.Data;
         }
 
         /// <summary>
-        ///  
+        /// Add Media Gallery Entry The AddMediaGalleryEntry endpoint allows users to add a new media entry to the gallery of a specific product. To make a request to this endpoint, users need to provide the necessary information in the specified format. The request includes the tenant_id to specify the relevant tenant, the product_id to identify the target product, and the asset_grn which represents the globally unique identifier for the media asset being added. Additionally, the position field indicates the desired position of the media entry within the gallery, allowing users to control the order in which the media items are displayed. The metadata field, which is a repeated field, provides the option to include additional metadata associated with the media entry. This operation is asynchronous and may complete after the response.
         /// </summary>
         /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of ProductAddMediaGalleryEntryResponse</returns>
-        public product.Client.ApiResponse<ProductAddMediaGalleryEntryResponse> ProductAddMediaGalleryEntryWithHttpInfo(ProductAddMediaGalleryEntryRequest body, int operationIndex = 0)
+        public product.Client.ApiResponse<ProductAddMediaGalleryEntryResponse> AddMediaGalleryEntryWithHttpInfo(ProductAddMediaGalleryEntryRequest body, int operationIndex = 0)
         {
             // verify the required parameter 'body' is set
             if (body == null)
             {
-                throw new product.Client.ApiException(400, "Missing required parameter 'body' when calling ProductApi->ProductAddMediaGalleryEntry");
+                throw new product.Client.ApiException(400, "Missing required parameter 'body' when calling ProductApi->AddMediaGalleryEntry");
             }
 
             product.Client.RequestOptions localVarRequestOptions = new product.Client.RequestOptions();
@@ -2071,15 +2428,20 @@ namespace product.Api
 
             localVarRequestOptions.Data = body;
 
-            localVarRequestOptions.Operation = "ProductApi.ProductAddMediaGalleryEntry";
+            localVarRequestOptions.Operation = "ProductApi.AddMediaGalleryEntry";
             localVarRequestOptions.OperationIndex = operationIndex;
 
+            // authentication (Authorization) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
 
             // make the HTTP request
             var localVarResponse = this.Client.Post<ProductAddMediaGalleryEntryResponse>("/product.Product/AddMediaGalleryEntry", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ProductAddMediaGalleryEntry", localVarResponse);
+                Exception _exception = this.ExceptionFactory("AddMediaGalleryEntry", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;
@@ -2090,33 +2452,33 @@ namespace product.Api
         }
 
         /// <summary>
-        ///  
+        /// Add Media Gallery Entry The AddMediaGalleryEntry endpoint allows users to add a new media entry to the gallery of a specific product. To make a request to this endpoint, users need to provide the necessary information in the specified format. The request includes the tenant_id to specify the relevant tenant, the product_id to identify the target product, and the asset_grn which represents the globally unique identifier for the media asset being added. Additionally, the position field indicates the desired position of the media entry within the gallery, allowing users to control the order in which the media items are displayed. The metadata field, which is a repeated field, provides the option to include additional metadata associated with the media entry. This operation is asynchronous and may complete after the response.
         /// </summary>
         /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ProductAddMediaGalleryEntryResponse</returns>
-        public async System.Threading.Tasks.Task<ProductAddMediaGalleryEntryResponse> ProductAddMediaGalleryEntryAsync(ProductAddMediaGalleryEntryRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<ProductAddMediaGalleryEntryResponse> AddMediaGalleryEntryAsync(ProductAddMediaGalleryEntryRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            product.Client.ApiResponse<ProductAddMediaGalleryEntryResponse> localVarResponse = await ProductAddMediaGalleryEntryWithHttpInfoAsync(body, operationIndex, cancellationToken).ConfigureAwait(false);
+            product.Client.ApiResponse<ProductAddMediaGalleryEntryResponse> localVarResponse = await AddMediaGalleryEntryWithHttpInfoAsync(body, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
         /// <summary>
-        ///  
+        /// Add Media Gallery Entry The AddMediaGalleryEntry endpoint allows users to add a new media entry to the gallery of a specific product. To make a request to this endpoint, users need to provide the necessary information in the specified format. The request includes the tenant_id to specify the relevant tenant, the product_id to identify the target product, and the asset_grn which represents the globally unique identifier for the media asset being added. Additionally, the position field indicates the desired position of the media entry within the gallery, allowing users to control the order in which the media items are displayed. The metadata field, which is a repeated field, provides the option to include additional metadata associated with the media entry. This operation is asynchronous and may complete after the response.
         /// </summary>
         /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (ProductAddMediaGalleryEntryResponse)</returns>
-        public async System.Threading.Tasks.Task<product.Client.ApiResponse<ProductAddMediaGalleryEntryResponse>> ProductAddMediaGalleryEntryWithHttpInfoAsync(ProductAddMediaGalleryEntryRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<product.Client.ApiResponse<ProductAddMediaGalleryEntryResponse>> AddMediaGalleryEntryWithHttpInfoAsync(ProductAddMediaGalleryEntryRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'body' is set
             if (body == null)
             {
-                throw new product.Client.ApiException(400, "Missing required parameter 'body' when calling ProductApi->ProductAddMediaGalleryEntry");
+                throw new product.Client.ApiException(400, "Missing required parameter 'body' when calling ProductApi->AddMediaGalleryEntry");
             }
 
 
@@ -2145,16 +2507,21 @@ namespace product.Api
 
             localVarRequestOptions.Data = body;
 
-            localVarRequestOptions.Operation = "ProductApi.ProductAddMediaGalleryEntry";
+            localVarRequestOptions.Operation = "ProductApi.AddMediaGalleryEntry";
             localVarRequestOptions.OperationIndex = operationIndex;
 
+            // authentication (Authorization) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
 
             // make the HTTP request
             var localVarResponse = await this.AsynchronousClient.PostAsync<ProductAddMediaGalleryEntryResponse>("/product.Product/AddMediaGalleryEntry", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ProductAddMediaGalleryEntry", localVarResponse);
+                Exception _exception = this.ExceptionFactory("AddMediaGalleryEntry", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;
@@ -2165,31 +2532,31 @@ namespace product.Api
         }
 
         /// <summary>
-        /// Assets endpoints 
+        /// Bulk Add Assets Entries The BulkAddAssetsEntries endpoint allows users to add assets. This operation is asynchronous and may complete after the response.
         /// </summary>
         /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ProductBulkAddAssetsEntriesResponse</returns>
-        public ProductBulkAddAssetsEntriesResponse ProductBulkAddAssetsEntries(ProductBulkAddAssetsEntriesRequest body, int operationIndex = 0)
+        public ProductBulkAddAssetsEntriesResponse BulkAddAssetsEntries(ProductBulkAddAssetsEntriesRequest body, int operationIndex = 0)
         {
-            product.Client.ApiResponse<ProductBulkAddAssetsEntriesResponse> localVarResponse = ProductBulkAddAssetsEntriesWithHttpInfo(body);
+            product.Client.ApiResponse<ProductBulkAddAssetsEntriesResponse> localVarResponse = BulkAddAssetsEntriesWithHttpInfo(body);
             return localVarResponse.Data;
         }
 
         /// <summary>
-        /// Assets endpoints 
+        /// Bulk Add Assets Entries The BulkAddAssetsEntries endpoint allows users to add assets. This operation is asynchronous and may complete after the response.
         /// </summary>
         /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of ProductBulkAddAssetsEntriesResponse</returns>
-        public product.Client.ApiResponse<ProductBulkAddAssetsEntriesResponse> ProductBulkAddAssetsEntriesWithHttpInfo(ProductBulkAddAssetsEntriesRequest body, int operationIndex = 0)
+        public product.Client.ApiResponse<ProductBulkAddAssetsEntriesResponse> BulkAddAssetsEntriesWithHttpInfo(ProductBulkAddAssetsEntriesRequest body, int operationIndex = 0)
         {
             // verify the required parameter 'body' is set
             if (body == null)
             {
-                throw new product.Client.ApiException(400, "Missing required parameter 'body' when calling ProductApi->ProductBulkAddAssetsEntries");
+                throw new product.Client.ApiException(400, "Missing required parameter 'body' when calling ProductApi->BulkAddAssetsEntries");
             }
 
             product.Client.RequestOptions localVarRequestOptions = new product.Client.RequestOptions();
@@ -2217,15 +2584,20 @@ namespace product.Api
 
             localVarRequestOptions.Data = body;
 
-            localVarRequestOptions.Operation = "ProductApi.ProductBulkAddAssetsEntries";
+            localVarRequestOptions.Operation = "ProductApi.BulkAddAssetsEntries";
             localVarRequestOptions.OperationIndex = operationIndex;
 
+            // authentication (Authorization) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
 
             // make the HTTP request
             var localVarResponse = this.Client.Post<ProductBulkAddAssetsEntriesResponse>("/product.Product/BulkAddAssetsEntries", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ProductBulkAddAssetsEntries", localVarResponse);
+                Exception _exception = this.ExceptionFactory("BulkAddAssetsEntries", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;
@@ -2236,33 +2608,33 @@ namespace product.Api
         }
 
         /// <summary>
-        /// Assets endpoints 
+        /// Bulk Add Assets Entries The BulkAddAssetsEntries endpoint allows users to add assets. This operation is asynchronous and may complete after the response.
         /// </summary>
         /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ProductBulkAddAssetsEntriesResponse</returns>
-        public async System.Threading.Tasks.Task<ProductBulkAddAssetsEntriesResponse> ProductBulkAddAssetsEntriesAsync(ProductBulkAddAssetsEntriesRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<ProductBulkAddAssetsEntriesResponse> BulkAddAssetsEntriesAsync(ProductBulkAddAssetsEntriesRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            product.Client.ApiResponse<ProductBulkAddAssetsEntriesResponse> localVarResponse = await ProductBulkAddAssetsEntriesWithHttpInfoAsync(body, operationIndex, cancellationToken).ConfigureAwait(false);
+            product.Client.ApiResponse<ProductBulkAddAssetsEntriesResponse> localVarResponse = await BulkAddAssetsEntriesWithHttpInfoAsync(body, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
         /// <summary>
-        /// Assets endpoints 
+        /// Bulk Add Assets Entries The BulkAddAssetsEntries endpoint allows users to add assets. This operation is asynchronous and may complete after the response.
         /// </summary>
         /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (ProductBulkAddAssetsEntriesResponse)</returns>
-        public async System.Threading.Tasks.Task<product.Client.ApiResponse<ProductBulkAddAssetsEntriesResponse>> ProductBulkAddAssetsEntriesWithHttpInfoAsync(ProductBulkAddAssetsEntriesRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<product.Client.ApiResponse<ProductBulkAddAssetsEntriesResponse>> BulkAddAssetsEntriesWithHttpInfoAsync(ProductBulkAddAssetsEntriesRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'body' is set
             if (body == null)
             {
-                throw new product.Client.ApiException(400, "Missing required parameter 'body' when calling ProductApi->ProductBulkAddAssetsEntries");
+                throw new product.Client.ApiException(400, "Missing required parameter 'body' when calling ProductApi->BulkAddAssetsEntries");
             }
 
 
@@ -2291,16 +2663,21 @@ namespace product.Api
 
             localVarRequestOptions.Data = body;
 
-            localVarRequestOptions.Operation = "ProductApi.ProductBulkAddAssetsEntries";
+            localVarRequestOptions.Operation = "ProductApi.BulkAddAssetsEntries";
             localVarRequestOptions.OperationIndex = operationIndex;
 
+            // authentication (Authorization) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
 
             // make the HTTP request
             var localVarResponse = await this.AsynchronousClient.PostAsync<ProductBulkAddAssetsEntriesResponse>("/product.Product/BulkAddAssetsEntries", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ProductBulkAddAssetsEntries", localVarResponse);
+                Exception _exception = this.ExceptionFactory("BulkAddAssetsEntries", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;
@@ -2311,7 +2688,3751 @@ namespace product.Api
         }
 
         /// <summary>
-        ///  
+        /// Bulk Delete Products This operation is asynchronous and may complete after the response.
+        /// </summary>
+        /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>Object</returns>
+        public Object BulkDeleteProducts(ProductBulkDeleteProductsRequest body, int operationIndex = 0)
+        {
+            product.Client.ApiResponse<Object> localVarResponse = BulkDeleteProductsWithHttpInfo(body);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Bulk Delete Products This operation is asynchronous and may complete after the response.
+        /// </summary>
+        /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of Object</returns>
+        public product.Client.ApiResponse<Object> BulkDeleteProductsWithHttpInfo(ProductBulkDeleteProductsRequest body, int operationIndex = 0)
+        {
+            // verify the required parameter 'body' is set
+            if (body == null)
+            {
+                throw new product.Client.ApiException(400, "Missing required parameter 'body' when calling ProductApi->BulkDeleteProducts");
+            }
+
+            product.Client.RequestOptions localVarRequestOptions = new product.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+                "application/json"
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var localVarContentType = product.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = product.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.Data = body;
+
+            localVarRequestOptions.Operation = "ProductApi.BulkDeleteProducts";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+            // authentication (Authorization) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
+
+            // make the HTTP request
+            var localVarResponse = this.Client.Post<Object>("/product.Product/BulkDeleteProducts", localVarRequestOptions, this.Configuration);
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("BulkDeleteProducts", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// Bulk Delete Products This operation is asynchronous and may complete after the response.
+        /// </summary>
+        /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of Object</returns>
+        public async System.Threading.Tasks.Task<Object> BulkDeleteProductsAsync(ProductBulkDeleteProductsRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        {
+            product.Client.ApiResponse<Object> localVarResponse = await BulkDeleteProductsWithHttpInfoAsync(body, operationIndex, cancellationToken).ConfigureAwait(false);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Bulk Delete Products This operation is asynchronous and may complete after the response.
+        /// </summary>
+        /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (Object)</returns>
+        public async System.Threading.Tasks.Task<product.Client.ApiResponse<Object>> BulkDeleteProductsWithHttpInfoAsync(ProductBulkDeleteProductsRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        {
+            // verify the required parameter 'body' is set
+            if (body == null)
+            {
+                throw new product.Client.ApiException(400, "Missing required parameter 'body' when calling ProductApi->BulkDeleteProducts");
+            }
+
+
+            product.Client.RequestOptions localVarRequestOptions = new product.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+                "application/json"
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var localVarContentType = product.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = product.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.Data = body;
+
+            localVarRequestOptions.Operation = "ProductApi.BulkDeleteProducts";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+            // authentication (Authorization) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
+
+            // make the HTTP request
+            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/product.Product/BulkDeleteProducts", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("BulkDeleteProducts", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// Bulk Enhance Product Data With AI The BulkEnhanceProductDataWithAI endpoint allows users to enhance product data using artificial intelligence (AI) capabilities. By making a request to this endpoint and providing the necessary input data, users can leverage AI algorithms to enrich and optimize product information. This operation is asynchronous and may complete after the response.
+        /// </summary>
+        /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>Object</returns>
+        public Object BulkEnhanceProductDataWithAI(ProductBulkEnhanceProductDataWithAIRequest body, int operationIndex = 0)
+        {
+            product.Client.ApiResponse<Object> localVarResponse = BulkEnhanceProductDataWithAIWithHttpInfo(body);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Bulk Enhance Product Data With AI The BulkEnhanceProductDataWithAI endpoint allows users to enhance product data using artificial intelligence (AI) capabilities. By making a request to this endpoint and providing the necessary input data, users can leverage AI algorithms to enrich and optimize product information. This operation is asynchronous and may complete after the response.
+        /// </summary>
+        /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of Object</returns>
+        public product.Client.ApiResponse<Object> BulkEnhanceProductDataWithAIWithHttpInfo(ProductBulkEnhanceProductDataWithAIRequest body, int operationIndex = 0)
+        {
+            // verify the required parameter 'body' is set
+            if (body == null)
+            {
+                throw new product.Client.ApiException(400, "Missing required parameter 'body' when calling ProductApi->BulkEnhanceProductDataWithAI");
+            }
+
+            product.Client.RequestOptions localVarRequestOptions = new product.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+                "application/json"
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var localVarContentType = product.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = product.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.Data = body;
+
+            localVarRequestOptions.Operation = "ProductApi.BulkEnhanceProductDataWithAI";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+            // authentication (Authorization) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
+
+            // make the HTTP request
+            var localVarResponse = this.Client.Post<Object>("/product.Product/BulkEnhanceProductDataWithAI", localVarRequestOptions, this.Configuration);
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("BulkEnhanceProductDataWithAI", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// Bulk Enhance Product Data With AI The BulkEnhanceProductDataWithAI endpoint allows users to enhance product data using artificial intelligence (AI) capabilities. By making a request to this endpoint and providing the necessary input data, users can leverage AI algorithms to enrich and optimize product information. This operation is asynchronous and may complete after the response.
+        /// </summary>
+        /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of Object</returns>
+        public async System.Threading.Tasks.Task<Object> BulkEnhanceProductDataWithAIAsync(ProductBulkEnhanceProductDataWithAIRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        {
+            product.Client.ApiResponse<Object> localVarResponse = await BulkEnhanceProductDataWithAIWithHttpInfoAsync(body, operationIndex, cancellationToken).ConfigureAwait(false);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Bulk Enhance Product Data With AI The BulkEnhanceProductDataWithAI endpoint allows users to enhance product data using artificial intelligence (AI) capabilities. By making a request to this endpoint and providing the necessary input data, users can leverage AI algorithms to enrich and optimize product information. This operation is asynchronous and may complete after the response.
+        /// </summary>
+        /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (Object)</returns>
+        public async System.Threading.Tasks.Task<product.Client.ApiResponse<Object>> BulkEnhanceProductDataWithAIWithHttpInfoAsync(ProductBulkEnhanceProductDataWithAIRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        {
+            // verify the required parameter 'body' is set
+            if (body == null)
+            {
+                throw new product.Client.ApiException(400, "Missing required parameter 'body' when calling ProductApi->BulkEnhanceProductDataWithAI");
+            }
+
+
+            product.Client.RequestOptions localVarRequestOptions = new product.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+                "application/json"
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var localVarContentType = product.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = product.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.Data = body;
+
+            localVarRequestOptions.Operation = "ProductApi.BulkEnhanceProductDataWithAI";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+            // authentication (Authorization) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
+
+            // make the HTTP request
+            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/product.Product/BulkEnhanceProductDataWithAI", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("BulkEnhanceProductDataWithAI", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// Bulk Remove Assets Entries The BulkRemoveAssetsEntries endpoint allows users to remove assets. This operation is asynchronous and may complete after the response.
+        /// </summary>
+        /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>Object</returns>
+        public Object BulkRemoveAssetsEntries(ProductBulkRemoveAssetsEntriesRequest body, int operationIndex = 0)
+        {
+            product.Client.ApiResponse<Object> localVarResponse = BulkRemoveAssetsEntriesWithHttpInfo(body);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Bulk Remove Assets Entries The BulkRemoveAssetsEntries endpoint allows users to remove assets. This operation is asynchronous and may complete after the response.
+        /// </summary>
+        /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of Object</returns>
+        public product.Client.ApiResponse<Object> BulkRemoveAssetsEntriesWithHttpInfo(ProductBulkRemoveAssetsEntriesRequest body, int operationIndex = 0)
+        {
+            // verify the required parameter 'body' is set
+            if (body == null)
+            {
+                throw new product.Client.ApiException(400, "Missing required parameter 'body' when calling ProductApi->BulkRemoveAssetsEntries");
+            }
+
+            product.Client.RequestOptions localVarRequestOptions = new product.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+                "application/json"
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var localVarContentType = product.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = product.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.Data = body;
+
+            localVarRequestOptions.Operation = "ProductApi.BulkRemoveAssetsEntries";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+            // authentication (Authorization) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
+
+            // make the HTTP request
+            var localVarResponse = this.Client.Post<Object>("/product.Product/BulkRemoveAssetsEntries", localVarRequestOptions, this.Configuration);
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("BulkRemoveAssetsEntries", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// Bulk Remove Assets Entries The BulkRemoveAssetsEntries endpoint allows users to remove assets. This operation is asynchronous and may complete after the response.
+        /// </summary>
+        /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of Object</returns>
+        public async System.Threading.Tasks.Task<Object> BulkRemoveAssetsEntriesAsync(ProductBulkRemoveAssetsEntriesRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        {
+            product.Client.ApiResponse<Object> localVarResponse = await BulkRemoveAssetsEntriesWithHttpInfoAsync(body, operationIndex, cancellationToken).ConfigureAwait(false);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Bulk Remove Assets Entries The BulkRemoveAssetsEntries endpoint allows users to remove assets. This operation is asynchronous and may complete after the response.
+        /// </summary>
+        /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (Object)</returns>
+        public async System.Threading.Tasks.Task<product.Client.ApiResponse<Object>> BulkRemoveAssetsEntriesWithHttpInfoAsync(ProductBulkRemoveAssetsEntriesRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        {
+            // verify the required parameter 'body' is set
+            if (body == null)
+            {
+                throw new product.Client.ApiException(400, "Missing required parameter 'body' when calling ProductApi->BulkRemoveAssetsEntries");
+            }
+
+
+            product.Client.RequestOptions localVarRequestOptions = new product.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+                "application/json"
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var localVarContentType = product.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = product.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.Data = body;
+
+            localVarRequestOptions.Operation = "ProductApi.BulkRemoveAssetsEntries";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+            // authentication (Authorization) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
+
+            // make the HTTP request
+            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/product.Product/BulkRemoveAssetsEntries", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("BulkRemoveAssetsEntries", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// Bulk Update Assets Entries The BulkUpdateAssetsEntries endpoint allows users to update assets. This operation is asynchronous and may complete after the response.
+        /// </summary>
+        /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ProductBulkUpdateAssetsEntriesResponse</returns>
+        public ProductBulkUpdateAssetsEntriesResponse BulkUpdateAssetsEntries(ProductBulkUpdateAssetsEntriesRequest body, int operationIndex = 0)
+        {
+            product.Client.ApiResponse<ProductBulkUpdateAssetsEntriesResponse> localVarResponse = BulkUpdateAssetsEntriesWithHttpInfo(body);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Bulk Update Assets Entries The BulkUpdateAssetsEntries endpoint allows users to update assets. This operation is asynchronous and may complete after the response.
+        /// </summary>
+        /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of ProductBulkUpdateAssetsEntriesResponse</returns>
+        public product.Client.ApiResponse<ProductBulkUpdateAssetsEntriesResponse> BulkUpdateAssetsEntriesWithHttpInfo(ProductBulkUpdateAssetsEntriesRequest body, int operationIndex = 0)
+        {
+            // verify the required parameter 'body' is set
+            if (body == null)
+            {
+                throw new product.Client.ApiException(400, "Missing required parameter 'body' when calling ProductApi->BulkUpdateAssetsEntries");
+            }
+
+            product.Client.RequestOptions localVarRequestOptions = new product.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+                "application/json"
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var localVarContentType = product.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = product.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.Data = body;
+
+            localVarRequestOptions.Operation = "ProductApi.BulkUpdateAssetsEntries";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+            // authentication (Authorization) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
+
+            // make the HTTP request
+            var localVarResponse = this.Client.Post<ProductBulkUpdateAssetsEntriesResponse>("/product.Product/BulkUpdateAssetsEntries", localVarRequestOptions, this.Configuration);
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("BulkUpdateAssetsEntries", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// Bulk Update Assets Entries The BulkUpdateAssetsEntries endpoint allows users to update assets. This operation is asynchronous and may complete after the response.
+        /// </summary>
+        /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ProductBulkUpdateAssetsEntriesResponse</returns>
+        public async System.Threading.Tasks.Task<ProductBulkUpdateAssetsEntriesResponse> BulkUpdateAssetsEntriesAsync(ProductBulkUpdateAssetsEntriesRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        {
+            product.Client.ApiResponse<ProductBulkUpdateAssetsEntriesResponse> localVarResponse = await BulkUpdateAssetsEntriesWithHttpInfoAsync(body, operationIndex, cancellationToken).ConfigureAwait(false);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Bulk Update Assets Entries The BulkUpdateAssetsEntries endpoint allows users to update assets. This operation is asynchronous and may complete after the response.
+        /// </summary>
+        /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (ProductBulkUpdateAssetsEntriesResponse)</returns>
+        public async System.Threading.Tasks.Task<product.Client.ApiResponse<ProductBulkUpdateAssetsEntriesResponse>> BulkUpdateAssetsEntriesWithHttpInfoAsync(ProductBulkUpdateAssetsEntriesRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        {
+            // verify the required parameter 'body' is set
+            if (body == null)
+            {
+                throw new product.Client.ApiException(400, "Missing required parameter 'body' when calling ProductApi->BulkUpdateAssetsEntries");
+            }
+
+
+            product.Client.RequestOptions localVarRequestOptions = new product.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+                "application/json"
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var localVarContentType = product.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = product.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.Data = body;
+
+            localVarRequestOptions.Operation = "ProductApi.BulkUpdateAssetsEntries";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+            // authentication (Authorization) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
+
+            // make the HTTP request
+            var localVarResponse = await this.AsynchronousClient.PostAsync<ProductBulkUpdateAssetsEntriesResponse>("/product.Product/BulkUpdateAssetsEntries", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("BulkUpdateAssetsEntries", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// Bulk Update Products Version 2 of bulk updates for product attributes with enhanced payload structure and response format. This operation is asynchronous and may complete after the response.
+        /// </summary>
+        /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ProductBulkUpdateResponse</returns>
+        public ProductBulkUpdateResponse BulkUpdateV2(ProductBulkUpdateRequestV2 body, int operationIndex = 0)
+        {
+            product.Client.ApiResponse<ProductBulkUpdateResponse> localVarResponse = BulkUpdateV2WithHttpInfo(body);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Bulk Update Products Version 2 of bulk updates for product attributes with enhanced payload structure and response format. This operation is asynchronous and may complete after the response.
+        /// </summary>
+        /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of ProductBulkUpdateResponse</returns>
+        public product.Client.ApiResponse<ProductBulkUpdateResponse> BulkUpdateV2WithHttpInfo(ProductBulkUpdateRequestV2 body, int operationIndex = 0)
+        {
+            // verify the required parameter 'body' is set
+            if (body == null)
+            {
+                throw new product.Client.ApiException(400, "Missing required parameter 'body' when calling ProductApi->BulkUpdateV2");
+            }
+
+            product.Client.RequestOptions localVarRequestOptions = new product.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+                "application/json"
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var localVarContentType = product.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = product.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.Data = body;
+
+            localVarRequestOptions.Operation = "ProductApi.BulkUpdateV2";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+            // authentication (Authorization) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
+
+            // make the HTTP request
+            var localVarResponse = this.Client.Post<ProductBulkUpdateResponse>("/product.Product/BulkUpdateV2", localVarRequestOptions, this.Configuration);
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("BulkUpdateV2", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// Bulk Update Products Version 2 of bulk updates for product attributes with enhanced payload structure and response format. This operation is asynchronous and may complete after the response.
+        /// </summary>
+        /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ProductBulkUpdateResponse</returns>
+        public async System.Threading.Tasks.Task<ProductBulkUpdateResponse> BulkUpdateV2Async(ProductBulkUpdateRequestV2 body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        {
+            product.Client.ApiResponse<ProductBulkUpdateResponse> localVarResponse = await BulkUpdateV2WithHttpInfoAsync(body, operationIndex, cancellationToken).ConfigureAwait(false);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Bulk Update Products Version 2 of bulk updates for product attributes with enhanced payload structure and response format. This operation is asynchronous and may complete after the response.
+        /// </summary>
+        /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (ProductBulkUpdateResponse)</returns>
+        public async System.Threading.Tasks.Task<product.Client.ApiResponse<ProductBulkUpdateResponse>> BulkUpdateV2WithHttpInfoAsync(ProductBulkUpdateRequestV2 body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        {
+            // verify the required parameter 'body' is set
+            if (body == null)
+            {
+                throw new product.Client.ApiException(400, "Missing required parameter 'body' when calling ProductApi->BulkUpdateV2");
+            }
+
+
+            product.Client.RequestOptions localVarRequestOptions = new product.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+                "application/json"
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var localVarContentType = product.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = product.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.Data = body;
+
+            localVarRequestOptions.Operation = "ProductApi.BulkUpdateV2";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+            // authentication (Authorization) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
+
+            // make the HTTP request
+            var localVarResponse = await this.AsynchronousClient.PostAsync<ProductBulkUpdateResponse>("/product.Product/BulkUpdateV2", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("BulkUpdateV2", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// Create Attribute Options Create attribute options with specified codes, values, and swatches. Returns created options and any associated errors.
+        /// </summary>
+        /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>EntitymanagerCreateAttributeOptionsResponse</returns>
+        public EntitymanagerCreateAttributeOptionsResponse CreateAttributeOptions(EntitymanagerCreateAttributeOptionsRequest body, int operationIndex = 0)
+        {
+            product.Client.ApiResponse<EntitymanagerCreateAttributeOptionsResponse> localVarResponse = CreateAttributeOptionsWithHttpInfo(body);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Create Attribute Options Create attribute options with specified codes, values, and swatches. Returns created options and any associated errors.
+        /// </summary>
+        /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of EntitymanagerCreateAttributeOptionsResponse</returns>
+        public product.Client.ApiResponse<EntitymanagerCreateAttributeOptionsResponse> CreateAttributeOptionsWithHttpInfo(EntitymanagerCreateAttributeOptionsRequest body, int operationIndex = 0)
+        {
+            // verify the required parameter 'body' is set
+            if (body == null)
+            {
+                throw new product.Client.ApiException(400, "Missing required parameter 'body' when calling ProductApi->CreateAttributeOptions");
+            }
+
+            product.Client.RequestOptions localVarRequestOptions = new product.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+                "application/json"
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var localVarContentType = product.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = product.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.Data = body;
+
+            localVarRequestOptions.Operation = "ProductApi.CreateAttributeOptions";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+            // authentication (Authorization) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
+
+            // make the HTTP request
+            var localVarResponse = this.Client.Post<EntitymanagerCreateAttributeOptionsResponse>("/product.Product/CreateAttributeOptions", localVarRequestOptions, this.Configuration);
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("CreateAttributeOptions", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// Create Attribute Options Create attribute options with specified codes, values, and swatches. Returns created options and any associated errors.
+        /// </summary>
+        /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of EntitymanagerCreateAttributeOptionsResponse</returns>
+        public async System.Threading.Tasks.Task<EntitymanagerCreateAttributeOptionsResponse> CreateAttributeOptionsAsync(EntitymanagerCreateAttributeOptionsRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        {
+            product.Client.ApiResponse<EntitymanagerCreateAttributeOptionsResponse> localVarResponse = await CreateAttributeOptionsWithHttpInfoAsync(body, operationIndex, cancellationToken).ConfigureAwait(false);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Create Attribute Options Create attribute options with specified codes, values, and swatches. Returns created options and any associated errors.
+        /// </summary>
+        /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (EntitymanagerCreateAttributeOptionsResponse)</returns>
+        public async System.Threading.Tasks.Task<product.Client.ApiResponse<EntitymanagerCreateAttributeOptionsResponse>> CreateAttributeOptionsWithHttpInfoAsync(EntitymanagerCreateAttributeOptionsRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        {
+            // verify the required parameter 'body' is set
+            if (body == null)
+            {
+                throw new product.Client.ApiException(400, "Missing required parameter 'body' when calling ProductApi->CreateAttributeOptions");
+            }
+
+
+            product.Client.RequestOptions localVarRequestOptions = new product.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+                "application/json"
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var localVarContentType = product.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = product.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.Data = body;
+
+            localVarRequestOptions.Operation = "ProductApi.CreateAttributeOptions";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+            // authentication (Authorization) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
+
+            // make the HTTP request
+            var localVarResponse = await this.AsynchronousClient.PostAsync<EntitymanagerCreateAttributeOptionsResponse>("/product.Product/CreateAttributeOptions", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("CreateAttributeOptions", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// Create Entity The CreateEntity endpoint allows users to define and create a new entity with custom attributes, providing a flexible way to represent and manage different data structures within the system. By making a request to this endpoint, users can create a new entity that serves as an abstraction of a product or any other domain-specific object. This endpoint empowers users to define the specific attributes that compose the entity, such as color, composition, technical details, or any other relevant properties. Utilize the CreateEntity endpoint to dynamically extend and adapt your system&#39;s data model to accommodate diverse business requirements and efficiently manage various types of entities.
+        /// </summary>
+        /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>EntitymanagerCreateEntityResponse</returns>
+        public EntitymanagerCreateEntityResponse CreateEntity(EntitymanagerEntity body, int operationIndex = 0)
+        {
+            product.Client.ApiResponse<EntitymanagerCreateEntityResponse> localVarResponse = CreateEntityWithHttpInfo(body);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Create Entity The CreateEntity endpoint allows users to define and create a new entity with custom attributes, providing a flexible way to represent and manage different data structures within the system. By making a request to this endpoint, users can create a new entity that serves as an abstraction of a product or any other domain-specific object. This endpoint empowers users to define the specific attributes that compose the entity, such as color, composition, technical details, or any other relevant properties. Utilize the CreateEntity endpoint to dynamically extend and adapt your system&#39;s data model to accommodate diverse business requirements and efficiently manage various types of entities.
+        /// </summary>
+        /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of EntitymanagerCreateEntityResponse</returns>
+        public product.Client.ApiResponse<EntitymanagerCreateEntityResponse> CreateEntityWithHttpInfo(EntitymanagerEntity body, int operationIndex = 0)
+        {
+            // verify the required parameter 'body' is set
+            if (body == null)
+            {
+                throw new product.Client.ApiException(400, "Missing required parameter 'body' when calling ProductApi->CreateEntity");
+            }
+
+            product.Client.RequestOptions localVarRequestOptions = new product.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+                "application/json"
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var localVarContentType = product.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = product.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.Data = body;
+
+            localVarRequestOptions.Operation = "ProductApi.CreateEntity";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+            // authentication (Authorization) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
+
+            // make the HTTP request
+            var localVarResponse = this.Client.Post<EntitymanagerCreateEntityResponse>("/product.Product/CreateEntity", localVarRequestOptions, this.Configuration);
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("CreateEntity", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// Create Entity The CreateEntity endpoint allows users to define and create a new entity with custom attributes, providing a flexible way to represent and manage different data structures within the system. By making a request to this endpoint, users can create a new entity that serves as an abstraction of a product or any other domain-specific object. This endpoint empowers users to define the specific attributes that compose the entity, such as color, composition, technical details, or any other relevant properties. Utilize the CreateEntity endpoint to dynamically extend and adapt your system&#39;s data model to accommodate diverse business requirements and efficiently manage various types of entities.
+        /// </summary>
+        /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of EntitymanagerCreateEntityResponse</returns>
+        public async System.Threading.Tasks.Task<EntitymanagerCreateEntityResponse> CreateEntityAsync(EntitymanagerEntity body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        {
+            product.Client.ApiResponse<EntitymanagerCreateEntityResponse> localVarResponse = await CreateEntityWithHttpInfoAsync(body, operationIndex, cancellationToken).ConfigureAwait(false);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Create Entity The CreateEntity endpoint allows users to define and create a new entity with custom attributes, providing a flexible way to represent and manage different data structures within the system. By making a request to this endpoint, users can create a new entity that serves as an abstraction of a product or any other domain-specific object. This endpoint empowers users to define the specific attributes that compose the entity, such as color, composition, technical details, or any other relevant properties. Utilize the CreateEntity endpoint to dynamically extend and adapt your system&#39;s data model to accommodate diverse business requirements and efficiently manage various types of entities.
+        /// </summary>
+        /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (EntitymanagerCreateEntityResponse)</returns>
+        public async System.Threading.Tasks.Task<product.Client.ApiResponse<EntitymanagerCreateEntityResponse>> CreateEntityWithHttpInfoAsync(EntitymanagerEntity body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        {
+            // verify the required parameter 'body' is set
+            if (body == null)
+            {
+                throw new product.Client.ApiException(400, "Missing required parameter 'body' when calling ProductApi->CreateEntity");
+            }
+
+
+            product.Client.RequestOptions localVarRequestOptions = new product.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+                "application/json"
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var localVarContentType = product.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = product.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.Data = body;
+
+            localVarRequestOptions.Operation = "ProductApi.CreateEntity";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+            // authentication (Authorization) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
+
+            // make the HTTP request
+            var localVarResponse = await this.AsynchronousClient.PostAsync<EntitymanagerCreateEntityResponse>("/product.Product/CreateEntity", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("CreateEntity", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// Create Options List The CreateOptionsList endpoint allows users to create an OptionList, which represents a list of predefined options for assigning to an attribute. By making a request to this endpoint with the provided request format, users can create a new OptionList by specifying the relevant tenant ID and providing the OptionList object containing the predefined options. This functionality facilitates efficient management and assignment of predefined attribute values, ensuring consistency and flexibility within the system.
+        /// </summary>
+        /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>EntitymanagerCreateOptionsListResponse</returns>
+        public EntitymanagerCreateOptionsListResponse CreateOptionsList(EntitymanagerCreateOptionsListRequest body, int operationIndex = 0)
+        {
+            product.Client.ApiResponse<EntitymanagerCreateOptionsListResponse> localVarResponse = CreateOptionsListWithHttpInfo(body);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Create Options List The CreateOptionsList endpoint allows users to create an OptionList, which represents a list of predefined options for assigning to an attribute. By making a request to this endpoint with the provided request format, users can create a new OptionList by specifying the relevant tenant ID and providing the OptionList object containing the predefined options. This functionality facilitates efficient management and assignment of predefined attribute values, ensuring consistency and flexibility within the system.
+        /// </summary>
+        /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of EntitymanagerCreateOptionsListResponse</returns>
+        public product.Client.ApiResponse<EntitymanagerCreateOptionsListResponse> CreateOptionsListWithHttpInfo(EntitymanagerCreateOptionsListRequest body, int operationIndex = 0)
+        {
+            // verify the required parameter 'body' is set
+            if (body == null)
+            {
+                throw new product.Client.ApiException(400, "Missing required parameter 'body' when calling ProductApi->CreateOptionsList");
+            }
+
+            product.Client.RequestOptions localVarRequestOptions = new product.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+                "application/json"
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var localVarContentType = product.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = product.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.Data = body;
+
+            localVarRequestOptions.Operation = "ProductApi.CreateOptionsList";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+            // authentication (Authorization) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
+
+            // make the HTTP request
+            var localVarResponse = this.Client.Post<EntitymanagerCreateOptionsListResponse>("/product.Product/CreateOptionsList", localVarRequestOptions, this.Configuration);
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("CreateOptionsList", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// Create Options List The CreateOptionsList endpoint allows users to create an OptionList, which represents a list of predefined options for assigning to an attribute. By making a request to this endpoint with the provided request format, users can create a new OptionList by specifying the relevant tenant ID and providing the OptionList object containing the predefined options. This functionality facilitates efficient management and assignment of predefined attribute values, ensuring consistency and flexibility within the system.
+        /// </summary>
+        /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of EntitymanagerCreateOptionsListResponse</returns>
+        public async System.Threading.Tasks.Task<EntitymanagerCreateOptionsListResponse> CreateOptionsListAsync(EntitymanagerCreateOptionsListRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        {
+            product.Client.ApiResponse<EntitymanagerCreateOptionsListResponse> localVarResponse = await CreateOptionsListWithHttpInfoAsync(body, operationIndex, cancellationToken).ConfigureAwait(false);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Create Options List The CreateOptionsList endpoint allows users to create an OptionList, which represents a list of predefined options for assigning to an attribute. By making a request to this endpoint with the provided request format, users can create a new OptionList by specifying the relevant tenant ID and providing the OptionList object containing the predefined options. This functionality facilitates efficient management and assignment of predefined attribute values, ensuring consistency and flexibility within the system.
+        /// </summary>
+        /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (EntitymanagerCreateOptionsListResponse)</returns>
+        public async System.Threading.Tasks.Task<product.Client.ApiResponse<EntitymanagerCreateOptionsListResponse>> CreateOptionsListWithHttpInfoAsync(EntitymanagerCreateOptionsListRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        {
+            // verify the required parameter 'body' is set
+            if (body == null)
+            {
+                throw new product.Client.ApiException(400, "Missing required parameter 'body' when calling ProductApi->CreateOptionsList");
+            }
+
+
+            product.Client.RequestOptions localVarRequestOptions = new product.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+                "application/json"
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var localVarContentType = product.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = product.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.Data = body;
+
+            localVarRequestOptions.Operation = "ProductApi.CreateOptionsList";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+            // authentication (Authorization) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
+
+            // make the HTTP request
+            var localVarResponse = await this.AsynchronousClient.PostAsync<EntitymanagerCreateOptionsListResponse>("/product.Product/CreateOptionsList", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("CreateOptionsList", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// Create Product With AI The CreateProductWithAI endpoint allows users to create a new product within the system using artificial intelligence (AI) capabilities. By sending a request to this endpoint and providing the necessary input data, users can leverage AI algorithms to enhance and optimize the product creation process.
+        /// </summary>
+        /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ProductCreateProductWithAIResponse</returns>
+        public ProductCreateProductWithAIResponse CreateProductWithAI(ProductCreateProductWithAIRequest body, int operationIndex = 0)
+        {
+            product.Client.ApiResponse<ProductCreateProductWithAIResponse> localVarResponse = CreateProductWithAIWithHttpInfo(body);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Create Product With AI The CreateProductWithAI endpoint allows users to create a new product within the system using artificial intelligence (AI) capabilities. By sending a request to this endpoint and providing the necessary input data, users can leverage AI algorithms to enhance and optimize the product creation process.
+        /// </summary>
+        /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of ProductCreateProductWithAIResponse</returns>
+        public product.Client.ApiResponse<ProductCreateProductWithAIResponse> CreateProductWithAIWithHttpInfo(ProductCreateProductWithAIRequest body, int operationIndex = 0)
+        {
+            // verify the required parameter 'body' is set
+            if (body == null)
+            {
+                throw new product.Client.ApiException(400, "Missing required parameter 'body' when calling ProductApi->CreateProductWithAI");
+            }
+
+            product.Client.RequestOptions localVarRequestOptions = new product.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+                "application/json"
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var localVarContentType = product.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = product.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.Data = body;
+
+            localVarRequestOptions.Operation = "ProductApi.CreateProductWithAI";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+            // authentication (Authorization) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
+
+            // make the HTTP request
+            var localVarResponse = this.Client.Post<ProductCreateProductWithAIResponse>("/product.Product/CreateProductWithAI", localVarRequestOptions, this.Configuration);
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("CreateProductWithAI", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// Create Product With AI The CreateProductWithAI endpoint allows users to create a new product within the system using artificial intelligence (AI) capabilities. By sending a request to this endpoint and providing the necessary input data, users can leverage AI algorithms to enhance and optimize the product creation process.
+        /// </summary>
+        /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ProductCreateProductWithAIResponse</returns>
+        public async System.Threading.Tasks.Task<ProductCreateProductWithAIResponse> CreateProductWithAIAsync(ProductCreateProductWithAIRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        {
+            product.Client.ApiResponse<ProductCreateProductWithAIResponse> localVarResponse = await CreateProductWithAIWithHttpInfoAsync(body, operationIndex, cancellationToken).ConfigureAwait(false);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Create Product With AI The CreateProductWithAI endpoint allows users to create a new product within the system using artificial intelligence (AI) capabilities. By sending a request to this endpoint and providing the necessary input data, users can leverage AI algorithms to enhance and optimize the product creation process.
+        /// </summary>
+        /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (ProductCreateProductWithAIResponse)</returns>
+        public async System.Threading.Tasks.Task<product.Client.ApiResponse<ProductCreateProductWithAIResponse>> CreateProductWithAIWithHttpInfoAsync(ProductCreateProductWithAIRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        {
+            // verify the required parameter 'body' is set
+            if (body == null)
+            {
+                throw new product.Client.ApiException(400, "Missing required parameter 'body' when calling ProductApi->CreateProductWithAI");
+            }
+
+
+            product.Client.RequestOptions localVarRequestOptions = new product.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+                "application/json"
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var localVarContentType = product.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = product.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.Data = body;
+
+            localVarRequestOptions.Operation = "ProductApi.CreateProductWithAI";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+            // authentication (Authorization) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
+
+            // make the HTTP request
+            var localVarResponse = await this.AsynchronousClient.PostAsync<ProductCreateProductWithAIResponse>("/product.Product/CreateProductWithAI", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("CreateProductWithAI", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// Get Attribute Option Retrieve attribute option details by providing the tenant ID, list code, and option ID. Returns the specified attribute option.
+        /// </summary>
+        /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>EntitymanagerGetAttributeOptionResponse</returns>
+        public EntitymanagerGetAttributeOptionResponse GetAttributeOption(EntitymanagerGetAttributeOptionRequest body, int operationIndex = 0)
+        {
+            product.Client.ApiResponse<EntitymanagerGetAttributeOptionResponse> localVarResponse = GetAttributeOptionWithHttpInfo(body);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get Attribute Option Retrieve attribute option details by providing the tenant ID, list code, and option ID. Returns the specified attribute option.
+        /// </summary>
+        /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of EntitymanagerGetAttributeOptionResponse</returns>
+        public product.Client.ApiResponse<EntitymanagerGetAttributeOptionResponse> GetAttributeOptionWithHttpInfo(EntitymanagerGetAttributeOptionRequest body, int operationIndex = 0)
+        {
+            // verify the required parameter 'body' is set
+            if (body == null)
+            {
+                throw new product.Client.ApiException(400, "Missing required parameter 'body' when calling ProductApi->GetAttributeOption");
+            }
+
+            product.Client.RequestOptions localVarRequestOptions = new product.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+                "application/json"
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var localVarContentType = product.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = product.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.Data = body;
+
+            localVarRequestOptions.Operation = "ProductApi.GetAttributeOption";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+            // authentication (Authorization) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
+
+            // make the HTTP request
+            var localVarResponse = this.Client.Post<EntitymanagerGetAttributeOptionResponse>("/product.Product/GetAttributeOption", localVarRequestOptions, this.Configuration);
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("GetAttributeOption", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// Get Attribute Option Retrieve attribute option details by providing the tenant ID, list code, and option ID. Returns the specified attribute option.
+        /// </summary>
+        /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of EntitymanagerGetAttributeOptionResponse</returns>
+        public async System.Threading.Tasks.Task<EntitymanagerGetAttributeOptionResponse> GetAttributeOptionAsync(EntitymanagerGetAttributeOptionRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        {
+            product.Client.ApiResponse<EntitymanagerGetAttributeOptionResponse> localVarResponse = await GetAttributeOptionWithHttpInfoAsync(body, operationIndex, cancellationToken).ConfigureAwait(false);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get Attribute Option Retrieve attribute option details by providing the tenant ID, list code, and option ID. Returns the specified attribute option.
+        /// </summary>
+        /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (EntitymanagerGetAttributeOptionResponse)</returns>
+        public async System.Threading.Tasks.Task<product.Client.ApiResponse<EntitymanagerGetAttributeOptionResponse>> GetAttributeOptionWithHttpInfoAsync(EntitymanagerGetAttributeOptionRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        {
+            // verify the required parameter 'body' is set
+            if (body == null)
+            {
+                throw new product.Client.ApiException(400, "Missing required parameter 'body' when calling ProductApi->GetAttributeOption");
+            }
+
+
+            product.Client.RequestOptions localVarRequestOptions = new product.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+                "application/json"
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var localVarContentType = product.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = product.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.Data = body;
+
+            localVarRequestOptions.Operation = "ProductApi.GetAttributeOption";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+            // authentication (Authorization) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
+
+            // make the HTTP request
+            var localVarResponse = await this.AsynchronousClient.PostAsync<EntitymanagerGetAttributeOptionResponse>("/product.Product/GetAttributeOption", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("GetAttributeOption", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// Get Attribute Options Retrieve a list of attribute options based on the provided tenant ID and list code.
+        /// </summary>
+        /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>EntitymanagerGetAttributeOptionsResponse</returns>
+        public EntitymanagerGetAttributeOptionsResponse GetAttributeOptions(EntitymanagerGetAttributeOptionsRequest body, int operationIndex = 0)
+        {
+            product.Client.ApiResponse<EntitymanagerGetAttributeOptionsResponse> localVarResponse = GetAttributeOptionsWithHttpInfo(body);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get Attribute Options Retrieve a list of attribute options based on the provided tenant ID and list code.
+        /// </summary>
+        /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of EntitymanagerGetAttributeOptionsResponse</returns>
+        public product.Client.ApiResponse<EntitymanagerGetAttributeOptionsResponse> GetAttributeOptionsWithHttpInfo(EntitymanagerGetAttributeOptionsRequest body, int operationIndex = 0)
+        {
+            // verify the required parameter 'body' is set
+            if (body == null)
+            {
+                throw new product.Client.ApiException(400, "Missing required parameter 'body' when calling ProductApi->GetAttributeOptions");
+            }
+
+            product.Client.RequestOptions localVarRequestOptions = new product.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+                "application/json"
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var localVarContentType = product.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = product.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.Data = body;
+
+            localVarRequestOptions.Operation = "ProductApi.GetAttributeOptions";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+            // authentication (Authorization) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
+
+            // make the HTTP request
+            var localVarResponse = this.Client.Post<EntitymanagerGetAttributeOptionsResponse>("/product.Product/GetAttributeOptions", localVarRequestOptions, this.Configuration);
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("GetAttributeOptions", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// Get Attribute Options Retrieve a list of attribute options based on the provided tenant ID and list code.
+        /// </summary>
+        /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of EntitymanagerGetAttributeOptionsResponse</returns>
+        public async System.Threading.Tasks.Task<EntitymanagerGetAttributeOptionsResponse> GetAttributeOptionsAsync(EntitymanagerGetAttributeOptionsRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        {
+            product.Client.ApiResponse<EntitymanagerGetAttributeOptionsResponse> localVarResponse = await GetAttributeOptionsWithHttpInfoAsync(body, operationIndex, cancellationToken).ConfigureAwait(false);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get Attribute Options Retrieve a list of attribute options based on the provided tenant ID and list code.
+        /// </summary>
+        /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (EntitymanagerGetAttributeOptionsResponse)</returns>
+        public async System.Threading.Tasks.Task<product.Client.ApiResponse<EntitymanagerGetAttributeOptionsResponse>> GetAttributeOptionsWithHttpInfoAsync(EntitymanagerGetAttributeOptionsRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        {
+            // verify the required parameter 'body' is set
+            if (body == null)
+            {
+                throw new product.Client.ApiException(400, "Missing required parameter 'body' when calling ProductApi->GetAttributeOptions");
+            }
+
+
+            product.Client.RequestOptions localVarRequestOptions = new product.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+                "application/json"
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var localVarContentType = product.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = product.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.Data = body;
+
+            localVarRequestOptions.Operation = "ProductApi.GetAttributeOptions";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+            // authentication (Authorization) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
+
+            // make the HTTP request
+            var localVarResponse = await this.AsynchronousClient.PostAsync<EntitymanagerGetAttributeOptionsResponse>("/product.Product/GetAttributeOptions", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("GetAttributeOptions", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// Get Entity Details Retrieve details of an entity by providing the tenant ID and either entity data or entity ID. Returns information including ID, type, code, label, relationships, and attributes.
+        /// </summary>
+        /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>EntitymanagerEntity</returns>
+        public EntitymanagerEntity GetEntity(EntitymanagerEntityRequest body, int operationIndex = 0)
+        {
+            product.Client.ApiResponse<EntitymanagerEntity> localVarResponse = GetEntityWithHttpInfo(body);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get Entity Details Retrieve details of an entity by providing the tenant ID and either entity data or entity ID. Returns information including ID, type, code, label, relationships, and attributes.
+        /// </summary>
+        /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of EntitymanagerEntity</returns>
+        public product.Client.ApiResponse<EntitymanagerEntity> GetEntityWithHttpInfo(EntitymanagerEntityRequest body, int operationIndex = 0)
+        {
+            // verify the required parameter 'body' is set
+            if (body == null)
+            {
+                throw new product.Client.ApiException(400, "Missing required parameter 'body' when calling ProductApi->GetEntity");
+            }
+
+            product.Client.RequestOptions localVarRequestOptions = new product.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+                "application/json"
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var localVarContentType = product.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = product.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.Data = body;
+
+            localVarRequestOptions.Operation = "ProductApi.GetEntity";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+            // authentication (Authorization) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
+
+            // make the HTTP request
+            var localVarResponse = this.Client.Post<EntitymanagerEntity>("/product.Product/GetEntity", localVarRequestOptions, this.Configuration);
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("GetEntity", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// Get Entity Details Retrieve details of an entity by providing the tenant ID and either entity data or entity ID. Returns information including ID, type, code, label, relationships, and attributes.
+        /// </summary>
+        /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of EntitymanagerEntity</returns>
+        public async System.Threading.Tasks.Task<EntitymanagerEntity> GetEntityAsync(EntitymanagerEntityRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        {
+            product.Client.ApiResponse<EntitymanagerEntity> localVarResponse = await GetEntityWithHttpInfoAsync(body, operationIndex, cancellationToken).ConfigureAwait(false);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get Entity Details Retrieve details of an entity by providing the tenant ID and either entity data or entity ID. Returns information including ID, type, code, label, relationships, and attributes.
+        /// </summary>
+        /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (EntitymanagerEntity)</returns>
+        public async System.Threading.Tasks.Task<product.Client.ApiResponse<EntitymanagerEntity>> GetEntityWithHttpInfoAsync(EntitymanagerEntityRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        {
+            // verify the required parameter 'body' is set
+            if (body == null)
+            {
+                throw new product.Client.ApiException(400, "Missing required parameter 'body' when calling ProductApi->GetEntity");
+            }
+
+
+            product.Client.RequestOptions localVarRequestOptions = new product.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+                "application/json"
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var localVarContentType = product.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = product.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.Data = body;
+
+            localVarRequestOptions.Operation = "ProductApi.GetEntity";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+            // authentication (Authorization) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
+
+            // make the HTTP request
+            var localVarResponse = await this.AsynchronousClient.PostAsync<EntitymanagerEntity>("/product.Product/GetEntity", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("GetEntity", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// Get Options List Retrieve option lists.
+        /// </summary>
+        /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>EntitymanagerGetOptionsListResponse</returns>
+        public EntitymanagerGetOptionsListResponse GetOptionsList(EntitymanagerGetOptionsListRequest body, int operationIndex = 0)
+        {
+            product.Client.ApiResponse<EntitymanagerGetOptionsListResponse> localVarResponse = GetOptionsListWithHttpInfo(body);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get Options List Retrieve option lists.
+        /// </summary>
+        /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of EntitymanagerGetOptionsListResponse</returns>
+        public product.Client.ApiResponse<EntitymanagerGetOptionsListResponse> GetOptionsListWithHttpInfo(EntitymanagerGetOptionsListRequest body, int operationIndex = 0)
+        {
+            // verify the required parameter 'body' is set
+            if (body == null)
+            {
+                throw new product.Client.ApiException(400, "Missing required parameter 'body' when calling ProductApi->GetOptionsList");
+            }
+
+            product.Client.RequestOptions localVarRequestOptions = new product.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+                "application/json"
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var localVarContentType = product.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = product.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.Data = body;
+
+            localVarRequestOptions.Operation = "ProductApi.GetOptionsList";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+            // authentication (Authorization) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
+
+            // make the HTTP request
+            var localVarResponse = this.Client.Post<EntitymanagerGetOptionsListResponse>("/product.Product/GetOptionsList", localVarRequestOptions, this.Configuration);
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("GetOptionsList", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// Get Options List Retrieve option lists.
+        /// </summary>
+        /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of EntitymanagerGetOptionsListResponse</returns>
+        public async System.Threading.Tasks.Task<EntitymanagerGetOptionsListResponse> GetOptionsListAsync(EntitymanagerGetOptionsListRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        {
+            product.Client.ApiResponse<EntitymanagerGetOptionsListResponse> localVarResponse = await GetOptionsListWithHttpInfoAsync(body, operationIndex, cancellationToken).ConfigureAwait(false);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get Options List Retrieve option lists.
+        /// </summary>
+        /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (EntitymanagerGetOptionsListResponse)</returns>
+        public async System.Threading.Tasks.Task<product.Client.ApiResponse<EntitymanagerGetOptionsListResponse>> GetOptionsListWithHttpInfoAsync(EntitymanagerGetOptionsListRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        {
+            // verify the required parameter 'body' is set
+            if (body == null)
+            {
+                throw new product.Client.ApiException(400, "Missing required parameter 'body' when calling ProductApi->GetOptionsList");
+            }
+
+
+            product.Client.RequestOptions localVarRequestOptions = new product.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+                "application/json"
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var localVarContentType = product.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = product.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.Data = body;
+
+            localVarRequestOptions.Operation = "ProductApi.GetOptionsList";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+            // authentication (Authorization) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
+
+            // make the HTTP request
+            var localVarResponse = await this.AsynchronousClient.PostAsync<EntitymanagerGetOptionsListResponse>("/product.Product/GetOptionsList", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("GetOptionsList", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// Get Product The GetProduct endpoint enables users to retrieve a product from the system. By sending a request to this endpoint, users can retrieve a product by providing its unique identifier.
+        /// </summary>
+        /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ProductGetProductResponse</returns>
+        public ProductGetProductResponse GetProduct(ProductGetProductRequest body, int operationIndex = 0)
+        {
+            product.Client.ApiResponse<ProductGetProductResponse> localVarResponse = GetProductWithHttpInfo(body);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get Product The GetProduct endpoint enables users to retrieve a product from the system. By sending a request to this endpoint, users can retrieve a product by providing its unique identifier.
+        /// </summary>
+        /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of ProductGetProductResponse</returns>
+        public product.Client.ApiResponse<ProductGetProductResponse> GetProductWithHttpInfo(ProductGetProductRequest body, int operationIndex = 0)
+        {
+            // verify the required parameter 'body' is set
+            if (body == null)
+            {
+                throw new product.Client.ApiException(400, "Missing required parameter 'body' when calling ProductApi->GetProduct");
+            }
+
+            product.Client.RequestOptions localVarRequestOptions = new product.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+                "application/json"
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var localVarContentType = product.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = product.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.Data = body;
+
+            localVarRequestOptions.Operation = "ProductApi.GetProduct";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+            // authentication (Authorization) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
+
+            // make the HTTP request
+            var localVarResponse = this.Client.Post<ProductGetProductResponse>("/product.Product/GetProduct", localVarRequestOptions, this.Configuration);
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("GetProduct", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// Get Product The GetProduct endpoint enables users to retrieve a product from the system. By sending a request to this endpoint, users can retrieve a product by providing its unique identifier.
+        /// </summary>
+        /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ProductGetProductResponse</returns>
+        public async System.Threading.Tasks.Task<ProductGetProductResponse> GetProductAsync(ProductGetProductRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        {
+            product.Client.ApiResponse<ProductGetProductResponse> localVarResponse = await GetProductWithHttpInfoAsync(body, operationIndex, cancellationToken).ConfigureAwait(false);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get Product The GetProduct endpoint enables users to retrieve a product from the system. By sending a request to this endpoint, users can retrieve a product by providing its unique identifier.
+        /// </summary>
+        /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (ProductGetProductResponse)</returns>
+        public async System.Threading.Tasks.Task<product.Client.ApiResponse<ProductGetProductResponse>> GetProductWithHttpInfoAsync(ProductGetProductRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        {
+            // verify the required parameter 'body' is set
+            if (body == null)
+            {
+                throw new product.Client.ApiException(400, "Missing required parameter 'body' when calling ProductApi->GetProduct");
+            }
+
+
+            product.Client.RequestOptions localVarRequestOptions = new product.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+                "application/json"
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var localVarContentType = product.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = product.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.Data = body;
+
+            localVarRequestOptions.Operation = "ProductApi.GetProduct";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+            // authentication (Authorization) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
+
+            // make the HTTP request
+            var localVarResponse = await this.AsynchronousClient.PostAsync<ProductGetProductResponse>("/product.Product/GetProduct", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("GetProduct", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// Get Product By Code The GetProductByCode endpoint enables users to retrieve a product from the system. By sending a request to this endpoint, users can retrieve a product by providing its unique code.
+        /// </summary>
+        /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ProductGetProductByCodeResponse</returns>
+        public ProductGetProductByCodeResponse GetProductByCode(ProductGetProductByCodeRequest body, int operationIndex = 0)
+        {
+            product.Client.ApiResponse<ProductGetProductByCodeResponse> localVarResponse = GetProductByCodeWithHttpInfo(body);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get Product By Code The GetProductByCode endpoint enables users to retrieve a product from the system. By sending a request to this endpoint, users can retrieve a product by providing its unique code.
+        /// </summary>
+        /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of ProductGetProductByCodeResponse</returns>
+        public product.Client.ApiResponse<ProductGetProductByCodeResponse> GetProductByCodeWithHttpInfo(ProductGetProductByCodeRequest body, int operationIndex = 0)
+        {
+            // verify the required parameter 'body' is set
+            if (body == null)
+            {
+                throw new product.Client.ApiException(400, "Missing required parameter 'body' when calling ProductApi->GetProductByCode");
+            }
+
+            product.Client.RequestOptions localVarRequestOptions = new product.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+                "application/json"
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var localVarContentType = product.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = product.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.Data = body;
+
+            localVarRequestOptions.Operation = "ProductApi.GetProductByCode";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+            // authentication (Authorization) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
+
+            // make the HTTP request
+            var localVarResponse = this.Client.Post<ProductGetProductByCodeResponse>("/product.Product/GetProductByCode", localVarRequestOptions, this.Configuration);
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("GetProductByCode", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// Get Product By Code The GetProductByCode endpoint enables users to retrieve a product from the system. By sending a request to this endpoint, users can retrieve a product by providing its unique code.
+        /// </summary>
+        /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ProductGetProductByCodeResponse</returns>
+        public async System.Threading.Tasks.Task<ProductGetProductByCodeResponse> GetProductByCodeAsync(ProductGetProductByCodeRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        {
+            product.Client.ApiResponse<ProductGetProductByCodeResponse> localVarResponse = await GetProductByCodeWithHttpInfoAsync(body, operationIndex, cancellationToken).ConfigureAwait(false);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get Product By Code The GetProductByCode endpoint enables users to retrieve a product from the system. By sending a request to this endpoint, users can retrieve a product by providing its unique code.
+        /// </summary>
+        /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (ProductGetProductByCodeResponse)</returns>
+        public async System.Threading.Tasks.Task<product.Client.ApiResponse<ProductGetProductByCodeResponse>> GetProductByCodeWithHttpInfoAsync(ProductGetProductByCodeRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        {
+            // verify the required parameter 'body' is set
+            if (body == null)
+            {
+                throw new product.Client.ApiException(400, "Missing required parameter 'body' when calling ProductApi->GetProductByCode");
+            }
+
+
+            product.Client.RequestOptions localVarRequestOptions = new product.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+                "application/json"
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var localVarContentType = product.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = product.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.Data = body;
+
+            localVarRequestOptions.Operation = "ProductApi.GetProductByCode";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+            // authentication (Authorization) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
+
+            // make the HTTP request
+            var localVarResponse = await this.AsynchronousClient.PostAsync<ProductGetProductByCodeResponse>("/product.Product/GetProductByCode", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("GetProductByCode", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// Get Product By Url Key The GetProductByUrlKey endpoint enables users to retrieve a product from the system. By sending a request to this endpoint, users can retrieve a product by providing its unique url key.
+        /// </summary>
+        /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ProductGetProductByUrlKeyResponse</returns>
+        public ProductGetProductByUrlKeyResponse GetProductByUrlKey(ProductGetProductByUrlKeyRequest body, int operationIndex = 0)
+        {
+            product.Client.ApiResponse<ProductGetProductByUrlKeyResponse> localVarResponse = GetProductByUrlKeyWithHttpInfo(body);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get Product By Url Key The GetProductByUrlKey endpoint enables users to retrieve a product from the system. By sending a request to this endpoint, users can retrieve a product by providing its unique url key.
+        /// </summary>
+        /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of ProductGetProductByUrlKeyResponse</returns>
+        public product.Client.ApiResponse<ProductGetProductByUrlKeyResponse> GetProductByUrlKeyWithHttpInfo(ProductGetProductByUrlKeyRequest body, int operationIndex = 0)
+        {
+            // verify the required parameter 'body' is set
+            if (body == null)
+            {
+                throw new product.Client.ApiException(400, "Missing required parameter 'body' when calling ProductApi->GetProductByUrlKey");
+            }
+
+            product.Client.RequestOptions localVarRequestOptions = new product.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+                "application/json"
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var localVarContentType = product.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = product.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.Data = body;
+
+            localVarRequestOptions.Operation = "ProductApi.GetProductByUrlKey";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+            // authentication (Authorization) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
+
+            // make the HTTP request
+            var localVarResponse = this.Client.Post<ProductGetProductByUrlKeyResponse>("/product.Product/GetProductByUrlKey", localVarRequestOptions, this.Configuration);
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("GetProductByUrlKey", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// Get Product By Url Key The GetProductByUrlKey endpoint enables users to retrieve a product from the system. By sending a request to this endpoint, users can retrieve a product by providing its unique url key.
+        /// </summary>
+        /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ProductGetProductByUrlKeyResponse</returns>
+        public async System.Threading.Tasks.Task<ProductGetProductByUrlKeyResponse> GetProductByUrlKeyAsync(ProductGetProductByUrlKeyRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        {
+            product.Client.ApiResponse<ProductGetProductByUrlKeyResponse> localVarResponse = await GetProductByUrlKeyWithHttpInfoAsync(body, operationIndex, cancellationToken).ConfigureAwait(false);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get Product By Url Key The GetProductByUrlKey endpoint enables users to retrieve a product from the system. By sending a request to this endpoint, users can retrieve a product by providing its unique url key.
+        /// </summary>
+        /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (ProductGetProductByUrlKeyResponse)</returns>
+        public async System.Threading.Tasks.Task<product.Client.ApiResponse<ProductGetProductByUrlKeyResponse>> GetProductByUrlKeyWithHttpInfoAsync(ProductGetProductByUrlKeyRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        {
+            // verify the required parameter 'body' is set
+            if (body == null)
+            {
+                throw new product.Client.ApiException(400, "Missing required parameter 'body' when calling ProductApi->GetProductByUrlKey");
+            }
+
+
+            product.Client.RequestOptions localVarRequestOptions = new product.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+                "application/json"
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var localVarContentType = product.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = product.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.Data = body;
+
+            localVarRequestOptions.Operation = "ProductApi.GetProductByUrlKey";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+            // authentication (Authorization) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
+
+            // make the HTTP request
+            var localVarResponse = await this.AsynchronousClient.PostAsync<ProductGetProductByUrlKeyResponse>("/product.Product/GetProductByUrlKey", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("GetProductByUrlKey", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// Get Product Data In Review The GetProductDataInReview endpoint allows users to retrieve product data that is currently under review. By making a request to this endpoint, users can access detailed information about the product data that is pending approval or review by authorized personnel. This functionality provides transparency and visibility into the product data review process, enabling users to track the status and progress of product data submissions.
+        /// </summary>
+        /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ProductGetProductDataInReviewResponse</returns>
+        public ProductGetProductDataInReviewResponse GetProductDataInReview(ProductGetProductDataInReviewRequest body, int operationIndex = 0)
+        {
+            product.Client.ApiResponse<ProductGetProductDataInReviewResponse> localVarResponse = GetProductDataInReviewWithHttpInfo(body);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get Product Data In Review The GetProductDataInReview endpoint allows users to retrieve product data that is currently under review. By making a request to this endpoint, users can access detailed information about the product data that is pending approval or review by authorized personnel. This functionality provides transparency and visibility into the product data review process, enabling users to track the status and progress of product data submissions.
+        /// </summary>
+        /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of ProductGetProductDataInReviewResponse</returns>
+        public product.Client.ApiResponse<ProductGetProductDataInReviewResponse> GetProductDataInReviewWithHttpInfo(ProductGetProductDataInReviewRequest body, int operationIndex = 0)
+        {
+            // verify the required parameter 'body' is set
+            if (body == null)
+            {
+                throw new product.Client.ApiException(400, "Missing required parameter 'body' when calling ProductApi->GetProductDataInReview");
+            }
+
+            product.Client.RequestOptions localVarRequestOptions = new product.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+                "application/json"
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var localVarContentType = product.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = product.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.Data = body;
+
+            localVarRequestOptions.Operation = "ProductApi.GetProductDataInReview";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+            // authentication (Authorization) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
+
+            // make the HTTP request
+            var localVarResponse = this.Client.Post<ProductGetProductDataInReviewResponse>("/product.Product/GetProductDataInReview", localVarRequestOptions, this.Configuration);
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("GetProductDataInReview", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// Get Product Data In Review The GetProductDataInReview endpoint allows users to retrieve product data that is currently under review. By making a request to this endpoint, users can access detailed information about the product data that is pending approval or review by authorized personnel. This functionality provides transparency and visibility into the product data review process, enabling users to track the status and progress of product data submissions.
+        /// </summary>
+        /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ProductGetProductDataInReviewResponse</returns>
+        public async System.Threading.Tasks.Task<ProductGetProductDataInReviewResponse> GetProductDataInReviewAsync(ProductGetProductDataInReviewRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        {
+            product.Client.ApiResponse<ProductGetProductDataInReviewResponse> localVarResponse = await GetProductDataInReviewWithHttpInfoAsync(body, operationIndex, cancellationToken).ConfigureAwait(false);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get Product Data In Review The GetProductDataInReview endpoint allows users to retrieve product data that is currently under review. By making a request to this endpoint, users can access detailed information about the product data that is pending approval or review by authorized personnel. This functionality provides transparency and visibility into the product data review process, enabling users to track the status and progress of product data submissions.
+        /// </summary>
+        /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (ProductGetProductDataInReviewResponse)</returns>
+        public async System.Threading.Tasks.Task<product.Client.ApiResponse<ProductGetProductDataInReviewResponse>> GetProductDataInReviewWithHttpInfoAsync(ProductGetProductDataInReviewRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        {
+            // verify the required parameter 'body' is set
+            if (body == null)
+            {
+                throw new product.Client.ApiException(400, "Missing required parameter 'body' when calling ProductApi->GetProductDataInReview");
+            }
+
+
+            product.Client.RequestOptions localVarRequestOptions = new product.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+                "application/json"
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var localVarContentType = product.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = product.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.Data = body;
+
+            localVarRequestOptions.Operation = "ProductApi.GetProductDataInReview";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+            // authentication (Authorization) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
+
+            // make the HTTP request
+            var localVarResponse = await this.AsynchronousClient.PostAsync<ProductGetProductDataInReviewResponse>("/product.Product/GetProductDataInReview", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("GetProductDataInReview", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// List Attribute Options 
+        /// </summary>
+        /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>EntitymanagerListAttributeOptionsResponse</returns>
+        public EntitymanagerListAttributeOptionsResponse ListAttributeOptions(EntitymanagerListAttributeOptionsRequest body, int operationIndex = 0)
+        {
+            product.Client.ApiResponse<EntitymanagerListAttributeOptionsResponse> localVarResponse = ListAttributeOptionsWithHttpInfo(body);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// List Attribute Options 
+        /// </summary>
+        /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of EntitymanagerListAttributeOptionsResponse</returns>
+        public product.Client.ApiResponse<EntitymanagerListAttributeOptionsResponse> ListAttributeOptionsWithHttpInfo(EntitymanagerListAttributeOptionsRequest body, int operationIndex = 0)
+        {
+            // verify the required parameter 'body' is set
+            if (body == null)
+            {
+                throw new product.Client.ApiException(400, "Missing required parameter 'body' when calling ProductApi->ListAttributeOptions");
+            }
+
+            product.Client.RequestOptions localVarRequestOptions = new product.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+                "application/json"
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var localVarContentType = product.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = product.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.Data = body;
+
+            localVarRequestOptions.Operation = "ProductApi.ListAttributeOptions";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+            // authentication (Authorization) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
+
+            // make the HTTP request
+            var localVarResponse = this.Client.Post<EntitymanagerListAttributeOptionsResponse>("/product.Product/ListAttributeOptions", localVarRequestOptions, this.Configuration);
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("ListAttributeOptions", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// List Attribute Options 
+        /// </summary>
+        /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of EntitymanagerListAttributeOptionsResponse</returns>
+        public async System.Threading.Tasks.Task<EntitymanagerListAttributeOptionsResponse> ListAttributeOptionsAsync(EntitymanagerListAttributeOptionsRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        {
+            product.Client.ApiResponse<EntitymanagerListAttributeOptionsResponse> localVarResponse = await ListAttributeOptionsWithHttpInfoAsync(body, operationIndex, cancellationToken).ConfigureAwait(false);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// List Attribute Options 
+        /// </summary>
+        /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (EntitymanagerListAttributeOptionsResponse)</returns>
+        public async System.Threading.Tasks.Task<product.Client.ApiResponse<EntitymanagerListAttributeOptionsResponse>> ListAttributeOptionsWithHttpInfoAsync(EntitymanagerListAttributeOptionsRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        {
+            // verify the required parameter 'body' is set
+            if (body == null)
+            {
+                throw new product.Client.ApiException(400, "Missing required parameter 'body' when calling ProductApi->ListAttributeOptions");
+            }
+
+
+            product.Client.RequestOptions localVarRequestOptions = new product.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+                "application/json"
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var localVarContentType = product.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = product.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.Data = body;
+
+            localVarRequestOptions.Operation = "ProductApi.ListAttributeOptions";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+            // authentication (Authorization) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
+
+            // make the HTTP request
+            var localVarResponse = await this.AsynchronousClient.PostAsync<EntitymanagerListAttributeOptionsResponse>("/product.Product/ListAttributeOptions", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("ListAttributeOptions", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// List Entities 
+        /// </summary>
+        /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>EntitymanagerListEntitiesResponse</returns>
+        public EntitymanagerListEntitiesResponse ListEntities(EntitymanagerListEntitiesRequest body, int operationIndex = 0)
+        {
+            product.Client.ApiResponse<EntitymanagerListEntitiesResponse> localVarResponse = ListEntitiesWithHttpInfo(body);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// List Entities 
+        /// </summary>
+        /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of EntitymanagerListEntitiesResponse</returns>
+        public product.Client.ApiResponse<EntitymanagerListEntitiesResponse> ListEntitiesWithHttpInfo(EntitymanagerListEntitiesRequest body, int operationIndex = 0)
+        {
+            // verify the required parameter 'body' is set
+            if (body == null)
+            {
+                throw new product.Client.ApiException(400, "Missing required parameter 'body' when calling ProductApi->ListEntities");
+            }
+
+            product.Client.RequestOptions localVarRequestOptions = new product.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+                "application/json"
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var localVarContentType = product.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = product.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.Data = body;
+
+            localVarRequestOptions.Operation = "ProductApi.ListEntities";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+            // authentication (Authorization) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
+
+            // make the HTTP request
+            var localVarResponse = this.Client.Post<EntitymanagerListEntitiesResponse>("/product.Product/ListEntities", localVarRequestOptions, this.Configuration);
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("ListEntities", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// List Entities 
+        /// </summary>
+        /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of EntitymanagerListEntitiesResponse</returns>
+        public async System.Threading.Tasks.Task<EntitymanagerListEntitiesResponse> ListEntitiesAsync(EntitymanagerListEntitiesRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        {
+            product.Client.ApiResponse<EntitymanagerListEntitiesResponse> localVarResponse = await ListEntitiesWithHttpInfoAsync(body, operationIndex, cancellationToken).ConfigureAwait(false);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// List Entities 
+        /// </summary>
+        /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (EntitymanagerListEntitiesResponse)</returns>
+        public async System.Threading.Tasks.Task<product.Client.ApiResponse<EntitymanagerListEntitiesResponse>> ListEntitiesWithHttpInfoAsync(EntitymanagerListEntitiesRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        {
+            // verify the required parameter 'body' is set
+            if (body == null)
+            {
+                throw new product.Client.ApiException(400, "Missing required parameter 'body' when calling ProductApi->ListEntities");
+            }
+
+
+            product.Client.RequestOptions localVarRequestOptions = new product.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+                "application/json"
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var localVarContentType = product.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = product.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.Data = body;
+
+            localVarRequestOptions.Operation = "ProductApi.ListEntities";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+            // authentication (Authorization) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
+
+            // make the HTTP request
+            var localVarResponse = await this.AsynchronousClient.PostAsync<EntitymanagerListEntitiesResponse>("/product.Product/ListEntities", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("ListEntities", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// List Options Lists The ListOptionsLists endpoint allows users to retrieve a list of OptionLists available in the system. By making a request to this endpoint with the provided request format, users can obtain all the OptionLists associated with the specified tenant. This functionality enables users to access and manage the predefined options available for various attributes within the system. Utilizing the ListOptionsLists endpoint provides a convenient way to retrieve and work with OptionLists, facilitating efficient management of attribute options and ensuring consistency in attribute values throughout the system.
+        /// </summary>
+        /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>EntitymanagerListOptionsListsResponse</returns>
+        public EntitymanagerListOptionsListsResponse ListOptionsLists(EntitymanagerListOptionsListsRequest body, int operationIndex = 0)
+        {
+            product.Client.ApiResponse<EntitymanagerListOptionsListsResponse> localVarResponse = ListOptionsListsWithHttpInfo(body);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// List Options Lists The ListOptionsLists endpoint allows users to retrieve a list of OptionLists available in the system. By making a request to this endpoint with the provided request format, users can obtain all the OptionLists associated with the specified tenant. This functionality enables users to access and manage the predefined options available for various attributes within the system. Utilizing the ListOptionsLists endpoint provides a convenient way to retrieve and work with OptionLists, facilitating efficient management of attribute options and ensuring consistency in attribute values throughout the system.
+        /// </summary>
+        /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of EntitymanagerListOptionsListsResponse</returns>
+        public product.Client.ApiResponse<EntitymanagerListOptionsListsResponse> ListOptionsListsWithHttpInfo(EntitymanagerListOptionsListsRequest body, int operationIndex = 0)
+        {
+            // verify the required parameter 'body' is set
+            if (body == null)
+            {
+                throw new product.Client.ApiException(400, "Missing required parameter 'body' when calling ProductApi->ListOptionsLists");
+            }
+
+            product.Client.RequestOptions localVarRequestOptions = new product.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+                "application/json"
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var localVarContentType = product.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = product.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.Data = body;
+
+            localVarRequestOptions.Operation = "ProductApi.ListOptionsLists";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+            // authentication (Authorization) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
+
+            // make the HTTP request
+            var localVarResponse = this.Client.Post<EntitymanagerListOptionsListsResponse>("/product.Product/ListOptionsLists", localVarRequestOptions, this.Configuration);
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("ListOptionsLists", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// List Options Lists The ListOptionsLists endpoint allows users to retrieve a list of OptionLists available in the system. By making a request to this endpoint with the provided request format, users can obtain all the OptionLists associated with the specified tenant. This functionality enables users to access and manage the predefined options available for various attributes within the system. Utilizing the ListOptionsLists endpoint provides a convenient way to retrieve and work with OptionLists, facilitating efficient management of attribute options and ensuring consistency in attribute values throughout the system.
+        /// </summary>
+        /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of EntitymanagerListOptionsListsResponse</returns>
+        public async System.Threading.Tasks.Task<EntitymanagerListOptionsListsResponse> ListOptionsListsAsync(EntitymanagerListOptionsListsRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        {
+            product.Client.ApiResponse<EntitymanagerListOptionsListsResponse> localVarResponse = await ListOptionsListsWithHttpInfoAsync(body, operationIndex, cancellationToken).ConfigureAwait(false);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// List Options Lists The ListOptionsLists endpoint allows users to retrieve a list of OptionLists available in the system. By making a request to this endpoint with the provided request format, users can obtain all the OptionLists associated with the specified tenant. This functionality enables users to access and manage the predefined options available for various attributes within the system. Utilizing the ListOptionsLists endpoint provides a convenient way to retrieve and work with OptionLists, facilitating efficient management of attribute options and ensuring consistency in attribute values throughout the system.
+        /// </summary>
+        /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (EntitymanagerListOptionsListsResponse)</returns>
+        public async System.Threading.Tasks.Task<product.Client.ApiResponse<EntitymanagerListOptionsListsResponse>> ListOptionsListsWithHttpInfoAsync(EntitymanagerListOptionsListsRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        {
+            // verify the required parameter 'body' is set
+            if (body == null)
+            {
+                throw new product.Client.ApiException(400, "Missing required parameter 'body' when calling ProductApi->ListOptionsLists");
+            }
+
+
+            product.Client.RequestOptions localVarRequestOptions = new product.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+                "application/json"
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var localVarContentType = product.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = product.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.Data = body;
+
+            localVarRequestOptions.Operation = "ProductApi.ListOptionsLists";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+            // authentication (Authorization) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
+
+            // make the HTTP request
+            var localVarResponse = await this.AsynchronousClient.PostAsync<EntitymanagerListOptionsListsResponse>("/product.Product/ListOptionsLists", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("ListOptionsLists", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// List Products The ListProducts endpoint provides users with the ability to retrieve a filtered list of products based on specific criteria. By including filter parameters in the request, users can customize the response to only include products that meet certain conditions, such as price range, category, availability, or any other relevant attributes. This endpoint empowers users to efficiently narrow down the product selection and retrieve tailored results.
+        /// </summary>
+        /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ProductListProductsResponse</returns>
+        public ProductListProductsResponse ListProducts(ProductListProductsRequest body, int operationIndex = 0)
+        {
+            product.Client.ApiResponse<ProductListProductsResponse> localVarResponse = ListProductsWithHttpInfo(body);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// List Products The ListProducts endpoint provides users with the ability to retrieve a filtered list of products based on specific criteria. By including filter parameters in the request, users can customize the response to only include products that meet certain conditions, such as price range, category, availability, or any other relevant attributes. This endpoint empowers users to efficiently narrow down the product selection and retrieve tailored results.
+        /// </summary>
+        /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of ProductListProductsResponse</returns>
+        public product.Client.ApiResponse<ProductListProductsResponse> ListProductsWithHttpInfo(ProductListProductsRequest body, int operationIndex = 0)
+        {
+            // verify the required parameter 'body' is set
+            if (body == null)
+            {
+                throw new product.Client.ApiException(400, "Missing required parameter 'body' when calling ProductApi->ListProducts");
+            }
+
+            product.Client.RequestOptions localVarRequestOptions = new product.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+                "application/json"
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var localVarContentType = product.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = product.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.Data = body;
+
+            localVarRequestOptions.Operation = "ProductApi.ListProducts";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+            // authentication (Authorization) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
+
+            // make the HTTP request
+            var localVarResponse = this.Client.Post<ProductListProductsResponse>("/product.Product/ListProducts", localVarRequestOptions, this.Configuration);
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("ListProducts", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// List Products The ListProducts endpoint provides users with the ability to retrieve a filtered list of products based on specific criteria. By including filter parameters in the request, users can customize the response to only include products that meet certain conditions, such as price range, category, availability, or any other relevant attributes. This endpoint empowers users to efficiently narrow down the product selection and retrieve tailored results.
+        /// </summary>
+        /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ProductListProductsResponse</returns>
+        public async System.Threading.Tasks.Task<ProductListProductsResponse> ListProductsAsync(ProductListProductsRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        {
+            product.Client.ApiResponse<ProductListProductsResponse> localVarResponse = await ListProductsWithHttpInfoAsync(body, operationIndex, cancellationToken).ConfigureAwait(false);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// List Products The ListProducts endpoint provides users with the ability to retrieve a filtered list of products based on specific criteria. By including filter parameters in the request, users can customize the response to only include products that meet certain conditions, such as price range, category, availability, or any other relevant attributes. This endpoint empowers users to efficiently narrow down the product selection and retrieve tailored results.
+        /// </summary>
+        /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (ProductListProductsResponse)</returns>
+        public async System.Threading.Tasks.Task<product.Client.ApiResponse<ProductListProductsResponse>> ListProductsWithHttpInfoAsync(ProductListProductsRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        {
+            // verify the required parameter 'body' is set
+            if (body == null)
+            {
+                throw new product.Client.ApiException(400, "Missing required parameter 'body' when calling ProductApi->ListProducts");
+            }
+
+
+            product.Client.RequestOptions localVarRequestOptions = new product.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+                "application/json"
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var localVarContentType = product.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = product.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.Data = body;
+
+            localVarRequestOptions.Operation = "ProductApi.ListProducts";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+            // authentication (Authorization) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
+
+            // make the HTTP request
+            var localVarResponse = await this.AsynchronousClient.PostAsync<ProductListProductsResponse>("/product.Product/ListProducts", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("ListProducts", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// List Products By Ids The ListProductsByIds endpoint allows users to retrieve a list of products based on provided IDs. By making a request to this endpoint and specifying a set of product IDs, users can retrieve detailed information about the corresponding products. This endpoint facilitates efficient retrieval of specific products, enabling applications to display accurate and targeted product information to users.
+        /// </summary>
+        /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ProductListProductsByIdsResponse</returns>
+        public ProductListProductsByIdsResponse ListProductsByIds(ProductListProductsByIdsRequest body, int operationIndex = 0)
+        {
+            product.Client.ApiResponse<ProductListProductsByIdsResponse> localVarResponse = ListProductsByIdsWithHttpInfo(body);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// List Products By Ids The ListProductsByIds endpoint allows users to retrieve a list of products based on provided IDs. By making a request to this endpoint and specifying a set of product IDs, users can retrieve detailed information about the corresponding products. This endpoint facilitates efficient retrieval of specific products, enabling applications to display accurate and targeted product information to users.
+        /// </summary>
+        /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of ProductListProductsByIdsResponse</returns>
+        public product.Client.ApiResponse<ProductListProductsByIdsResponse> ListProductsByIdsWithHttpInfo(ProductListProductsByIdsRequest body, int operationIndex = 0)
+        {
+            // verify the required parameter 'body' is set
+            if (body == null)
+            {
+                throw new product.Client.ApiException(400, "Missing required parameter 'body' when calling ProductApi->ListProductsByIds");
+            }
+
+            product.Client.RequestOptions localVarRequestOptions = new product.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+                "application/json"
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var localVarContentType = product.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = product.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.Data = body;
+
+            localVarRequestOptions.Operation = "ProductApi.ListProductsByIds";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+            // authentication (Authorization) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
+
+            // make the HTTP request
+            var localVarResponse = this.Client.Post<ProductListProductsByIdsResponse>("/product.Product/ListProductsByIds", localVarRequestOptions, this.Configuration);
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("ListProductsByIds", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// List Products By Ids The ListProductsByIds endpoint allows users to retrieve a list of products based on provided IDs. By making a request to this endpoint and specifying a set of product IDs, users can retrieve detailed information about the corresponding products. This endpoint facilitates efficient retrieval of specific products, enabling applications to display accurate and targeted product information to users.
+        /// </summary>
+        /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ProductListProductsByIdsResponse</returns>
+        public async System.Threading.Tasks.Task<ProductListProductsByIdsResponse> ListProductsByIdsAsync(ProductListProductsByIdsRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        {
+            product.Client.ApiResponse<ProductListProductsByIdsResponse> localVarResponse = await ListProductsByIdsWithHttpInfoAsync(body, operationIndex, cancellationToken).ConfigureAwait(false);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// List Products By Ids The ListProductsByIds endpoint allows users to retrieve a list of products based on provided IDs. By making a request to this endpoint and specifying a set of product IDs, users can retrieve detailed information about the corresponding products. This endpoint facilitates efficient retrieval of specific products, enabling applications to display accurate and targeted product information to users.
+        /// </summary>
+        /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (ProductListProductsByIdsResponse)</returns>
+        public async System.Threading.Tasks.Task<product.Client.ApiResponse<ProductListProductsByIdsResponse>> ListProductsByIdsWithHttpInfoAsync(ProductListProductsByIdsRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        {
+            // verify the required parameter 'body' is set
+            if (body == null)
+            {
+                throw new product.Client.ApiException(400, "Missing required parameter 'body' when calling ProductApi->ListProductsByIds");
+            }
+
+
+            product.Client.RequestOptions localVarRequestOptions = new product.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+                "application/json"
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var localVarContentType = product.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = product.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.Data = body;
+
+            localVarRequestOptions.Operation = "ProductApi.ListProductsByIds";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+            // authentication (Authorization) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
+
+            // make the HTTP request
+            var localVarResponse = await this.AsynchronousClient.PostAsync<ProductListProductsByIdsResponse>("/product.Product/ListProductsByIds", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("ListProductsByIds", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// List Products By Sku 
+        /// </summary>
+        /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ProductListProductsBySkuResponse</returns>
+        public ProductListProductsBySkuResponse ListProductsBySku(ProductListProductsBySkuRequest body, int operationIndex = 0)
+        {
+            product.Client.ApiResponse<ProductListProductsBySkuResponse> localVarResponse = ListProductsBySkuWithHttpInfo(body);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// List Products By Sku 
+        /// </summary>
+        /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of ProductListProductsBySkuResponse</returns>
+        public product.Client.ApiResponse<ProductListProductsBySkuResponse> ListProductsBySkuWithHttpInfo(ProductListProductsBySkuRequest body, int operationIndex = 0)
+        {
+            // verify the required parameter 'body' is set
+            if (body == null)
+            {
+                throw new product.Client.ApiException(400, "Missing required parameter 'body' when calling ProductApi->ListProductsBySku");
+            }
+
+            product.Client.RequestOptions localVarRequestOptions = new product.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+                "application/json"
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var localVarContentType = product.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = product.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.Data = body;
+
+            localVarRequestOptions.Operation = "ProductApi.ListProductsBySku";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+            // authentication (Authorization) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
+
+            // make the HTTP request
+            var localVarResponse = this.Client.Post<ProductListProductsBySkuResponse>("/product.Product/ListProductsBySku", localVarRequestOptions, this.Configuration);
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("ListProductsBySku", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// List Products By Sku 
+        /// </summary>
+        /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ProductListProductsBySkuResponse</returns>
+        public async System.Threading.Tasks.Task<ProductListProductsBySkuResponse> ListProductsBySkuAsync(ProductListProductsBySkuRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        {
+            product.Client.ApiResponse<ProductListProductsBySkuResponse> localVarResponse = await ListProductsBySkuWithHttpInfoAsync(body, operationIndex, cancellationToken).ConfigureAwait(false);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// List Products By Sku 
+        /// </summary>
+        /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (ProductListProductsBySkuResponse)</returns>
+        public async System.Threading.Tasks.Task<product.Client.ApiResponse<ProductListProductsBySkuResponse>> ListProductsBySkuWithHttpInfoAsync(ProductListProductsBySkuRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        {
+            // verify the required parameter 'body' is set
+            if (body == null)
+            {
+                throw new product.Client.ApiException(400, "Missing required parameter 'body' when calling ProductApi->ListProductsBySku");
+            }
+
+
+            product.Client.RequestOptions localVarRequestOptions = new product.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+                "application/json"
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var localVarContentType = product.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = product.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.Data = body;
+
+            localVarRequestOptions.Operation = "ProductApi.ListProductsBySku";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+            // authentication (Authorization) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
+
+            // make the HTTP request
+            var localVarResponse = await this.AsynchronousClient.PostAsync<ProductListProductsBySkuResponse>("/product.Product/ListProductsBySku", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("ListProductsBySku", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// List Product Variants By Sku 
+        /// </summary>
+        /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ProductListVariantsBySkuResponse</returns>
+        public ProductListVariantsBySkuResponse ListVariantsBySku(ProductListVariantsBySkuRequest body, int operationIndex = 0)
+        {
+            product.Client.ApiResponse<ProductListVariantsBySkuResponse> localVarResponse = ListVariantsBySkuWithHttpInfo(body);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// List Product Variants By Sku 
+        /// </summary>
+        /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of ProductListVariantsBySkuResponse</returns>
+        public product.Client.ApiResponse<ProductListVariantsBySkuResponse> ListVariantsBySkuWithHttpInfo(ProductListVariantsBySkuRequest body, int operationIndex = 0)
+        {
+            // verify the required parameter 'body' is set
+            if (body == null)
+            {
+                throw new product.Client.ApiException(400, "Missing required parameter 'body' when calling ProductApi->ListVariantsBySku");
+            }
+
+            product.Client.RequestOptions localVarRequestOptions = new product.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+                "application/json"
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var localVarContentType = product.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = product.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.Data = body;
+
+            localVarRequestOptions.Operation = "ProductApi.ListVariantsBySku";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+            // authentication (Authorization) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
+
+            // make the HTTP request
+            var localVarResponse = this.Client.Post<ProductListVariantsBySkuResponse>("/product.Product/ListVariantsBySku", localVarRequestOptions, this.Configuration);
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("ListVariantsBySku", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// List Product Variants By Sku 
+        /// </summary>
+        /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ProductListVariantsBySkuResponse</returns>
+        public async System.Threading.Tasks.Task<ProductListVariantsBySkuResponse> ListVariantsBySkuAsync(ProductListVariantsBySkuRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        {
+            product.Client.ApiResponse<ProductListVariantsBySkuResponse> localVarResponse = await ListVariantsBySkuWithHttpInfoAsync(body, operationIndex, cancellationToken).ConfigureAwait(false);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// List Product Variants By Sku 
+        /// </summary>
+        /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (ProductListVariantsBySkuResponse)</returns>
+        public async System.Threading.Tasks.Task<product.Client.ApiResponse<ProductListVariantsBySkuResponse>> ListVariantsBySkuWithHttpInfoAsync(ProductListVariantsBySkuRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        {
+            // verify the required parameter 'body' is set
+            if (body == null)
+            {
+                throw new product.Client.ApiException(400, "Missing required parameter 'body' when calling ProductApi->ListVariantsBySku");
+            }
+
+
+            product.Client.RequestOptions localVarRequestOptions = new product.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+                "application/json"
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var localVarContentType = product.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = product.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.Data = body;
+
+            localVarRequestOptions.Operation = "ProductApi.ListVariantsBySku";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+            // authentication (Authorization) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
+
+            // make the HTTP request
+            var localVarResponse = await this.AsynchronousClient.PostAsync<ProductListVariantsBySkuResponse>("/product.Product/ListVariantsBySku", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("ListVariantsBySku", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        ///  Allow creation of multiple attributes. If any attribute is invalid, an error will be returned with more details, and in the response body, the attributes created will be returned.
         /// </summary>
         /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"></param>
@@ -2324,7 +6445,7 @@ namespace product.Api
         }
 
         /// <summary>
-        ///  
+        ///  Allow creation of multiple attributes. If any attribute is invalid, an error will be returned with more details, and in the response body, the attributes created will be returned.
         /// </summary>
         /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"></param>
@@ -2366,6 +6487,11 @@ namespace product.Api
             localVarRequestOptions.Operation = "ProductApi.ProductBulkCreateAttribute";
             localVarRequestOptions.OperationIndex = operationIndex;
 
+            // authentication (Authorization) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
 
             // make the HTTP request
             var localVarResponse = this.Client.Post<EntitymanagerBulkCreateAttributeResponse>("/product.Product/BulkCreateAttribute", localVarRequestOptions, this.Configuration);
@@ -2382,7 +6508,7 @@ namespace product.Api
         }
 
         /// <summary>
-        ///  
+        ///  Allow creation of multiple attributes. If any attribute is invalid, an error will be returned with more details, and in the response body, the attributes created will be returned.
         /// </summary>
         /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"></param>
@@ -2396,7 +6522,7 @@ namespace product.Api
         }
 
         /// <summary>
-        ///  
+        ///  Allow creation of multiple attributes. If any attribute is invalid, an error will be returned with more details, and in the response body, the attributes created will be returned.
         /// </summary>
         /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"></param>
@@ -2440,6 +6566,11 @@ namespace product.Api
             localVarRequestOptions.Operation = "ProductApi.ProductBulkCreateAttribute";
             localVarRequestOptions.OperationIndex = operationIndex;
 
+            // authentication (Authorization) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
 
             // make the HTTP request
             var localVarResponse = await this.AsynchronousClient.PostAsync<EntitymanagerBulkCreateAttributeResponse>("/product.Product/BulkCreateAttribute", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
@@ -2457,299 +6588,7 @@ namespace product.Api
         }
 
         /// <summary>
-        ///  
-        /// </summary>
-        /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>Object</returns>
-        public Object ProductBulkDeleteProducts(ProductBulkDeleteProductsRequest body, int operationIndex = 0)
-        {
-            product.Client.ApiResponse<Object> localVarResponse = ProductBulkDeleteProductsWithHttpInfo(body);
-            return localVarResponse.Data;
-        }
-
-        /// <summary>
-        ///  
-        /// </summary>
-        /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of Object</returns>
-        public product.Client.ApiResponse<Object> ProductBulkDeleteProductsWithHttpInfo(ProductBulkDeleteProductsRequest body, int operationIndex = 0)
-        {
-            // verify the required parameter 'body' is set
-            if (body == null)
-            {
-                throw new product.Client.ApiException(400, "Missing required parameter 'body' when calling ProductApi->ProductBulkDeleteProducts");
-            }
-
-            product.Client.RequestOptions localVarRequestOptions = new product.Client.RequestOptions();
-
-            string[] _contentTypes = new string[] {
-                "application/json"
-            };
-
-            // to determine the Accept header
-            string[] _accepts = new string[] {
-                "application/json"
-            };
-
-            var localVarContentType = product.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
-            }
-
-            var localVarAccept = product.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
-            }
-
-            localVarRequestOptions.Data = body;
-
-            localVarRequestOptions.Operation = "ProductApi.ProductBulkDeleteProducts";
-            localVarRequestOptions.OperationIndex = operationIndex;
-
-
-            // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/product.Product/BulkDeleteProducts", localVarRequestOptions, this.Configuration);
-            if (this.ExceptionFactory != null)
-            {
-                Exception _exception = this.ExceptionFactory("ProductBulkDeleteProducts", localVarResponse);
-                if (_exception != null)
-                {
-                    throw _exception;
-                }
-            }
-
-            return localVarResponse;
-        }
-
-        /// <summary>
-        ///  
-        /// </summary>
-        /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of Object</returns>
-        public async System.Threading.Tasks.Task<Object> ProductBulkDeleteProductsAsync(ProductBulkDeleteProductsRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
-        {
-            product.Client.ApiResponse<Object> localVarResponse = await ProductBulkDeleteProductsWithHttpInfoAsync(body, operationIndex, cancellationToken).ConfigureAwait(false);
-            return localVarResponse.Data;
-        }
-
-        /// <summary>
-        ///  
-        /// </summary>
-        /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (Object)</returns>
-        public async System.Threading.Tasks.Task<product.Client.ApiResponse<Object>> ProductBulkDeleteProductsWithHttpInfoAsync(ProductBulkDeleteProductsRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
-        {
-            // verify the required parameter 'body' is set
-            if (body == null)
-            {
-                throw new product.Client.ApiException(400, "Missing required parameter 'body' when calling ProductApi->ProductBulkDeleteProducts");
-            }
-
-
-            product.Client.RequestOptions localVarRequestOptions = new product.Client.RequestOptions();
-
-            string[] _contentTypes = new string[] {
-                "application/json"
-            };
-
-            // to determine the Accept header
-            string[] _accepts = new string[] {
-                "application/json"
-            };
-
-            var localVarContentType = product.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
-            }
-
-            var localVarAccept = product.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
-            }
-
-            localVarRequestOptions.Data = body;
-
-            localVarRequestOptions.Operation = "ProductApi.ProductBulkDeleteProducts";
-            localVarRequestOptions.OperationIndex = operationIndex;
-
-
-            // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/product.Product/BulkDeleteProducts", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
-
-            if (this.ExceptionFactory != null)
-            {
-                Exception _exception = this.ExceptionFactory("ProductBulkDeleteProducts", localVarResponse);
-                if (_exception != null)
-                {
-                    throw _exception;
-                }
-            }
-
-            return localVarResponse;
-        }
-
-        /// <summary>
-        ///  
-        /// </summary>
-        /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>Object</returns>
-        public Object ProductBulkRemoveAssetsEntries(ProductBulkRemoveAssetsEntriesRequest body, int operationIndex = 0)
-        {
-            product.Client.ApiResponse<Object> localVarResponse = ProductBulkRemoveAssetsEntriesWithHttpInfo(body);
-            return localVarResponse.Data;
-        }
-
-        /// <summary>
-        ///  
-        /// </summary>
-        /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of Object</returns>
-        public product.Client.ApiResponse<Object> ProductBulkRemoveAssetsEntriesWithHttpInfo(ProductBulkRemoveAssetsEntriesRequest body, int operationIndex = 0)
-        {
-            // verify the required parameter 'body' is set
-            if (body == null)
-            {
-                throw new product.Client.ApiException(400, "Missing required parameter 'body' when calling ProductApi->ProductBulkRemoveAssetsEntries");
-            }
-
-            product.Client.RequestOptions localVarRequestOptions = new product.Client.RequestOptions();
-
-            string[] _contentTypes = new string[] {
-                "application/json"
-            };
-
-            // to determine the Accept header
-            string[] _accepts = new string[] {
-                "application/json"
-            };
-
-            var localVarContentType = product.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
-            }
-
-            var localVarAccept = product.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
-            }
-
-            localVarRequestOptions.Data = body;
-
-            localVarRequestOptions.Operation = "ProductApi.ProductBulkRemoveAssetsEntries";
-            localVarRequestOptions.OperationIndex = operationIndex;
-
-
-            // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/product.Product/BulkRemoveAssetsEntries", localVarRequestOptions, this.Configuration);
-            if (this.ExceptionFactory != null)
-            {
-                Exception _exception = this.ExceptionFactory("ProductBulkRemoveAssetsEntries", localVarResponse);
-                if (_exception != null)
-                {
-                    throw _exception;
-                }
-            }
-
-            return localVarResponse;
-        }
-
-        /// <summary>
-        ///  
-        /// </summary>
-        /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of Object</returns>
-        public async System.Threading.Tasks.Task<Object> ProductBulkRemoveAssetsEntriesAsync(ProductBulkRemoveAssetsEntriesRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
-        {
-            product.Client.ApiResponse<Object> localVarResponse = await ProductBulkRemoveAssetsEntriesWithHttpInfoAsync(body, operationIndex, cancellationToken).ConfigureAwait(false);
-            return localVarResponse.Data;
-        }
-
-        /// <summary>
-        ///  
-        /// </summary>
-        /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (Object)</returns>
-        public async System.Threading.Tasks.Task<product.Client.ApiResponse<Object>> ProductBulkRemoveAssetsEntriesWithHttpInfoAsync(ProductBulkRemoveAssetsEntriesRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
-        {
-            // verify the required parameter 'body' is set
-            if (body == null)
-            {
-                throw new product.Client.ApiException(400, "Missing required parameter 'body' when calling ProductApi->ProductBulkRemoveAssetsEntries");
-            }
-
-
-            product.Client.RequestOptions localVarRequestOptions = new product.Client.RequestOptions();
-
-            string[] _contentTypes = new string[] {
-                "application/json"
-            };
-
-            // to determine the Accept header
-            string[] _accepts = new string[] {
-                "application/json"
-            };
-
-            var localVarContentType = product.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
-            }
-
-            var localVarAccept = product.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
-            }
-
-            localVarRequestOptions.Data = body;
-
-            localVarRequestOptions.Operation = "ProductApi.ProductBulkRemoveAssetsEntries";
-            localVarRequestOptions.OperationIndex = operationIndex;
-
-
-            // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/product.Product/BulkRemoveAssetsEntries", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
-
-            if (this.ExceptionFactory != null)
-            {
-                Exception _exception = this.ExceptionFactory("ProductBulkRemoveAssetsEntries", localVarResponse);
-                if (_exception != null)
-                {
-                    throw _exception;
-                }
-            }
-
-            return localVarResponse;
-        }
-
-        /// <summary>
-        ///  
+        ///  This operation is asynchronous and may complete after the response.
         /// </summary>
         /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"></param>
@@ -2763,7 +6602,7 @@ namespace product.Api
         }
 
         /// <summary>
-        ///  
+        ///  This operation is asynchronous and may complete after the response.
         /// </summary>
         /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"></param>
@@ -2806,6 +6645,11 @@ namespace product.Api
             localVarRequestOptions.Operation = "ProductApi.ProductBulkUpdate";
             localVarRequestOptions.OperationIndex = operationIndex;
 
+            // authentication (Authorization) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
 
             // make the HTTP request
             var localVarResponse = this.Client.Post<ProductBulkUpdateResponse>("/product.Product/BulkUpdate", localVarRequestOptions, this.Configuration);
@@ -2822,7 +6666,7 @@ namespace product.Api
         }
 
         /// <summary>
-        ///  
+        ///  This operation is asynchronous and may complete after the response.
         /// </summary>
         /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"></param>
@@ -2837,7 +6681,7 @@ namespace product.Api
         }
 
         /// <summary>
-        ///  
+        ///  This operation is asynchronous and may complete after the response.
         /// </summary>
         /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"></param>
@@ -2882,6 +6726,11 @@ namespace product.Api
             localVarRequestOptions.Operation = "ProductApi.ProductBulkUpdate";
             localVarRequestOptions.OperationIndex = operationIndex;
 
+            // authentication (Authorization) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
 
             // make the HTTP request
             var localVarResponse = await this.AsynchronousClient.PostAsync<ProductBulkUpdateResponse>("/product.Product/BulkUpdate", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
@@ -2889,298 +6738,6 @@ namespace product.Api
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("ProductBulkUpdate", localVarResponse);
-                if (_exception != null)
-                {
-                    throw _exception;
-                }
-            }
-
-            return localVarResponse;
-        }
-
-        /// <summary>
-        ///  
-        /// </summary>
-        /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ProductBulkUpdateAssetsEntriesResponse</returns>
-        public ProductBulkUpdateAssetsEntriesResponse ProductBulkUpdateAssetsEntries(ProductBulkUpdateAssetsEntriesRequest body, int operationIndex = 0)
-        {
-            product.Client.ApiResponse<ProductBulkUpdateAssetsEntriesResponse> localVarResponse = ProductBulkUpdateAssetsEntriesWithHttpInfo(body);
-            return localVarResponse.Data;
-        }
-
-        /// <summary>
-        ///  
-        /// </summary>
-        /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of ProductBulkUpdateAssetsEntriesResponse</returns>
-        public product.Client.ApiResponse<ProductBulkUpdateAssetsEntriesResponse> ProductBulkUpdateAssetsEntriesWithHttpInfo(ProductBulkUpdateAssetsEntriesRequest body, int operationIndex = 0)
-        {
-            // verify the required parameter 'body' is set
-            if (body == null)
-            {
-                throw new product.Client.ApiException(400, "Missing required parameter 'body' when calling ProductApi->ProductBulkUpdateAssetsEntries");
-            }
-
-            product.Client.RequestOptions localVarRequestOptions = new product.Client.RequestOptions();
-
-            string[] _contentTypes = new string[] {
-                "application/json"
-            };
-
-            // to determine the Accept header
-            string[] _accepts = new string[] {
-                "application/json"
-            };
-
-            var localVarContentType = product.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
-            }
-
-            var localVarAccept = product.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
-            }
-
-            localVarRequestOptions.Data = body;
-
-            localVarRequestOptions.Operation = "ProductApi.ProductBulkUpdateAssetsEntries";
-            localVarRequestOptions.OperationIndex = operationIndex;
-
-
-            // make the HTTP request
-            var localVarResponse = this.Client.Post<ProductBulkUpdateAssetsEntriesResponse>("/product.Product/BulkUpdateAssetsEntries", localVarRequestOptions, this.Configuration);
-            if (this.ExceptionFactory != null)
-            {
-                Exception _exception = this.ExceptionFactory("ProductBulkUpdateAssetsEntries", localVarResponse);
-                if (_exception != null)
-                {
-                    throw _exception;
-                }
-            }
-
-            return localVarResponse;
-        }
-
-        /// <summary>
-        ///  
-        /// </summary>
-        /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ProductBulkUpdateAssetsEntriesResponse</returns>
-        public async System.Threading.Tasks.Task<ProductBulkUpdateAssetsEntriesResponse> ProductBulkUpdateAssetsEntriesAsync(ProductBulkUpdateAssetsEntriesRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
-        {
-            product.Client.ApiResponse<ProductBulkUpdateAssetsEntriesResponse> localVarResponse = await ProductBulkUpdateAssetsEntriesWithHttpInfoAsync(body, operationIndex, cancellationToken).ConfigureAwait(false);
-            return localVarResponse.Data;
-        }
-
-        /// <summary>
-        ///  
-        /// </summary>
-        /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (ProductBulkUpdateAssetsEntriesResponse)</returns>
-        public async System.Threading.Tasks.Task<product.Client.ApiResponse<ProductBulkUpdateAssetsEntriesResponse>> ProductBulkUpdateAssetsEntriesWithHttpInfoAsync(ProductBulkUpdateAssetsEntriesRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
-        {
-            // verify the required parameter 'body' is set
-            if (body == null)
-            {
-                throw new product.Client.ApiException(400, "Missing required parameter 'body' when calling ProductApi->ProductBulkUpdateAssetsEntries");
-            }
-
-
-            product.Client.RequestOptions localVarRequestOptions = new product.Client.RequestOptions();
-
-            string[] _contentTypes = new string[] {
-                "application/json"
-            };
-
-            // to determine the Accept header
-            string[] _accepts = new string[] {
-                "application/json"
-            };
-
-            var localVarContentType = product.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
-            }
-
-            var localVarAccept = product.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
-            }
-
-            localVarRequestOptions.Data = body;
-
-            localVarRequestOptions.Operation = "ProductApi.ProductBulkUpdateAssetsEntries";
-            localVarRequestOptions.OperationIndex = operationIndex;
-
-
-            // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.PostAsync<ProductBulkUpdateAssetsEntriesResponse>("/product.Product/BulkUpdateAssetsEntries", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
-
-            if (this.ExceptionFactory != null)
-            {
-                Exception _exception = this.ExceptionFactory("ProductBulkUpdateAssetsEntries", localVarResponse);
-                if (_exception != null)
-                {
-                    throw _exception;
-                }
-            }
-
-            return localVarResponse;
-        }
-
-        /// <summary>
-        ///  
-        /// </summary>
-        /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ProductBulkUpdateResponseV2</returns>
-        public ProductBulkUpdateResponseV2 ProductBulkUpdateV2(ProductBulkUpdateRequestV2 body, int operationIndex = 0)
-        {
-            product.Client.ApiResponse<ProductBulkUpdateResponseV2> localVarResponse = ProductBulkUpdateV2WithHttpInfo(body);
-            return localVarResponse.Data;
-        }
-
-        /// <summary>
-        ///  
-        /// </summary>
-        /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of ProductBulkUpdateResponseV2</returns>
-        public product.Client.ApiResponse<ProductBulkUpdateResponseV2> ProductBulkUpdateV2WithHttpInfo(ProductBulkUpdateRequestV2 body, int operationIndex = 0)
-        {
-            // verify the required parameter 'body' is set
-            if (body == null)
-            {
-                throw new product.Client.ApiException(400, "Missing required parameter 'body' when calling ProductApi->ProductBulkUpdateV2");
-            }
-
-            product.Client.RequestOptions localVarRequestOptions = new product.Client.RequestOptions();
-
-            string[] _contentTypes = new string[] {
-                "application/json"
-            };
-
-            // to determine the Accept header
-            string[] _accepts = new string[] {
-                "application/json"
-            };
-
-            var localVarContentType = product.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
-            }
-
-            var localVarAccept = product.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
-            }
-
-            localVarRequestOptions.Data = body;
-
-            localVarRequestOptions.Operation = "ProductApi.ProductBulkUpdateV2";
-            localVarRequestOptions.OperationIndex = operationIndex;
-
-
-            // make the HTTP request
-            var localVarResponse = this.Client.Post<ProductBulkUpdateResponseV2>("/product.Product/BulkUpdateV2", localVarRequestOptions, this.Configuration);
-            if (this.ExceptionFactory != null)
-            {
-                Exception _exception = this.ExceptionFactory("ProductBulkUpdateV2", localVarResponse);
-                if (_exception != null)
-                {
-                    throw _exception;
-                }
-            }
-
-            return localVarResponse;
-        }
-
-        /// <summary>
-        ///  
-        /// </summary>
-        /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ProductBulkUpdateResponseV2</returns>
-        public async System.Threading.Tasks.Task<ProductBulkUpdateResponseV2> ProductBulkUpdateV2Async(ProductBulkUpdateRequestV2 body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
-        {
-            product.Client.ApiResponse<ProductBulkUpdateResponseV2> localVarResponse = await ProductBulkUpdateV2WithHttpInfoAsync(body, operationIndex, cancellationToken).ConfigureAwait(false);
-            return localVarResponse.Data;
-        }
-
-        /// <summary>
-        ///  
-        /// </summary>
-        /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (ProductBulkUpdateResponseV2)</returns>
-        public async System.Threading.Tasks.Task<product.Client.ApiResponse<ProductBulkUpdateResponseV2>> ProductBulkUpdateV2WithHttpInfoAsync(ProductBulkUpdateRequestV2 body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
-        {
-            // verify the required parameter 'body' is set
-            if (body == null)
-            {
-                throw new product.Client.ApiException(400, "Missing required parameter 'body' when calling ProductApi->ProductBulkUpdateV2");
-            }
-
-
-            product.Client.RequestOptions localVarRequestOptions = new product.Client.RequestOptions();
-
-            string[] _contentTypes = new string[] {
-                "application/json"
-            };
-
-            // to determine the Accept header
-            string[] _accepts = new string[] {
-                "application/json"
-            };
-
-            var localVarContentType = product.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
-            }
-
-            var localVarAccept = product.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
-            }
-
-            localVarRequestOptions.Data = body;
-
-            localVarRequestOptions.Operation = "ProductApi.ProductBulkUpdateV2";
-            localVarRequestOptions.OperationIndex = operationIndex;
-
-
-            // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.PostAsync<ProductBulkUpdateResponseV2>("/product.Product/BulkUpdateV2", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
-
-            if (this.ExceptionFactory != null)
-            {
-                Exception _exception = this.ExceptionFactory("ProductBulkUpdateV2", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;
@@ -3246,6 +6803,11 @@ namespace product.Api
             localVarRequestOptions.Operation = "ProductApi.ProductCreateAttributeGroup";
             localVarRequestOptions.OperationIndex = operationIndex;
 
+            // authentication (Authorization) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
 
             // make the HTTP request
             var localVarResponse = this.Client.Post<EntitymanagerAttributeGroup>("/product.Product/CreateAttributeGroup", localVarRequestOptions, this.Configuration);
@@ -3320,6 +6882,11 @@ namespace product.Api
             localVarRequestOptions.Operation = "ProductApi.ProductCreateAttributeGroup";
             localVarRequestOptions.OperationIndex = operationIndex;
 
+            // authentication (Authorization) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
 
             // make the HTTP request
             var localVarResponse = await this.AsynchronousClient.PostAsync<EntitymanagerAttributeGroup>("/product.Product/CreateAttributeGroup", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
@@ -3340,445 +6907,7 @@ namespace product.Api
         ///  
         /// </summary>
         /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>EntitymanagerCreateAttributeOptionsResponse</returns>
-        public EntitymanagerCreateAttributeOptionsResponse ProductCreateAttributeOptions(EntitymanagerCreateAttributeOptionsRequest body, int operationIndex = 0)
-        {
-            product.Client.ApiResponse<EntitymanagerCreateAttributeOptionsResponse> localVarResponse = ProductCreateAttributeOptionsWithHttpInfo(body);
-            return localVarResponse.Data;
-        }
-
-        /// <summary>
-        ///  
-        /// </summary>
-        /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of EntitymanagerCreateAttributeOptionsResponse</returns>
-        public product.Client.ApiResponse<EntitymanagerCreateAttributeOptionsResponse> ProductCreateAttributeOptionsWithHttpInfo(EntitymanagerCreateAttributeOptionsRequest body, int operationIndex = 0)
-        {
-            // verify the required parameter 'body' is set
-            if (body == null)
-            {
-                throw new product.Client.ApiException(400, "Missing required parameter 'body' when calling ProductApi->ProductCreateAttributeOptions");
-            }
-
-            product.Client.RequestOptions localVarRequestOptions = new product.Client.RequestOptions();
-
-            string[] _contentTypes = new string[] {
-                "application/json"
-            };
-
-            // to determine the Accept header
-            string[] _accepts = new string[] {
-                "application/json"
-            };
-
-            var localVarContentType = product.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
-            }
-
-            var localVarAccept = product.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
-            }
-
-            localVarRequestOptions.Data = body;
-
-            localVarRequestOptions.Operation = "ProductApi.ProductCreateAttributeOptions";
-            localVarRequestOptions.OperationIndex = operationIndex;
-
-
-            // make the HTTP request
-            var localVarResponse = this.Client.Post<EntitymanagerCreateAttributeOptionsResponse>("/product.Product/CreateAttributeOptions", localVarRequestOptions, this.Configuration);
-            if (this.ExceptionFactory != null)
-            {
-                Exception _exception = this.ExceptionFactory("ProductCreateAttributeOptions", localVarResponse);
-                if (_exception != null)
-                {
-                    throw _exception;
-                }
-            }
-
-            return localVarResponse;
-        }
-
-        /// <summary>
-        ///  
-        /// </summary>
-        /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of EntitymanagerCreateAttributeOptionsResponse</returns>
-        public async System.Threading.Tasks.Task<EntitymanagerCreateAttributeOptionsResponse> ProductCreateAttributeOptionsAsync(EntitymanagerCreateAttributeOptionsRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
-        {
-            product.Client.ApiResponse<EntitymanagerCreateAttributeOptionsResponse> localVarResponse = await ProductCreateAttributeOptionsWithHttpInfoAsync(body, operationIndex, cancellationToken).ConfigureAwait(false);
-            return localVarResponse.Data;
-        }
-
-        /// <summary>
-        ///  
-        /// </summary>
-        /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (EntitymanagerCreateAttributeOptionsResponse)</returns>
-        public async System.Threading.Tasks.Task<product.Client.ApiResponse<EntitymanagerCreateAttributeOptionsResponse>> ProductCreateAttributeOptionsWithHttpInfoAsync(EntitymanagerCreateAttributeOptionsRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
-        {
-            // verify the required parameter 'body' is set
-            if (body == null)
-            {
-                throw new product.Client.ApiException(400, "Missing required parameter 'body' when calling ProductApi->ProductCreateAttributeOptions");
-            }
-
-
-            product.Client.RequestOptions localVarRequestOptions = new product.Client.RequestOptions();
-
-            string[] _contentTypes = new string[] {
-                "application/json"
-            };
-
-            // to determine the Accept header
-            string[] _accepts = new string[] {
-                "application/json"
-            };
-
-            var localVarContentType = product.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
-            }
-
-            var localVarAccept = product.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
-            }
-
-            localVarRequestOptions.Data = body;
-
-            localVarRequestOptions.Operation = "ProductApi.ProductCreateAttributeOptions";
-            localVarRequestOptions.OperationIndex = operationIndex;
-
-
-            // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.PostAsync<EntitymanagerCreateAttributeOptionsResponse>("/product.Product/CreateAttributeOptions", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
-
-            if (this.ExceptionFactory != null)
-            {
-                Exception _exception = this.ExceptionFactory("ProductCreateAttributeOptions", localVarResponse);
-                if (_exception != null)
-                {
-                    throw _exception;
-                }
-            }
-
-            return localVarResponse;
-        }
-
-        /// <summary>
-        ///  
-        /// </summary>
-        /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>EntitymanagerCreateEntityResponse</returns>
-        public EntitymanagerCreateEntityResponse ProductCreateEntity(EntitymanagerEntity body, int operationIndex = 0)
-        {
-            product.Client.ApiResponse<EntitymanagerCreateEntityResponse> localVarResponse = ProductCreateEntityWithHttpInfo(body);
-            return localVarResponse.Data;
-        }
-
-        /// <summary>
-        ///  
-        /// </summary>
-        /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of EntitymanagerCreateEntityResponse</returns>
-        public product.Client.ApiResponse<EntitymanagerCreateEntityResponse> ProductCreateEntityWithHttpInfo(EntitymanagerEntity body, int operationIndex = 0)
-        {
-            // verify the required parameter 'body' is set
-            if (body == null)
-            {
-                throw new product.Client.ApiException(400, "Missing required parameter 'body' when calling ProductApi->ProductCreateEntity");
-            }
-
-            product.Client.RequestOptions localVarRequestOptions = new product.Client.RequestOptions();
-
-            string[] _contentTypes = new string[] {
-                "application/json"
-            };
-
-            // to determine the Accept header
-            string[] _accepts = new string[] {
-                "application/json"
-            };
-
-            var localVarContentType = product.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
-            }
-
-            var localVarAccept = product.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
-            }
-
-            localVarRequestOptions.Data = body;
-
-            localVarRequestOptions.Operation = "ProductApi.ProductCreateEntity";
-            localVarRequestOptions.OperationIndex = operationIndex;
-
-
-            // make the HTTP request
-            var localVarResponse = this.Client.Post<EntitymanagerCreateEntityResponse>("/product.Product/CreateEntity", localVarRequestOptions, this.Configuration);
-            if (this.ExceptionFactory != null)
-            {
-                Exception _exception = this.ExceptionFactory("ProductCreateEntity", localVarResponse);
-                if (_exception != null)
-                {
-                    throw _exception;
-                }
-            }
-
-            return localVarResponse;
-        }
-
-        /// <summary>
-        ///  
-        /// </summary>
-        /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of EntitymanagerCreateEntityResponse</returns>
-        public async System.Threading.Tasks.Task<EntitymanagerCreateEntityResponse> ProductCreateEntityAsync(EntitymanagerEntity body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
-        {
-            product.Client.ApiResponse<EntitymanagerCreateEntityResponse> localVarResponse = await ProductCreateEntityWithHttpInfoAsync(body, operationIndex, cancellationToken).ConfigureAwait(false);
-            return localVarResponse.Data;
-        }
-
-        /// <summary>
-        ///  
-        /// </summary>
-        /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (EntitymanagerCreateEntityResponse)</returns>
-        public async System.Threading.Tasks.Task<product.Client.ApiResponse<EntitymanagerCreateEntityResponse>> ProductCreateEntityWithHttpInfoAsync(EntitymanagerEntity body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
-        {
-            // verify the required parameter 'body' is set
-            if (body == null)
-            {
-                throw new product.Client.ApiException(400, "Missing required parameter 'body' when calling ProductApi->ProductCreateEntity");
-            }
-
-
-            product.Client.RequestOptions localVarRequestOptions = new product.Client.RequestOptions();
-
-            string[] _contentTypes = new string[] {
-                "application/json"
-            };
-
-            // to determine the Accept header
-            string[] _accepts = new string[] {
-                "application/json"
-            };
-
-            var localVarContentType = product.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
-            }
-
-            var localVarAccept = product.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
-            }
-
-            localVarRequestOptions.Data = body;
-
-            localVarRequestOptions.Operation = "ProductApi.ProductCreateEntity";
-            localVarRequestOptions.OperationIndex = operationIndex;
-
-
-            // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.PostAsync<EntitymanagerCreateEntityResponse>("/product.Product/CreateEntity", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
-
-            if (this.ExceptionFactory != null)
-            {
-                Exception _exception = this.ExceptionFactory("ProductCreateEntity", localVarResponse);
-                if (_exception != null)
-                {
-                    throw _exception;
-                }
-            }
-
-            return localVarResponse;
-        }
-
-        /// <summary>
-        ///  
-        /// </summary>
-        /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>EntitymanagerCreateOptionsListResponse</returns>
-        public EntitymanagerCreateOptionsListResponse ProductCreateOptionsList(EntitymanagerCreateOptionsListRequest body, int operationIndex = 0)
-        {
-            product.Client.ApiResponse<EntitymanagerCreateOptionsListResponse> localVarResponse = ProductCreateOptionsListWithHttpInfo(body);
-            return localVarResponse.Data;
-        }
-
-        /// <summary>
-        ///  
-        /// </summary>
-        /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of EntitymanagerCreateOptionsListResponse</returns>
-        public product.Client.ApiResponse<EntitymanagerCreateOptionsListResponse> ProductCreateOptionsListWithHttpInfo(EntitymanagerCreateOptionsListRequest body, int operationIndex = 0)
-        {
-            // verify the required parameter 'body' is set
-            if (body == null)
-            {
-                throw new product.Client.ApiException(400, "Missing required parameter 'body' when calling ProductApi->ProductCreateOptionsList");
-            }
-
-            product.Client.RequestOptions localVarRequestOptions = new product.Client.RequestOptions();
-
-            string[] _contentTypes = new string[] {
-                "application/json"
-            };
-
-            // to determine the Accept header
-            string[] _accepts = new string[] {
-                "application/json"
-            };
-
-            var localVarContentType = product.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
-            }
-
-            var localVarAccept = product.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
-            }
-
-            localVarRequestOptions.Data = body;
-
-            localVarRequestOptions.Operation = "ProductApi.ProductCreateOptionsList";
-            localVarRequestOptions.OperationIndex = operationIndex;
-
-
-            // make the HTTP request
-            var localVarResponse = this.Client.Post<EntitymanagerCreateOptionsListResponse>("/product.Product/CreateOptionsList", localVarRequestOptions, this.Configuration);
-            if (this.ExceptionFactory != null)
-            {
-                Exception _exception = this.ExceptionFactory("ProductCreateOptionsList", localVarResponse);
-                if (_exception != null)
-                {
-                    throw _exception;
-                }
-            }
-
-            return localVarResponse;
-        }
-
-        /// <summary>
-        ///  
-        /// </summary>
-        /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of EntitymanagerCreateOptionsListResponse</returns>
-        public async System.Threading.Tasks.Task<EntitymanagerCreateOptionsListResponse> ProductCreateOptionsListAsync(EntitymanagerCreateOptionsListRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
-        {
-            product.Client.ApiResponse<EntitymanagerCreateOptionsListResponse> localVarResponse = await ProductCreateOptionsListWithHttpInfoAsync(body, operationIndex, cancellationToken).ConfigureAwait(false);
-            return localVarResponse.Data;
-        }
-
-        /// <summary>
-        ///  
-        /// </summary>
-        /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (EntitymanagerCreateOptionsListResponse)</returns>
-        public async System.Threading.Tasks.Task<product.Client.ApiResponse<EntitymanagerCreateOptionsListResponse>> ProductCreateOptionsListWithHttpInfoAsync(EntitymanagerCreateOptionsListRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
-        {
-            // verify the required parameter 'body' is set
-            if (body == null)
-            {
-                throw new product.Client.ApiException(400, "Missing required parameter 'body' when calling ProductApi->ProductCreateOptionsList");
-            }
-
-
-            product.Client.RequestOptions localVarRequestOptions = new product.Client.RequestOptions();
-
-            string[] _contentTypes = new string[] {
-                "application/json"
-            };
-
-            // to determine the Accept header
-            string[] _accepts = new string[] {
-                "application/json"
-            };
-
-            var localVarContentType = product.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
-            }
-
-            var localVarAccept = product.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
-            }
-
-            localVarRequestOptions.Data = body;
-
-            localVarRequestOptions.Operation = "ProductApi.ProductCreateOptionsList";
-            localVarRequestOptions.OperationIndex = operationIndex;
-
-
-            // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.PostAsync<EntitymanagerCreateOptionsListResponse>("/product.Product/CreateOptionsList", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
-
-            if (this.ExceptionFactory != null)
-            {
-                Exception _exception = this.ExceptionFactory("ProductCreateOptionsList", localVarResponse);
-                if (_exception != null)
-                {
-                    throw _exception;
-                }
-            }
-
-            return localVarResponse;
-        }
-
-        /// <summary>
-        ///  
-        /// </summary>
-        /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"></param>
+        /// <param name="body">The CreateProductRequest message is used to create a new product within the system. It contains various fields that allow specifying the details and attributes of the product.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ProductCreateProductResponse</returns>
         [Obsolete]
@@ -3792,7 +6921,7 @@ namespace product.Api
         ///  
         /// </summary>
         /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"></param>
+        /// <param name="body">The CreateProductRequest message is used to create a new product within the system. It contains various fields that allow specifying the details and attributes of the product.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of ProductCreateProductResponse</returns>
         [Obsolete]
@@ -3832,6 +6961,11 @@ namespace product.Api
             localVarRequestOptions.Operation = "ProductApi.ProductCreateProduct";
             localVarRequestOptions.OperationIndex = operationIndex;
 
+            // authentication (Authorization) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
 
             // make the HTTP request
             var localVarResponse = this.Client.Post<ProductCreateProductResponse>("/product.Product/CreateProduct", localVarRequestOptions, this.Configuration);
@@ -3851,7 +6985,7 @@ namespace product.Api
         ///  
         /// </summary>
         /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"></param>
+        /// <param name="body">The CreateProductRequest message is used to create a new product within the system. It contains various fields that allow specifying the details and attributes of the product.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ProductCreateProductResponse</returns>
@@ -3866,7 +7000,7 @@ namespace product.Api
         ///  
         /// </summary>
         /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"></param>
+        /// <param name="body">The CreateProductRequest message is used to create a new product within the system. It contains various fields that allow specifying the details and attributes of the product.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (ProductCreateProductResponse)</returns>
@@ -3908,6 +7042,11 @@ namespace product.Api
             localVarRequestOptions.Operation = "ProductApi.ProductCreateProduct";
             localVarRequestOptions.OperationIndex = operationIndex;
 
+            // authentication (Authorization) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
 
             // make the HTTP request
             var localVarResponse = await this.AsynchronousClient.PostAsync<ProductCreateProductResponse>("/product.Product/CreateProduct", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
@@ -3980,6 +7119,11 @@ namespace product.Api
             localVarRequestOptions.Operation = "ProductApi.ProductCreateProductV2";
             localVarRequestOptions.OperationIndex = operationIndex;
 
+            // authentication (Authorization) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
 
             // make the HTTP request
             var localVarResponse = this.Client.Post<ProductCreateProductResponseV2>("/product.Product/CreateProductV2", localVarRequestOptions, this.Configuration);
@@ -4054,6 +7198,11 @@ namespace product.Api
             localVarRequestOptions.Operation = "ProductApi.ProductCreateProductV2";
             localVarRequestOptions.OperationIndex = operationIndex;
 
+            // authentication (Authorization) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
 
             // make the HTTP request
             var localVarResponse = await this.AsynchronousClient.PostAsync<ProductCreateProductResponseV2>("/product.Product/CreateProductV2", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
@@ -4128,6 +7277,11 @@ namespace product.Api
             localVarRequestOptions.Operation = "ProductApi.ProductDelete";
             localVarRequestOptions.OperationIndex = operationIndex;
 
+            // authentication (Authorization) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
 
             // make the HTTP request
             var localVarResponse = this.Client.Post<ProductDeleteResponse>("/product.Product/Delete", localVarRequestOptions, this.Configuration);
@@ -4204,6 +7358,11 @@ namespace product.Api
             localVarRequestOptions.Operation = "ProductApi.ProductDelete";
             localVarRequestOptions.OperationIndex = operationIndex;
 
+            // authentication (Authorization) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
 
             // make the HTTP request
             var localVarResponse = await this.AsynchronousClient.PostAsync<ProductDeleteResponse>("/product.Product/Delete", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
@@ -4276,6 +7435,11 @@ namespace product.Api
             localVarRequestOptions.Operation = "ProductApi.ProductDeleteAttribute";
             localVarRequestOptions.OperationIndex = operationIndex;
 
+            // authentication (Authorization) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
 
             // make the HTTP request
             var localVarResponse = this.Client.Post<Object>("/product.Product/DeleteAttribute", localVarRequestOptions, this.Configuration);
@@ -4350,6 +7514,11 @@ namespace product.Api
             localVarRequestOptions.Operation = "ProductApi.ProductDeleteAttribute";
             localVarRequestOptions.OperationIndex = operationIndex;
 
+            // authentication (Authorization) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
 
             // make the HTTP request
             var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/product.Product/DeleteAttribute", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
@@ -4422,6 +7591,11 @@ namespace product.Api
             localVarRequestOptions.Operation = "ProductApi.ProductDeleteProduct";
             localVarRequestOptions.OperationIndex = operationIndex;
 
+            // authentication (Authorization) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
 
             // make the HTTP request
             var localVarResponse = this.Client.Post<Object>("/product.Product/DeleteProduct", localVarRequestOptions, this.Configuration);
@@ -4496,6 +7670,11 @@ namespace product.Api
             localVarRequestOptions.Operation = "ProductApi.ProductDeleteProduct";
             localVarRequestOptions.OperationIndex = operationIndex;
 
+            // authentication (Authorization) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
 
             // make the HTTP request
             var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/product.Product/DeleteProduct", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
@@ -4568,6 +7747,11 @@ namespace product.Api
             localVarRequestOptions.Operation = "ProductApi.ProductGetAttributeGroup";
             localVarRequestOptions.OperationIndex = operationIndex;
 
+            // authentication (Authorization) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
 
             // make the HTTP request
             var localVarResponse = this.Client.Post<EntitymanagerAttributeGroup>("/product.Product/GetAttributeGroup", localVarRequestOptions, this.Configuration);
@@ -4642,6 +7826,11 @@ namespace product.Api
             localVarRequestOptions.Operation = "ProductApi.ProductGetAttributeGroup";
             localVarRequestOptions.OperationIndex = operationIndex;
 
+            // authentication (Authorization) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
 
             // make the HTTP request
             var localVarResponse = await this.AsynchronousClient.PostAsync<EntitymanagerAttributeGroup>("/product.Product/GetAttributeGroup", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
@@ -4664,1028 +7853,6 @@ namespace product.Api
         /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>EntitymanagerGetAttributeOptionResponse</returns>
-        public EntitymanagerGetAttributeOptionResponse ProductGetAttributeOption(EntitymanagerGetAttributeOptionRequest body, int operationIndex = 0)
-        {
-            product.Client.ApiResponse<EntitymanagerGetAttributeOptionResponse> localVarResponse = ProductGetAttributeOptionWithHttpInfo(body);
-            return localVarResponse.Data;
-        }
-
-        /// <summary>
-        ///  
-        /// </summary>
-        /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of EntitymanagerGetAttributeOptionResponse</returns>
-        public product.Client.ApiResponse<EntitymanagerGetAttributeOptionResponse> ProductGetAttributeOptionWithHttpInfo(EntitymanagerGetAttributeOptionRequest body, int operationIndex = 0)
-        {
-            // verify the required parameter 'body' is set
-            if (body == null)
-            {
-                throw new product.Client.ApiException(400, "Missing required parameter 'body' when calling ProductApi->ProductGetAttributeOption");
-            }
-
-            product.Client.RequestOptions localVarRequestOptions = new product.Client.RequestOptions();
-
-            string[] _contentTypes = new string[] {
-                "application/json"
-            };
-
-            // to determine the Accept header
-            string[] _accepts = new string[] {
-                "application/json"
-            };
-
-            var localVarContentType = product.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
-            }
-
-            var localVarAccept = product.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
-            }
-
-            localVarRequestOptions.Data = body;
-
-            localVarRequestOptions.Operation = "ProductApi.ProductGetAttributeOption";
-            localVarRequestOptions.OperationIndex = operationIndex;
-
-
-            // make the HTTP request
-            var localVarResponse = this.Client.Post<EntitymanagerGetAttributeOptionResponse>("/product.Product/GetAttributeOption", localVarRequestOptions, this.Configuration);
-            if (this.ExceptionFactory != null)
-            {
-                Exception _exception = this.ExceptionFactory("ProductGetAttributeOption", localVarResponse);
-                if (_exception != null)
-                {
-                    throw _exception;
-                }
-            }
-
-            return localVarResponse;
-        }
-
-        /// <summary>
-        ///  
-        /// </summary>
-        /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of EntitymanagerGetAttributeOptionResponse</returns>
-        public async System.Threading.Tasks.Task<EntitymanagerGetAttributeOptionResponse> ProductGetAttributeOptionAsync(EntitymanagerGetAttributeOptionRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
-        {
-            product.Client.ApiResponse<EntitymanagerGetAttributeOptionResponse> localVarResponse = await ProductGetAttributeOptionWithHttpInfoAsync(body, operationIndex, cancellationToken).ConfigureAwait(false);
-            return localVarResponse.Data;
-        }
-
-        /// <summary>
-        ///  
-        /// </summary>
-        /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (EntitymanagerGetAttributeOptionResponse)</returns>
-        public async System.Threading.Tasks.Task<product.Client.ApiResponse<EntitymanagerGetAttributeOptionResponse>> ProductGetAttributeOptionWithHttpInfoAsync(EntitymanagerGetAttributeOptionRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
-        {
-            // verify the required parameter 'body' is set
-            if (body == null)
-            {
-                throw new product.Client.ApiException(400, "Missing required parameter 'body' when calling ProductApi->ProductGetAttributeOption");
-            }
-
-
-            product.Client.RequestOptions localVarRequestOptions = new product.Client.RequestOptions();
-
-            string[] _contentTypes = new string[] {
-                "application/json"
-            };
-
-            // to determine the Accept header
-            string[] _accepts = new string[] {
-                "application/json"
-            };
-
-            var localVarContentType = product.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
-            }
-
-            var localVarAccept = product.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
-            }
-
-            localVarRequestOptions.Data = body;
-
-            localVarRequestOptions.Operation = "ProductApi.ProductGetAttributeOption";
-            localVarRequestOptions.OperationIndex = operationIndex;
-
-
-            // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.PostAsync<EntitymanagerGetAttributeOptionResponse>("/product.Product/GetAttributeOption", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
-
-            if (this.ExceptionFactory != null)
-            {
-                Exception _exception = this.ExceptionFactory("ProductGetAttributeOption", localVarResponse);
-                if (_exception != null)
-                {
-                    throw _exception;
-                }
-            }
-
-            return localVarResponse;
-        }
-
-        /// <summary>
-        ///  
-        /// </summary>
-        /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>EntitymanagerGetAttributeOptionsResponse</returns>
-        public EntitymanagerGetAttributeOptionsResponse ProductGetAttributeOptions(EntitymanagerGetAttributeOptionsRequest body, int operationIndex = 0)
-        {
-            product.Client.ApiResponse<EntitymanagerGetAttributeOptionsResponse> localVarResponse = ProductGetAttributeOptionsWithHttpInfo(body);
-            return localVarResponse.Data;
-        }
-
-        /// <summary>
-        ///  
-        /// </summary>
-        /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of EntitymanagerGetAttributeOptionsResponse</returns>
-        public product.Client.ApiResponse<EntitymanagerGetAttributeOptionsResponse> ProductGetAttributeOptionsWithHttpInfo(EntitymanagerGetAttributeOptionsRequest body, int operationIndex = 0)
-        {
-            // verify the required parameter 'body' is set
-            if (body == null)
-            {
-                throw new product.Client.ApiException(400, "Missing required parameter 'body' when calling ProductApi->ProductGetAttributeOptions");
-            }
-
-            product.Client.RequestOptions localVarRequestOptions = new product.Client.RequestOptions();
-
-            string[] _contentTypes = new string[] {
-                "application/json"
-            };
-
-            // to determine the Accept header
-            string[] _accepts = new string[] {
-                "application/json"
-            };
-
-            var localVarContentType = product.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
-            }
-
-            var localVarAccept = product.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
-            }
-
-            localVarRequestOptions.Data = body;
-
-            localVarRequestOptions.Operation = "ProductApi.ProductGetAttributeOptions";
-            localVarRequestOptions.OperationIndex = operationIndex;
-
-
-            // make the HTTP request
-            var localVarResponse = this.Client.Post<EntitymanagerGetAttributeOptionsResponse>("/product.Product/GetAttributeOptions", localVarRequestOptions, this.Configuration);
-            if (this.ExceptionFactory != null)
-            {
-                Exception _exception = this.ExceptionFactory("ProductGetAttributeOptions", localVarResponse);
-                if (_exception != null)
-                {
-                    throw _exception;
-                }
-            }
-
-            return localVarResponse;
-        }
-
-        /// <summary>
-        ///  
-        /// </summary>
-        /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of EntitymanagerGetAttributeOptionsResponse</returns>
-        public async System.Threading.Tasks.Task<EntitymanagerGetAttributeOptionsResponse> ProductGetAttributeOptionsAsync(EntitymanagerGetAttributeOptionsRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
-        {
-            product.Client.ApiResponse<EntitymanagerGetAttributeOptionsResponse> localVarResponse = await ProductGetAttributeOptionsWithHttpInfoAsync(body, operationIndex, cancellationToken).ConfigureAwait(false);
-            return localVarResponse.Data;
-        }
-
-        /// <summary>
-        ///  
-        /// </summary>
-        /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (EntitymanagerGetAttributeOptionsResponse)</returns>
-        public async System.Threading.Tasks.Task<product.Client.ApiResponse<EntitymanagerGetAttributeOptionsResponse>> ProductGetAttributeOptionsWithHttpInfoAsync(EntitymanagerGetAttributeOptionsRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
-        {
-            // verify the required parameter 'body' is set
-            if (body == null)
-            {
-                throw new product.Client.ApiException(400, "Missing required parameter 'body' when calling ProductApi->ProductGetAttributeOptions");
-            }
-
-
-            product.Client.RequestOptions localVarRequestOptions = new product.Client.RequestOptions();
-
-            string[] _contentTypes = new string[] {
-                "application/json"
-            };
-
-            // to determine the Accept header
-            string[] _accepts = new string[] {
-                "application/json"
-            };
-
-            var localVarContentType = product.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
-            }
-
-            var localVarAccept = product.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
-            }
-
-            localVarRequestOptions.Data = body;
-
-            localVarRequestOptions.Operation = "ProductApi.ProductGetAttributeOptions";
-            localVarRequestOptions.OperationIndex = operationIndex;
-
-
-            // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.PostAsync<EntitymanagerGetAttributeOptionsResponse>("/product.Product/GetAttributeOptions", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
-
-            if (this.ExceptionFactory != null)
-            {
-                Exception _exception = this.ExceptionFactory("ProductGetAttributeOptions", localVarResponse);
-                if (_exception != null)
-                {
-                    throw _exception;
-                }
-            }
-
-            return localVarResponse;
-        }
-
-        /// <summary>
-        ///  
-        /// </summary>
-        /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>EntitymanagerEntity</returns>
-        public EntitymanagerEntity ProductGetEntity(EntitymanagerEntityRequest body, int operationIndex = 0)
-        {
-            product.Client.ApiResponse<EntitymanagerEntity> localVarResponse = ProductGetEntityWithHttpInfo(body);
-            return localVarResponse.Data;
-        }
-
-        /// <summary>
-        ///  
-        /// </summary>
-        /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of EntitymanagerEntity</returns>
-        public product.Client.ApiResponse<EntitymanagerEntity> ProductGetEntityWithHttpInfo(EntitymanagerEntityRequest body, int operationIndex = 0)
-        {
-            // verify the required parameter 'body' is set
-            if (body == null)
-            {
-                throw new product.Client.ApiException(400, "Missing required parameter 'body' when calling ProductApi->ProductGetEntity");
-            }
-
-            product.Client.RequestOptions localVarRequestOptions = new product.Client.RequestOptions();
-
-            string[] _contentTypes = new string[] {
-                "application/json"
-            };
-
-            // to determine the Accept header
-            string[] _accepts = new string[] {
-                "application/json"
-            };
-
-            var localVarContentType = product.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
-            }
-
-            var localVarAccept = product.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
-            }
-
-            localVarRequestOptions.Data = body;
-
-            localVarRequestOptions.Operation = "ProductApi.ProductGetEntity";
-            localVarRequestOptions.OperationIndex = operationIndex;
-
-
-            // make the HTTP request
-            var localVarResponse = this.Client.Post<EntitymanagerEntity>("/product.Product/GetEntity", localVarRequestOptions, this.Configuration);
-            if (this.ExceptionFactory != null)
-            {
-                Exception _exception = this.ExceptionFactory("ProductGetEntity", localVarResponse);
-                if (_exception != null)
-                {
-                    throw _exception;
-                }
-            }
-
-            return localVarResponse;
-        }
-
-        /// <summary>
-        ///  
-        /// </summary>
-        /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of EntitymanagerEntity</returns>
-        public async System.Threading.Tasks.Task<EntitymanagerEntity> ProductGetEntityAsync(EntitymanagerEntityRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
-        {
-            product.Client.ApiResponse<EntitymanagerEntity> localVarResponse = await ProductGetEntityWithHttpInfoAsync(body, operationIndex, cancellationToken).ConfigureAwait(false);
-            return localVarResponse.Data;
-        }
-
-        /// <summary>
-        ///  
-        /// </summary>
-        /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (EntitymanagerEntity)</returns>
-        public async System.Threading.Tasks.Task<product.Client.ApiResponse<EntitymanagerEntity>> ProductGetEntityWithHttpInfoAsync(EntitymanagerEntityRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
-        {
-            // verify the required parameter 'body' is set
-            if (body == null)
-            {
-                throw new product.Client.ApiException(400, "Missing required parameter 'body' when calling ProductApi->ProductGetEntity");
-            }
-
-
-            product.Client.RequestOptions localVarRequestOptions = new product.Client.RequestOptions();
-
-            string[] _contentTypes = new string[] {
-                "application/json"
-            };
-
-            // to determine the Accept header
-            string[] _accepts = new string[] {
-                "application/json"
-            };
-
-            var localVarContentType = product.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
-            }
-
-            var localVarAccept = product.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
-            }
-
-            localVarRequestOptions.Data = body;
-
-            localVarRequestOptions.Operation = "ProductApi.ProductGetEntity";
-            localVarRequestOptions.OperationIndex = operationIndex;
-
-
-            // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.PostAsync<EntitymanagerEntity>("/product.Product/GetEntity", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
-
-            if (this.ExceptionFactory != null)
-            {
-                Exception _exception = this.ExceptionFactory("ProductGetEntity", localVarResponse);
-                if (_exception != null)
-                {
-                    throw _exception;
-                }
-            }
-
-            return localVarResponse;
-        }
-
-        /// <summary>
-        ///  
-        /// </summary>
-        /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>EntitymanagerGetOptionsListResponse</returns>
-        public EntitymanagerGetOptionsListResponse ProductGetOptionsList(EntitymanagerGetOptionsListRequest body, int operationIndex = 0)
-        {
-            product.Client.ApiResponse<EntitymanagerGetOptionsListResponse> localVarResponse = ProductGetOptionsListWithHttpInfo(body);
-            return localVarResponse.Data;
-        }
-
-        /// <summary>
-        ///  
-        /// </summary>
-        /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of EntitymanagerGetOptionsListResponse</returns>
-        public product.Client.ApiResponse<EntitymanagerGetOptionsListResponse> ProductGetOptionsListWithHttpInfo(EntitymanagerGetOptionsListRequest body, int operationIndex = 0)
-        {
-            // verify the required parameter 'body' is set
-            if (body == null)
-            {
-                throw new product.Client.ApiException(400, "Missing required parameter 'body' when calling ProductApi->ProductGetOptionsList");
-            }
-
-            product.Client.RequestOptions localVarRequestOptions = new product.Client.RequestOptions();
-
-            string[] _contentTypes = new string[] {
-                "application/json"
-            };
-
-            // to determine the Accept header
-            string[] _accepts = new string[] {
-                "application/json"
-            };
-
-            var localVarContentType = product.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
-            }
-
-            var localVarAccept = product.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
-            }
-
-            localVarRequestOptions.Data = body;
-
-            localVarRequestOptions.Operation = "ProductApi.ProductGetOptionsList";
-            localVarRequestOptions.OperationIndex = operationIndex;
-
-
-            // make the HTTP request
-            var localVarResponse = this.Client.Post<EntitymanagerGetOptionsListResponse>("/product.Product/GetOptionsList", localVarRequestOptions, this.Configuration);
-            if (this.ExceptionFactory != null)
-            {
-                Exception _exception = this.ExceptionFactory("ProductGetOptionsList", localVarResponse);
-                if (_exception != null)
-                {
-                    throw _exception;
-                }
-            }
-
-            return localVarResponse;
-        }
-
-        /// <summary>
-        ///  
-        /// </summary>
-        /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of EntitymanagerGetOptionsListResponse</returns>
-        public async System.Threading.Tasks.Task<EntitymanagerGetOptionsListResponse> ProductGetOptionsListAsync(EntitymanagerGetOptionsListRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
-        {
-            product.Client.ApiResponse<EntitymanagerGetOptionsListResponse> localVarResponse = await ProductGetOptionsListWithHttpInfoAsync(body, operationIndex, cancellationToken).ConfigureAwait(false);
-            return localVarResponse.Data;
-        }
-
-        /// <summary>
-        ///  
-        /// </summary>
-        /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (EntitymanagerGetOptionsListResponse)</returns>
-        public async System.Threading.Tasks.Task<product.Client.ApiResponse<EntitymanagerGetOptionsListResponse>> ProductGetOptionsListWithHttpInfoAsync(EntitymanagerGetOptionsListRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
-        {
-            // verify the required parameter 'body' is set
-            if (body == null)
-            {
-                throw new product.Client.ApiException(400, "Missing required parameter 'body' when calling ProductApi->ProductGetOptionsList");
-            }
-
-
-            product.Client.RequestOptions localVarRequestOptions = new product.Client.RequestOptions();
-
-            string[] _contentTypes = new string[] {
-                "application/json"
-            };
-
-            // to determine the Accept header
-            string[] _accepts = new string[] {
-                "application/json"
-            };
-
-            var localVarContentType = product.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
-            }
-
-            var localVarAccept = product.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
-            }
-
-            localVarRequestOptions.Data = body;
-
-            localVarRequestOptions.Operation = "ProductApi.ProductGetOptionsList";
-            localVarRequestOptions.OperationIndex = operationIndex;
-
-
-            // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.PostAsync<EntitymanagerGetOptionsListResponse>("/product.Product/GetOptionsList", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
-
-            if (this.ExceptionFactory != null)
-            {
-                Exception _exception = this.ExceptionFactory("ProductGetOptionsList", localVarResponse);
-                if (_exception != null)
-                {
-                    throw _exception;
-                }
-            }
-
-            return localVarResponse;
-        }
-
-        /// <summary>
-        ///  
-        /// </summary>
-        /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ProductGetProductResponse</returns>
-        public ProductGetProductResponse ProductGetProduct(ProductGetProductRequest body, int operationIndex = 0)
-        {
-            product.Client.ApiResponse<ProductGetProductResponse> localVarResponse = ProductGetProductWithHttpInfo(body);
-            return localVarResponse.Data;
-        }
-
-        /// <summary>
-        ///  
-        /// </summary>
-        /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of ProductGetProductResponse</returns>
-        public product.Client.ApiResponse<ProductGetProductResponse> ProductGetProductWithHttpInfo(ProductGetProductRequest body, int operationIndex = 0)
-        {
-            // verify the required parameter 'body' is set
-            if (body == null)
-            {
-                throw new product.Client.ApiException(400, "Missing required parameter 'body' when calling ProductApi->ProductGetProduct");
-            }
-
-            product.Client.RequestOptions localVarRequestOptions = new product.Client.RequestOptions();
-
-            string[] _contentTypes = new string[] {
-                "application/json"
-            };
-
-            // to determine the Accept header
-            string[] _accepts = new string[] {
-                "application/json"
-            };
-
-            var localVarContentType = product.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
-            }
-
-            var localVarAccept = product.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
-            }
-
-            localVarRequestOptions.Data = body;
-
-            localVarRequestOptions.Operation = "ProductApi.ProductGetProduct";
-            localVarRequestOptions.OperationIndex = operationIndex;
-
-
-            // make the HTTP request
-            var localVarResponse = this.Client.Post<ProductGetProductResponse>("/product.Product/GetProduct", localVarRequestOptions, this.Configuration);
-            if (this.ExceptionFactory != null)
-            {
-                Exception _exception = this.ExceptionFactory("ProductGetProduct", localVarResponse);
-                if (_exception != null)
-                {
-                    throw _exception;
-                }
-            }
-
-            return localVarResponse;
-        }
-
-        /// <summary>
-        ///  
-        /// </summary>
-        /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ProductGetProductResponse</returns>
-        public async System.Threading.Tasks.Task<ProductGetProductResponse> ProductGetProductAsync(ProductGetProductRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
-        {
-            product.Client.ApiResponse<ProductGetProductResponse> localVarResponse = await ProductGetProductWithHttpInfoAsync(body, operationIndex, cancellationToken).ConfigureAwait(false);
-            return localVarResponse.Data;
-        }
-
-        /// <summary>
-        ///  
-        /// </summary>
-        /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (ProductGetProductResponse)</returns>
-        public async System.Threading.Tasks.Task<product.Client.ApiResponse<ProductGetProductResponse>> ProductGetProductWithHttpInfoAsync(ProductGetProductRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
-        {
-            // verify the required parameter 'body' is set
-            if (body == null)
-            {
-                throw new product.Client.ApiException(400, "Missing required parameter 'body' when calling ProductApi->ProductGetProduct");
-            }
-
-
-            product.Client.RequestOptions localVarRequestOptions = new product.Client.RequestOptions();
-
-            string[] _contentTypes = new string[] {
-                "application/json"
-            };
-
-            // to determine the Accept header
-            string[] _accepts = new string[] {
-                "application/json"
-            };
-
-            var localVarContentType = product.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
-            }
-
-            var localVarAccept = product.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
-            }
-
-            localVarRequestOptions.Data = body;
-
-            localVarRequestOptions.Operation = "ProductApi.ProductGetProduct";
-            localVarRequestOptions.OperationIndex = operationIndex;
-
-
-            // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.PostAsync<ProductGetProductResponse>("/product.Product/GetProduct", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
-
-            if (this.ExceptionFactory != null)
-            {
-                Exception _exception = this.ExceptionFactory("ProductGetProduct", localVarResponse);
-                if (_exception != null)
-                {
-                    throw _exception;
-                }
-            }
-
-            return localVarResponse;
-        }
-
-        /// <summary>
-        ///  
-        /// </summary>
-        /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ProductGetProductByCodeResponse</returns>
-        public ProductGetProductByCodeResponse ProductGetProductByCode(ProductGetProductByCodeRequest body, int operationIndex = 0)
-        {
-            product.Client.ApiResponse<ProductGetProductByCodeResponse> localVarResponse = ProductGetProductByCodeWithHttpInfo(body);
-            return localVarResponse.Data;
-        }
-
-        /// <summary>
-        ///  
-        /// </summary>
-        /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of ProductGetProductByCodeResponse</returns>
-        public product.Client.ApiResponse<ProductGetProductByCodeResponse> ProductGetProductByCodeWithHttpInfo(ProductGetProductByCodeRequest body, int operationIndex = 0)
-        {
-            // verify the required parameter 'body' is set
-            if (body == null)
-            {
-                throw new product.Client.ApiException(400, "Missing required parameter 'body' when calling ProductApi->ProductGetProductByCode");
-            }
-
-            product.Client.RequestOptions localVarRequestOptions = new product.Client.RequestOptions();
-
-            string[] _contentTypes = new string[] {
-                "application/json"
-            };
-
-            // to determine the Accept header
-            string[] _accepts = new string[] {
-                "application/json"
-            };
-
-            var localVarContentType = product.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
-            }
-
-            var localVarAccept = product.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
-            }
-
-            localVarRequestOptions.Data = body;
-
-            localVarRequestOptions.Operation = "ProductApi.ProductGetProductByCode";
-            localVarRequestOptions.OperationIndex = operationIndex;
-
-
-            // make the HTTP request
-            var localVarResponse = this.Client.Post<ProductGetProductByCodeResponse>("/product.Product/GetProductByCode", localVarRequestOptions, this.Configuration);
-            if (this.ExceptionFactory != null)
-            {
-                Exception _exception = this.ExceptionFactory("ProductGetProductByCode", localVarResponse);
-                if (_exception != null)
-                {
-                    throw _exception;
-                }
-            }
-
-            return localVarResponse;
-        }
-
-        /// <summary>
-        ///  
-        /// </summary>
-        /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ProductGetProductByCodeResponse</returns>
-        public async System.Threading.Tasks.Task<ProductGetProductByCodeResponse> ProductGetProductByCodeAsync(ProductGetProductByCodeRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
-        {
-            product.Client.ApiResponse<ProductGetProductByCodeResponse> localVarResponse = await ProductGetProductByCodeWithHttpInfoAsync(body, operationIndex, cancellationToken).ConfigureAwait(false);
-            return localVarResponse.Data;
-        }
-
-        /// <summary>
-        ///  
-        /// </summary>
-        /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (ProductGetProductByCodeResponse)</returns>
-        public async System.Threading.Tasks.Task<product.Client.ApiResponse<ProductGetProductByCodeResponse>> ProductGetProductByCodeWithHttpInfoAsync(ProductGetProductByCodeRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
-        {
-            // verify the required parameter 'body' is set
-            if (body == null)
-            {
-                throw new product.Client.ApiException(400, "Missing required parameter 'body' when calling ProductApi->ProductGetProductByCode");
-            }
-
-
-            product.Client.RequestOptions localVarRequestOptions = new product.Client.RequestOptions();
-
-            string[] _contentTypes = new string[] {
-                "application/json"
-            };
-
-            // to determine the Accept header
-            string[] _accepts = new string[] {
-                "application/json"
-            };
-
-            var localVarContentType = product.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
-            }
-
-            var localVarAccept = product.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
-            }
-
-            localVarRequestOptions.Data = body;
-
-            localVarRequestOptions.Operation = "ProductApi.ProductGetProductByCode";
-            localVarRequestOptions.OperationIndex = operationIndex;
-
-
-            // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.PostAsync<ProductGetProductByCodeResponse>("/product.Product/GetProductByCode", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
-
-            if (this.ExceptionFactory != null)
-            {
-                Exception _exception = this.ExceptionFactory("ProductGetProductByCode", localVarResponse);
-                if (_exception != null)
-                {
-                    throw _exception;
-                }
-            }
-
-            return localVarResponse;
-        }
-
-        /// <summary>
-        ///  
-        /// </summary>
-        /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ProductGetProductByUrlKeyResponse</returns>
-        public ProductGetProductByUrlKeyResponse ProductGetProductByUrlKey(ProductGetProductByUrlKeyRequest body, int operationIndex = 0)
-        {
-            product.Client.ApiResponse<ProductGetProductByUrlKeyResponse> localVarResponse = ProductGetProductByUrlKeyWithHttpInfo(body);
-            return localVarResponse.Data;
-        }
-
-        /// <summary>
-        ///  
-        /// </summary>
-        /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of ProductGetProductByUrlKeyResponse</returns>
-        public product.Client.ApiResponse<ProductGetProductByUrlKeyResponse> ProductGetProductByUrlKeyWithHttpInfo(ProductGetProductByUrlKeyRequest body, int operationIndex = 0)
-        {
-            // verify the required parameter 'body' is set
-            if (body == null)
-            {
-                throw new product.Client.ApiException(400, "Missing required parameter 'body' when calling ProductApi->ProductGetProductByUrlKey");
-            }
-
-            product.Client.RequestOptions localVarRequestOptions = new product.Client.RequestOptions();
-
-            string[] _contentTypes = new string[] {
-                "application/json"
-            };
-
-            // to determine the Accept header
-            string[] _accepts = new string[] {
-                "application/json"
-            };
-
-            var localVarContentType = product.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
-            }
-
-            var localVarAccept = product.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
-            }
-
-            localVarRequestOptions.Data = body;
-
-            localVarRequestOptions.Operation = "ProductApi.ProductGetProductByUrlKey";
-            localVarRequestOptions.OperationIndex = operationIndex;
-
-
-            // make the HTTP request
-            var localVarResponse = this.Client.Post<ProductGetProductByUrlKeyResponse>("/product.Product/GetProductByUrlKey", localVarRequestOptions, this.Configuration);
-            if (this.ExceptionFactory != null)
-            {
-                Exception _exception = this.ExceptionFactory("ProductGetProductByUrlKey", localVarResponse);
-                if (_exception != null)
-                {
-                    throw _exception;
-                }
-            }
-
-            return localVarResponse;
-        }
-
-        /// <summary>
-        ///  
-        /// </summary>
-        /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ProductGetProductByUrlKeyResponse</returns>
-        public async System.Threading.Tasks.Task<ProductGetProductByUrlKeyResponse> ProductGetProductByUrlKeyAsync(ProductGetProductByUrlKeyRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
-        {
-            product.Client.ApiResponse<ProductGetProductByUrlKeyResponse> localVarResponse = await ProductGetProductByUrlKeyWithHttpInfoAsync(body, operationIndex, cancellationToken).ConfigureAwait(false);
-            return localVarResponse.Data;
-        }
-
-        /// <summary>
-        ///  
-        /// </summary>
-        /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (ProductGetProductByUrlKeyResponse)</returns>
-        public async System.Threading.Tasks.Task<product.Client.ApiResponse<ProductGetProductByUrlKeyResponse>> ProductGetProductByUrlKeyWithHttpInfoAsync(ProductGetProductByUrlKeyRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
-        {
-            // verify the required parameter 'body' is set
-            if (body == null)
-            {
-                throw new product.Client.ApiException(400, "Missing required parameter 'body' when calling ProductApi->ProductGetProductByUrlKey");
-            }
-
-
-            product.Client.RequestOptions localVarRequestOptions = new product.Client.RequestOptions();
-
-            string[] _contentTypes = new string[] {
-                "application/json"
-            };
-
-            // to determine the Accept header
-            string[] _accepts = new string[] {
-                "application/json"
-            };
-
-            var localVarContentType = product.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
-            }
-
-            var localVarAccept = product.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
-            }
-
-            localVarRequestOptions.Data = body;
-
-            localVarRequestOptions.Operation = "ProductApi.ProductGetProductByUrlKey";
-            localVarRequestOptions.OperationIndex = operationIndex;
-
-
-            // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.PostAsync<ProductGetProductByUrlKeyResponse>("/product.Product/GetProductByUrlKey", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
-
-            if (this.ExceptionFactory != null)
-            {
-                Exception _exception = this.ExceptionFactory("ProductGetProductByUrlKey", localVarResponse);
-                if (_exception != null)
-                {
-                    throw _exception;
-                }
-            }
-
-            return localVarResponse;
-        }
-
-        /// <summary>
-        /// Attribute Groups endpoints 
-        /// </summary>
-        /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>EntitymanagerListAttributeGroupsResponse</returns>
         public EntitymanagerListAttributeGroupsResponse ProductListAttributeGroups(EntitymanagerListAttributeGroupsRequest body, int operationIndex = 0)
         {
@@ -5694,7 +7861,7 @@ namespace product.Api
         }
 
         /// <summary>
-        /// Attribute Groups endpoints 
+        ///  
         /// </summary>
         /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"></param>
@@ -5736,6 +7903,11 @@ namespace product.Api
             localVarRequestOptions.Operation = "ProductApi.ProductListAttributeGroups";
             localVarRequestOptions.OperationIndex = operationIndex;
 
+            // authentication (Authorization) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
 
             // make the HTTP request
             var localVarResponse = this.Client.Post<EntitymanagerListAttributeGroupsResponse>("/product.Product/ListAttributeGroups", localVarRequestOptions, this.Configuration);
@@ -5752,7 +7924,7 @@ namespace product.Api
         }
 
         /// <summary>
-        /// Attribute Groups endpoints 
+        ///  
         /// </summary>
         /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"></param>
@@ -5766,7 +7938,7 @@ namespace product.Api
         }
 
         /// <summary>
-        /// Attribute Groups endpoints 
+        ///  
         /// </summary>
         /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"></param>
@@ -5810,6 +7982,11 @@ namespace product.Api
             localVarRequestOptions.Operation = "ProductApi.ProductListAttributeGroups";
             localVarRequestOptions.OperationIndex = operationIndex;
 
+            // authentication (Authorization) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
 
             // make the HTTP request
             var localVarResponse = await this.AsynchronousClient.PostAsync<EntitymanagerListAttributeGroupsResponse>("/product.Product/ListAttributeGroups", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
@@ -5817,1174 +7994,6 @@ namespace product.Api
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("ProductListAttributeGroups", localVarResponse);
-                if (_exception != null)
-                {
-                    throw _exception;
-                }
-            }
-
-            return localVarResponse;
-        }
-
-        /// <summary>
-        ///  
-        /// </summary>
-        /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>EntitymanagerListAttributeOptionsResponse</returns>
-        public EntitymanagerListAttributeOptionsResponse ProductListAttributeOptions(EntitymanagerListAttributeOptionsRequest body, int operationIndex = 0)
-        {
-            product.Client.ApiResponse<EntitymanagerListAttributeOptionsResponse> localVarResponse = ProductListAttributeOptionsWithHttpInfo(body);
-            return localVarResponse.Data;
-        }
-
-        /// <summary>
-        ///  
-        /// </summary>
-        /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of EntitymanagerListAttributeOptionsResponse</returns>
-        public product.Client.ApiResponse<EntitymanagerListAttributeOptionsResponse> ProductListAttributeOptionsWithHttpInfo(EntitymanagerListAttributeOptionsRequest body, int operationIndex = 0)
-        {
-            // verify the required parameter 'body' is set
-            if (body == null)
-            {
-                throw new product.Client.ApiException(400, "Missing required parameter 'body' when calling ProductApi->ProductListAttributeOptions");
-            }
-
-            product.Client.RequestOptions localVarRequestOptions = new product.Client.RequestOptions();
-
-            string[] _contentTypes = new string[] {
-                "application/json"
-            };
-
-            // to determine the Accept header
-            string[] _accepts = new string[] {
-                "application/json"
-            };
-
-            var localVarContentType = product.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
-            }
-
-            var localVarAccept = product.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
-            }
-
-            localVarRequestOptions.Data = body;
-
-            localVarRequestOptions.Operation = "ProductApi.ProductListAttributeOptions";
-            localVarRequestOptions.OperationIndex = operationIndex;
-
-
-            // make the HTTP request
-            var localVarResponse = this.Client.Post<EntitymanagerListAttributeOptionsResponse>("/product.Product/ListAttributeOptions", localVarRequestOptions, this.Configuration);
-            if (this.ExceptionFactory != null)
-            {
-                Exception _exception = this.ExceptionFactory("ProductListAttributeOptions", localVarResponse);
-                if (_exception != null)
-                {
-                    throw _exception;
-                }
-            }
-
-            return localVarResponse;
-        }
-
-        /// <summary>
-        ///  
-        /// </summary>
-        /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of EntitymanagerListAttributeOptionsResponse</returns>
-        public async System.Threading.Tasks.Task<EntitymanagerListAttributeOptionsResponse> ProductListAttributeOptionsAsync(EntitymanagerListAttributeOptionsRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
-        {
-            product.Client.ApiResponse<EntitymanagerListAttributeOptionsResponse> localVarResponse = await ProductListAttributeOptionsWithHttpInfoAsync(body, operationIndex, cancellationToken).ConfigureAwait(false);
-            return localVarResponse.Data;
-        }
-
-        /// <summary>
-        ///  
-        /// </summary>
-        /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (EntitymanagerListAttributeOptionsResponse)</returns>
-        public async System.Threading.Tasks.Task<product.Client.ApiResponse<EntitymanagerListAttributeOptionsResponse>> ProductListAttributeOptionsWithHttpInfoAsync(EntitymanagerListAttributeOptionsRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
-        {
-            // verify the required parameter 'body' is set
-            if (body == null)
-            {
-                throw new product.Client.ApiException(400, "Missing required parameter 'body' when calling ProductApi->ProductListAttributeOptions");
-            }
-
-
-            product.Client.RequestOptions localVarRequestOptions = new product.Client.RequestOptions();
-
-            string[] _contentTypes = new string[] {
-                "application/json"
-            };
-
-            // to determine the Accept header
-            string[] _accepts = new string[] {
-                "application/json"
-            };
-
-            var localVarContentType = product.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
-            }
-
-            var localVarAccept = product.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
-            }
-
-            localVarRequestOptions.Data = body;
-
-            localVarRequestOptions.Operation = "ProductApi.ProductListAttributeOptions";
-            localVarRequestOptions.OperationIndex = operationIndex;
-
-
-            // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.PostAsync<EntitymanagerListAttributeOptionsResponse>("/product.Product/ListAttributeOptions", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
-
-            if (this.ExceptionFactory != null)
-            {
-                Exception _exception = this.ExceptionFactory("ProductListAttributeOptions", localVarResponse);
-                if (_exception != null)
-                {
-                    throw _exception;
-                }
-            }
-
-            return localVarResponse;
-        }
-
-        /// <summary>
-        ///  
-        /// </summary>
-        /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>EntitymanagerListEntitiesResponse</returns>
-        public EntitymanagerListEntitiesResponse ProductListEntities(EntitymanagerListEntitiesRequest body, int operationIndex = 0)
-        {
-            product.Client.ApiResponse<EntitymanagerListEntitiesResponse> localVarResponse = ProductListEntitiesWithHttpInfo(body);
-            return localVarResponse.Data;
-        }
-
-        /// <summary>
-        ///  
-        /// </summary>
-        /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of EntitymanagerListEntitiesResponse</returns>
-        public product.Client.ApiResponse<EntitymanagerListEntitiesResponse> ProductListEntitiesWithHttpInfo(EntitymanagerListEntitiesRequest body, int operationIndex = 0)
-        {
-            // verify the required parameter 'body' is set
-            if (body == null)
-            {
-                throw new product.Client.ApiException(400, "Missing required parameter 'body' when calling ProductApi->ProductListEntities");
-            }
-
-            product.Client.RequestOptions localVarRequestOptions = new product.Client.RequestOptions();
-
-            string[] _contentTypes = new string[] {
-                "application/json"
-            };
-
-            // to determine the Accept header
-            string[] _accepts = new string[] {
-                "application/json"
-            };
-
-            var localVarContentType = product.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
-            }
-
-            var localVarAccept = product.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
-            }
-
-            localVarRequestOptions.Data = body;
-
-            localVarRequestOptions.Operation = "ProductApi.ProductListEntities";
-            localVarRequestOptions.OperationIndex = operationIndex;
-
-
-            // make the HTTP request
-            var localVarResponse = this.Client.Post<EntitymanagerListEntitiesResponse>("/product.Product/ListEntities", localVarRequestOptions, this.Configuration);
-            if (this.ExceptionFactory != null)
-            {
-                Exception _exception = this.ExceptionFactory("ProductListEntities", localVarResponse);
-                if (_exception != null)
-                {
-                    throw _exception;
-                }
-            }
-
-            return localVarResponse;
-        }
-
-        /// <summary>
-        ///  
-        /// </summary>
-        /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of EntitymanagerListEntitiesResponse</returns>
-        public async System.Threading.Tasks.Task<EntitymanagerListEntitiesResponse> ProductListEntitiesAsync(EntitymanagerListEntitiesRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
-        {
-            product.Client.ApiResponse<EntitymanagerListEntitiesResponse> localVarResponse = await ProductListEntitiesWithHttpInfoAsync(body, operationIndex, cancellationToken).ConfigureAwait(false);
-            return localVarResponse.Data;
-        }
-
-        /// <summary>
-        ///  
-        /// </summary>
-        /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (EntitymanagerListEntitiesResponse)</returns>
-        public async System.Threading.Tasks.Task<product.Client.ApiResponse<EntitymanagerListEntitiesResponse>> ProductListEntitiesWithHttpInfoAsync(EntitymanagerListEntitiesRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
-        {
-            // verify the required parameter 'body' is set
-            if (body == null)
-            {
-                throw new product.Client.ApiException(400, "Missing required parameter 'body' when calling ProductApi->ProductListEntities");
-            }
-
-
-            product.Client.RequestOptions localVarRequestOptions = new product.Client.RequestOptions();
-
-            string[] _contentTypes = new string[] {
-                "application/json"
-            };
-
-            // to determine the Accept header
-            string[] _accepts = new string[] {
-                "application/json"
-            };
-
-            var localVarContentType = product.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
-            }
-
-            var localVarAccept = product.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
-            }
-
-            localVarRequestOptions.Data = body;
-
-            localVarRequestOptions.Operation = "ProductApi.ProductListEntities";
-            localVarRequestOptions.OperationIndex = operationIndex;
-
-
-            // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.PostAsync<EntitymanagerListEntitiesResponse>("/product.Product/ListEntities", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
-
-            if (this.ExceptionFactory != null)
-            {
-                Exception _exception = this.ExceptionFactory("ProductListEntities", localVarResponse);
-                if (_exception != null)
-                {
-                    throw _exception;
-                }
-            }
-
-            return localVarResponse;
-        }
-
-        /// <summary>
-        ///  
-        /// </summary>
-        /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>EntitymanagerListOptionsListsResponse</returns>
-        public EntitymanagerListOptionsListsResponse ProductListOptionsLists(EntitymanagerListOptionsListsRequest body, int operationIndex = 0)
-        {
-            product.Client.ApiResponse<EntitymanagerListOptionsListsResponse> localVarResponse = ProductListOptionsListsWithHttpInfo(body);
-            return localVarResponse.Data;
-        }
-
-        /// <summary>
-        ///  
-        /// </summary>
-        /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of EntitymanagerListOptionsListsResponse</returns>
-        public product.Client.ApiResponse<EntitymanagerListOptionsListsResponse> ProductListOptionsListsWithHttpInfo(EntitymanagerListOptionsListsRequest body, int operationIndex = 0)
-        {
-            // verify the required parameter 'body' is set
-            if (body == null)
-            {
-                throw new product.Client.ApiException(400, "Missing required parameter 'body' when calling ProductApi->ProductListOptionsLists");
-            }
-
-            product.Client.RequestOptions localVarRequestOptions = new product.Client.RequestOptions();
-
-            string[] _contentTypes = new string[] {
-                "application/json"
-            };
-
-            // to determine the Accept header
-            string[] _accepts = new string[] {
-                "application/json"
-            };
-
-            var localVarContentType = product.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
-            }
-
-            var localVarAccept = product.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
-            }
-
-            localVarRequestOptions.Data = body;
-
-            localVarRequestOptions.Operation = "ProductApi.ProductListOptionsLists";
-            localVarRequestOptions.OperationIndex = operationIndex;
-
-
-            // make the HTTP request
-            var localVarResponse = this.Client.Post<EntitymanagerListOptionsListsResponse>("/product.Product/ListOptionsLists", localVarRequestOptions, this.Configuration);
-            if (this.ExceptionFactory != null)
-            {
-                Exception _exception = this.ExceptionFactory("ProductListOptionsLists", localVarResponse);
-                if (_exception != null)
-                {
-                    throw _exception;
-                }
-            }
-
-            return localVarResponse;
-        }
-
-        /// <summary>
-        ///  
-        /// </summary>
-        /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of EntitymanagerListOptionsListsResponse</returns>
-        public async System.Threading.Tasks.Task<EntitymanagerListOptionsListsResponse> ProductListOptionsListsAsync(EntitymanagerListOptionsListsRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
-        {
-            product.Client.ApiResponse<EntitymanagerListOptionsListsResponse> localVarResponse = await ProductListOptionsListsWithHttpInfoAsync(body, operationIndex, cancellationToken).ConfigureAwait(false);
-            return localVarResponse.Data;
-        }
-
-        /// <summary>
-        ///  
-        /// </summary>
-        /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (EntitymanagerListOptionsListsResponse)</returns>
-        public async System.Threading.Tasks.Task<product.Client.ApiResponse<EntitymanagerListOptionsListsResponse>> ProductListOptionsListsWithHttpInfoAsync(EntitymanagerListOptionsListsRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
-        {
-            // verify the required parameter 'body' is set
-            if (body == null)
-            {
-                throw new product.Client.ApiException(400, "Missing required parameter 'body' when calling ProductApi->ProductListOptionsLists");
-            }
-
-
-            product.Client.RequestOptions localVarRequestOptions = new product.Client.RequestOptions();
-
-            string[] _contentTypes = new string[] {
-                "application/json"
-            };
-
-            // to determine the Accept header
-            string[] _accepts = new string[] {
-                "application/json"
-            };
-
-            var localVarContentType = product.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
-            }
-
-            var localVarAccept = product.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
-            }
-
-            localVarRequestOptions.Data = body;
-
-            localVarRequestOptions.Operation = "ProductApi.ProductListOptionsLists";
-            localVarRequestOptions.OperationIndex = operationIndex;
-
-
-            // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.PostAsync<EntitymanagerListOptionsListsResponse>("/product.Product/ListOptionsLists", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
-
-            if (this.ExceptionFactory != null)
-            {
-                Exception _exception = this.ExceptionFactory("ProductListOptionsLists", localVarResponse);
-                if (_exception != null)
-                {
-                    throw _exception;
-                }
-            }
-
-            return localVarResponse;
-        }
-
-        /// <summary>
-        ///  
-        /// </summary>
-        /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ProductListProductsResponse</returns>
-        public ProductListProductsResponse ProductListProducts(ProductListProductsRequest body, int operationIndex = 0)
-        {
-            product.Client.ApiResponse<ProductListProductsResponse> localVarResponse = ProductListProductsWithHttpInfo(body);
-            return localVarResponse.Data;
-        }
-
-        /// <summary>
-        ///  
-        /// </summary>
-        /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of ProductListProductsResponse</returns>
-        public product.Client.ApiResponse<ProductListProductsResponse> ProductListProductsWithHttpInfo(ProductListProductsRequest body, int operationIndex = 0)
-        {
-            // verify the required parameter 'body' is set
-            if (body == null)
-            {
-                throw new product.Client.ApiException(400, "Missing required parameter 'body' when calling ProductApi->ProductListProducts");
-            }
-
-            product.Client.RequestOptions localVarRequestOptions = new product.Client.RequestOptions();
-
-            string[] _contentTypes = new string[] {
-                "application/json"
-            };
-
-            // to determine the Accept header
-            string[] _accepts = new string[] {
-                "application/json"
-            };
-
-            var localVarContentType = product.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
-            }
-
-            var localVarAccept = product.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
-            }
-
-            localVarRequestOptions.Data = body;
-
-            localVarRequestOptions.Operation = "ProductApi.ProductListProducts";
-            localVarRequestOptions.OperationIndex = operationIndex;
-
-
-            // make the HTTP request
-            var localVarResponse = this.Client.Post<ProductListProductsResponse>("/product.Product/ListProducts", localVarRequestOptions, this.Configuration);
-            if (this.ExceptionFactory != null)
-            {
-                Exception _exception = this.ExceptionFactory("ProductListProducts", localVarResponse);
-                if (_exception != null)
-                {
-                    throw _exception;
-                }
-            }
-
-            return localVarResponse;
-        }
-
-        /// <summary>
-        ///  
-        /// </summary>
-        /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ProductListProductsResponse</returns>
-        public async System.Threading.Tasks.Task<ProductListProductsResponse> ProductListProductsAsync(ProductListProductsRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
-        {
-            product.Client.ApiResponse<ProductListProductsResponse> localVarResponse = await ProductListProductsWithHttpInfoAsync(body, operationIndex, cancellationToken).ConfigureAwait(false);
-            return localVarResponse.Data;
-        }
-
-        /// <summary>
-        ///  
-        /// </summary>
-        /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (ProductListProductsResponse)</returns>
-        public async System.Threading.Tasks.Task<product.Client.ApiResponse<ProductListProductsResponse>> ProductListProductsWithHttpInfoAsync(ProductListProductsRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
-        {
-            // verify the required parameter 'body' is set
-            if (body == null)
-            {
-                throw new product.Client.ApiException(400, "Missing required parameter 'body' when calling ProductApi->ProductListProducts");
-            }
-
-
-            product.Client.RequestOptions localVarRequestOptions = new product.Client.RequestOptions();
-
-            string[] _contentTypes = new string[] {
-                "application/json"
-            };
-
-            // to determine the Accept header
-            string[] _accepts = new string[] {
-                "application/json"
-            };
-
-            var localVarContentType = product.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
-            }
-
-            var localVarAccept = product.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
-            }
-
-            localVarRequestOptions.Data = body;
-
-            localVarRequestOptions.Operation = "ProductApi.ProductListProducts";
-            localVarRequestOptions.OperationIndex = operationIndex;
-
-
-            // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.PostAsync<ProductListProductsResponse>("/product.Product/ListProducts", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
-
-            if (this.ExceptionFactory != null)
-            {
-                Exception _exception = this.ExceptionFactory("ProductListProducts", localVarResponse);
-                if (_exception != null)
-                {
-                    throw _exception;
-                }
-            }
-
-            return localVarResponse;
-        }
-
-        /// <summary>
-        ///  
-        /// </summary>
-        /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ProductListProductsByIdsResponse</returns>
-        public ProductListProductsByIdsResponse ProductListProductsByIds(ProductListProductsByIdsRequest body, int operationIndex = 0)
-        {
-            product.Client.ApiResponse<ProductListProductsByIdsResponse> localVarResponse = ProductListProductsByIdsWithHttpInfo(body);
-            return localVarResponse.Data;
-        }
-
-        /// <summary>
-        ///  
-        /// </summary>
-        /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of ProductListProductsByIdsResponse</returns>
-        public product.Client.ApiResponse<ProductListProductsByIdsResponse> ProductListProductsByIdsWithHttpInfo(ProductListProductsByIdsRequest body, int operationIndex = 0)
-        {
-            // verify the required parameter 'body' is set
-            if (body == null)
-            {
-                throw new product.Client.ApiException(400, "Missing required parameter 'body' when calling ProductApi->ProductListProductsByIds");
-            }
-
-            product.Client.RequestOptions localVarRequestOptions = new product.Client.RequestOptions();
-
-            string[] _contentTypes = new string[] {
-                "application/json"
-            };
-
-            // to determine the Accept header
-            string[] _accepts = new string[] {
-                "application/json"
-            };
-
-            var localVarContentType = product.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
-            }
-
-            var localVarAccept = product.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
-            }
-
-            localVarRequestOptions.Data = body;
-
-            localVarRequestOptions.Operation = "ProductApi.ProductListProductsByIds";
-            localVarRequestOptions.OperationIndex = operationIndex;
-
-
-            // make the HTTP request
-            var localVarResponse = this.Client.Post<ProductListProductsByIdsResponse>("/product.Product/ListProductsByIds", localVarRequestOptions, this.Configuration);
-            if (this.ExceptionFactory != null)
-            {
-                Exception _exception = this.ExceptionFactory("ProductListProductsByIds", localVarResponse);
-                if (_exception != null)
-                {
-                    throw _exception;
-                }
-            }
-
-            return localVarResponse;
-        }
-
-        /// <summary>
-        ///  
-        /// </summary>
-        /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ProductListProductsByIdsResponse</returns>
-        public async System.Threading.Tasks.Task<ProductListProductsByIdsResponse> ProductListProductsByIdsAsync(ProductListProductsByIdsRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
-        {
-            product.Client.ApiResponse<ProductListProductsByIdsResponse> localVarResponse = await ProductListProductsByIdsWithHttpInfoAsync(body, operationIndex, cancellationToken).ConfigureAwait(false);
-            return localVarResponse.Data;
-        }
-
-        /// <summary>
-        ///  
-        /// </summary>
-        /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (ProductListProductsByIdsResponse)</returns>
-        public async System.Threading.Tasks.Task<product.Client.ApiResponse<ProductListProductsByIdsResponse>> ProductListProductsByIdsWithHttpInfoAsync(ProductListProductsByIdsRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
-        {
-            // verify the required parameter 'body' is set
-            if (body == null)
-            {
-                throw new product.Client.ApiException(400, "Missing required parameter 'body' when calling ProductApi->ProductListProductsByIds");
-            }
-
-
-            product.Client.RequestOptions localVarRequestOptions = new product.Client.RequestOptions();
-
-            string[] _contentTypes = new string[] {
-                "application/json"
-            };
-
-            // to determine the Accept header
-            string[] _accepts = new string[] {
-                "application/json"
-            };
-
-            var localVarContentType = product.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
-            }
-
-            var localVarAccept = product.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
-            }
-
-            localVarRequestOptions.Data = body;
-
-            localVarRequestOptions.Operation = "ProductApi.ProductListProductsByIds";
-            localVarRequestOptions.OperationIndex = operationIndex;
-
-
-            // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.PostAsync<ProductListProductsByIdsResponse>("/product.Product/ListProductsByIds", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
-
-            if (this.ExceptionFactory != null)
-            {
-                Exception _exception = this.ExceptionFactory("ProductListProductsByIds", localVarResponse);
-                if (_exception != null)
-                {
-                    throw _exception;
-                }
-            }
-
-            return localVarResponse;
-        }
-
-        /// <summary>
-        ///  
-        /// </summary>
-        /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ProductListProductsBySkuResponse</returns>
-        public ProductListProductsBySkuResponse ProductListProductsBySku(ProductListProductsBySkuRequest body, int operationIndex = 0)
-        {
-            product.Client.ApiResponse<ProductListProductsBySkuResponse> localVarResponse = ProductListProductsBySkuWithHttpInfo(body);
-            return localVarResponse.Data;
-        }
-
-        /// <summary>
-        ///  
-        /// </summary>
-        /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of ProductListProductsBySkuResponse</returns>
-        public product.Client.ApiResponse<ProductListProductsBySkuResponse> ProductListProductsBySkuWithHttpInfo(ProductListProductsBySkuRequest body, int operationIndex = 0)
-        {
-            // verify the required parameter 'body' is set
-            if (body == null)
-            {
-                throw new product.Client.ApiException(400, "Missing required parameter 'body' when calling ProductApi->ProductListProductsBySku");
-            }
-
-            product.Client.RequestOptions localVarRequestOptions = new product.Client.RequestOptions();
-
-            string[] _contentTypes = new string[] {
-                "application/json"
-            };
-
-            // to determine the Accept header
-            string[] _accepts = new string[] {
-                "application/json"
-            };
-
-            var localVarContentType = product.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
-            }
-
-            var localVarAccept = product.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
-            }
-
-            localVarRequestOptions.Data = body;
-
-            localVarRequestOptions.Operation = "ProductApi.ProductListProductsBySku";
-            localVarRequestOptions.OperationIndex = operationIndex;
-
-
-            // make the HTTP request
-            var localVarResponse = this.Client.Post<ProductListProductsBySkuResponse>("/product.Product/ListProductsBySku", localVarRequestOptions, this.Configuration);
-            if (this.ExceptionFactory != null)
-            {
-                Exception _exception = this.ExceptionFactory("ProductListProductsBySku", localVarResponse);
-                if (_exception != null)
-                {
-                    throw _exception;
-                }
-            }
-
-            return localVarResponse;
-        }
-
-        /// <summary>
-        ///  
-        /// </summary>
-        /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ProductListProductsBySkuResponse</returns>
-        public async System.Threading.Tasks.Task<ProductListProductsBySkuResponse> ProductListProductsBySkuAsync(ProductListProductsBySkuRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
-        {
-            product.Client.ApiResponse<ProductListProductsBySkuResponse> localVarResponse = await ProductListProductsBySkuWithHttpInfoAsync(body, operationIndex, cancellationToken).ConfigureAwait(false);
-            return localVarResponse.Data;
-        }
-
-        /// <summary>
-        ///  
-        /// </summary>
-        /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (ProductListProductsBySkuResponse)</returns>
-        public async System.Threading.Tasks.Task<product.Client.ApiResponse<ProductListProductsBySkuResponse>> ProductListProductsBySkuWithHttpInfoAsync(ProductListProductsBySkuRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
-        {
-            // verify the required parameter 'body' is set
-            if (body == null)
-            {
-                throw new product.Client.ApiException(400, "Missing required parameter 'body' when calling ProductApi->ProductListProductsBySku");
-            }
-
-
-            product.Client.RequestOptions localVarRequestOptions = new product.Client.RequestOptions();
-
-            string[] _contentTypes = new string[] {
-                "application/json"
-            };
-
-            // to determine the Accept header
-            string[] _accepts = new string[] {
-                "application/json"
-            };
-
-            var localVarContentType = product.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
-            }
-
-            var localVarAccept = product.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
-            }
-
-            localVarRequestOptions.Data = body;
-
-            localVarRequestOptions.Operation = "ProductApi.ProductListProductsBySku";
-            localVarRequestOptions.OperationIndex = operationIndex;
-
-
-            // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.PostAsync<ProductListProductsBySkuResponse>("/product.Product/ListProductsBySku", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
-
-            if (this.ExceptionFactory != null)
-            {
-                Exception _exception = this.ExceptionFactory("ProductListProductsBySku", localVarResponse);
-                if (_exception != null)
-                {
-                    throw _exception;
-                }
-            }
-
-            return localVarResponse;
-        }
-
-        /// <summary>
-        ///  
-        /// </summary>
-        /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ProductListVariantsBySkuResponse</returns>
-        public ProductListVariantsBySkuResponse ProductListVariantsBySku(ProductListVariantsBySkuRequest body, int operationIndex = 0)
-        {
-            product.Client.ApiResponse<ProductListVariantsBySkuResponse> localVarResponse = ProductListVariantsBySkuWithHttpInfo(body);
-            return localVarResponse.Data;
-        }
-
-        /// <summary>
-        ///  
-        /// </summary>
-        /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of ProductListVariantsBySkuResponse</returns>
-        public product.Client.ApiResponse<ProductListVariantsBySkuResponse> ProductListVariantsBySkuWithHttpInfo(ProductListVariantsBySkuRequest body, int operationIndex = 0)
-        {
-            // verify the required parameter 'body' is set
-            if (body == null)
-            {
-                throw new product.Client.ApiException(400, "Missing required parameter 'body' when calling ProductApi->ProductListVariantsBySku");
-            }
-
-            product.Client.RequestOptions localVarRequestOptions = new product.Client.RequestOptions();
-
-            string[] _contentTypes = new string[] {
-                "application/json"
-            };
-
-            // to determine the Accept header
-            string[] _accepts = new string[] {
-                "application/json"
-            };
-
-            var localVarContentType = product.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
-            }
-
-            var localVarAccept = product.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
-            }
-
-            localVarRequestOptions.Data = body;
-
-            localVarRequestOptions.Operation = "ProductApi.ProductListVariantsBySku";
-            localVarRequestOptions.OperationIndex = operationIndex;
-
-
-            // make the HTTP request
-            var localVarResponse = this.Client.Post<ProductListVariantsBySkuResponse>("/product.Product/ListVariantsBySku", localVarRequestOptions, this.Configuration);
-            if (this.ExceptionFactory != null)
-            {
-                Exception _exception = this.ExceptionFactory("ProductListVariantsBySku", localVarResponse);
-                if (_exception != null)
-                {
-                    throw _exception;
-                }
-            }
-
-            return localVarResponse;
-        }
-
-        /// <summary>
-        ///  
-        /// </summary>
-        /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ProductListVariantsBySkuResponse</returns>
-        public async System.Threading.Tasks.Task<ProductListVariantsBySkuResponse> ProductListVariantsBySkuAsync(ProductListVariantsBySkuRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
-        {
-            product.Client.ApiResponse<ProductListVariantsBySkuResponse> localVarResponse = await ProductListVariantsBySkuWithHttpInfoAsync(body, operationIndex, cancellationToken).ConfigureAwait(false);
-            return localVarResponse.Data;
-        }
-
-        /// <summary>
-        ///  
-        /// </summary>
-        /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (ProductListVariantsBySkuResponse)</returns>
-        public async System.Threading.Tasks.Task<product.Client.ApiResponse<ProductListVariantsBySkuResponse>> ProductListVariantsBySkuWithHttpInfoAsync(ProductListVariantsBySkuRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
-        {
-            // verify the required parameter 'body' is set
-            if (body == null)
-            {
-                throw new product.Client.ApiException(400, "Missing required parameter 'body' when calling ProductApi->ProductListVariantsBySku");
-            }
-
-
-            product.Client.RequestOptions localVarRequestOptions = new product.Client.RequestOptions();
-
-            string[] _contentTypes = new string[] {
-                "application/json"
-            };
-
-            // to determine the Accept header
-            string[] _accepts = new string[] {
-                "application/json"
-            };
-
-            var localVarContentType = product.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
-            }
-
-            var localVarAccept = product.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
-            }
-
-            localVarRequestOptions.Data = body;
-
-            localVarRequestOptions.Operation = "ProductApi.ProductListVariantsBySku";
-            localVarRequestOptions.OperationIndex = operationIndex;
-
-
-            // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.PostAsync<ProductListVariantsBySkuResponse>("/product.Product/ListVariantsBySku", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
-
-            if (this.ExceptionFactory != null)
-            {
-                Exception _exception = this.ExceptionFactory("ProductListVariantsBySku", localVarResponse);
-                if (_exception != null)
-                {
-                    throw _exception;
-                }
-            }
-
-            return localVarResponse;
-        }
-
-        /// <summary>
-        ///  
-        /// </summary>
-        /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>Object</returns>
-        public Object ProductRemoveMediaGalleryEntry(ProductRemoveMediaGalleryEntryRequest body, int operationIndex = 0)
-        {
-            product.Client.ApiResponse<Object> localVarResponse = ProductRemoveMediaGalleryEntryWithHttpInfo(body);
-            return localVarResponse.Data;
-        }
-
-        /// <summary>
-        ///  
-        /// </summary>
-        /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of Object</returns>
-        public product.Client.ApiResponse<Object> ProductRemoveMediaGalleryEntryWithHttpInfo(ProductRemoveMediaGalleryEntryRequest body, int operationIndex = 0)
-        {
-            // verify the required parameter 'body' is set
-            if (body == null)
-            {
-                throw new product.Client.ApiException(400, "Missing required parameter 'body' when calling ProductApi->ProductRemoveMediaGalleryEntry");
-            }
-
-            product.Client.RequestOptions localVarRequestOptions = new product.Client.RequestOptions();
-
-            string[] _contentTypes = new string[] {
-                "application/json"
-            };
-
-            // to determine the Accept header
-            string[] _accepts = new string[] {
-                "application/json"
-            };
-
-            var localVarContentType = product.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
-            }
-
-            var localVarAccept = product.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
-            }
-
-            localVarRequestOptions.Data = body;
-
-            localVarRequestOptions.Operation = "ProductApi.ProductRemoveMediaGalleryEntry";
-            localVarRequestOptions.OperationIndex = operationIndex;
-
-
-            // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/product.Product/RemoveMediaGalleryEntry", localVarRequestOptions, this.Configuration);
-            if (this.ExceptionFactory != null)
-            {
-                Exception _exception = this.ExceptionFactory("ProductRemoveMediaGalleryEntry", localVarResponse);
-                if (_exception != null)
-                {
-                    throw _exception;
-                }
-            }
-
-            return localVarResponse;
-        }
-
-        /// <summary>
-        ///  
-        /// </summary>
-        /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of Object</returns>
-        public async System.Threading.Tasks.Task<Object> ProductRemoveMediaGalleryEntryAsync(ProductRemoveMediaGalleryEntryRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
-        {
-            product.Client.ApiResponse<Object> localVarResponse = await ProductRemoveMediaGalleryEntryWithHttpInfoAsync(body, operationIndex, cancellationToken).ConfigureAwait(false);
-            return localVarResponse.Data;
-        }
-
-        /// <summary>
-        ///  
-        /// </summary>
-        /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (Object)</returns>
-        public async System.Threading.Tasks.Task<product.Client.ApiResponse<Object>> ProductRemoveMediaGalleryEntryWithHttpInfoAsync(ProductRemoveMediaGalleryEntryRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
-        {
-            // verify the required parameter 'body' is set
-            if (body == null)
-            {
-                throw new product.Client.ApiException(400, "Missing required parameter 'body' when calling ProductApi->ProductRemoveMediaGalleryEntry");
-            }
-
-
-            product.Client.RequestOptions localVarRequestOptions = new product.Client.RequestOptions();
-
-            string[] _contentTypes = new string[] {
-                "application/json"
-            };
-
-            // to determine the Accept header
-            string[] _accepts = new string[] {
-                "application/json"
-            };
-
-            var localVarContentType = product.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
-            }
-
-            var localVarAccept = product.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
-            }
-
-            localVarRequestOptions.Data = body;
-
-            localVarRequestOptions.Operation = "ProductApi.ProductRemoveMediaGalleryEntry";
-            localVarRequestOptions.OperationIndex = operationIndex;
-
-
-            // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/product.Product/RemoveMediaGalleryEntry", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
-
-            if (this.ExceptionFactory != null)
-            {
-                Exception _exception = this.ExceptionFactory("ProductRemoveMediaGalleryEntry", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;
@@ -7050,6 +8059,11 @@ namespace product.Api
             localVarRequestOptions.Operation = "ProductApi.ProductUpdateAttribute";
             localVarRequestOptions.OperationIndex = operationIndex;
 
+            // authentication (Authorization) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
 
             // make the HTTP request
             var localVarResponse = this.Client.Post<EntitymanagerAttribute>("/product.Product/UpdateAttribute", localVarRequestOptions, this.Configuration);
@@ -7124,6 +8138,11 @@ namespace product.Api
             localVarRequestOptions.Operation = "ProductApi.ProductUpdateAttribute";
             localVarRequestOptions.OperationIndex = operationIndex;
 
+            // authentication (Authorization) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
 
             // make the HTTP request
             var localVarResponse = await this.AsynchronousClient.PostAsync<EntitymanagerAttribute>("/product.Product/UpdateAttribute", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
@@ -7196,6 +8215,11 @@ namespace product.Api
             localVarRequestOptions.Operation = "ProductApi.ProductUpdateAttributeGroup";
             localVarRequestOptions.OperationIndex = operationIndex;
 
+            // authentication (Authorization) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
 
             // make the HTTP request
             var localVarResponse = this.Client.Post<EntitymanagerAttributeGroup>("/product.Product/UpdateAttributeGroup", localVarRequestOptions, this.Configuration);
@@ -7270,6 +8294,11 @@ namespace product.Api
             localVarRequestOptions.Operation = "ProductApi.ProductUpdateAttributeGroup";
             localVarRequestOptions.OperationIndex = operationIndex;
 
+            // authentication (Authorization) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
 
             // make the HTTP request
             var localVarResponse = await this.AsynchronousClient.PostAsync<EntitymanagerAttributeGroup>("/product.Product/UpdateAttributeGroup", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
@@ -7277,444 +8306,6 @@ namespace product.Api
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("ProductUpdateAttributeGroup", localVarResponse);
-                if (_exception != null)
-                {
-                    throw _exception;
-                }
-            }
-
-            return localVarResponse;
-        }
-
-        /// <summary>
-        /// rpc GetAttributeOptionByCode (product.entitymanager.GetAttributeOptionByCodeRequest) returns (product.entitymanager.GetAttributeOptionByCodeResponse) {} 
-        /// </summary>
-        /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>EntitymanagerUpdateAttributeOptionsResponse</returns>
-        public EntitymanagerUpdateAttributeOptionsResponse ProductUpdateAttributeOptions(EntitymanagerUpdateAttributeOptionsRequest body, int operationIndex = 0)
-        {
-            product.Client.ApiResponse<EntitymanagerUpdateAttributeOptionsResponse> localVarResponse = ProductUpdateAttributeOptionsWithHttpInfo(body);
-            return localVarResponse.Data;
-        }
-
-        /// <summary>
-        /// rpc GetAttributeOptionByCode (product.entitymanager.GetAttributeOptionByCodeRequest) returns (product.entitymanager.GetAttributeOptionByCodeResponse) {} 
-        /// </summary>
-        /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of EntitymanagerUpdateAttributeOptionsResponse</returns>
-        public product.Client.ApiResponse<EntitymanagerUpdateAttributeOptionsResponse> ProductUpdateAttributeOptionsWithHttpInfo(EntitymanagerUpdateAttributeOptionsRequest body, int operationIndex = 0)
-        {
-            // verify the required parameter 'body' is set
-            if (body == null)
-            {
-                throw new product.Client.ApiException(400, "Missing required parameter 'body' when calling ProductApi->ProductUpdateAttributeOptions");
-            }
-
-            product.Client.RequestOptions localVarRequestOptions = new product.Client.RequestOptions();
-
-            string[] _contentTypes = new string[] {
-                "application/json"
-            };
-
-            // to determine the Accept header
-            string[] _accepts = new string[] {
-                "application/json"
-            };
-
-            var localVarContentType = product.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
-            }
-
-            var localVarAccept = product.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
-            }
-
-            localVarRequestOptions.Data = body;
-
-            localVarRequestOptions.Operation = "ProductApi.ProductUpdateAttributeOptions";
-            localVarRequestOptions.OperationIndex = operationIndex;
-
-
-            // make the HTTP request
-            var localVarResponse = this.Client.Post<EntitymanagerUpdateAttributeOptionsResponse>("/product.Product/UpdateAttributeOptions", localVarRequestOptions, this.Configuration);
-            if (this.ExceptionFactory != null)
-            {
-                Exception _exception = this.ExceptionFactory("ProductUpdateAttributeOptions", localVarResponse);
-                if (_exception != null)
-                {
-                    throw _exception;
-                }
-            }
-
-            return localVarResponse;
-        }
-
-        /// <summary>
-        /// rpc GetAttributeOptionByCode (product.entitymanager.GetAttributeOptionByCodeRequest) returns (product.entitymanager.GetAttributeOptionByCodeResponse) {} 
-        /// </summary>
-        /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of EntitymanagerUpdateAttributeOptionsResponse</returns>
-        public async System.Threading.Tasks.Task<EntitymanagerUpdateAttributeOptionsResponse> ProductUpdateAttributeOptionsAsync(EntitymanagerUpdateAttributeOptionsRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
-        {
-            product.Client.ApiResponse<EntitymanagerUpdateAttributeOptionsResponse> localVarResponse = await ProductUpdateAttributeOptionsWithHttpInfoAsync(body, operationIndex, cancellationToken).ConfigureAwait(false);
-            return localVarResponse.Data;
-        }
-
-        /// <summary>
-        /// rpc GetAttributeOptionByCode (product.entitymanager.GetAttributeOptionByCodeRequest) returns (product.entitymanager.GetAttributeOptionByCodeResponse) {} 
-        /// </summary>
-        /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (EntitymanagerUpdateAttributeOptionsResponse)</returns>
-        public async System.Threading.Tasks.Task<product.Client.ApiResponse<EntitymanagerUpdateAttributeOptionsResponse>> ProductUpdateAttributeOptionsWithHttpInfoAsync(EntitymanagerUpdateAttributeOptionsRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
-        {
-            // verify the required parameter 'body' is set
-            if (body == null)
-            {
-                throw new product.Client.ApiException(400, "Missing required parameter 'body' when calling ProductApi->ProductUpdateAttributeOptions");
-            }
-
-
-            product.Client.RequestOptions localVarRequestOptions = new product.Client.RequestOptions();
-
-            string[] _contentTypes = new string[] {
-                "application/json"
-            };
-
-            // to determine the Accept header
-            string[] _accepts = new string[] {
-                "application/json"
-            };
-
-            var localVarContentType = product.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
-            }
-
-            var localVarAccept = product.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
-            }
-
-            localVarRequestOptions.Data = body;
-
-            localVarRequestOptions.Operation = "ProductApi.ProductUpdateAttributeOptions";
-            localVarRequestOptions.OperationIndex = operationIndex;
-
-
-            // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.PostAsync<EntitymanagerUpdateAttributeOptionsResponse>("/product.Product/UpdateAttributeOptions", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
-
-            if (this.ExceptionFactory != null)
-            {
-                Exception _exception = this.ExceptionFactory("ProductUpdateAttributeOptions", localVarResponse);
-                if (_exception != null)
-                {
-                    throw _exception;
-                }
-            }
-
-            return localVarResponse;
-        }
-
-        /// <summary>
-        ///  
-        /// </summary>
-        /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>Object</returns>
-        public Object ProductUpdateMediaGalleryEntry(ProductUpdateMediaGalleryEntryRequest body, int operationIndex = 0)
-        {
-            product.Client.ApiResponse<Object> localVarResponse = ProductUpdateMediaGalleryEntryWithHttpInfo(body);
-            return localVarResponse.Data;
-        }
-
-        /// <summary>
-        ///  
-        /// </summary>
-        /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of Object</returns>
-        public product.Client.ApiResponse<Object> ProductUpdateMediaGalleryEntryWithHttpInfo(ProductUpdateMediaGalleryEntryRequest body, int operationIndex = 0)
-        {
-            // verify the required parameter 'body' is set
-            if (body == null)
-            {
-                throw new product.Client.ApiException(400, "Missing required parameter 'body' when calling ProductApi->ProductUpdateMediaGalleryEntry");
-            }
-
-            product.Client.RequestOptions localVarRequestOptions = new product.Client.RequestOptions();
-
-            string[] _contentTypes = new string[] {
-                "application/json"
-            };
-
-            // to determine the Accept header
-            string[] _accepts = new string[] {
-                "application/json"
-            };
-
-            var localVarContentType = product.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
-            }
-
-            var localVarAccept = product.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
-            }
-
-            localVarRequestOptions.Data = body;
-
-            localVarRequestOptions.Operation = "ProductApi.ProductUpdateMediaGalleryEntry";
-            localVarRequestOptions.OperationIndex = operationIndex;
-
-
-            // make the HTTP request
-            var localVarResponse = this.Client.Post<Object>("/product.Product/UpdateMediaGalleryEntry", localVarRequestOptions, this.Configuration);
-            if (this.ExceptionFactory != null)
-            {
-                Exception _exception = this.ExceptionFactory("ProductUpdateMediaGalleryEntry", localVarResponse);
-                if (_exception != null)
-                {
-                    throw _exception;
-                }
-            }
-
-            return localVarResponse;
-        }
-
-        /// <summary>
-        ///  
-        /// </summary>
-        /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of Object</returns>
-        public async System.Threading.Tasks.Task<Object> ProductUpdateMediaGalleryEntryAsync(ProductUpdateMediaGalleryEntryRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
-        {
-            product.Client.ApiResponse<Object> localVarResponse = await ProductUpdateMediaGalleryEntryWithHttpInfoAsync(body, operationIndex, cancellationToken).ConfigureAwait(false);
-            return localVarResponse.Data;
-        }
-
-        /// <summary>
-        ///  
-        /// </summary>
-        /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (Object)</returns>
-        public async System.Threading.Tasks.Task<product.Client.ApiResponse<Object>> ProductUpdateMediaGalleryEntryWithHttpInfoAsync(ProductUpdateMediaGalleryEntryRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
-        {
-            // verify the required parameter 'body' is set
-            if (body == null)
-            {
-                throw new product.Client.ApiException(400, "Missing required parameter 'body' when calling ProductApi->ProductUpdateMediaGalleryEntry");
-            }
-
-
-            product.Client.RequestOptions localVarRequestOptions = new product.Client.RequestOptions();
-
-            string[] _contentTypes = new string[] {
-                "application/json"
-            };
-
-            // to determine the Accept header
-            string[] _accepts = new string[] {
-                "application/json"
-            };
-
-            var localVarContentType = product.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
-            }
-
-            var localVarAccept = product.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
-            }
-
-            localVarRequestOptions.Data = body;
-
-            localVarRequestOptions.Operation = "ProductApi.ProductUpdateMediaGalleryEntry";
-            localVarRequestOptions.OperationIndex = operationIndex;
-
-
-            // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/product.Product/UpdateMediaGalleryEntry", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
-
-            if (this.ExceptionFactory != null)
-            {
-                Exception _exception = this.ExceptionFactory("ProductUpdateMediaGalleryEntry", localVarResponse);
-                if (_exception != null)
-                {
-                    throw _exception;
-                }
-            }
-
-            return localVarResponse;
-        }
-
-        /// <summary>
-        ///  
-        /// </summary>
-        /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>EntitymanagerUpdateOptionsListResponse</returns>
-        public EntitymanagerUpdateOptionsListResponse ProductUpdateOptionsList(EntitymanagerUpdateOptionsListRequest body, int operationIndex = 0)
-        {
-            product.Client.ApiResponse<EntitymanagerUpdateOptionsListResponse> localVarResponse = ProductUpdateOptionsListWithHttpInfo(body);
-            return localVarResponse.Data;
-        }
-
-        /// <summary>
-        ///  
-        /// </summary>
-        /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of EntitymanagerUpdateOptionsListResponse</returns>
-        public product.Client.ApiResponse<EntitymanagerUpdateOptionsListResponse> ProductUpdateOptionsListWithHttpInfo(EntitymanagerUpdateOptionsListRequest body, int operationIndex = 0)
-        {
-            // verify the required parameter 'body' is set
-            if (body == null)
-            {
-                throw new product.Client.ApiException(400, "Missing required parameter 'body' when calling ProductApi->ProductUpdateOptionsList");
-            }
-
-            product.Client.RequestOptions localVarRequestOptions = new product.Client.RequestOptions();
-
-            string[] _contentTypes = new string[] {
-                "application/json"
-            };
-
-            // to determine the Accept header
-            string[] _accepts = new string[] {
-                "application/json"
-            };
-
-            var localVarContentType = product.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
-            }
-
-            var localVarAccept = product.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
-            }
-
-            localVarRequestOptions.Data = body;
-
-            localVarRequestOptions.Operation = "ProductApi.ProductUpdateOptionsList";
-            localVarRequestOptions.OperationIndex = operationIndex;
-
-
-            // make the HTTP request
-            var localVarResponse = this.Client.Post<EntitymanagerUpdateOptionsListResponse>("/product.Product/UpdateOptionsList", localVarRequestOptions, this.Configuration);
-            if (this.ExceptionFactory != null)
-            {
-                Exception _exception = this.ExceptionFactory("ProductUpdateOptionsList", localVarResponse);
-                if (_exception != null)
-                {
-                    throw _exception;
-                }
-            }
-
-            return localVarResponse;
-        }
-
-        /// <summary>
-        ///  
-        /// </summary>
-        /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of EntitymanagerUpdateOptionsListResponse</returns>
-        public async System.Threading.Tasks.Task<EntitymanagerUpdateOptionsListResponse> ProductUpdateOptionsListAsync(EntitymanagerUpdateOptionsListRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
-        {
-            product.Client.ApiResponse<EntitymanagerUpdateOptionsListResponse> localVarResponse = await ProductUpdateOptionsListWithHttpInfoAsync(body, operationIndex, cancellationToken).ConfigureAwait(false);
-            return localVarResponse.Data;
-        }
-
-        /// <summary>
-        ///  
-        /// </summary>
-        /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (EntitymanagerUpdateOptionsListResponse)</returns>
-        public async System.Threading.Tasks.Task<product.Client.ApiResponse<EntitymanagerUpdateOptionsListResponse>> ProductUpdateOptionsListWithHttpInfoAsync(EntitymanagerUpdateOptionsListRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
-        {
-            // verify the required parameter 'body' is set
-            if (body == null)
-            {
-                throw new product.Client.ApiException(400, "Missing required parameter 'body' when calling ProductApi->ProductUpdateOptionsList");
-            }
-
-
-            product.Client.RequestOptions localVarRequestOptions = new product.Client.RequestOptions();
-
-            string[] _contentTypes = new string[] {
-                "application/json"
-            };
-
-            // to determine the Accept header
-            string[] _accepts = new string[] {
-                "application/json"
-            };
-
-            var localVarContentType = product.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
-            }
-
-            var localVarAccept = product.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
-            }
-
-            localVarRequestOptions.Data = body;
-
-            localVarRequestOptions.Operation = "ProductApi.ProductUpdateOptionsList";
-            localVarRequestOptions.OperationIndex = operationIndex;
-
-
-            // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.PostAsync<EntitymanagerUpdateOptionsListResponse>("/product.Product/UpdateOptionsList", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
-
-            if (this.ExceptionFactory != null)
-            {
-                Exception _exception = this.ExceptionFactory("ProductUpdateOptionsList", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;
@@ -7782,6 +8373,11 @@ namespace product.Api
             localVarRequestOptions.Operation = "ProductApi.ProductUpdateProduct";
             localVarRequestOptions.OperationIndex = operationIndex;
 
+            // authentication (Authorization) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
 
             // make the HTTP request
             var localVarResponse = this.Client.Post<ProductUpdateProductResponse>("/product.Product/UpdateProduct", localVarRequestOptions, this.Configuration);
@@ -7858,6 +8454,11 @@ namespace product.Api
             localVarRequestOptions.Operation = "ProductApi.ProductUpdateProduct";
             localVarRequestOptions.OperationIndex = operationIndex;
 
+            // authentication (Authorization) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
 
             // make the HTTP request
             var localVarResponse = await this.AsynchronousClient.PostAsync<ProductUpdateProductResponse>("/product.Product/UpdateProduct", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
@@ -7930,6 +8531,11 @@ namespace product.Api
             localVarRequestOptions.Operation = "ProductApi.ProductUpdateProductV2";
             localVarRequestOptions.OperationIndex = operationIndex;
 
+            // authentication (Authorization) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
 
             // make the HTTP request
             var localVarResponse = this.Client.Post<Object>("/product.Product/UpdateProductV2", localVarRequestOptions, this.Configuration);
@@ -8004,6 +8610,11 @@ namespace product.Api
             localVarRequestOptions.Operation = "ProductApi.ProductUpdateProductV2";
             localVarRequestOptions.OperationIndex = operationIndex;
 
+            // authentication (Authorization) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
 
             // make the HTTP request
             var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/product.Product/UpdateProductV2", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
@@ -8011,6 +8622,1098 @@ namespace product.Api
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("ProductUpdateProductV2", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// Remove Media Gallery Entry The RemoveMediaGalleryEntry endpoint allows users to remove a specific media entry from a product&#39;s gallery. By making a request to this endpoint and providing the tenant ID, product ID, and the unique identifier of the media entry, users can easily manage and update the visual content of a product&#39;s gallery. This operation is asynchronous and may complete after the response.
+        /// </summary>
+        /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>Object</returns>
+        public Object RemoveMediaGalleryEntry(ProductRemoveMediaGalleryEntryRequest body, int operationIndex = 0)
+        {
+            product.Client.ApiResponse<Object> localVarResponse = RemoveMediaGalleryEntryWithHttpInfo(body);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Remove Media Gallery Entry The RemoveMediaGalleryEntry endpoint allows users to remove a specific media entry from a product&#39;s gallery. By making a request to this endpoint and providing the tenant ID, product ID, and the unique identifier of the media entry, users can easily manage and update the visual content of a product&#39;s gallery. This operation is asynchronous and may complete after the response.
+        /// </summary>
+        /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of Object</returns>
+        public product.Client.ApiResponse<Object> RemoveMediaGalleryEntryWithHttpInfo(ProductRemoveMediaGalleryEntryRequest body, int operationIndex = 0)
+        {
+            // verify the required parameter 'body' is set
+            if (body == null)
+            {
+                throw new product.Client.ApiException(400, "Missing required parameter 'body' when calling ProductApi->RemoveMediaGalleryEntry");
+            }
+
+            product.Client.RequestOptions localVarRequestOptions = new product.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+                "application/json"
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var localVarContentType = product.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = product.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.Data = body;
+
+            localVarRequestOptions.Operation = "ProductApi.RemoveMediaGalleryEntry";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+            // authentication (Authorization) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
+
+            // make the HTTP request
+            var localVarResponse = this.Client.Post<Object>("/product.Product/RemoveMediaGalleryEntry", localVarRequestOptions, this.Configuration);
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("RemoveMediaGalleryEntry", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// Remove Media Gallery Entry The RemoveMediaGalleryEntry endpoint allows users to remove a specific media entry from a product&#39;s gallery. By making a request to this endpoint and providing the tenant ID, product ID, and the unique identifier of the media entry, users can easily manage and update the visual content of a product&#39;s gallery. This operation is asynchronous and may complete after the response.
+        /// </summary>
+        /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of Object</returns>
+        public async System.Threading.Tasks.Task<Object> RemoveMediaGalleryEntryAsync(ProductRemoveMediaGalleryEntryRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        {
+            product.Client.ApiResponse<Object> localVarResponse = await RemoveMediaGalleryEntryWithHttpInfoAsync(body, operationIndex, cancellationToken).ConfigureAwait(false);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Remove Media Gallery Entry The RemoveMediaGalleryEntry endpoint allows users to remove a specific media entry from a product&#39;s gallery. By making a request to this endpoint and providing the tenant ID, product ID, and the unique identifier of the media entry, users can easily manage and update the visual content of a product&#39;s gallery. This operation is asynchronous and may complete after the response.
+        /// </summary>
+        /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (Object)</returns>
+        public async System.Threading.Tasks.Task<product.Client.ApiResponse<Object>> RemoveMediaGalleryEntryWithHttpInfoAsync(ProductRemoveMediaGalleryEntryRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        {
+            // verify the required parameter 'body' is set
+            if (body == null)
+            {
+                throw new product.Client.ApiException(400, "Missing required parameter 'body' when calling ProductApi->RemoveMediaGalleryEntry");
+            }
+
+
+            product.Client.RequestOptions localVarRequestOptions = new product.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+                "application/json"
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var localVarContentType = product.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = product.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.Data = body;
+
+            localVarRequestOptions.Operation = "ProductApi.RemoveMediaGalleryEntry";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+            // authentication (Authorization) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
+
+            // make the HTTP request
+            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/product.Product/RemoveMediaGalleryEntry", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("RemoveMediaGalleryEntry", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// Update Attribute Options 
+        /// </summary>
+        /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>EntitymanagerUpdateAttributeOptionsResponse</returns>
+        public EntitymanagerUpdateAttributeOptionsResponse UpdateAttributeOptions(EntitymanagerUpdateAttributeOptionsRequest body, int operationIndex = 0)
+        {
+            product.Client.ApiResponse<EntitymanagerUpdateAttributeOptionsResponse> localVarResponse = UpdateAttributeOptionsWithHttpInfo(body);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Update Attribute Options 
+        /// </summary>
+        /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of EntitymanagerUpdateAttributeOptionsResponse</returns>
+        public product.Client.ApiResponse<EntitymanagerUpdateAttributeOptionsResponse> UpdateAttributeOptionsWithHttpInfo(EntitymanagerUpdateAttributeOptionsRequest body, int operationIndex = 0)
+        {
+            // verify the required parameter 'body' is set
+            if (body == null)
+            {
+                throw new product.Client.ApiException(400, "Missing required parameter 'body' when calling ProductApi->UpdateAttributeOptions");
+            }
+
+            product.Client.RequestOptions localVarRequestOptions = new product.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+                "application/json"
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var localVarContentType = product.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = product.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.Data = body;
+
+            localVarRequestOptions.Operation = "ProductApi.UpdateAttributeOptions";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+            // authentication (Authorization) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
+
+            // make the HTTP request
+            var localVarResponse = this.Client.Post<EntitymanagerUpdateAttributeOptionsResponse>("/product.Product/UpdateAttributeOptions", localVarRequestOptions, this.Configuration);
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("UpdateAttributeOptions", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// Update Attribute Options 
+        /// </summary>
+        /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of EntitymanagerUpdateAttributeOptionsResponse</returns>
+        public async System.Threading.Tasks.Task<EntitymanagerUpdateAttributeOptionsResponse> UpdateAttributeOptionsAsync(EntitymanagerUpdateAttributeOptionsRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        {
+            product.Client.ApiResponse<EntitymanagerUpdateAttributeOptionsResponse> localVarResponse = await UpdateAttributeOptionsWithHttpInfoAsync(body, operationIndex, cancellationToken).ConfigureAwait(false);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Update Attribute Options 
+        /// </summary>
+        /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (EntitymanagerUpdateAttributeOptionsResponse)</returns>
+        public async System.Threading.Tasks.Task<product.Client.ApiResponse<EntitymanagerUpdateAttributeOptionsResponse>> UpdateAttributeOptionsWithHttpInfoAsync(EntitymanagerUpdateAttributeOptionsRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        {
+            // verify the required parameter 'body' is set
+            if (body == null)
+            {
+                throw new product.Client.ApiException(400, "Missing required parameter 'body' when calling ProductApi->UpdateAttributeOptions");
+            }
+
+
+            product.Client.RequestOptions localVarRequestOptions = new product.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+                "application/json"
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var localVarContentType = product.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = product.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.Data = body;
+
+            localVarRequestOptions.Operation = "ProductApi.UpdateAttributeOptions";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+            // authentication (Authorization) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
+
+            // make the HTTP request
+            var localVarResponse = await this.AsynchronousClient.PostAsync<EntitymanagerUpdateAttributeOptionsResponse>("/product.Product/UpdateAttributeOptions", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("UpdateAttributeOptions", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// Get Enhance Product Data With AI Status The GetEnhanceProductDataWithAIStatus endpoint allows users to retrieve the status of a product data enhancement process using artificial intelligence (AI) capabilities. By making a request to this endpoint and providing the necessary input data, users can check the progress and completion status of the AI-driven product data enhancement operation. This functionality provides visibility and transparency into the AI processing of product data, enabling users to monitor and track the status of the enhancement process.
+        /// </summary>
+        /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ProductGetEnhanceProductDataWithAIStatusResponse</returns>
+        public ProductGetEnhanceProductDataWithAIStatusResponse UpdateDataToBeReviewed(ProductGetEnhanceProductDataWithAIStatusRequest body, int operationIndex = 0)
+        {
+            product.Client.ApiResponse<ProductGetEnhanceProductDataWithAIStatusResponse> localVarResponse = UpdateDataToBeReviewedWithHttpInfo(body);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get Enhance Product Data With AI Status The GetEnhanceProductDataWithAIStatus endpoint allows users to retrieve the status of a product data enhancement process using artificial intelligence (AI) capabilities. By making a request to this endpoint and providing the necessary input data, users can check the progress and completion status of the AI-driven product data enhancement operation. This functionality provides visibility and transparency into the AI processing of product data, enabling users to monitor and track the status of the enhancement process.
+        /// </summary>
+        /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of ProductGetEnhanceProductDataWithAIStatusResponse</returns>
+        public product.Client.ApiResponse<ProductGetEnhanceProductDataWithAIStatusResponse> UpdateDataToBeReviewedWithHttpInfo(ProductGetEnhanceProductDataWithAIStatusRequest body, int operationIndex = 0)
+        {
+            // verify the required parameter 'body' is set
+            if (body == null)
+            {
+                throw new product.Client.ApiException(400, "Missing required parameter 'body' when calling ProductApi->UpdateDataToBeReviewed");
+            }
+
+            product.Client.RequestOptions localVarRequestOptions = new product.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+                "application/json"
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var localVarContentType = product.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = product.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.Data = body;
+
+            localVarRequestOptions.Operation = "ProductApi.UpdateDataToBeReviewed";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+            // authentication (Authorization) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
+
+            // make the HTTP request
+            var localVarResponse = this.Client.Post<ProductGetEnhanceProductDataWithAIStatusResponse>("/product.Product/GetEnhanceProductDataWithAIStatus", localVarRequestOptions, this.Configuration);
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("UpdateDataToBeReviewed", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// Get Enhance Product Data With AI Status The GetEnhanceProductDataWithAIStatus endpoint allows users to retrieve the status of a product data enhancement process using artificial intelligence (AI) capabilities. By making a request to this endpoint and providing the necessary input data, users can check the progress and completion status of the AI-driven product data enhancement operation. This functionality provides visibility and transparency into the AI processing of product data, enabling users to monitor and track the status of the enhancement process.
+        /// </summary>
+        /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ProductGetEnhanceProductDataWithAIStatusResponse</returns>
+        public async System.Threading.Tasks.Task<ProductGetEnhanceProductDataWithAIStatusResponse> UpdateDataToBeReviewedAsync(ProductGetEnhanceProductDataWithAIStatusRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        {
+            product.Client.ApiResponse<ProductGetEnhanceProductDataWithAIStatusResponse> localVarResponse = await UpdateDataToBeReviewedWithHttpInfoAsync(body, operationIndex, cancellationToken).ConfigureAwait(false);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get Enhance Product Data With AI Status The GetEnhanceProductDataWithAIStatus endpoint allows users to retrieve the status of a product data enhancement process using artificial intelligence (AI) capabilities. By making a request to this endpoint and providing the necessary input data, users can check the progress and completion status of the AI-driven product data enhancement operation. This functionality provides visibility and transparency into the AI processing of product data, enabling users to monitor and track the status of the enhancement process.
+        /// </summary>
+        /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (ProductGetEnhanceProductDataWithAIStatusResponse)</returns>
+        public async System.Threading.Tasks.Task<product.Client.ApiResponse<ProductGetEnhanceProductDataWithAIStatusResponse>> UpdateDataToBeReviewedWithHttpInfoAsync(ProductGetEnhanceProductDataWithAIStatusRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        {
+            // verify the required parameter 'body' is set
+            if (body == null)
+            {
+                throw new product.Client.ApiException(400, "Missing required parameter 'body' when calling ProductApi->UpdateDataToBeReviewed");
+            }
+
+
+            product.Client.RequestOptions localVarRequestOptions = new product.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+                "application/json"
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var localVarContentType = product.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = product.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.Data = body;
+
+            localVarRequestOptions.Operation = "ProductApi.UpdateDataToBeReviewed";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+            // authentication (Authorization) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
+
+            // make the HTTP request
+            var localVarResponse = await this.AsynchronousClient.PostAsync<ProductGetEnhanceProductDataWithAIStatusResponse>("/product.Product/GetEnhanceProductDataWithAIStatus", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("UpdateDataToBeReviewed", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// Update Data To Be Reviewed The UpdateDataToBeReviewed endpoint allows users to update product data that is pending review. By sending a request to this endpoint and providing the necessary input data, users can modify and enhance the product information that is currently under review. This functionality enables users to make changes to product data submissions and ensure that the information is accurate and up-to-date before final approval.
+        /// </summary>
+        /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>Object</returns>
+        public Object UpdateDataToBeReviewed_0(ProductUpdateDataToBeReviewedRequest body, int operationIndex = 0)
+        {
+            product.Client.ApiResponse<Object> localVarResponse = UpdateDataToBeReviewed_0WithHttpInfo(body);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Update Data To Be Reviewed The UpdateDataToBeReviewed endpoint allows users to update product data that is pending review. By sending a request to this endpoint and providing the necessary input data, users can modify and enhance the product information that is currently under review. This functionality enables users to make changes to product data submissions and ensure that the information is accurate and up-to-date before final approval.
+        /// </summary>
+        /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of Object</returns>
+        public product.Client.ApiResponse<Object> UpdateDataToBeReviewed_0WithHttpInfo(ProductUpdateDataToBeReviewedRequest body, int operationIndex = 0)
+        {
+            // verify the required parameter 'body' is set
+            if (body == null)
+            {
+                throw new product.Client.ApiException(400, "Missing required parameter 'body' when calling ProductApi->UpdateDataToBeReviewed_0");
+            }
+
+            product.Client.RequestOptions localVarRequestOptions = new product.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+                "application/json"
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var localVarContentType = product.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = product.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.Data = body;
+
+            localVarRequestOptions.Operation = "ProductApi.UpdateDataToBeReviewed_0";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+            // authentication (Authorization) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
+
+            // make the HTTP request
+            var localVarResponse = this.Client.Post<Object>("/product.Product/UpdateDataToBeReviewed", localVarRequestOptions, this.Configuration);
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("UpdateDataToBeReviewed_0", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// Update Data To Be Reviewed The UpdateDataToBeReviewed endpoint allows users to update product data that is pending review. By sending a request to this endpoint and providing the necessary input data, users can modify and enhance the product information that is currently under review. This functionality enables users to make changes to product data submissions and ensure that the information is accurate and up-to-date before final approval.
+        /// </summary>
+        /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of Object</returns>
+        public async System.Threading.Tasks.Task<Object> UpdateDataToBeReviewed_0Async(ProductUpdateDataToBeReviewedRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        {
+            product.Client.ApiResponse<Object> localVarResponse = await UpdateDataToBeReviewed_0WithHttpInfoAsync(body, operationIndex, cancellationToken).ConfigureAwait(false);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Update Data To Be Reviewed The UpdateDataToBeReviewed endpoint allows users to update product data that is pending review. By sending a request to this endpoint and providing the necessary input data, users can modify and enhance the product information that is currently under review. This functionality enables users to make changes to product data submissions and ensure that the information is accurate and up-to-date before final approval.
+        /// </summary>
+        /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (Object)</returns>
+        public async System.Threading.Tasks.Task<product.Client.ApiResponse<Object>> UpdateDataToBeReviewed_0WithHttpInfoAsync(ProductUpdateDataToBeReviewedRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        {
+            // verify the required parameter 'body' is set
+            if (body == null)
+            {
+                throw new product.Client.ApiException(400, "Missing required parameter 'body' when calling ProductApi->UpdateDataToBeReviewed_0");
+            }
+
+
+            product.Client.RequestOptions localVarRequestOptions = new product.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+                "application/json"
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var localVarContentType = product.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = product.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.Data = body;
+
+            localVarRequestOptions.Operation = "ProductApi.UpdateDataToBeReviewed_0";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+            // authentication (Authorization) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
+
+            // make the HTTP request
+            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/product.Product/UpdateDataToBeReviewed", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("UpdateDataToBeReviewed_0", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// Update Media Gallery Entry The UpdateMediaGalleryEntry endpoint allows users to modify and update a specific media entry within a product&#39;s gallery. By sending a request to this endpoint and providing the necessary information, users can efficiently update the media asset, position, and metadata associated with the entry. This operation is asynchronous and may complete after the response.
+        /// </summary>
+        /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>Object</returns>
+        public Object UpdateMediaGalleryEntry(ProductUpdateMediaGalleryEntryRequest body, int operationIndex = 0)
+        {
+            product.Client.ApiResponse<Object> localVarResponse = UpdateMediaGalleryEntryWithHttpInfo(body);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Update Media Gallery Entry The UpdateMediaGalleryEntry endpoint allows users to modify and update a specific media entry within a product&#39;s gallery. By sending a request to this endpoint and providing the necessary information, users can efficiently update the media asset, position, and metadata associated with the entry. This operation is asynchronous and may complete after the response.
+        /// </summary>
+        /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of Object</returns>
+        public product.Client.ApiResponse<Object> UpdateMediaGalleryEntryWithHttpInfo(ProductUpdateMediaGalleryEntryRequest body, int operationIndex = 0)
+        {
+            // verify the required parameter 'body' is set
+            if (body == null)
+            {
+                throw new product.Client.ApiException(400, "Missing required parameter 'body' when calling ProductApi->UpdateMediaGalleryEntry");
+            }
+
+            product.Client.RequestOptions localVarRequestOptions = new product.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+                "application/json"
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var localVarContentType = product.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = product.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.Data = body;
+
+            localVarRequestOptions.Operation = "ProductApi.UpdateMediaGalleryEntry";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+            // authentication (Authorization) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
+
+            // make the HTTP request
+            var localVarResponse = this.Client.Post<Object>("/product.Product/UpdateMediaGalleryEntry", localVarRequestOptions, this.Configuration);
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("UpdateMediaGalleryEntry", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// Update Media Gallery Entry The UpdateMediaGalleryEntry endpoint allows users to modify and update a specific media entry within a product&#39;s gallery. By sending a request to this endpoint and providing the necessary information, users can efficiently update the media asset, position, and metadata associated with the entry. This operation is asynchronous and may complete after the response.
+        /// </summary>
+        /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of Object</returns>
+        public async System.Threading.Tasks.Task<Object> UpdateMediaGalleryEntryAsync(ProductUpdateMediaGalleryEntryRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        {
+            product.Client.ApiResponse<Object> localVarResponse = await UpdateMediaGalleryEntryWithHttpInfoAsync(body, operationIndex, cancellationToken).ConfigureAwait(false);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Update Media Gallery Entry The UpdateMediaGalleryEntry endpoint allows users to modify and update a specific media entry within a product&#39;s gallery. By sending a request to this endpoint and providing the necessary information, users can efficiently update the media asset, position, and metadata associated with the entry. This operation is asynchronous and may complete after the response.
+        /// </summary>
+        /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (Object)</returns>
+        public async System.Threading.Tasks.Task<product.Client.ApiResponse<Object>> UpdateMediaGalleryEntryWithHttpInfoAsync(ProductUpdateMediaGalleryEntryRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        {
+            // verify the required parameter 'body' is set
+            if (body == null)
+            {
+                throw new product.Client.ApiException(400, "Missing required parameter 'body' when calling ProductApi->UpdateMediaGalleryEntry");
+            }
+
+
+            product.Client.RequestOptions localVarRequestOptions = new product.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+                "application/json"
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var localVarContentType = product.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = product.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.Data = body;
+
+            localVarRequestOptions.Operation = "ProductApi.UpdateMediaGalleryEntry";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+            // authentication (Authorization) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
+
+            // make the HTTP request
+            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/product.Product/UpdateMediaGalleryEntry", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("UpdateMediaGalleryEntry", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// Update Options List 
+        /// </summary>
+        /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>EntitymanagerUpdateOptionsListResponse</returns>
+        public EntitymanagerUpdateOptionsListResponse UpdateOptionsList(EntitymanagerUpdateOptionsListRequest body, int operationIndex = 0)
+        {
+            product.Client.ApiResponse<EntitymanagerUpdateOptionsListResponse> localVarResponse = UpdateOptionsListWithHttpInfo(body);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Update Options List 
+        /// </summary>
+        /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of EntitymanagerUpdateOptionsListResponse</returns>
+        public product.Client.ApiResponse<EntitymanagerUpdateOptionsListResponse> UpdateOptionsListWithHttpInfo(EntitymanagerUpdateOptionsListRequest body, int operationIndex = 0)
+        {
+            // verify the required parameter 'body' is set
+            if (body == null)
+            {
+                throw new product.Client.ApiException(400, "Missing required parameter 'body' when calling ProductApi->UpdateOptionsList");
+            }
+
+            product.Client.RequestOptions localVarRequestOptions = new product.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+                "application/json"
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var localVarContentType = product.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = product.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.Data = body;
+
+            localVarRequestOptions.Operation = "ProductApi.UpdateOptionsList";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+            // authentication (Authorization) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
+
+            // make the HTTP request
+            var localVarResponse = this.Client.Post<EntitymanagerUpdateOptionsListResponse>("/product.Product/UpdateOptionsList", localVarRequestOptions, this.Configuration);
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("UpdateOptionsList", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// Update Options List 
+        /// </summary>
+        /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of EntitymanagerUpdateOptionsListResponse</returns>
+        public async System.Threading.Tasks.Task<EntitymanagerUpdateOptionsListResponse> UpdateOptionsListAsync(EntitymanagerUpdateOptionsListRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        {
+            product.Client.ApiResponse<EntitymanagerUpdateOptionsListResponse> localVarResponse = await UpdateOptionsListWithHttpInfoAsync(body, operationIndex, cancellationToken).ConfigureAwait(false);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Update Options List 
+        /// </summary>
+        /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (EntitymanagerUpdateOptionsListResponse)</returns>
+        public async System.Threading.Tasks.Task<product.Client.ApiResponse<EntitymanagerUpdateOptionsListResponse>> UpdateOptionsListWithHttpInfoAsync(EntitymanagerUpdateOptionsListRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        {
+            // verify the required parameter 'body' is set
+            if (body == null)
+            {
+                throw new product.Client.ApiException(400, "Missing required parameter 'body' when calling ProductApi->UpdateOptionsList");
+            }
+
+
+            product.Client.RequestOptions localVarRequestOptions = new product.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+                "application/json"
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var localVarContentType = product.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = product.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.Data = body;
+
+            localVarRequestOptions.Operation = "ProductApi.UpdateOptionsList";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+            // authentication (Authorization) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
+
+            // make the HTTP request
+            var localVarResponse = await this.AsynchronousClient.PostAsync<EntitymanagerUpdateOptionsListResponse>("/product.Product/UpdateOptionsList", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("UpdateOptionsList", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// Update Product With AI The UpdateProductWithAI endpoint allows users to update an existing product within the system using artificial intelligence (AI) capabilities. By sending a request to this endpoint and providing the necessary input data, users can leverage AI algorithms to enhance and optimize the product update process.
+        /// </summary>
+        /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ProductUpdateProductWithAIResponse</returns>
+        public ProductUpdateProductWithAIResponse UpdateProductWithAI(ProductUpdateProductWithAIRequest body, int operationIndex = 0)
+        {
+            product.Client.ApiResponse<ProductUpdateProductWithAIResponse> localVarResponse = UpdateProductWithAIWithHttpInfo(body);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Update Product With AI The UpdateProductWithAI endpoint allows users to update an existing product within the system using artificial intelligence (AI) capabilities. By sending a request to this endpoint and providing the necessary input data, users can leverage AI algorithms to enhance and optimize the product update process.
+        /// </summary>
+        /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of ProductUpdateProductWithAIResponse</returns>
+        public product.Client.ApiResponse<ProductUpdateProductWithAIResponse> UpdateProductWithAIWithHttpInfo(ProductUpdateProductWithAIRequest body, int operationIndex = 0)
+        {
+            // verify the required parameter 'body' is set
+            if (body == null)
+            {
+                throw new product.Client.ApiException(400, "Missing required parameter 'body' when calling ProductApi->UpdateProductWithAI");
+            }
+
+            product.Client.RequestOptions localVarRequestOptions = new product.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+                "application/json"
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var localVarContentType = product.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = product.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.Data = body;
+
+            localVarRequestOptions.Operation = "ProductApi.UpdateProductWithAI";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+            // authentication (Authorization) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
+
+            // make the HTTP request
+            var localVarResponse = this.Client.Post<ProductUpdateProductWithAIResponse>("/product.Product/UpdateProductWithAI", localVarRequestOptions, this.Configuration);
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("UpdateProductWithAI", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// Update Product With AI The UpdateProductWithAI endpoint allows users to update an existing product within the system using artificial intelligence (AI) capabilities. By sending a request to this endpoint and providing the necessary input data, users can leverage AI algorithms to enhance and optimize the product update process.
+        /// </summary>
+        /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ProductUpdateProductWithAIResponse</returns>
+        public async System.Threading.Tasks.Task<ProductUpdateProductWithAIResponse> UpdateProductWithAIAsync(ProductUpdateProductWithAIRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        {
+            product.Client.ApiResponse<ProductUpdateProductWithAIResponse> localVarResponse = await UpdateProductWithAIWithHttpInfoAsync(body, operationIndex, cancellationToken).ConfigureAwait(false);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Update Product With AI The UpdateProductWithAI endpoint allows users to update an existing product within the system using artificial intelligence (AI) capabilities. By sending a request to this endpoint and providing the necessary input data, users can leverage AI algorithms to enhance and optimize the product update process.
+        /// </summary>
+        /// <exception cref="product.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (ProductUpdateProductWithAIResponse)</returns>
+        public async System.Threading.Tasks.Task<product.Client.ApiResponse<ProductUpdateProductWithAIResponse>> UpdateProductWithAIWithHttpInfoAsync(ProductUpdateProductWithAIRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        {
+            // verify the required parameter 'body' is set
+            if (body == null)
+            {
+                throw new product.Client.ApiException(400, "Missing required parameter 'body' when calling ProductApi->UpdateProductWithAI");
+            }
+
+
+            product.Client.RequestOptions localVarRequestOptions = new product.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+                "application/json"
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var localVarContentType = product.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = product.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.Data = body;
+
+            localVarRequestOptions.Operation = "ProductApi.UpdateProductWithAI";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+            // authentication (Authorization) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
+
+            // make the HTTP request
+            var localVarResponse = await this.AsynchronousClient.PostAsync<ProductUpdateProductWithAIResponse>("/product.Product/UpdateProductWithAI", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("UpdateProductWithAI", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;

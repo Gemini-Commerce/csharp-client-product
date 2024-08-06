@@ -1,7 +1,7 @@
 /*
  * Product Service
  *
- * API for managing products
+ * Introducing our revolutionary Product Management Service! Designed to streamline your product inventory and elevate customer experiences, our cutting-edge protobuf service is a game-changer in the world of efficient product management.  With our service, you can effortlessly create new products, allowing you to quickly bring your ideas to life and expand your catalog. Retrieve product information in a snap, providing accurate and personalized details to your customers based on their specific needs and preferences.  Stay ahead of the competition by easily updating product information, ensuring your catalog is always up-to-date and optimized. Seamlessly remove products from your inventory when needed, maintaining a clean and relevant product selection.  Enhance the visual appeal of your products with our advanced media gallery functionalities. Effortlessly add and update captivating images and videos to showcase your products in the best possible light, engaging your customers and driving conversions.  Personalization is key in today's market, and our service enables you to offer unique options to your customers. Easily create and manage lists of customizable options for your products, providing flexibility and tailoring to individual preferences.  Attributes play a vital role in defining products, and our service empowers you to effectively manage them. From bulk attribute creation to listing and retrieving attribute options, our service ensures your product information is rich and comprehensive.  Our service extends its capabilities to entity management, allowing you to effortlessly handle different entities and create customized options lists associated with them. This provides further flexibility and customization options for your product offerings.  When it comes to bulk updates, our service has you covered. Effortlessly update multiple products simultaneously, saving you time and streamlining your operations.  Finding specific products and variants is a breeze with our service. Quickly locate products based on their unique stock keeping unit (SKU) values, ensuring efficient inventory management and smooth order fulfillment.  Experience a new level of efficiency and productivity with our Product Management Service. Unlock the full potential of streamlined product management and empower your business to thrive in today's competitive market. Try our service today and elevate your product management to new heights!
  *
  * The version of the OpenAPI document: v1
  * Contact: info@gemini-commerce.com
@@ -27,7 +27,7 @@ using OpenAPIDateConverter = product.Client.OpenAPIDateConverter;
 namespace product.Model
 {
     /// <summary>
-    /// ProductCreateProductRequest
+    /// The CreateProductRequest message is used to create a new product within the system. It contains various fields that allow specifying the details and attributes of the product.
     /// </summary>
     [DataContract(Name = "productCreateProductRequest")]
     public partial class ProductCreateProductRequest : IValidatableObject
@@ -35,20 +35,20 @@ namespace product.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="ProductCreateProductRequest" /> class.
         /// </summary>
-        /// <param name="tenantId">tenantId.</param>
-        /// <param name="entityType">entityType.</param>
-        /// <param name="entityCode">entityCode.</param>
-        /// <param name="code">code.</param>
-        /// <param name="isConfigurable">isConfigurable.</param>
-        /// <param name="variantAttributes">variantAttributes.</param>
-        /// <param name="isVirtual">isVirtual.</param>
-        /// <param name="isGiftcard">isGiftcard.</param>
+        /// <param name="tenantId">Represents the ID of the tenant associated with the product..</param>
+        /// <param name="entityType">Specifies the type of entity for the product..</param>
+        /// <param name="entityCode">Indicates the code of the entity associated with the product..</param>
+        /// <param name="code">Represents the unique code or identifier for the product..</param>
+        /// <param name="isConfigurable">Specifies whether the product has variants or not..</param>
+        /// <param name="variantAttributes">Contains a list of attributes specific to the product variants..</param>
+        /// <param name="isVirtual">Indicates whether the product is virtual or not..</param>
+        /// <param name="isGiftcard">Specifies whether the product is a gift card or not..</param>
         /// <param name="hasConfigurator">hasConfigurator.</param>
         /// <param name="urlKey">urlKey.</param>
-        /// <param name="maxSaleableQuantity">maxSaleableQuantity.</param>
+        /// <param name="maxSaleableQuantity">Specifies the maximum quantity that can be sold for the product in each order..</param>
         /// <param name="mediaVariantAttributes">mediaVariantAttributes.</param>
-        /// <param name="attributes">attributes.</param>
-        /// <param name="variants">variants.</param>
+        /// <param name="attributes">Contains a map of additional attributes associated with the product, where the key is the attribute name and the value is any type of value..</param>
+        /// <param name="variants">Represents a map of product variants associated with the product, where the key is the variant ID or code, and the value is a ProductVariant message..</param>
         public ProductCreateProductRequest(string tenantId = default(string), string entityType = default(string), string entityCode = default(string), string code = default(string), bool isConfigurable = default(bool), List<string> variantAttributes = default(List<string>), bool isVirtual = default(bool), bool isGiftcard = default(bool), bool hasConfigurator = default(bool), ProductLocalizedText urlKey = default(ProductLocalizedText), long maxSaleableQuantity = default(long), List<string> mediaVariantAttributes = default(List<string>), Dictionary<string, ProtobufAny> attributes = default(Dictionary<string, ProtobufAny>), Dictionary<string, ProductProductVariant> variants = default(Dictionary<string, ProductProductVariant>))
         {
             this.TenantId = tenantId;
@@ -68,50 +68,58 @@ namespace product.Model
         }
 
         /// <summary>
-        /// Gets or Sets TenantId
+        /// Represents the ID of the tenant associated with the product.
         /// </summary>
+        /// <value>Represents the ID of the tenant associated with the product.</value>
         [DataMember(Name = "tenantId", EmitDefaultValue = false)]
         public string TenantId { get; set; }
 
         /// <summary>
-        /// Gets or Sets EntityType
+        /// Specifies the type of entity for the product.
         /// </summary>
+        /// <value>Specifies the type of entity for the product.</value>
         [DataMember(Name = "entityType", EmitDefaultValue = false)]
         public string EntityType { get; set; }
 
         /// <summary>
-        /// Gets or Sets EntityCode
+        /// Indicates the code of the entity associated with the product.
         /// </summary>
+        /// <value>Indicates the code of the entity associated with the product.</value>
         [DataMember(Name = "entityCode", EmitDefaultValue = false)]
         public string EntityCode { get; set; }
 
         /// <summary>
-        /// Gets or Sets Code
+        /// Represents the unique code or identifier for the product.
         /// </summary>
+        /// <value>Represents the unique code or identifier for the product.</value>
         [DataMember(Name = "code", EmitDefaultValue = false)]
         public string Code { get; set; }
 
         /// <summary>
-        /// Gets or Sets IsConfigurable
+        /// Specifies whether the product has variants or not.
         /// </summary>
+        /// <value>Specifies whether the product has variants or not.</value>
         [DataMember(Name = "isConfigurable", EmitDefaultValue = true)]
         public bool IsConfigurable { get; set; }
 
         /// <summary>
-        /// Gets or Sets VariantAttributes
+        /// Contains a list of attributes specific to the product variants.
         /// </summary>
+        /// <value>Contains a list of attributes specific to the product variants.</value>
         [DataMember(Name = "variantAttributes", EmitDefaultValue = false)]
         public List<string> VariantAttributes { get; set; }
 
         /// <summary>
-        /// Gets or Sets IsVirtual
+        /// Indicates whether the product is virtual or not.
         /// </summary>
+        /// <value>Indicates whether the product is virtual or not.</value>
         [DataMember(Name = "isVirtual", EmitDefaultValue = true)]
         public bool IsVirtual { get; set; }
 
         /// <summary>
-        /// Gets or Sets IsGiftcard
+        /// Specifies whether the product is a gift card or not.
         /// </summary>
+        /// <value>Specifies whether the product is a gift card or not.</value>
         [DataMember(Name = "isGiftcard", EmitDefaultValue = true)]
         public bool IsGiftcard { get; set; }
 
@@ -128,8 +136,9 @@ namespace product.Model
         public ProductLocalizedText UrlKey { get; set; }
 
         /// <summary>
-        /// Gets or Sets MaxSaleableQuantity
+        /// Specifies the maximum quantity that can be sold for the product in each order.
         /// </summary>
+        /// <value>Specifies the maximum quantity that can be sold for the product in each order.</value>
         [DataMember(Name = "maxSaleableQuantity", EmitDefaultValue = false)]
         public long MaxSaleableQuantity { get; set; }
 
@@ -140,14 +149,16 @@ namespace product.Model
         public List<string> MediaVariantAttributes { get; set; }
 
         /// <summary>
-        /// Gets or Sets Attributes
+        /// Contains a map of additional attributes associated with the product, where the key is the attribute name and the value is any type of value.
         /// </summary>
+        /// <value>Contains a map of additional attributes associated with the product, where the key is the attribute name and the value is any type of value.</value>
         [DataMember(Name = "attributes", EmitDefaultValue = false)]
         public Dictionary<string, ProtobufAny> Attributes { get; set; }
 
         /// <summary>
-        /// Gets or Sets Variants
+        /// Represents a map of product variants associated with the product, where the key is the variant ID or code, and the value is a ProductVariant message.
         /// </summary>
+        /// <value>Represents a map of product variants associated with the product, where the key is the variant ID or code, and the value is a ProductVariant message.</value>
         [DataMember(Name = "variants", EmitDefaultValue = false)]
         public Dictionary<string, ProductProductVariant> Variants { get; set; }
 
@@ -193,6 +204,15 @@ namespace product.Model
         /// <returns>Validation Result</returns>
         IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
+            if (this.TenantId != null) {
+                // TenantId (string) pattern
+                Regex regexTenantId = new Regex(@"^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$", RegexOptions.CultureInvariant);
+                if (!regexTenantId.Match(this.TenantId).Success)
+                {
+                    yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for TenantId, must match a pattern of " + regexTenantId, new [] { "TenantId" });
+                }
+            }
+
             yield break;
         }
     }
