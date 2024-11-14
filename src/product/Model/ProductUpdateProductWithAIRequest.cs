@@ -47,6 +47,7 @@ namespace product.Model
             this.Locale = locale;
             this.SkipReview = skipReview;
             this.AttributesToEnrich = attributesToEnrich;
+            this.AdditionalProperties = new Dictionary<string, object>();
         }
 
         /// <summary>
@@ -80,6 +81,12 @@ namespace product.Model
         public List<ProductAttributeToEnrich> AttributesToEnrich { get; set; }
 
         /// <summary>
+        /// Gets or Sets additional properties
+        /// </summary>
+        [JsonExtensionData]
+        public IDictionary<string, object> AdditionalProperties { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -92,6 +99,7 @@ namespace product.Model
             sb.Append("  Locale: ").Append(Locale).Append("\n");
             sb.Append("  SkipReview: ").Append(SkipReview).Append("\n");
             sb.Append("  AttributesToEnrich: ").Append(AttributesToEnrich).Append("\n");
+            sb.Append("  AdditionalProperties: ").Append(AdditionalProperties).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -110,7 +118,7 @@ namespace product.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             yield break;
         }

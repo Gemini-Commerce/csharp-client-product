@@ -39,6 +39,7 @@ namespace product.Model
         public EntitymanagerGetAttributeOptionResponse(EntitymanagerAttributeOption option = default(EntitymanagerAttributeOption))
         {
             this.Option = option;
+            this.AdditionalProperties = new Dictionary<string, object>();
         }
 
         /// <summary>
@@ -46,6 +47,12 @@ namespace product.Model
         /// </summary>
         [DataMember(Name = "option", EmitDefaultValue = false)]
         public EntitymanagerAttributeOption Option { get; set; }
+
+        /// <summary>
+        /// Gets or Sets additional properties
+        /// </summary>
+        [JsonExtensionData]
+        public IDictionary<string, object> AdditionalProperties { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -56,6 +63,7 @@ namespace product.Model
             StringBuilder sb = new StringBuilder();
             sb.Append("class EntitymanagerGetAttributeOptionResponse {\n");
             sb.Append("  Option: ").Append(Option).Append("\n");
+            sb.Append("  AdditionalProperties: ").Append(AdditionalProperties).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -74,7 +82,7 @@ namespace product.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             yield break;
         }

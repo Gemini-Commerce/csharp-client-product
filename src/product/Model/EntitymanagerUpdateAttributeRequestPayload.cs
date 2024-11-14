@@ -51,12 +51,13 @@ namespace product.Model
         public EntitymanagerUpdateAttributeRequestPayload(string label = default(string), string varDefault = default(string), int sort = default(int), string groupCode = default(string), Dictionary<string, string> title = default(Dictionary<string, string>), EntitymanagerRenderAs? renderAs = default(EntitymanagerRenderAs?), EntitymanagerAiContext aiContext = default(EntitymanagerAiContext))
         {
             this.Label = label;
-            this.VarDefault = varDefault;
+            this.Default = varDefault;
             this.Sort = sort;
             this.GroupCode = groupCode;
             this.Title = title;
             this.RenderAs = renderAs;
             this.AiContext = aiContext;
+            this.AdditionalProperties = new Dictionary<string, object>();
         }
 
         /// <summary>
@@ -66,10 +67,10 @@ namespace product.Model
         public string Label { get; set; }
 
         /// <summary>
-        /// Gets or Sets VarDefault
+        /// Gets or Sets Default
         /// </summary>
         [DataMember(Name = "default", EmitDefaultValue = false)]
-        public string VarDefault { get; set; }
+        public string Default { get; set; }
 
         /// <summary>
         /// Gets or Sets Sort
@@ -96,6 +97,12 @@ namespace product.Model
         public EntitymanagerAiContext AiContext { get; set; }
 
         /// <summary>
+        /// Gets or Sets additional properties
+        /// </summary>
+        [JsonExtensionData]
+        public IDictionary<string, object> AdditionalProperties { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -104,12 +111,13 @@ namespace product.Model
             StringBuilder sb = new StringBuilder();
             sb.Append("class EntitymanagerUpdateAttributeRequestPayload {\n");
             sb.Append("  Label: ").Append(Label).Append("\n");
-            sb.Append("  VarDefault: ").Append(VarDefault).Append("\n");
+            sb.Append("  Default: ").Append(Default).Append("\n");
             sb.Append("  Sort: ").Append(Sort).Append("\n");
             sb.Append("  GroupCode: ").Append(GroupCode).Append("\n");
             sb.Append("  Title: ").Append(Title).Append("\n");
             sb.Append("  RenderAs: ").Append(RenderAs).Append("\n");
             sb.Append("  AiContext: ").Append(AiContext).Append("\n");
+            sb.Append("  AdditionalProperties: ").Append(AdditionalProperties).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -128,7 +136,7 @@ namespace product.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             yield break;
         }

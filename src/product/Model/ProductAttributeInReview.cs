@@ -62,7 +62,7 @@ namespace product.Model
         public ProductAttributeInReview(string code = default(string), AttributeInReviewString varString = default(AttributeInReviewString), int int32 = default(int), string int64 = default(string), float float32 = default(float), double float64 = default(double), bool boolean = default(bool), ProductAttributeInReviewSource? source = default(ProductAttributeInReviewSource?), DateTime createdAt = default(DateTime), string jobId = default(string), ProductAttributeInReviewJobType? jobType = default(ProductAttributeInReviewJobType?), ProductAttributeInReviewError error = default(ProductAttributeInReviewError))
         {
             this.Code = code;
-            this.VarString = varString;
+            this.String = varString;
             this.Int32 = int32;
             this.Int64 = int64;
             this.Float32 = float32;
@@ -73,6 +73,7 @@ namespace product.Model
             this.JobId = jobId;
             this.JobType = jobType;
             this.Error = error;
+            this.AdditionalProperties = new Dictionary<string, object>();
         }
 
         /// <summary>
@@ -82,10 +83,10 @@ namespace product.Model
         public string Code { get; set; }
 
         /// <summary>
-        /// Gets or Sets VarString
+        /// Gets or Sets String
         /// </summary>
         [DataMember(Name = "string", EmitDefaultValue = false)]
-        public AttributeInReviewString VarString { get; set; }
+        public AttributeInReviewString String { get; set; }
 
         /// <summary>
         /// Gets or Sets Int32
@@ -136,6 +137,12 @@ namespace product.Model
         public ProductAttributeInReviewError Error { get; set; }
 
         /// <summary>
+        /// Gets or Sets additional properties
+        /// </summary>
+        [JsonExtensionData]
+        public IDictionary<string, object> AdditionalProperties { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -144,7 +151,7 @@ namespace product.Model
             StringBuilder sb = new StringBuilder();
             sb.Append("class ProductAttributeInReview {\n");
             sb.Append("  Code: ").Append(Code).Append("\n");
-            sb.Append("  VarString: ").Append(VarString).Append("\n");
+            sb.Append("  String: ").Append(String).Append("\n");
             sb.Append("  Int32: ").Append(Int32).Append("\n");
             sb.Append("  Int64: ").Append(Int64).Append("\n");
             sb.Append("  Float32: ").Append(Float32).Append("\n");
@@ -155,6 +162,7 @@ namespace product.Model
             sb.Append("  JobId: ").Append(JobId).Append("\n");
             sb.Append("  JobType: ").Append(JobType).Append("\n");
             sb.Append("  Error: ").Append(Error).Append("\n");
+            sb.Append("  AdditionalProperties: ").Append(AdditionalProperties).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -173,7 +181,7 @@ namespace product.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             yield break;
         }

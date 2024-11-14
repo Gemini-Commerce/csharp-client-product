@@ -70,7 +70,7 @@ namespace product.Model
             this.Type = type;
             this.OptionList = optionList;
             this.Entity = entity;
-            this.VarDefault = varDefault;
+            this.Default = varDefault;
             this.IsRequired = isRequired;
             this.IsSystem = isSystem;
             this.IsRepeated = isRepeated;
@@ -79,6 +79,7 @@ namespace product.Model
             this.Title = title;
             this.RenderAs = renderAs;
             this.AiContext = aiContext;
+            this.AdditionalProperties = new Dictionary<string, object>();
         }
 
         /// <summary>
@@ -112,10 +113,10 @@ namespace product.Model
         public string Entity { get; set; }
 
         /// <summary>
-        /// Gets or Sets VarDefault
+        /// Gets or Sets Default
         /// </summary>
         [DataMember(Name = "default", EmitDefaultValue = false)]
-        public string VarDefault { get; set; }
+        public string Default { get; set; }
 
         /// <summary>
         /// Gets or Sets IsRequired
@@ -160,6 +161,12 @@ namespace product.Model
         public EntitymanagerAiContext AiContext { get; set; }
 
         /// <summary>
+        /// Gets or Sets additional properties
+        /// </summary>
+        [JsonExtensionData]
+        public IDictionary<string, object> AdditionalProperties { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -173,7 +180,7 @@ namespace product.Model
             sb.Append("  Type: ").Append(Type).Append("\n");
             sb.Append("  OptionList: ").Append(OptionList).Append("\n");
             sb.Append("  Entity: ").Append(Entity).Append("\n");
-            sb.Append("  VarDefault: ").Append(VarDefault).Append("\n");
+            sb.Append("  Default: ").Append(Default).Append("\n");
             sb.Append("  IsRequired: ").Append(IsRequired).Append("\n");
             sb.Append("  IsSystem: ").Append(IsSystem).Append("\n");
             sb.Append("  IsRepeated: ").Append(IsRepeated).Append("\n");
@@ -182,6 +189,7 @@ namespace product.Model
             sb.Append("  Title: ").Append(Title).Append("\n");
             sb.Append("  RenderAs: ").Append(RenderAs).Append("\n");
             sb.Append("  AiContext: ").Append(AiContext).Append("\n");
+            sb.Append("  AdditionalProperties: ").Append(AdditionalProperties).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -200,7 +208,7 @@ namespace product.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             yield break;
         }

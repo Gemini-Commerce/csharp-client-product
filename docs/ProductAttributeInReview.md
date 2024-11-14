@@ -7,7 +7,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **Code**| **string** |   | [optional]
-**VarString**| [**AttributeInReviewString**](AttributeInReviewString.md) |   | [optional]
+**String**| [**AttributeInReviewString**](AttributeInReviewString.md) |   | [optional]
 **Int32**| **int** |   | [optional]
 **Int64**| **string** |   | [optional]
 **Float32**| **float** |   | [optional]

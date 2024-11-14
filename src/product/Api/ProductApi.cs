@@ -1083,7 +1083,7 @@ namespace product.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ProductAddMediaGalleryEntryResponse</returns>
-        System.Threading.Tasks.Task<ProductAddMediaGalleryEntryResponse> AddMediaGalleryEntryAsync(ProductAddMediaGalleryEntryRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ProductAddMediaGalleryEntryResponse> AddMediaGalleryEntryAsync(ProductAddMediaGalleryEntryRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// Add Media Gallery Entry
@@ -1096,7 +1096,7 @@ namespace product.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (ProductAddMediaGalleryEntryResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ProductAddMediaGalleryEntryResponse>> AddMediaGalleryEntryWithHttpInfoAsync(ProductAddMediaGalleryEntryRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<ProductAddMediaGalleryEntryResponse>> AddMediaGalleryEntryWithHttpInfoAsync(ProductAddMediaGalleryEntryRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// Bulk Add Assets Entries
         /// </summary>
@@ -1108,7 +1108,7 @@ namespace product.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ProductBulkAddAssetsEntriesResponse</returns>
-        System.Threading.Tasks.Task<ProductBulkAddAssetsEntriesResponse> BulkAddAssetsEntriesAsync(ProductBulkAddAssetsEntriesRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ProductBulkAddAssetsEntriesResponse> BulkAddAssetsEntriesAsync(ProductBulkAddAssetsEntriesRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// Bulk Add Assets Entries
@@ -1121,7 +1121,7 @@ namespace product.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (ProductBulkAddAssetsEntriesResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ProductBulkAddAssetsEntriesResponse>> BulkAddAssetsEntriesWithHttpInfoAsync(ProductBulkAddAssetsEntriesRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<ProductBulkAddAssetsEntriesResponse>> BulkAddAssetsEntriesWithHttpInfoAsync(ProductBulkAddAssetsEntriesRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// Bulk Delete Products
         /// </summary>
@@ -1133,7 +1133,7 @@ namespace product.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of Object</returns>
-        System.Threading.Tasks.Task<Object> BulkDeleteProductsAsync(ProductBulkDeleteProductsRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<Object> BulkDeleteProductsAsync(ProductBulkDeleteProductsRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// Bulk Delete Products
@@ -1146,7 +1146,7 @@ namespace product.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (Object)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> BulkDeleteProductsWithHttpInfoAsync(ProductBulkDeleteProductsRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<Object>> BulkDeleteProductsWithHttpInfoAsync(ProductBulkDeleteProductsRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// Bulk Enhance Product Data With AI
         /// </summary>
@@ -1158,7 +1158,7 @@ namespace product.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of Object</returns>
-        System.Threading.Tasks.Task<Object> BulkEnhanceProductDataWithAIAsync(ProductBulkEnhanceProductDataWithAIRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<Object> BulkEnhanceProductDataWithAIAsync(ProductBulkEnhanceProductDataWithAIRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// Bulk Enhance Product Data With AI
@@ -1171,7 +1171,7 @@ namespace product.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (Object)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> BulkEnhanceProductDataWithAIWithHttpInfoAsync(ProductBulkEnhanceProductDataWithAIRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<Object>> BulkEnhanceProductDataWithAIWithHttpInfoAsync(ProductBulkEnhanceProductDataWithAIRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// Bulk Remove Assets Entries
         /// </summary>
@@ -1183,7 +1183,7 @@ namespace product.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of Object</returns>
-        System.Threading.Tasks.Task<Object> BulkRemoveAssetsEntriesAsync(ProductBulkRemoveAssetsEntriesRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<Object> BulkRemoveAssetsEntriesAsync(ProductBulkRemoveAssetsEntriesRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// Bulk Remove Assets Entries
@@ -1196,7 +1196,7 @@ namespace product.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (Object)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> BulkRemoveAssetsEntriesWithHttpInfoAsync(ProductBulkRemoveAssetsEntriesRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<Object>> BulkRemoveAssetsEntriesWithHttpInfoAsync(ProductBulkRemoveAssetsEntriesRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// Bulk Update Assets Entries
         /// </summary>
@@ -1208,7 +1208,7 @@ namespace product.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ProductBulkUpdateAssetsEntriesResponse</returns>
-        System.Threading.Tasks.Task<ProductBulkUpdateAssetsEntriesResponse> BulkUpdateAssetsEntriesAsync(ProductBulkUpdateAssetsEntriesRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ProductBulkUpdateAssetsEntriesResponse> BulkUpdateAssetsEntriesAsync(ProductBulkUpdateAssetsEntriesRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// Bulk Update Assets Entries
@@ -1221,7 +1221,7 @@ namespace product.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (ProductBulkUpdateAssetsEntriesResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ProductBulkUpdateAssetsEntriesResponse>> BulkUpdateAssetsEntriesWithHttpInfoAsync(ProductBulkUpdateAssetsEntriesRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<ProductBulkUpdateAssetsEntriesResponse>> BulkUpdateAssetsEntriesWithHttpInfoAsync(ProductBulkUpdateAssetsEntriesRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// Bulk Update Products
         /// </summary>
@@ -1233,7 +1233,7 @@ namespace product.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ProductBulkUpdateResponse</returns>
-        System.Threading.Tasks.Task<ProductBulkUpdateResponse> BulkUpdateV2Async(ProductBulkUpdateRequestV2 body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ProductBulkUpdateResponse> BulkUpdateV2Async(ProductBulkUpdateRequestV2 body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// Bulk Update Products
@@ -1246,7 +1246,7 @@ namespace product.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (ProductBulkUpdateResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ProductBulkUpdateResponse>> BulkUpdateV2WithHttpInfoAsync(ProductBulkUpdateRequestV2 body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<ProductBulkUpdateResponse>> BulkUpdateV2WithHttpInfoAsync(ProductBulkUpdateRequestV2 body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// Create Attribute Options
         /// </summary>
@@ -1258,7 +1258,7 @@ namespace product.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of EntitymanagerCreateAttributeOptionsResponse</returns>
-        System.Threading.Tasks.Task<EntitymanagerCreateAttributeOptionsResponse> CreateAttributeOptionsAsync(EntitymanagerCreateAttributeOptionsRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<EntitymanagerCreateAttributeOptionsResponse> CreateAttributeOptionsAsync(EntitymanagerCreateAttributeOptionsRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// Create Attribute Options
@@ -1271,7 +1271,7 @@ namespace product.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (EntitymanagerCreateAttributeOptionsResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<EntitymanagerCreateAttributeOptionsResponse>> CreateAttributeOptionsWithHttpInfoAsync(EntitymanagerCreateAttributeOptionsRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<EntitymanagerCreateAttributeOptionsResponse>> CreateAttributeOptionsWithHttpInfoAsync(EntitymanagerCreateAttributeOptionsRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// Create Entity
         /// </summary>
@@ -1283,7 +1283,7 @@ namespace product.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of EntitymanagerCreateEntityResponse</returns>
-        System.Threading.Tasks.Task<EntitymanagerCreateEntityResponse> CreateEntityAsync(EntitymanagerEntity body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<EntitymanagerCreateEntityResponse> CreateEntityAsync(EntitymanagerEntity body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// Create Entity
@@ -1296,7 +1296,7 @@ namespace product.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (EntitymanagerCreateEntityResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<EntitymanagerCreateEntityResponse>> CreateEntityWithHttpInfoAsync(EntitymanagerEntity body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<EntitymanagerCreateEntityResponse>> CreateEntityWithHttpInfoAsync(EntitymanagerEntity body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// Create Options List
         /// </summary>
@@ -1308,7 +1308,7 @@ namespace product.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of EntitymanagerCreateOptionsListResponse</returns>
-        System.Threading.Tasks.Task<EntitymanagerCreateOptionsListResponse> CreateOptionsListAsync(EntitymanagerCreateOptionsListRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<EntitymanagerCreateOptionsListResponse> CreateOptionsListAsync(EntitymanagerCreateOptionsListRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// Create Options List
@@ -1321,7 +1321,7 @@ namespace product.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (EntitymanagerCreateOptionsListResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<EntitymanagerCreateOptionsListResponse>> CreateOptionsListWithHttpInfoAsync(EntitymanagerCreateOptionsListRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<EntitymanagerCreateOptionsListResponse>> CreateOptionsListWithHttpInfoAsync(EntitymanagerCreateOptionsListRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// Create Product With AI
         /// </summary>
@@ -1333,7 +1333,7 @@ namespace product.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ProductCreateProductWithAIResponse</returns>
-        System.Threading.Tasks.Task<ProductCreateProductWithAIResponse> CreateProductWithAIAsync(ProductCreateProductWithAIRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ProductCreateProductWithAIResponse> CreateProductWithAIAsync(ProductCreateProductWithAIRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// Create Product With AI
@@ -1346,7 +1346,7 @@ namespace product.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (ProductCreateProductWithAIResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ProductCreateProductWithAIResponse>> CreateProductWithAIWithHttpInfoAsync(ProductCreateProductWithAIRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<ProductCreateProductWithAIResponse>> CreateProductWithAIWithHttpInfoAsync(ProductCreateProductWithAIRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// Get Attribute Option
         /// </summary>
@@ -1358,7 +1358,7 @@ namespace product.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of EntitymanagerGetAttributeOptionResponse</returns>
-        System.Threading.Tasks.Task<EntitymanagerGetAttributeOptionResponse> GetAttributeOptionAsync(EntitymanagerGetAttributeOptionRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<EntitymanagerGetAttributeOptionResponse> GetAttributeOptionAsync(EntitymanagerGetAttributeOptionRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// Get Attribute Option
@@ -1371,7 +1371,7 @@ namespace product.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (EntitymanagerGetAttributeOptionResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<EntitymanagerGetAttributeOptionResponse>> GetAttributeOptionWithHttpInfoAsync(EntitymanagerGetAttributeOptionRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<EntitymanagerGetAttributeOptionResponse>> GetAttributeOptionWithHttpInfoAsync(EntitymanagerGetAttributeOptionRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// Get Attribute Options
         /// </summary>
@@ -1383,7 +1383,7 @@ namespace product.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of EntitymanagerGetAttributeOptionsResponse</returns>
-        System.Threading.Tasks.Task<EntitymanagerGetAttributeOptionsResponse> GetAttributeOptionsAsync(EntitymanagerGetAttributeOptionsRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<EntitymanagerGetAttributeOptionsResponse> GetAttributeOptionsAsync(EntitymanagerGetAttributeOptionsRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// Get Attribute Options
@@ -1396,7 +1396,7 @@ namespace product.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (EntitymanagerGetAttributeOptionsResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<EntitymanagerGetAttributeOptionsResponse>> GetAttributeOptionsWithHttpInfoAsync(EntitymanagerGetAttributeOptionsRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<EntitymanagerGetAttributeOptionsResponse>> GetAttributeOptionsWithHttpInfoAsync(EntitymanagerGetAttributeOptionsRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// Get Entity Details
         /// </summary>
@@ -1408,7 +1408,7 @@ namespace product.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of EntitymanagerEntity</returns>
-        System.Threading.Tasks.Task<EntitymanagerEntity> GetEntityAsync(EntitymanagerEntityRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<EntitymanagerEntity> GetEntityAsync(EntitymanagerEntityRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// Get Entity Details
@@ -1421,7 +1421,7 @@ namespace product.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (EntitymanagerEntity)</returns>
-        System.Threading.Tasks.Task<ApiResponse<EntitymanagerEntity>> GetEntityWithHttpInfoAsync(EntitymanagerEntityRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<EntitymanagerEntity>> GetEntityWithHttpInfoAsync(EntitymanagerEntityRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// Get Options List
         /// </summary>
@@ -1433,7 +1433,7 @@ namespace product.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of EntitymanagerGetOptionsListResponse</returns>
-        System.Threading.Tasks.Task<EntitymanagerGetOptionsListResponse> GetOptionsListAsync(EntitymanagerGetOptionsListRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<EntitymanagerGetOptionsListResponse> GetOptionsListAsync(EntitymanagerGetOptionsListRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// Get Options List
@@ -1446,7 +1446,7 @@ namespace product.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (EntitymanagerGetOptionsListResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<EntitymanagerGetOptionsListResponse>> GetOptionsListWithHttpInfoAsync(EntitymanagerGetOptionsListRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<EntitymanagerGetOptionsListResponse>> GetOptionsListWithHttpInfoAsync(EntitymanagerGetOptionsListRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// Get Product
         /// </summary>
@@ -1458,7 +1458,7 @@ namespace product.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ProductGetProductResponse</returns>
-        System.Threading.Tasks.Task<ProductGetProductResponse> GetProductAsync(ProductGetProductRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ProductGetProductResponse> GetProductAsync(ProductGetProductRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// Get Product
@@ -1471,7 +1471,7 @@ namespace product.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (ProductGetProductResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ProductGetProductResponse>> GetProductWithHttpInfoAsync(ProductGetProductRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<ProductGetProductResponse>> GetProductWithHttpInfoAsync(ProductGetProductRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// Get Product By Code
         /// </summary>
@@ -1483,7 +1483,7 @@ namespace product.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ProductGetProductByCodeResponse</returns>
-        System.Threading.Tasks.Task<ProductGetProductByCodeResponse> GetProductByCodeAsync(ProductGetProductByCodeRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ProductGetProductByCodeResponse> GetProductByCodeAsync(ProductGetProductByCodeRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// Get Product By Code
@@ -1496,7 +1496,7 @@ namespace product.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (ProductGetProductByCodeResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ProductGetProductByCodeResponse>> GetProductByCodeWithHttpInfoAsync(ProductGetProductByCodeRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<ProductGetProductByCodeResponse>> GetProductByCodeWithHttpInfoAsync(ProductGetProductByCodeRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// Get Product By Url Key
         /// </summary>
@@ -1508,7 +1508,7 @@ namespace product.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ProductGetProductByUrlKeyResponse</returns>
-        System.Threading.Tasks.Task<ProductGetProductByUrlKeyResponse> GetProductByUrlKeyAsync(ProductGetProductByUrlKeyRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ProductGetProductByUrlKeyResponse> GetProductByUrlKeyAsync(ProductGetProductByUrlKeyRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// Get Product By Url Key
@@ -1521,7 +1521,7 @@ namespace product.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (ProductGetProductByUrlKeyResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ProductGetProductByUrlKeyResponse>> GetProductByUrlKeyWithHttpInfoAsync(ProductGetProductByUrlKeyRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<ProductGetProductByUrlKeyResponse>> GetProductByUrlKeyWithHttpInfoAsync(ProductGetProductByUrlKeyRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// Get Product Data In Review
         /// </summary>
@@ -1533,7 +1533,7 @@ namespace product.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ProductGetProductDataInReviewResponse</returns>
-        System.Threading.Tasks.Task<ProductGetProductDataInReviewResponse> GetProductDataInReviewAsync(ProductGetProductDataInReviewRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ProductGetProductDataInReviewResponse> GetProductDataInReviewAsync(ProductGetProductDataInReviewRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// Get Product Data In Review
@@ -1546,7 +1546,7 @@ namespace product.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (ProductGetProductDataInReviewResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ProductGetProductDataInReviewResponse>> GetProductDataInReviewWithHttpInfoAsync(ProductGetProductDataInReviewRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<ProductGetProductDataInReviewResponse>> GetProductDataInReviewWithHttpInfoAsync(ProductGetProductDataInReviewRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// List Attribute Options
         /// </summary>
@@ -1558,7 +1558,7 @@ namespace product.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of EntitymanagerListAttributeOptionsResponse</returns>
-        System.Threading.Tasks.Task<EntitymanagerListAttributeOptionsResponse> ListAttributeOptionsAsync(EntitymanagerListAttributeOptionsRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<EntitymanagerListAttributeOptionsResponse> ListAttributeOptionsAsync(EntitymanagerListAttributeOptionsRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// List Attribute Options
@@ -1571,7 +1571,7 @@ namespace product.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (EntitymanagerListAttributeOptionsResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<EntitymanagerListAttributeOptionsResponse>> ListAttributeOptionsWithHttpInfoAsync(EntitymanagerListAttributeOptionsRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<EntitymanagerListAttributeOptionsResponse>> ListAttributeOptionsWithHttpInfoAsync(EntitymanagerListAttributeOptionsRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// List Entities
         /// </summary>
@@ -1583,7 +1583,7 @@ namespace product.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of EntitymanagerListEntitiesResponse</returns>
-        System.Threading.Tasks.Task<EntitymanagerListEntitiesResponse> ListEntitiesAsync(EntitymanagerListEntitiesRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<EntitymanagerListEntitiesResponse> ListEntitiesAsync(EntitymanagerListEntitiesRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// List Entities
@@ -1596,7 +1596,7 @@ namespace product.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (EntitymanagerListEntitiesResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<EntitymanagerListEntitiesResponse>> ListEntitiesWithHttpInfoAsync(EntitymanagerListEntitiesRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<EntitymanagerListEntitiesResponse>> ListEntitiesWithHttpInfoAsync(EntitymanagerListEntitiesRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// List Options Lists
         /// </summary>
@@ -1608,7 +1608,7 @@ namespace product.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of EntitymanagerListOptionsListsResponse</returns>
-        System.Threading.Tasks.Task<EntitymanagerListOptionsListsResponse> ListOptionsListsAsync(EntitymanagerListOptionsListsRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<EntitymanagerListOptionsListsResponse> ListOptionsListsAsync(EntitymanagerListOptionsListsRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// List Options Lists
@@ -1621,7 +1621,7 @@ namespace product.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (EntitymanagerListOptionsListsResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<EntitymanagerListOptionsListsResponse>> ListOptionsListsWithHttpInfoAsync(EntitymanagerListOptionsListsRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<EntitymanagerListOptionsListsResponse>> ListOptionsListsWithHttpInfoAsync(EntitymanagerListOptionsListsRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// List Products
         /// </summary>
@@ -1633,7 +1633,7 @@ namespace product.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ProductListProductsResponse</returns>
-        System.Threading.Tasks.Task<ProductListProductsResponse> ListProductsAsync(ProductListProductsRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ProductListProductsResponse> ListProductsAsync(ProductListProductsRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// List Products
@@ -1646,7 +1646,7 @@ namespace product.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (ProductListProductsResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ProductListProductsResponse>> ListProductsWithHttpInfoAsync(ProductListProductsRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<ProductListProductsResponse>> ListProductsWithHttpInfoAsync(ProductListProductsRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// List Products By Ids
         /// </summary>
@@ -1658,7 +1658,7 @@ namespace product.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ProductListProductsByIdsResponse</returns>
-        System.Threading.Tasks.Task<ProductListProductsByIdsResponse> ListProductsByIdsAsync(ProductListProductsByIdsRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ProductListProductsByIdsResponse> ListProductsByIdsAsync(ProductListProductsByIdsRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// List Products By Ids
@@ -1671,7 +1671,7 @@ namespace product.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (ProductListProductsByIdsResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ProductListProductsByIdsResponse>> ListProductsByIdsWithHttpInfoAsync(ProductListProductsByIdsRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<ProductListProductsByIdsResponse>> ListProductsByIdsWithHttpInfoAsync(ProductListProductsByIdsRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// List Products By Sku
         /// </summary>
@@ -1683,7 +1683,7 @@ namespace product.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ProductListProductsBySkuResponse</returns>
-        System.Threading.Tasks.Task<ProductListProductsBySkuResponse> ListProductsBySkuAsync(ProductListProductsBySkuRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ProductListProductsBySkuResponse> ListProductsBySkuAsync(ProductListProductsBySkuRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// List Products By Sku
@@ -1696,7 +1696,7 @@ namespace product.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (ProductListProductsBySkuResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ProductListProductsBySkuResponse>> ListProductsBySkuWithHttpInfoAsync(ProductListProductsBySkuRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<ProductListProductsBySkuResponse>> ListProductsBySkuWithHttpInfoAsync(ProductListProductsBySkuRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// List Product Variants By Sku
         /// </summary>
@@ -1708,7 +1708,7 @@ namespace product.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ProductListVariantsBySkuResponse</returns>
-        System.Threading.Tasks.Task<ProductListVariantsBySkuResponse> ListVariantsBySkuAsync(ProductListVariantsBySkuRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ProductListVariantsBySkuResponse> ListVariantsBySkuAsync(ProductListVariantsBySkuRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// List Product Variants By Sku
@@ -1721,7 +1721,7 @@ namespace product.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (ProductListVariantsBySkuResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ProductListVariantsBySkuResponse>> ListVariantsBySkuWithHttpInfoAsync(ProductListVariantsBySkuRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<ProductListVariantsBySkuResponse>> ListVariantsBySkuWithHttpInfoAsync(ProductListVariantsBySkuRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// 
         /// </summary>
@@ -1733,7 +1733,7 @@ namespace product.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of EntitymanagerBulkCreateAttributeResponse</returns>
-        System.Threading.Tasks.Task<EntitymanagerBulkCreateAttributeResponse> ProductBulkCreateAttributeAsync(EntitymanagerBulkCreateAttributeRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<EntitymanagerBulkCreateAttributeResponse> ProductBulkCreateAttributeAsync(EntitymanagerBulkCreateAttributeRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -1746,7 +1746,7 @@ namespace product.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (EntitymanagerBulkCreateAttributeResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<EntitymanagerBulkCreateAttributeResponse>> ProductBulkCreateAttributeWithHttpInfoAsync(EntitymanagerBulkCreateAttributeRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<EntitymanagerBulkCreateAttributeResponse>> ProductBulkCreateAttributeWithHttpInfoAsync(EntitymanagerBulkCreateAttributeRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// 
         /// </summary>
@@ -1759,7 +1759,7 @@ namespace product.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ProductBulkUpdateResponse</returns>
         [Obsolete]
-        System.Threading.Tasks.Task<ProductBulkUpdateResponse> ProductBulkUpdateAsync(ProductBulkUpdateRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ProductBulkUpdateResponse> ProductBulkUpdateAsync(ProductBulkUpdateRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -1773,7 +1773,7 @@ namespace product.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (ProductBulkUpdateResponse)</returns>
         [Obsolete]
-        System.Threading.Tasks.Task<ApiResponse<ProductBulkUpdateResponse>> ProductBulkUpdateWithHttpInfoAsync(ProductBulkUpdateRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<ProductBulkUpdateResponse>> ProductBulkUpdateWithHttpInfoAsync(ProductBulkUpdateRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// 
         /// </summary>
@@ -1785,7 +1785,7 @@ namespace product.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of EntitymanagerAttributeGroup</returns>
-        System.Threading.Tasks.Task<EntitymanagerAttributeGroup> ProductCreateAttributeGroupAsync(EntitymanagerCreateAttributeGroupRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<EntitymanagerAttributeGroup> ProductCreateAttributeGroupAsync(EntitymanagerCreateAttributeGroupRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -1798,7 +1798,7 @@ namespace product.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (EntitymanagerAttributeGroup)</returns>
-        System.Threading.Tasks.Task<ApiResponse<EntitymanagerAttributeGroup>> ProductCreateAttributeGroupWithHttpInfoAsync(EntitymanagerCreateAttributeGroupRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<EntitymanagerAttributeGroup>> ProductCreateAttributeGroupWithHttpInfoAsync(EntitymanagerCreateAttributeGroupRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// 
         /// </summary>
@@ -1811,7 +1811,7 @@ namespace product.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ProductCreateProductResponse</returns>
         [Obsolete]
-        System.Threading.Tasks.Task<ProductCreateProductResponse> ProductCreateProductAsync(ProductCreateProductRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ProductCreateProductResponse> ProductCreateProductAsync(ProductCreateProductRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -1825,7 +1825,7 @@ namespace product.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (ProductCreateProductResponse)</returns>
         [Obsolete]
-        System.Threading.Tasks.Task<ApiResponse<ProductCreateProductResponse>> ProductCreateProductWithHttpInfoAsync(ProductCreateProductRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<ProductCreateProductResponse>> ProductCreateProductWithHttpInfoAsync(ProductCreateProductRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// 
         /// </summary>
@@ -1837,7 +1837,7 @@ namespace product.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ProductCreateProductResponseV2</returns>
-        System.Threading.Tasks.Task<ProductCreateProductResponseV2> ProductCreateProductV2Async(ProductCreateProductRequestV2 body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ProductCreateProductResponseV2> ProductCreateProductV2Async(ProductCreateProductRequestV2 body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -1850,7 +1850,7 @@ namespace product.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (ProductCreateProductResponseV2)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ProductCreateProductResponseV2>> ProductCreateProductV2WithHttpInfoAsync(ProductCreateProductRequestV2 body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<ProductCreateProductResponseV2>> ProductCreateProductV2WithHttpInfoAsync(ProductCreateProductRequestV2 body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// 
         /// </summary>
@@ -1863,7 +1863,7 @@ namespace product.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ProductDeleteResponse</returns>
         [Obsolete]
-        System.Threading.Tasks.Task<ProductDeleteResponse> ProductDeleteAsync(ProductDeleteRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ProductDeleteResponse> ProductDeleteAsync(ProductDeleteRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -1877,7 +1877,7 @@ namespace product.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (ProductDeleteResponse)</returns>
         [Obsolete]
-        System.Threading.Tasks.Task<ApiResponse<ProductDeleteResponse>> ProductDeleteWithHttpInfoAsync(ProductDeleteRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<ProductDeleteResponse>> ProductDeleteWithHttpInfoAsync(ProductDeleteRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// 
         /// </summary>
@@ -1889,7 +1889,7 @@ namespace product.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of Object</returns>
-        System.Threading.Tasks.Task<Object> ProductDeleteAttributeAsync(EntitymanagerDeleteAttributeRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<Object> ProductDeleteAttributeAsync(EntitymanagerDeleteAttributeRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -1902,7 +1902,7 @@ namespace product.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (Object)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> ProductDeleteAttributeWithHttpInfoAsync(EntitymanagerDeleteAttributeRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<Object>> ProductDeleteAttributeWithHttpInfoAsync(EntitymanagerDeleteAttributeRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// 
         /// </summary>
@@ -1914,7 +1914,7 @@ namespace product.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of Object</returns>
-        System.Threading.Tasks.Task<Object> ProductDeleteProductAsync(ProductDeleteProductRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<Object> ProductDeleteProductAsync(ProductDeleteProductRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -1927,7 +1927,7 @@ namespace product.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (Object)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> ProductDeleteProductWithHttpInfoAsync(ProductDeleteProductRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<Object>> ProductDeleteProductWithHttpInfoAsync(ProductDeleteProductRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// 
         /// </summary>
@@ -1939,7 +1939,7 @@ namespace product.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of EntitymanagerAttributeGroup</returns>
-        System.Threading.Tasks.Task<EntitymanagerAttributeGroup> ProductGetAttributeGroupAsync(EntitymanagerGetAttributeGroupRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<EntitymanagerAttributeGroup> ProductGetAttributeGroupAsync(EntitymanagerGetAttributeGroupRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -1952,7 +1952,7 @@ namespace product.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (EntitymanagerAttributeGroup)</returns>
-        System.Threading.Tasks.Task<ApiResponse<EntitymanagerAttributeGroup>> ProductGetAttributeGroupWithHttpInfoAsync(EntitymanagerGetAttributeGroupRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<EntitymanagerAttributeGroup>> ProductGetAttributeGroupWithHttpInfoAsync(EntitymanagerGetAttributeGroupRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// 
         /// </summary>
@@ -1964,7 +1964,7 @@ namespace product.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of EntitymanagerListAttributeGroupsResponse</returns>
-        System.Threading.Tasks.Task<EntitymanagerListAttributeGroupsResponse> ProductListAttributeGroupsAsync(EntitymanagerListAttributeGroupsRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<EntitymanagerListAttributeGroupsResponse> ProductListAttributeGroupsAsync(EntitymanagerListAttributeGroupsRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -1977,7 +1977,7 @@ namespace product.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (EntitymanagerListAttributeGroupsResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<EntitymanagerListAttributeGroupsResponse>> ProductListAttributeGroupsWithHttpInfoAsync(EntitymanagerListAttributeGroupsRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<EntitymanagerListAttributeGroupsResponse>> ProductListAttributeGroupsWithHttpInfoAsync(EntitymanagerListAttributeGroupsRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// 
         /// </summary>
@@ -1989,7 +1989,7 @@ namespace product.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of EntitymanagerAttribute</returns>
-        System.Threading.Tasks.Task<EntitymanagerAttribute> ProductUpdateAttributeAsync(EntitymanagerUpdateAttributeRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<EntitymanagerAttribute> ProductUpdateAttributeAsync(EntitymanagerUpdateAttributeRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -2002,7 +2002,7 @@ namespace product.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (EntitymanagerAttribute)</returns>
-        System.Threading.Tasks.Task<ApiResponse<EntitymanagerAttribute>> ProductUpdateAttributeWithHttpInfoAsync(EntitymanagerUpdateAttributeRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<EntitymanagerAttribute>> ProductUpdateAttributeWithHttpInfoAsync(EntitymanagerUpdateAttributeRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// 
         /// </summary>
@@ -2014,7 +2014,7 @@ namespace product.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of EntitymanagerAttributeGroup</returns>
-        System.Threading.Tasks.Task<EntitymanagerAttributeGroup> ProductUpdateAttributeGroupAsync(EntitymanagerUpdateAttributeGroupRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<EntitymanagerAttributeGroup> ProductUpdateAttributeGroupAsync(EntitymanagerUpdateAttributeGroupRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -2027,7 +2027,7 @@ namespace product.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (EntitymanagerAttributeGroup)</returns>
-        System.Threading.Tasks.Task<ApiResponse<EntitymanagerAttributeGroup>> ProductUpdateAttributeGroupWithHttpInfoAsync(EntitymanagerUpdateAttributeGroupRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<EntitymanagerAttributeGroup>> ProductUpdateAttributeGroupWithHttpInfoAsync(EntitymanagerUpdateAttributeGroupRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// 
         /// </summary>
@@ -2040,7 +2040,7 @@ namespace product.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ProductUpdateProductResponse</returns>
         [Obsolete]
-        System.Threading.Tasks.Task<ProductUpdateProductResponse> ProductUpdateProductAsync(ProductUpdateProductRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ProductUpdateProductResponse> ProductUpdateProductAsync(ProductUpdateProductRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -2054,7 +2054,7 @@ namespace product.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (ProductUpdateProductResponse)</returns>
         [Obsolete]
-        System.Threading.Tasks.Task<ApiResponse<ProductUpdateProductResponse>> ProductUpdateProductWithHttpInfoAsync(ProductUpdateProductRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<ProductUpdateProductResponse>> ProductUpdateProductWithHttpInfoAsync(ProductUpdateProductRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// 
         /// </summary>
@@ -2066,7 +2066,7 @@ namespace product.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of Object</returns>
-        System.Threading.Tasks.Task<Object> ProductUpdateProductV2Async(ProductUpdateProductRequestV2 body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<Object> ProductUpdateProductV2Async(ProductUpdateProductRequestV2 body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -2079,7 +2079,7 @@ namespace product.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (Object)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> ProductUpdateProductV2WithHttpInfoAsync(ProductUpdateProductRequestV2 body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<Object>> ProductUpdateProductV2WithHttpInfoAsync(ProductUpdateProductRequestV2 body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// Remove Media Gallery Entry
         /// </summary>
@@ -2091,7 +2091,7 @@ namespace product.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of Object</returns>
-        System.Threading.Tasks.Task<Object> RemoveMediaGalleryEntryAsync(ProductRemoveMediaGalleryEntryRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<Object> RemoveMediaGalleryEntryAsync(ProductRemoveMediaGalleryEntryRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// Remove Media Gallery Entry
@@ -2104,7 +2104,7 @@ namespace product.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (Object)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> RemoveMediaGalleryEntryWithHttpInfoAsync(ProductRemoveMediaGalleryEntryRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<Object>> RemoveMediaGalleryEntryWithHttpInfoAsync(ProductRemoveMediaGalleryEntryRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// Update Attribute Options
         /// </summary>
@@ -2116,7 +2116,7 @@ namespace product.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of EntitymanagerUpdateAttributeOptionsResponse</returns>
-        System.Threading.Tasks.Task<EntitymanagerUpdateAttributeOptionsResponse> UpdateAttributeOptionsAsync(EntitymanagerUpdateAttributeOptionsRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<EntitymanagerUpdateAttributeOptionsResponse> UpdateAttributeOptionsAsync(EntitymanagerUpdateAttributeOptionsRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// Update Attribute Options
@@ -2129,7 +2129,7 @@ namespace product.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (EntitymanagerUpdateAttributeOptionsResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<EntitymanagerUpdateAttributeOptionsResponse>> UpdateAttributeOptionsWithHttpInfoAsync(EntitymanagerUpdateAttributeOptionsRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<EntitymanagerUpdateAttributeOptionsResponse>> UpdateAttributeOptionsWithHttpInfoAsync(EntitymanagerUpdateAttributeOptionsRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// Get Enhance Product Data With AI Status
         /// </summary>
@@ -2141,7 +2141,7 @@ namespace product.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ProductGetEnhanceProductDataWithAIStatusResponse</returns>
-        System.Threading.Tasks.Task<ProductGetEnhanceProductDataWithAIStatusResponse> UpdateDataToBeReviewedAsync(ProductGetEnhanceProductDataWithAIStatusRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ProductGetEnhanceProductDataWithAIStatusResponse> UpdateDataToBeReviewedAsync(ProductGetEnhanceProductDataWithAIStatusRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// Get Enhance Product Data With AI Status
@@ -2154,7 +2154,7 @@ namespace product.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (ProductGetEnhanceProductDataWithAIStatusResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ProductGetEnhanceProductDataWithAIStatusResponse>> UpdateDataToBeReviewedWithHttpInfoAsync(ProductGetEnhanceProductDataWithAIStatusRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<ProductGetEnhanceProductDataWithAIStatusResponse>> UpdateDataToBeReviewedWithHttpInfoAsync(ProductGetEnhanceProductDataWithAIStatusRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// Update Data To Be Reviewed
         /// </summary>
@@ -2166,7 +2166,7 @@ namespace product.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of Object</returns>
-        System.Threading.Tasks.Task<Object> UpdateDataToBeReviewed_0Async(ProductUpdateDataToBeReviewedRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<Object> UpdateDataToBeReviewed_0Async(ProductUpdateDataToBeReviewedRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// Update Data To Be Reviewed
@@ -2179,7 +2179,7 @@ namespace product.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (Object)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> UpdateDataToBeReviewed_0WithHttpInfoAsync(ProductUpdateDataToBeReviewedRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<Object>> UpdateDataToBeReviewed_0WithHttpInfoAsync(ProductUpdateDataToBeReviewedRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// Update Media Gallery Entry
         /// </summary>
@@ -2191,7 +2191,7 @@ namespace product.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of Object</returns>
-        System.Threading.Tasks.Task<Object> UpdateMediaGalleryEntryAsync(ProductUpdateMediaGalleryEntryRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<Object> UpdateMediaGalleryEntryAsync(ProductUpdateMediaGalleryEntryRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// Update Media Gallery Entry
@@ -2204,7 +2204,7 @@ namespace product.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (Object)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> UpdateMediaGalleryEntryWithHttpInfoAsync(ProductUpdateMediaGalleryEntryRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<Object>> UpdateMediaGalleryEntryWithHttpInfoAsync(ProductUpdateMediaGalleryEntryRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// Update Options List
         /// </summary>
@@ -2216,7 +2216,7 @@ namespace product.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of EntitymanagerUpdateOptionsListResponse</returns>
-        System.Threading.Tasks.Task<EntitymanagerUpdateOptionsListResponse> UpdateOptionsListAsync(EntitymanagerUpdateOptionsListRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<EntitymanagerUpdateOptionsListResponse> UpdateOptionsListAsync(EntitymanagerUpdateOptionsListRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// Update Options List
@@ -2229,7 +2229,7 @@ namespace product.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (EntitymanagerUpdateOptionsListResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<EntitymanagerUpdateOptionsListResponse>> UpdateOptionsListWithHttpInfoAsync(EntitymanagerUpdateOptionsListRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<EntitymanagerUpdateOptionsListResponse>> UpdateOptionsListWithHttpInfoAsync(EntitymanagerUpdateOptionsListRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// Update Product With AI
         /// </summary>
@@ -2241,7 +2241,7 @@ namespace product.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ProductUpdateProductWithAIResponse</returns>
-        System.Threading.Tasks.Task<ProductUpdateProductWithAIResponse> UpdateProductWithAIAsync(ProductUpdateProductWithAIRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ProductUpdateProductWithAIResponse> UpdateProductWithAIAsync(ProductUpdateProductWithAIRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// Update Product With AI
@@ -2254,7 +2254,7 @@ namespace product.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (ProductUpdateProductWithAIResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ProductUpdateProductWithAIResponse>> UpdateProductWithAIWithHttpInfoAsync(ProductUpdateProductWithAIRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<ProductUpdateProductWithAIResponse>> UpdateProductWithAIWithHttpInfoAsync(ProductUpdateProductWithAIRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         #endregion Asynchronous Operations
     }
 
@@ -2459,7 +2459,7 @@ namespace product.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ProductAddMediaGalleryEntryResponse</returns>
-        public async System.Threading.Tasks.Task<ProductAddMediaGalleryEntryResponse> AddMediaGalleryEntryAsync(ProductAddMediaGalleryEntryRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<ProductAddMediaGalleryEntryResponse> AddMediaGalleryEntryAsync(ProductAddMediaGalleryEntryRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             product.Client.ApiResponse<ProductAddMediaGalleryEntryResponse> localVarResponse = await AddMediaGalleryEntryWithHttpInfoAsync(body, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
@@ -2473,7 +2473,7 @@ namespace product.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (ProductAddMediaGalleryEntryResponse)</returns>
-        public async System.Threading.Tasks.Task<product.Client.ApiResponse<ProductAddMediaGalleryEntryResponse>> AddMediaGalleryEntryWithHttpInfoAsync(ProductAddMediaGalleryEntryRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<product.Client.ApiResponse<ProductAddMediaGalleryEntryResponse>> AddMediaGalleryEntryWithHttpInfoAsync(ProductAddMediaGalleryEntryRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             // verify the required parameter 'body' is set
             if (body == null)
@@ -2615,7 +2615,7 @@ namespace product.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ProductBulkAddAssetsEntriesResponse</returns>
-        public async System.Threading.Tasks.Task<ProductBulkAddAssetsEntriesResponse> BulkAddAssetsEntriesAsync(ProductBulkAddAssetsEntriesRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<ProductBulkAddAssetsEntriesResponse> BulkAddAssetsEntriesAsync(ProductBulkAddAssetsEntriesRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             product.Client.ApiResponse<ProductBulkAddAssetsEntriesResponse> localVarResponse = await BulkAddAssetsEntriesWithHttpInfoAsync(body, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
@@ -2629,7 +2629,7 @@ namespace product.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (ProductBulkAddAssetsEntriesResponse)</returns>
-        public async System.Threading.Tasks.Task<product.Client.ApiResponse<ProductBulkAddAssetsEntriesResponse>> BulkAddAssetsEntriesWithHttpInfoAsync(ProductBulkAddAssetsEntriesRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<product.Client.ApiResponse<ProductBulkAddAssetsEntriesResponse>> BulkAddAssetsEntriesWithHttpInfoAsync(ProductBulkAddAssetsEntriesRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             // verify the required parameter 'body' is set
             if (body == null)
@@ -2771,7 +2771,7 @@ namespace product.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of Object</returns>
-        public async System.Threading.Tasks.Task<Object> BulkDeleteProductsAsync(ProductBulkDeleteProductsRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Object> BulkDeleteProductsAsync(ProductBulkDeleteProductsRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             product.Client.ApiResponse<Object> localVarResponse = await BulkDeleteProductsWithHttpInfoAsync(body, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
@@ -2785,7 +2785,7 @@ namespace product.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (Object)</returns>
-        public async System.Threading.Tasks.Task<product.Client.ApiResponse<Object>> BulkDeleteProductsWithHttpInfoAsync(ProductBulkDeleteProductsRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<product.Client.ApiResponse<Object>> BulkDeleteProductsWithHttpInfoAsync(ProductBulkDeleteProductsRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             // verify the required parameter 'body' is set
             if (body == null)
@@ -2927,7 +2927,7 @@ namespace product.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of Object</returns>
-        public async System.Threading.Tasks.Task<Object> BulkEnhanceProductDataWithAIAsync(ProductBulkEnhanceProductDataWithAIRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Object> BulkEnhanceProductDataWithAIAsync(ProductBulkEnhanceProductDataWithAIRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             product.Client.ApiResponse<Object> localVarResponse = await BulkEnhanceProductDataWithAIWithHttpInfoAsync(body, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
@@ -2941,7 +2941,7 @@ namespace product.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (Object)</returns>
-        public async System.Threading.Tasks.Task<product.Client.ApiResponse<Object>> BulkEnhanceProductDataWithAIWithHttpInfoAsync(ProductBulkEnhanceProductDataWithAIRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<product.Client.ApiResponse<Object>> BulkEnhanceProductDataWithAIWithHttpInfoAsync(ProductBulkEnhanceProductDataWithAIRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             // verify the required parameter 'body' is set
             if (body == null)
@@ -3083,7 +3083,7 @@ namespace product.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of Object</returns>
-        public async System.Threading.Tasks.Task<Object> BulkRemoveAssetsEntriesAsync(ProductBulkRemoveAssetsEntriesRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Object> BulkRemoveAssetsEntriesAsync(ProductBulkRemoveAssetsEntriesRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             product.Client.ApiResponse<Object> localVarResponse = await BulkRemoveAssetsEntriesWithHttpInfoAsync(body, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
@@ -3097,7 +3097,7 @@ namespace product.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (Object)</returns>
-        public async System.Threading.Tasks.Task<product.Client.ApiResponse<Object>> BulkRemoveAssetsEntriesWithHttpInfoAsync(ProductBulkRemoveAssetsEntriesRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<product.Client.ApiResponse<Object>> BulkRemoveAssetsEntriesWithHttpInfoAsync(ProductBulkRemoveAssetsEntriesRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             // verify the required parameter 'body' is set
             if (body == null)
@@ -3239,7 +3239,7 @@ namespace product.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ProductBulkUpdateAssetsEntriesResponse</returns>
-        public async System.Threading.Tasks.Task<ProductBulkUpdateAssetsEntriesResponse> BulkUpdateAssetsEntriesAsync(ProductBulkUpdateAssetsEntriesRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<ProductBulkUpdateAssetsEntriesResponse> BulkUpdateAssetsEntriesAsync(ProductBulkUpdateAssetsEntriesRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             product.Client.ApiResponse<ProductBulkUpdateAssetsEntriesResponse> localVarResponse = await BulkUpdateAssetsEntriesWithHttpInfoAsync(body, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
@@ -3253,7 +3253,7 @@ namespace product.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (ProductBulkUpdateAssetsEntriesResponse)</returns>
-        public async System.Threading.Tasks.Task<product.Client.ApiResponse<ProductBulkUpdateAssetsEntriesResponse>> BulkUpdateAssetsEntriesWithHttpInfoAsync(ProductBulkUpdateAssetsEntriesRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<product.Client.ApiResponse<ProductBulkUpdateAssetsEntriesResponse>> BulkUpdateAssetsEntriesWithHttpInfoAsync(ProductBulkUpdateAssetsEntriesRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             // verify the required parameter 'body' is set
             if (body == null)
@@ -3395,7 +3395,7 @@ namespace product.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ProductBulkUpdateResponse</returns>
-        public async System.Threading.Tasks.Task<ProductBulkUpdateResponse> BulkUpdateV2Async(ProductBulkUpdateRequestV2 body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<ProductBulkUpdateResponse> BulkUpdateV2Async(ProductBulkUpdateRequestV2 body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             product.Client.ApiResponse<ProductBulkUpdateResponse> localVarResponse = await BulkUpdateV2WithHttpInfoAsync(body, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
@@ -3409,7 +3409,7 @@ namespace product.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (ProductBulkUpdateResponse)</returns>
-        public async System.Threading.Tasks.Task<product.Client.ApiResponse<ProductBulkUpdateResponse>> BulkUpdateV2WithHttpInfoAsync(ProductBulkUpdateRequestV2 body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<product.Client.ApiResponse<ProductBulkUpdateResponse>> BulkUpdateV2WithHttpInfoAsync(ProductBulkUpdateRequestV2 body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             // verify the required parameter 'body' is set
             if (body == null)
@@ -3551,7 +3551,7 @@ namespace product.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of EntitymanagerCreateAttributeOptionsResponse</returns>
-        public async System.Threading.Tasks.Task<EntitymanagerCreateAttributeOptionsResponse> CreateAttributeOptionsAsync(EntitymanagerCreateAttributeOptionsRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<EntitymanagerCreateAttributeOptionsResponse> CreateAttributeOptionsAsync(EntitymanagerCreateAttributeOptionsRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             product.Client.ApiResponse<EntitymanagerCreateAttributeOptionsResponse> localVarResponse = await CreateAttributeOptionsWithHttpInfoAsync(body, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
@@ -3565,7 +3565,7 @@ namespace product.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (EntitymanagerCreateAttributeOptionsResponse)</returns>
-        public async System.Threading.Tasks.Task<product.Client.ApiResponse<EntitymanagerCreateAttributeOptionsResponse>> CreateAttributeOptionsWithHttpInfoAsync(EntitymanagerCreateAttributeOptionsRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<product.Client.ApiResponse<EntitymanagerCreateAttributeOptionsResponse>> CreateAttributeOptionsWithHttpInfoAsync(EntitymanagerCreateAttributeOptionsRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             // verify the required parameter 'body' is set
             if (body == null)
@@ -3707,7 +3707,7 @@ namespace product.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of EntitymanagerCreateEntityResponse</returns>
-        public async System.Threading.Tasks.Task<EntitymanagerCreateEntityResponse> CreateEntityAsync(EntitymanagerEntity body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<EntitymanagerCreateEntityResponse> CreateEntityAsync(EntitymanagerEntity body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             product.Client.ApiResponse<EntitymanagerCreateEntityResponse> localVarResponse = await CreateEntityWithHttpInfoAsync(body, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
@@ -3721,7 +3721,7 @@ namespace product.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (EntitymanagerCreateEntityResponse)</returns>
-        public async System.Threading.Tasks.Task<product.Client.ApiResponse<EntitymanagerCreateEntityResponse>> CreateEntityWithHttpInfoAsync(EntitymanagerEntity body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<product.Client.ApiResponse<EntitymanagerCreateEntityResponse>> CreateEntityWithHttpInfoAsync(EntitymanagerEntity body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             // verify the required parameter 'body' is set
             if (body == null)
@@ -3863,7 +3863,7 @@ namespace product.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of EntitymanagerCreateOptionsListResponse</returns>
-        public async System.Threading.Tasks.Task<EntitymanagerCreateOptionsListResponse> CreateOptionsListAsync(EntitymanagerCreateOptionsListRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<EntitymanagerCreateOptionsListResponse> CreateOptionsListAsync(EntitymanagerCreateOptionsListRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             product.Client.ApiResponse<EntitymanagerCreateOptionsListResponse> localVarResponse = await CreateOptionsListWithHttpInfoAsync(body, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
@@ -3877,7 +3877,7 @@ namespace product.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (EntitymanagerCreateOptionsListResponse)</returns>
-        public async System.Threading.Tasks.Task<product.Client.ApiResponse<EntitymanagerCreateOptionsListResponse>> CreateOptionsListWithHttpInfoAsync(EntitymanagerCreateOptionsListRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<product.Client.ApiResponse<EntitymanagerCreateOptionsListResponse>> CreateOptionsListWithHttpInfoAsync(EntitymanagerCreateOptionsListRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             // verify the required parameter 'body' is set
             if (body == null)
@@ -4019,7 +4019,7 @@ namespace product.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ProductCreateProductWithAIResponse</returns>
-        public async System.Threading.Tasks.Task<ProductCreateProductWithAIResponse> CreateProductWithAIAsync(ProductCreateProductWithAIRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<ProductCreateProductWithAIResponse> CreateProductWithAIAsync(ProductCreateProductWithAIRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             product.Client.ApiResponse<ProductCreateProductWithAIResponse> localVarResponse = await CreateProductWithAIWithHttpInfoAsync(body, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
@@ -4033,7 +4033,7 @@ namespace product.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (ProductCreateProductWithAIResponse)</returns>
-        public async System.Threading.Tasks.Task<product.Client.ApiResponse<ProductCreateProductWithAIResponse>> CreateProductWithAIWithHttpInfoAsync(ProductCreateProductWithAIRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<product.Client.ApiResponse<ProductCreateProductWithAIResponse>> CreateProductWithAIWithHttpInfoAsync(ProductCreateProductWithAIRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             // verify the required parameter 'body' is set
             if (body == null)
@@ -4175,7 +4175,7 @@ namespace product.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of EntitymanagerGetAttributeOptionResponse</returns>
-        public async System.Threading.Tasks.Task<EntitymanagerGetAttributeOptionResponse> GetAttributeOptionAsync(EntitymanagerGetAttributeOptionRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<EntitymanagerGetAttributeOptionResponse> GetAttributeOptionAsync(EntitymanagerGetAttributeOptionRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             product.Client.ApiResponse<EntitymanagerGetAttributeOptionResponse> localVarResponse = await GetAttributeOptionWithHttpInfoAsync(body, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
@@ -4189,7 +4189,7 @@ namespace product.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (EntitymanagerGetAttributeOptionResponse)</returns>
-        public async System.Threading.Tasks.Task<product.Client.ApiResponse<EntitymanagerGetAttributeOptionResponse>> GetAttributeOptionWithHttpInfoAsync(EntitymanagerGetAttributeOptionRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<product.Client.ApiResponse<EntitymanagerGetAttributeOptionResponse>> GetAttributeOptionWithHttpInfoAsync(EntitymanagerGetAttributeOptionRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             // verify the required parameter 'body' is set
             if (body == null)
@@ -4331,7 +4331,7 @@ namespace product.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of EntitymanagerGetAttributeOptionsResponse</returns>
-        public async System.Threading.Tasks.Task<EntitymanagerGetAttributeOptionsResponse> GetAttributeOptionsAsync(EntitymanagerGetAttributeOptionsRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<EntitymanagerGetAttributeOptionsResponse> GetAttributeOptionsAsync(EntitymanagerGetAttributeOptionsRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             product.Client.ApiResponse<EntitymanagerGetAttributeOptionsResponse> localVarResponse = await GetAttributeOptionsWithHttpInfoAsync(body, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
@@ -4345,7 +4345,7 @@ namespace product.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (EntitymanagerGetAttributeOptionsResponse)</returns>
-        public async System.Threading.Tasks.Task<product.Client.ApiResponse<EntitymanagerGetAttributeOptionsResponse>> GetAttributeOptionsWithHttpInfoAsync(EntitymanagerGetAttributeOptionsRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<product.Client.ApiResponse<EntitymanagerGetAttributeOptionsResponse>> GetAttributeOptionsWithHttpInfoAsync(EntitymanagerGetAttributeOptionsRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             // verify the required parameter 'body' is set
             if (body == null)
@@ -4487,7 +4487,7 @@ namespace product.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of EntitymanagerEntity</returns>
-        public async System.Threading.Tasks.Task<EntitymanagerEntity> GetEntityAsync(EntitymanagerEntityRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<EntitymanagerEntity> GetEntityAsync(EntitymanagerEntityRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             product.Client.ApiResponse<EntitymanagerEntity> localVarResponse = await GetEntityWithHttpInfoAsync(body, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
@@ -4501,7 +4501,7 @@ namespace product.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (EntitymanagerEntity)</returns>
-        public async System.Threading.Tasks.Task<product.Client.ApiResponse<EntitymanagerEntity>> GetEntityWithHttpInfoAsync(EntitymanagerEntityRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<product.Client.ApiResponse<EntitymanagerEntity>> GetEntityWithHttpInfoAsync(EntitymanagerEntityRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             // verify the required parameter 'body' is set
             if (body == null)
@@ -4643,7 +4643,7 @@ namespace product.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of EntitymanagerGetOptionsListResponse</returns>
-        public async System.Threading.Tasks.Task<EntitymanagerGetOptionsListResponse> GetOptionsListAsync(EntitymanagerGetOptionsListRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<EntitymanagerGetOptionsListResponse> GetOptionsListAsync(EntitymanagerGetOptionsListRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             product.Client.ApiResponse<EntitymanagerGetOptionsListResponse> localVarResponse = await GetOptionsListWithHttpInfoAsync(body, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
@@ -4657,7 +4657,7 @@ namespace product.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (EntitymanagerGetOptionsListResponse)</returns>
-        public async System.Threading.Tasks.Task<product.Client.ApiResponse<EntitymanagerGetOptionsListResponse>> GetOptionsListWithHttpInfoAsync(EntitymanagerGetOptionsListRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<product.Client.ApiResponse<EntitymanagerGetOptionsListResponse>> GetOptionsListWithHttpInfoAsync(EntitymanagerGetOptionsListRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             // verify the required parameter 'body' is set
             if (body == null)
@@ -4799,7 +4799,7 @@ namespace product.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ProductGetProductResponse</returns>
-        public async System.Threading.Tasks.Task<ProductGetProductResponse> GetProductAsync(ProductGetProductRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<ProductGetProductResponse> GetProductAsync(ProductGetProductRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             product.Client.ApiResponse<ProductGetProductResponse> localVarResponse = await GetProductWithHttpInfoAsync(body, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
@@ -4813,7 +4813,7 @@ namespace product.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (ProductGetProductResponse)</returns>
-        public async System.Threading.Tasks.Task<product.Client.ApiResponse<ProductGetProductResponse>> GetProductWithHttpInfoAsync(ProductGetProductRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<product.Client.ApiResponse<ProductGetProductResponse>> GetProductWithHttpInfoAsync(ProductGetProductRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             // verify the required parameter 'body' is set
             if (body == null)
@@ -4955,7 +4955,7 @@ namespace product.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ProductGetProductByCodeResponse</returns>
-        public async System.Threading.Tasks.Task<ProductGetProductByCodeResponse> GetProductByCodeAsync(ProductGetProductByCodeRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<ProductGetProductByCodeResponse> GetProductByCodeAsync(ProductGetProductByCodeRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             product.Client.ApiResponse<ProductGetProductByCodeResponse> localVarResponse = await GetProductByCodeWithHttpInfoAsync(body, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
@@ -4969,7 +4969,7 @@ namespace product.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (ProductGetProductByCodeResponse)</returns>
-        public async System.Threading.Tasks.Task<product.Client.ApiResponse<ProductGetProductByCodeResponse>> GetProductByCodeWithHttpInfoAsync(ProductGetProductByCodeRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<product.Client.ApiResponse<ProductGetProductByCodeResponse>> GetProductByCodeWithHttpInfoAsync(ProductGetProductByCodeRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             // verify the required parameter 'body' is set
             if (body == null)
@@ -5111,7 +5111,7 @@ namespace product.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ProductGetProductByUrlKeyResponse</returns>
-        public async System.Threading.Tasks.Task<ProductGetProductByUrlKeyResponse> GetProductByUrlKeyAsync(ProductGetProductByUrlKeyRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<ProductGetProductByUrlKeyResponse> GetProductByUrlKeyAsync(ProductGetProductByUrlKeyRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             product.Client.ApiResponse<ProductGetProductByUrlKeyResponse> localVarResponse = await GetProductByUrlKeyWithHttpInfoAsync(body, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
@@ -5125,7 +5125,7 @@ namespace product.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (ProductGetProductByUrlKeyResponse)</returns>
-        public async System.Threading.Tasks.Task<product.Client.ApiResponse<ProductGetProductByUrlKeyResponse>> GetProductByUrlKeyWithHttpInfoAsync(ProductGetProductByUrlKeyRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<product.Client.ApiResponse<ProductGetProductByUrlKeyResponse>> GetProductByUrlKeyWithHttpInfoAsync(ProductGetProductByUrlKeyRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             // verify the required parameter 'body' is set
             if (body == null)
@@ -5267,7 +5267,7 @@ namespace product.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ProductGetProductDataInReviewResponse</returns>
-        public async System.Threading.Tasks.Task<ProductGetProductDataInReviewResponse> GetProductDataInReviewAsync(ProductGetProductDataInReviewRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<ProductGetProductDataInReviewResponse> GetProductDataInReviewAsync(ProductGetProductDataInReviewRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             product.Client.ApiResponse<ProductGetProductDataInReviewResponse> localVarResponse = await GetProductDataInReviewWithHttpInfoAsync(body, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
@@ -5281,7 +5281,7 @@ namespace product.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (ProductGetProductDataInReviewResponse)</returns>
-        public async System.Threading.Tasks.Task<product.Client.ApiResponse<ProductGetProductDataInReviewResponse>> GetProductDataInReviewWithHttpInfoAsync(ProductGetProductDataInReviewRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<product.Client.ApiResponse<ProductGetProductDataInReviewResponse>> GetProductDataInReviewWithHttpInfoAsync(ProductGetProductDataInReviewRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             // verify the required parameter 'body' is set
             if (body == null)
@@ -5423,7 +5423,7 @@ namespace product.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of EntitymanagerListAttributeOptionsResponse</returns>
-        public async System.Threading.Tasks.Task<EntitymanagerListAttributeOptionsResponse> ListAttributeOptionsAsync(EntitymanagerListAttributeOptionsRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<EntitymanagerListAttributeOptionsResponse> ListAttributeOptionsAsync(EntitymanagerListAttributeOptionsRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             product.Client.ApiResponse<EntitymanagerListAttributeOptionsResponse> localVarResponse = await ListAttributeOptionsWithHttpInfoAsync(body, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
@@ -5437,7 +5437,7 @@ namespace product.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (EntitymanagerListAttributeOptionsResponse)</returns>
-        public async System.Threading.Tasks.Task<product.Client.ApiResponse<EntitymanagerListAttributeOptionsResponse>> ListAttributeOptionsWithHttpInfoAsync(EntitymanagerListAttributeOptionsRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<product.Client.ApiResponse<EntitymanagerListAttributeOptionsResponse>> ListAttributeOptionsWithHttpInfoAsync(EntitymanagerListAttributeOptionsRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             // verify the required parameter 'body' is set
             if (body == null)
@@ -5579,7 +5579,7 @@ namespace product.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of EntitymanagerListEntitiesResponse</returns>
-        public async System.Threading.Tasks.Task<EntitymanagerListEntitiesResponse> ListEntitiesAsync(EntitymanagerListEntitiesRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<EntitymanagerListEntitiesResponse> ListEntitiesAsync(EntitymanagerListEntitiesRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             product.Client.ApiResponse<EntitymanagerListEntitiesResponse> localVarResponse = await ListEntitiesWithHttpInfoAsync(body, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
@@ -5593,7 +5593,7 @@ namespace product.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (EntitymanagerListEntitiesResponse)</returns>
-        public async System.Threading.Tasks.Task<product.Client.ApiResponse<EntitymanagerListEntitiesResponse>> ListEntitiesWithHttpInfoAsync(EntitymanagerListEntitiesRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<product.Client.ApiResponse<EntitymanagerListEntitiesResponse>> ListEntitiesWithHttpInfoAsync(EntitymanagerListEntitiesRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             // verify the required parameter 'body' is set
             if (body == null)
@@ -5735,7 +5735,7 @@ namespace product.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of EntitymanagerListOptionsListsResponse</returns>
-        public async System.Threading.Tasks.Task<EntitymanagerListOptionsListsResponse> ListOptionsListsAsync(EntitymanagerListOptionsListsRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<EntitymanagerListOptionsListsResponse> ListOptionsListsAsync(EntitymanagerListOptionsListsRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             product.Client.ApiResponse<EntitymanagerListOptionsListsResponse> localVarResponse = await ListOptionsListsWithHttpInfoAsync(body, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
@@ -5749,7 +5749,7 @@ namespace product.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (EntitymanagerListOptionsListsResponse)</returns>
-        public async System.Threading.Tasks.Task<product.Client.ApiResponse<EntitymanagerListOptionsListsResponse>> ListOptionsListsWithHttpInfoAsync(EntitymanagerListOptionsListsRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<product.Client.ApiResponse<EntitymanagerListOptionsListsResponse>> ListOptionsListsWithHttpInfoAsync(EntitymanagerListOptionsListsRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             // verify the required parameter 'body' is set
             if (body == null)
@@ -5891,7 +5891,7 @@ namespace product.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ProductListProductsResponse</returns>
-        public async System.Threading.Tasks.Task<ProductListProductsResponse> ListProductsAsync(ProductListProductsRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<ProductListProductsResponse> ListProductsAsync(ProductListProductsRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             product.Client.ApiResponse<ProductListProductsResponse> localVarResponse = await ListProductsWithHttpInfoAsync(body, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
@@ -5905,7 +5905,7 @@ namespace product.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (ProductListProductsResponse)</returns>
-        public async System.Threading.Tasks.Task<product.Client.ApiResponse<ProductListProductsResponse>> ListProductsWithHttpInfoAsync(ProductListProductsRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<product.Client.ApiResponse<ProductListProductsResponse>> ListProductsWithHttpInfoAsync(ProductListProductsRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             // verify the required parameter 'body' is set
             if (body == null)
@@ -6047,7 +6047,7 @@ namespace product.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ProductListProductsByIdsResponse</returns>
-        public async System.Threading.Tasks.Task<ProductListProductsByIdsResponse> ListProductsByIdsAsync(ProductListProductsByIdsRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<ProductListProductsByIdsResponse> ListProductsByIdsAsync(ProductListProductsByIdsRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             product.Client.ApiResponse<ProductListProductsByIdsResponse> localVarResponse = await ListProductsByIdsWithHttpInfoAsync(body, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
@@ -6061,7 +6061,7 @@ namespace product.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (ProductListProductsByIdsResponse)</returns>
-        public async System.Threading.Tasks.Task<product.Client.ApiResponse<ProductListProductsByIdsResponse>> ListProductsByIdsWithHttpInfoAsync(ProductListProductsByIdsRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<product.Client.ApiResponse<ProductListProductsByIdsResponse>> ListProductsByIdsWithHttpInfoAsync(ProductListProductsByIdsRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             // verify the required parameter 'body' is set
             if (body == null)
@@ -6203,7 +6203,7 @@ namespace product.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ProductListProductsBySkuResponse</returns>
-        public async System.Threading.Tasks.Task<ProductListProductsBySkuResponse> ListProductsBySkuAsync(ProductListProductsBySkuRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<ProductListProductsBySkuResponse> ListProductsBySkuAsync(ProductListProductsBySkuRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             product.Client.ApiResponse<ProductListProductsBySkuResponse> localVarResponse = await ListProductsBySkuWithHttpInfoAsync(body, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
@@ -6217,7 +6217,7 @@ namespace product.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (ProductListProductsBySkuResponse)</returns>
-        public async System.Threading.Tasks.Task<product.Client.ApiResponse<ProductListProductsBySkuResponse>> ListProductsBySkuWithHttpInfoAsync(ProductListProductsBySkuRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<product.Client.ApiResponse<ProductListProductsBySkuResponse>> ListProductsBySkuWithHttpInfoAsync(ProductListProductsBySkuRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             // verify the required parameter 'body' is set
             if (body == null)
@@ -6359,7 +6359,7 @@ namespace product.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ProductListVariantsBySkuResponse</returns>
-        public async System.Threading.Tasks.Task<ProductListVariantsBySkuResponse> ListVariantsBySkuAsync(ProductListVariantsBySkuRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<ProductListVariantsBySkuResponse> ListVariantsBySkuAsync(ProductListVariantsBySkuRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             product.Client.ApiResponse<ProductListVariantsBySkuResponse> localVarResponse = await ListVariantsBySkuWithHttpInfoAsync(body, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
@@ -6373,7 +6373,7 @@ namespace product.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (ProductListVariantsBySkuResponse)</returns>
-        public async System.Threading.Tasks.Task<product.Client.ApiResponse<ProductListVariantsBySkuResponse>> ListVariantsBySkuWithHttpInfoAsync(ProductListVariantsBySkuRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<product.Client.ApiResponse<ProductListVariantsBySkuResponse>> ListVariantsBySkuWithHttpInfoAsync(ProductListVariantsBySkuRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             // verify the required parameter 'body' is set
             if (body == null)
@@ -6515,7 +6515,7 @@ namespace product.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of EntitymanagerBulkCreateAttributeResponse</returns>
-        public async System.Threading.Tasks.Task<EntitymanagerBulkCreateAttributeResponse> ProductBulkCreateAttributeAsync(EntitymanagerBulkCreateAttributeRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<EntitymanagerBulkCreateAttributeResponse> ProductBulkCreateAttributeAsync(EntitymanagerBulkCreateAttributeRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             product.Client.ApiResponse<EntitymanagerBulkCreateAttributeResponse> localVarResponse = await ProductBulkCreateAttributeWithHttpInfoAsync(body, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
@@ -6529,7 +6529,7 @@ namespace product.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (EntitymanagerBulkCreateAttributeResponse)</returns>
-        public async System.Threading.Tasks.Task<product.Client.ApiResponse<EntitymanagerBulkCreateAttributeResponse>> ProductBulkCreateAttributeWithHttpInfoAsync(EntitymanagerBulkCreateAttributeRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<product.Client.ApiResponse<EntitymanagerBulkCreateAttributeResponse>> ProductBulkCreateAttributeWithHttpInfoAsync(EntitymanagerBulkCreateAttributeRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             // verify the required parameter 'body' is set
             if (body == null)
@@ -6674,7 +6674,7 @@ namespace product.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ProductBulkUpdateResponse</returns>
         [Obsolete]
-        public async System.Threading.Tasks.Task<ProductBulkUpdateResponse> ProductBulkUpdateAsync(ProductBulkUpdateRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<ProductBulkUpdateResponse> ProductBulkUpdateAsync(ProductBulkUpdateRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             product.Client.ApiResponse<ProductBulkUpdateResponse> localVarResponse = await ProductBulkUpdateWithHttpInfoAsync(body, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
@@ -6689,7 +6689,7 @@ namespace product.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (ProductBulkUpdateResponse)</returns>
         [Obsolete]
-        public async System.Threading.Tasks.Task<product.Client.ApiResponse<ProductBulkUpdateResponse>> ProductBulkUpdateWithHttpInfoAsync(ProductBulkUpdateRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<product.Client.ApiResponse<ProductBulkUpdateResponse>> ProductBulkUpdateWithHttpInfoAsync(ProductBulkUpdateRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             // verify the required parameter 'body' is set
             if (body == null)
@@ -6831,7 +6831,7 @@ namespace product.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of EntitymanagerAttributeGroup</returns>
-        public async System.Threading.Tasks.Task<EntitymanagerAttributeGroup> ProductCreateAttributeGroupAsync(EntitymanagerCreateAttributeGroupRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<EntitymanagerAttributeGroup> ProductCreateAttributeGroupAsync(EntitymanagerCreateAttributeGroupRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             product.Client.ApiResponse<EntitymanagerAttributeGroup> localVarResponse = await ProductCreateAttributeGroupWithHttpInfoAsync(body, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
@@ -6845,7 +6845,7 @@ namespace product.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (EntitymanagerAttributeGroup)</returns>
-        public async System.Threading.Tasks.Task<product.Client.ApiResponse<EntitymanagerAttributeGroup>> ProductCreateAttributeGroupWithHttpInfoAsync(EntitymanagerCreateAttributeGroupRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<product.Client.ApiResponse<EntitymanagerAttributeGroup>> ProductCreateAttributeGroupWithHttpInfoAsync(EntitymanagerCreateAttributeGroupRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             // verify the required parameter 'body' is set
             if (body == null)
@@ -6990,7 +6990,7 @@ namespace product.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ProductCreateProductResponse</returns>
         [Obsolete]
-        public async System.Threading.Tasks.Task<ProductCreateProductResponse> ProductCreateProductAsync(ProductCreateProductRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<ProductCreateProductResponse> ProductCreateProductAsync(ProductCreateProductRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             product.Client.ApiResponse<ProductCreateProductResponse> localVarResponse = await ProductCreateProductWithHttpInfoAsync(body, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
@@ -7005,7 +7005,7 @@ namespace product.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (ProductCreateProductResponse)</returns>
         [Obsolete]
-        public async System.Threading.Tasks.Task<product.Client.ApiResponse<ProductCreateProductResponse>> ProductCreateProductWithHttpInfoAsync(ProductCreateProductRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<product.Client.ApiResponse<ProductCreateProductResponse>> ProductCreateProductWithHttpInfoAsync(ProductCreateProductRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             // verify the required parameter 'body' is set
             if (body == null)
@@ -7147,7 +7147,7 @@ namespace product.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ProductCreateProductResponseV2</returns>
-        public async System.Threading.Tasks.Task<ProductCreateProductResponseV2> ProductCreateProductV2Async(ProductCreateProductRequestV2 body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<ProductCreateProductResponseV2> ProductCreateProductV2Async(ProductCreateProductRequestV2 body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             product.Client.ApiResponse<ProductCreateProductResponseV2> localVarResponse = await ProductCreateProductV2WithHttpInfoAsync(body, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
@@ -7161,7 +7161,7 @@ namespace product.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (ProductCreateProductResponseV2)</returns>
-        public async System.Threading.Tasks.Task<product.Client.ApiResponse<ProductCreateProductResponseV2>> ProductCreateProductV2WithHttpInfoAsync(ProductCreateProductRequestV2 body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<product.Client.ApiResponse<ProductCreateProductResponseV2>> ProductCreateProductV2WithHttpInfoAsync(ProductCreateProductRequestV2 body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             // verify the required parameter 'body' is set
             if (body == null)
@@ -7306,7 +7306,7 @@ namespace product.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ProductDeleteResponse</returns>
         [Obsolete]
-        public async System.Threading.Tasks.Task<ProductDeleteResponse> ProductDeleteAsync(ProductDeleteRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<ProductDeleteResponse> ProductDeleteAsync(ProductDeleteRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             product.Client.ApiResponse<ProductDeleteResponse> localVarResponse = await ProductDeleteWithHttpInfoAsync(body, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
@@ -7321,7 +7321,7 @@ namespace product.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (ProductDeleteResponse)</returns>
         [Obsolete]
-        public async System.Threading.Tasks.Task<product.Client.ApiResponse<ProductDeleteResponse>> ProductDeleteWithHttpInfoAsync(ProductDeleteRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<product.Client.ApiResponse<ProductDeleteResponse>> ProductDeleteWithHttpInfoAsync(ProductDeleteRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             // verify the required parameter 'body' is set
             if (body == null)
@@ -7463,7 +7463,7 @@ namespace product.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of Object</returns>
-        public async System.Threading.Tasks.Task<Object> ProductDeleteAttributeAsync(EntitymanagerDeleteAttributeRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Object> ProductDeleteAttributeAsync(EntitymanagerDeleteAttributeRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             product.Client.ApiResponse<Object> localVarResponse = await ProductDeleteAttributeWithHttpInfoAsync(body, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
@@ -7477,7 +7477,7 @@ namespace product.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (Object)</returns>
-        public async System.Threading.Tasks.Task<product.Client.ApiResponse<Object>> ProductDeleteAttributeWithHttpInfoAsync(EntitymanagerDeleteAttributeRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<product.Client.ApiResponse<Object>> ProductDeleteAttributeWithHttpInfoAsync(EntitymanagerDeleteAttributeRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             // verify the required parameter 'body' is set
             if (body == null)
@@ -7619,7 +7619,7 @@ namespace product.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of Object</returns>
-        public async System.Threading.Tasks.Task<Object> ProductDeleteProductAsync(ProductDeleteProductRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Object> ProductDeleteProductAsync(ProductDeleteProductRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             product.Client.ApiResponse<Object> localVarResponse = await ProductDeleteProductWithHttpInfoAsync(body, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
@@ -7633,7 +7633,7 @@ namespace product.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (Object)</returns>
-        public async System.Threading.Tasks.Task<product.Client.ApiResponse<Object>> ProductDeleteProductWithHttpInfoAsync(ProductDeleteProductRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<product.Client.ApiResponse<Object>> ProductDeleteProductWithHttpInfoAsync(ProductDeleteProductRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             // verify the required parameter 'body' is set
             if (body == null)
@@ -7775,7 +7775,7 @@ namespace product.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of EntitymanagerAttributeGroup</returns>
-        public async System.Threading.Tasks.Task<EntitymanagerAttributeGroup> ProductGetAttributeGroupAsync(EntitymanagerGetAttributeGroupRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<EntitymanagerAttributeGroup> ProductGetAttributeGroupAsync(EntitymanagerGetAttributeGroupRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             product.Client.ApiResponse<EntitymanagerAttributeGroup> localVarResponse = await ProductGetAttributeGroupWithHttpInfoAsync(body, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
@@ -7789,7 +7789,7 @@ namespace product.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (EntitymanagerAttributeGroup)</returns>
-        public async System.Threading.Tasks.Task<product.Client.ApiResponse<EntitymanagerAttributeGroup>> ProductGetAttributeGroupWithHttpInfoAsync(EntitymanagerGetAttributeGroupRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<product.Client.ApiResponse<EntitymanagerAttributeGroup>> ProductGetAttributeGroupWithHttpInfoAsync(EntitymanagerGetAttributeGroupRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             // verify the required parameter 'body' is set
             if (body == null)
@@ -7931,7 +7931,7 @@ namespace product.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of EntitymanagerListAttributeGroupsResponse</returns>
-        public async System.Threading.Tasks.Task<EntitymanagerListAttributeGroupsResponse> ProductListAttributeGroupsAsync(EntitymanagerListAttributeGroupsRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<EntitymanagerListAttributeGroupsResponse> ProductListAttributeGroupsAsync(EntitymanagerListAttributeGroupsRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             product.Client.ApiResponse<EntitymanagerListAttributeGroupsResponse> localVarResponse = await ProductListAttributeGroupsWithHttpInfoAsync(body, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
@@ -7945,7 +7945,7 @@ namespace product.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (EntitymanagerListAttributeGroupsResponse)</returns>
-        public async System.Threading.Tasks.Task<product.Client.ApiResponse<EntitymanagerListAttributeGroupsResponse>> ProductListAttributeGroupsWithHttpInfoAsync(EntitymanagerListAttributeGroupsRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<product.Client.ApiResponse<EntitymanagerListAttributeGroupsResponse>> ProductListAttributeGroupsWithHttpInfoAsync(EntitymanagerListAttributeGroupsRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             // verify the required parameter 'body' is set
             if (body == null)
@@ -8087,7 +8087,7 @@ namespace product.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of EntitymanagerAttribute</returns>
-        public async System.Threading.Tasks.Task<EntitymanagerAttribute> ProductUpdateAttributeAsync(EntitymanagerUpdateAttributeRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<EntitymanagerAttribute> ProductUpdateAttributeAsync(EntitymanagerUpdateAttributeRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             product.Client.ApiResponse<EntitymanagerAttribute> localVarResponse = await ProductUpdateAttributeWithHttpInfoAsync(body, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
@@ -8101,7 +8101,7 @@ namespace product.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (EntitymanagerAttribute)</returns>
-        public async System.Threading.Tasks.Task<product.Client.ApiResponse<EntitymanagerAttribute>> ProductUpdateAttributeWithHttpInfoAsync(EntitymanagerUpdateAttributeRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<product.Client.ApiResponse<EntitymanagerAttribute>> ProductUpdateAttributeWithHttpInfoAsync(EntitymanagerUpdateAttributeRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             // verify the required parameter 'body' is set
             if (body == null)
@@ -8243,7 +8243,7 @@ namespace product.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of EntitymanagerAttributeGroup</returns>
-        public async System.Threading.Tasks.Task<EntitymanagerAttributeGroup> ProductUpdateAttributeGroupAsync(EntitymanagerUpdateAttributeGroupRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<EntitymanagerAttributeGroup> ProductUpdateAttributeGroupAsync(EntitymanagerUpdateAttributeGroupRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             product.Client.ApiResponse<EntitymanagerAttributeGroup> localVarResponse = await ProductUpdateAttributeGroupWithHttpInfoAsync(body, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
@@ -8257,7 +8257,7 @@ namespace product.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (EntitymanagerAttributeGroup)</returns>
-        public async System.Threading.Tasks.Task<product.Client.ApiResponse<EntitymanagerAttributeGroup>> ProductUpdateAttributeGroupWithHttpInfoAsync(EntitymanagerUpdateAttributeGroupRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<product.Client.ApiResponse<EntitymanagerAttributeGroup>> ProductUpdateAttributeGroupWithHttpInfoAsync(EntitymanagerUpdateAttributeGroupRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             // verify the required parameter 'body' is set
             if (body == null)
@@ -8402,7 +8402,7 @@ namespace product.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ProductUpdateProductResponse</returns>
         [Obsolete]
-        public async System.Threading.Tasks.Task<ProductUpdateProductResponse> ProductUpdateProductAsync(ProductUpdateProductRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<ProductUpdateProductResponse> ProductUpdateProductAsync(ProductUpdateProductRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             product.Client.ApiResponse<ProductUpdateProductResponse> localVarResponse = await ProductUpdateProductWithHttpInfoAsync(body, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
@@ -8417,7 +8417,7 @@ namespace product.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (ProductUpdateProductResponse)</returns>
         [Obsolete]
-        public async System.Threading.Tasks.Task<product.Client.ApiResponse<ProductUpdateProductResponse>> ProductUpdateProductWithHttpInfoAsync(ProductUpdateProductRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<product.Client.ApiResponse<ProductUpdateProductResponse>> ProductUpdateProductWithHttpInfoAsync(ProductUpdateProductRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             // verify the required parameter 'body' is set
             if (body == null)
@@ -8559,7 +8559,7 @@ namespace product.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of Object</returns>
-        public async System.Threading.Tasks.Task<Object> ProductUpdateProductV2Async(ProductUpdateProductRequestV2 body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Object> ProductUpdateProductV2Async(ProductUpdateProductRequestV2 body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             product.Client.ApiResponse<Object> localVarResponse = await ProductUpdateProductV2WithHttpInfoAsync(body, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
@@ -8573,7 +8573,7 @@ namespace product.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (Object)</returns>
-        public async System.Threading.Tasks.Task<product.Client.ApiResponse<Object>> ProductUpdateProductV2WithHttpInfoAsync(ProductUpdateProductRequestV2 body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<product.Client.ApiResponse<Object>> ProductUpdateProductV2WithHttpInfoAsync(ProductUpdateProductRequestV2 body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             // verify the required parameter 'body' is set
             if (body == null)
@@ -8715,7 +8715,7 @@ namespace product.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of Object</returns>
-        public async System.Threading.Tasks.Task<Object> RemoveMediaGalleryEntryAsync(ProductRemoveMediaGalleryEntryRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Object> RemoveMediaGalleryEntryAsync(ProductRemoveMediaGalleryEntryRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             product.Client.ApiResponse<Object> localVarResponse = await RemoveMediaGalleryEntryWithHttpInfoAsync(body, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
@@ -8729,7 +8729,7 @@ namespace product.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (Object)</returns>
-        public async System.Threading.Tasks.Task<product.Client.ApiResponse<Object>> RemoveMediaGalleryEntryWithHttpInfoAsync(ProductRemoveMediaGalleryEntryRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<product.Client.ApiResponse<Object>> RemoveMediaGalleryEntryWithHttpInfoAsync(ProductRemoveMediaGalleryEntryRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             // verify the required parameter 'body' is set
             if (body == null)
@@ -8871,7 +8871,7 @@ namespace product.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of EntitymanagerUpdateAttributeOptionsResponse</returns>
-        public async System.Threading.Tasks.Task<EntitymanagerUpdateAttributeOptionsResponse> UpdateAttributeOptionsAsync(EntitymanagerUpdateAttributeOptionsRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<EntitymanagerUpdateAttributeOptionsResponse> UpdateAttributeOptionsAsync(EntitymanagerUpdateAttributeOptionsRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             product.Client.ApiResponse<EntitymanagerUpdateAttributeOptionsResponse> localVarResponse = await UpdateAttributeOptionsWithHttpInfoAsync(body, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
@@ -8885,7 +8885,7 @@ namespace product.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (EntitymanagerUpdateAttributeOptionsResponse)</returns>
-        public async System.Threading.Tasks.Task<product.Client.ApiResponse<EntitymanagerUpdateAttributeOptionsResponse>> UpdateAttributeOptionsWithHttpInfoAsync(EntitymanagerUpdateAttributeOptionsRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<product.Client.ApiResponse<EntitymanagerUpdateAttributeOptionsResponse>> UpdateAttributeOptionsWithHttpInfoAsync(EntitymanagerUpdateAttributeOptionsRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             // verify the required parameter 'body' is set
             if (body == null)
@@ -9027,7 +9027,7 @@ namespace product.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ProductGetEnhanceProductDataWithAIStatusResponse</returns>
-        public async System.Threading.Tasks.Task<ProductGetEnhanceProductDataWithAIStatusResponse> UpdateDataToBeReviewedAsync(ProductGetEnhanceProductDataWithAIStatusRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<ProductGetEnhanceProductDataWithAIStatusResponse> UpdateDataToBeReviewedAsync(ProductGetEnhanceProductDataWithAIStatusRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             product.Client.ApiResponse<ProductGetEnhanceProductDataWithAIStatusResponse> localVarResponse = await UpdateDataToBeReviewedWithHttpInfoAsync(body, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
@@ -9041,7 +9041,7 @@ namespace product.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (ProductGetEnhanceProductDataWithAIStatusResponse)</returns>
-        public async System.Threading.Tasks.Task<product.Client.ApiResponse<ProductGetEnhanceProductDataWithAIStatusResponse>> UpdateDataToBeReviewedWithHttpInfoAsync(ProductGetEnhanceProductDataWithAIStatusRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<product.Client.ApiResponse<ProductGetEnhanceProductDataWithAIStatusResponse>> UpdateDataToBeReviewedWithHttpInfoAsync(ProductGetEnhanceProductDataWithAIStatusRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             // verify the required parameter 'body' is set
             if (body == null)
@@ -9183,7 +9183,7 @@ namespace product.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of Object</returns>
-        public async System.Threading.Tasks.Task<Object> UpdateDataToBeReviewed_0Async(ProductUpdateDataToBeReviewedRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Object> UpdateDataToBeReviewed_0Async(ProductUpdateDataToBeReviewedRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             product.Client.ApiResponse<Object> localVarResponse = await UpdateDataToBeReviewed_0WithHttpInfoAsync(body, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
@@ -9197,7 +9197,7 @@ namespace product.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (Object)</returns>
-        public async System.Threading.Tasks.Task<product.Client.ApiResponse<Object>> UpdateDataToBeReviewed_0WithHttpInfoAsync(ProductUpdateDataToBeReviewedRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<product.Client.ApiResponse<Object>> UpdateDataToBeReviewed_0WithHttpInfoAsync(ProductUpdateDataToBeReviewedRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             // verify the required parameter 'body' is set
             if (body == null)
@@ -9339,7 +9339,7 @@ namespace product.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of Object</returns>
-        public async System.Threading.Tasks.Task<Object> UpdateMediaGalleryEntryAsync(ProductUpdateMediaGalleryEntryRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Object> UpdateMediaGalleryEntryAsync(ProductUpdateMediaGalleryEntryRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             product.Client.ApiResponse<Object> localVarResponse = await UpdateMediaGalleryEntryWithHttpInfoAsync(body, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
@@ -9353,7 +9353,7 @@ namespace product.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (Object)</returns>
-        public async System.Threading.Tasks.Task<product.Client.ApiResponse<Object>> UpdateMediaGalleryEntryWithHttpInfoAsync(ProductUpdateMediaGalleryEntryRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<product.Client.ApiResponse<Object>> UpdateMediaGalleryEntryWithHttpInfoAsync(ProductUpdateMediaGalleryEntryRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             // verify the required parameter 'body' is set
             if (body == null)
@@ -9495,7 +9495,7 @@ namespace product.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of EntitymanagerUpdateOptionsListResponse</returns>
-        public async System.Threading.Tasks.Task<EntitymanagerUpdateOptionsListResponse> UpdateOptionsListAsync(EntitymanagerUpdateOptionsListRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<EntitymanagerUpdateOptionsListResponse> UpdateOptionsListAsync(EntitymanagerUpdateOptionsListRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             product.Client.ApiResponse<EntitymanagerUpdateOptionsListResponse> localVarResponse = await UpdateOptionsListWithHttpInfoAsync(body, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
@@ -9509,7 +9509,7 @@ namespace product.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (EntitymanagerUpdateOptionsListResponse)</returns>
-        public async System.Threading.Tasks.Task<product.Client.ApiResponse<EntitymanagerUpdateOptionsListResponse>> UpdateOptionsListWithHttpInfoAsync(EntitymanagerUpdateOptionsListRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<product.Client.ApiResponse<EntitymanagerUpdateOptionsListResponse>> UpdateOptionsListWithHttpInfoAsync(EntitymanagerUpdateOptionsListRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             // verify the required parameter 'body' is set
             if (body == null)
@@ -9651,7 +9651,7 @@ namespace product.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ProductUpdateProductWithAIResponse</returns>
-        public async System.Threading.Tasks.Task<ProductUpdateProductWithAIResponse> UpdateProductWithAIAsync(ProductUpdateProductWithAIRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<ProductUpdateProductWithAIResponse> UpdateProductWithAIAsync(ProductUpdateProductWithAIRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             product.Client.ApiResponse<ProductUpdateProductWithAIResponse> localVarResponse = await UpdateProductWithAIWithHttpInfoAsync(body, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
@@ -9665,7 +9665,7 @@ namespace product.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (ProductUpdateProductWithAIResponse)</returns>
-        public async System.Threading.Tasks.Task<product.Client.ApiResponse<ProductUpdateProductWithAIResponse>> UpdateProductWithAIWithHttpInfoAsync(ProductUpdateProductWithAIRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<product.Client.ApiResponse<ProductUpdateProductWithAIResponse>> UpdateProductWithAIWithHttpInfoAsync(ProductUpdateProductWithAIRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             // verify the required parameter 'body' is set
             if (body == null)

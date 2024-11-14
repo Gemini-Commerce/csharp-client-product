@@ -12,7 +12,7 @@ Name | Type | Description | Notes
 **Type**| **EntitymanagerTypes** |  for more information please, see Model/EntitymanagerTypes.php  | [optional]
 **OptionList**| **string** |   | [optional]
 **Entity**| **string** |   | [optional]
-**VarDefault**| **string** |   | [optional]
+**Default**| **string** |   | [optional]
 **IsRequired**| **bool** |   | [optional]
 **IsSystem**| **bool** |   | [optional]
 **IsRepeated**| **bool** |   | [optional]

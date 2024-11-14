@@ -7,7 +7,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **Label**| **string** |   | [optional]
-**VarDefault**| **string** |   | [optional]
+**Default**| **string** |   | [optional]
 **Sort**| **int** |   | [optional]
 **GroupCode**| **string** |   | [optional]
 **Title**| **Dictionary<string, string>** |   | [optional]
